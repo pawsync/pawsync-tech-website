@@ -9,14 +9,14 @@ const industries: { image: string; alt: string; label: string; tagline: string; 
     alt: "A black Labrador wearing a red collar",
     label: "Pet Technology",
     tagline: "Tracking • Health • Safety",
-    href: "/terrasense/pet-technology",
+    href: "/pet-technology",
   },
   {
     image: "https://images.unsplash.com/photo-1573611236714-1fe596de1fd3?auto=format&fit=crop&w=500&q=75",
     alt: "A tagged calf standing in a green pasture",
     label: "Livestock Farming",
     tagline: "Tracking • Health • Automation",
-    href: "/terrasense/livestock-technology",
+    href: "/livestock-technology",
   },
   {
     image: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=500&q=75",
@@ -29,7 +29,7 @@ const industries: { image: string; alt: string; label: string; tagline: string; 
     alt: "A chicken in a poultry farm setting",
     label: "Poultry Farming",
     tagline: "Climate • Feeding • Water • Automation",
-    href: "/terrasense/poultry-farming",
+    href: "/poultry-farming",
   },
   {
     image: "https://images.unsplash.com/photo-1599635406076-0f40532a59fc?auto=format&fit=crop&w=500&q=75",
@@ -120,7 +120,7 @@ export default function IndustriesGrid() {
 
         <div className="mt-10 text-center">
           <Link
-            href="/terrasense/industries"
+            href="/industries"
             className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]"
           >
             View all industries

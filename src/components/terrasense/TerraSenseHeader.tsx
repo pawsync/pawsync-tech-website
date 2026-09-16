@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import TerraSenseLogo from "@/components/terrasense/TerraSenseLogo";
 import {
   Activity,
   AlertTriangle,
@@ -28,36 +28,36 @@ import {
 } from "lucide-react";
 
 const solutionsMenu: { label: string; href: string; icon: LucideIcon }[] = [
-  { label: "Solutions Overview", href: "/terrasense/solutions", icon: Sparkles },
-  { label: "Animal Tracking", href: "/terrasense/solutions#tracking-location", icon: Satellite },
-  { label: "Virtual Fencing", href: "/terrasense/solutions#virtual-fencing", icon: Radar },
-  { label: "Smart Feeding", href: "/terrasense/solutions#smart-feeding", icon: UtensilsCrossed },
-  { label: "Animal Health Monitoring", href: "/terrasense/solutions#health-monitoring", icon: HeartPulse },
-  { label: "Livestock Monitoring", href: "/terrasense/livestock-technology", icon: Tractor },
-  { label: "Pet Technology", href: "/terrasense/pet-technology", icon: Dog },
-  { label: "Poultry Farming", href: "/terrasense/poultry-farming", icon: Bird },
-  { label: "Farm Automation", href: "/terrasense/farm-automation", icon: Settings2 },
-  { label: "Environmental Monitoring", href: "/terrasense/environmental-monitoring", icon: CloudRain },
-  { label: "Safety & Disaster Detection", href: "/terrasense/solutions#safety-detection", icon: AlertTriangle },
+  { label: "Solutions Overview", href: "/solutions", icon: Sparkles },
+  { label: "Animal Tracking", href: "/solutions#tracking-location", icon: Satellite },
+  { label: "Virtual Fencing", href: "/solutions#virtual-fencing", icon: Radar },
+  { label: "Smart Feeding", href: "/solutions#smart-feeding", icon: UtensilsCrossed },
+  { label: "Animal Health Monitoring", href: "/solutions#health-monitoring", icon: HeartPulse },
+  { label: "Livestock Monitoring", href: "/livestock-technology", icon: Tractor },
+  { label: "Pet Technology", href: "/pet-technology", icon: Dog },
+  { label: "Poultry Farming", href: "/poultry-farming", icon: Bird },
+  { label: "Farm Automation", href: "/farm-automation", icon: Settings2 },
+  { label: "Environmental Monitoring", href: "/environmental-monitoring", icon: CloudRain },
+  { label: "Safety & Disaster Detection", href: "/solutions#safety-detection", icon: AlertTriangle },
 ];
 
 const engineeringMenu: { label: string; href: string; icon: LucideIcon }[] = [
-  { label: "Custom Electronics", href: "/terrasense/custom-electronics", icon: CircuitBoard },
-  { label: "PCB Design", href: "/terrasense/custom-electronics#services", icon: Activity },
-  { label: "Embedded Firmware", href: "/terrasense/custom-electronics#services", icon: FileCode },
-  { label: "IoT Development", href: "/terrasense/custom-electronics#services", icon: Wifi },
-  { label: "Prototype Development", href: "/terrasense/custom-electronics#process", icon: FlaskConical },
+  { label: "Custom Electronics", href: "/custom-electronics", icon: CircuitBoard },
+  { label: "PCB Design", href: "/custom-electronics#services", icon: Activity },
+  { label: "Embedded Firmware", href: "/custom-electronics#services", icon: FileCode },
+  { label: "IoT Development", href: "/custom-electronics#services", icon: Wifi },
+  { label: "Prototype Development", href: "/custom-electronics#process", icon: FlaskConical },
 ];
 
 const allSolutionsLinks = [...solutionsMenu, ...engineeringMenu];
 
 const navLinks = [
-  { label: "Home", href: "/terrasense" },
-  { label: "Industries", href: "/terrasense/industries" },
-  { label: "How We Work", href: "/terrasense/how-we-work" },
-  { label: "About", href: "/terrasense/about" },
-  { label: "Blog", href: "/terrasense/blog" },
-  { label: "Contact", href: "/terrasense/contact" },
+  { label: "Home", href: "/" },
+  { label: "Industries", href: "/industries" },
+  { label: "How We Work", href: "/how-we-work" },
+  { label: "About", href: "/about" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function TerraSenseHeader() {
@@ -118,7 +118,7 @@ export default function TerraSenseHeader() {
   }, [isSolutionsOpen]);
 
   const isActive = (href: string) =>
-    href === "/terrasense" ? pathname === "/terrasense" : pathname.startsWith(href.split("#")[0]);
+    href === "/" ? pathname === "/" : pathname.startsWith(href.split("#")[0]);
   const isSolutionsActive = allSolutionsLinks.some((item) => isActive(item.href));
 
   return (
@@ -136,28 +136,21 @@ export default function TerraSenseHeader() {
         }`}
       >
         <Link
-          href="/terrasense"
+          href="/"
           onClick={() => setIsOpen(false)}
           aria-label="PawSync — Home"
           className="group flex items-center transition-opacity hover:opacity-80"
         >
-          <Image
-            src="/brand/pawsync-logo-compact.png"
-            alt="PawSync — Home"
-            width={1306}
-            height={705}
-            priority
-            className="h-12 w-auto sm:h-14"
-          />
+          <TerraSenseLogo />
         </Link>
 
         <ul className="hidden items-center gap-5 xl:gap-6 lg:flex">
           <li key="home">
             <Link
-              href="/terrasense"
-              aria-current={isActive("/terrasense") && pathname === "/terrasense" ? "true" : undefined}
+              href="/"
+              aria-current={isActive("/") && pathname === "/" ? "true" : undefined}
               className={`relative py-1 text-sm font-medium transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[var(--ts-green)] after:transition-transform after:duration-200 hover:text-[var(--ts-dark-green)] hover:after:scale-x-100 ${
-                pathname === "/terrasense" ? "text-[var(--ts-dark-green)] after:scale-x-100" : "text-[var(--ts-gray)]"
+                pathname === "/" ? "text-[var(--ts-dark-green)] after:scale-x-100" : "text-[var(--ts-gray)]"
               }`}
             >
               Home
@@ -223,7 +216,7 @@ export default function TerraSenseHeader() {
                     </Link>
                   ))}
                   <Link
-                    href="/terrasense/contact"
+                    href="/contact"
                     onClick={() => setIsSolutionsOpen(false)}
                     className="mt-3 flex items-center justify-center rounded-xl bg-[var(--ts-dark-green)]/8 px-3 py-2.5 text-center text-xs font-semibold text-[var(--ts-dark-green)] transition-colors hover:bg-[var(--ts-dark-green)]/15"
                   >
@@ -254,7 +247,7 @@ export default function TerraSenseHeader() {
 
         <div className="hidden lg:block">
           <Link
-            href="/terrasense/contact"
+            href="/contact"
             className="inline-flex items-center justify-center rounded-full bg-[var(--ts-dark-green)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-[var(--ts-navy)] hover:shadow-md active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[var(--ts-green)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ts-bg)]"
           >
             Start Your Project
@@ -282,10 +275,10 @@ export default function TerraSenseHeader() {
         <ul className="flex flex-col gap-1 px-4 py-4 sm:px-6">
           <li>
             <Link
-              href="/terrasense"
+              href="/"
               onClick={() => setIsOpen(false)}
               className={`block rounded-md px-3 py-2.5 text-base font-medium transition-colors hover:bg-[var(--ts-dark-green)]/10 ${
-                pathname === "/terrasense" ? "bg-[var(--ts-dark-green)]/10 text-[var(--ts-dark-green)]" : "text-[var(--ts-navy)]"
+                pathname === "/" ? "bg-[var(--ts-dark-green)]/10 text-[var(--ts-dark-green)]" : "text-[var(--ts-navy)]"
               }`}
             >
               Home
@@ -361,7 +354,7 @@ export default function TerraSenseHeader() {
 
           <li className="pt-2">
             <Link
-              href="/terrasense/contact"
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className="block rounded-full bg-[var(--ts-dark-green)] px-5 py-3 text-center text-base font-semibold text-white shadow-sm transition-colors hover:bg-[var(--ts-navy)]"
             >

@@ -11,7 +11,7 @@ export default function Breadcrumb({ items }: { items: Crumb[] }) {
     <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
       <ol className="flex flex-wrap items-center gap-1.5 text-sm text-[var(--ts-gray)]">
         <li className="flex items-center gap-1.5">
-          <Link href="/terrasense" className="flex items-center gap-1 transition-colors hover:text-[var(--ts-dark-green)]">
+          <Link href="/" className="flex items-center gap-1 transition-colors hover:text-[var(--ts-dark-green)]">
             <Home className="h-3.5 w-3.5" aria-hidden="true" />
             Home
           </Link>

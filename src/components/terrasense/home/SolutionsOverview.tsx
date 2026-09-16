@@ -26,49 +26,49 @@ const smallerSolutions: { icon: LucideIcon; title: string; description: string; 
     icon: Radar,
     title: "Virtual Fencing",
     description: "GPS or wireless boundary systems that help monitor animal movement without traditional physical fencing.",
-    href: "/terrasense/solutions#virtual-fencing",
+    href: "/solutions#virtual-fencing",
   },
   {
     icon: UtensilsCrossed,
     title: "Smart Feeding Systems",
     description: "Automated feeding devices with schedules, portion control, sensors and remote monitoring.",
-    href: "/terrasense/solutions#smart-feeding",
+    href: "/solutions#smart-feeding",
   },
   {
     icon: HeartPulse,
     title: "Animal Health Monitoring",
     description: "Wearable or installed electronics for activity, temperature, movement and daily health tracking.",
-    href: "/terrasense/solutions#health-monitoring",
+    href: "/solutions#health-monitoring",
   },
   {
     icon: Activity,
     title: "Livestock Monitoring",
     description: "Track movement, behavior, location and environmental conditions for livestock.",
-    href: "/terrasense/livestock-technology",
+    href: "/livestock-technology",
   },
   {
     icon: Bird,
     title: "Smart Poultry Monitoring",
     description: "Connected environmental monitoring and automation for temperature, humidity, ventilation, feed, water, and critical farm equipment.",
-    href: "/terrasense/poultry-farming",
+    href: "/poultry-farming",
   },
   {
     icon: Waves,
     title: "Smart Irrigation & Water Management",
     description: "Soil-moisture sensing, automated valves and pumps, and weather-aware scheduling to optimize water usage.",
-    href: "/terrasense/solutions#smart-irrigation",
+    href: "/solutions#smart-irrigation",
   },
   {
     icon: AlertTriangle,
     title: "Emergency & Disaster Detection",
     description: "Early-warning systems for extreme heat, cold, smoke, fire risk, flooding, water leakage and equipment failures.",
-    href: "/terrasense/solutions#safety-detection",
+    href: "/solutions#safety-detection",
   },
   {
     icon: CircuitBoard,
     title: "Custom IoT Devices",
     description: "Custom electronics designed around a client's exact product requirements.",
-    href: "/terrasense/custom-electronics",
+    href: "/custom-electronics",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function SolutionsOverview() {
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         {/* Featured 1: real photo */}
         <Link
-          href="/terrasense/solutions#tracking-location"
+          href="/solutions#tracking-location"
           className="group relative flex flex-col overflow-hidden rounded-3xl border border-[var(--ts-navy)]/8 bg-white shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-12px_rgba(14,27,38,0.18)]"
         >
           <div className="relative h-48 w-full overflow-hidden">
@@ -125,7 +125,7 @@ export default function SolutionsOverview() {
 
         {/* Featured 2: dashboard mockup */}
         <Link
-          href="/terrasense/farm-automation"
+          href="/farm-automation"
           className="group relative flex flex-col overflow-hidden rounded-3xl border border-[var(--ts-navy)]/8 bg-white shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-12px_rgba(14,27,38,0.18)]"
         >
           <div className="relative h-48 w-full overflow-hidden bg-[var(--ts-navy)] p-4">
@@ -171,7 +171,7 @@ export default function SolutionsOverview() {
 
         {/* Featured 3: sensor readout mockup */}
         <Link
-          href="/terrasense/environmental-monitoring"
+          href="/environmental-monitoring"
           className="group relative flex flex-col overflow-hidden rounded-3xl border border-[var(--ts-navy)]/8 bg-white shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-12px_rgba(14,27,38,0.18)]"
         >
           <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-[var(--ts-dark-green)] to-[var(--ts-navy)] p-5">

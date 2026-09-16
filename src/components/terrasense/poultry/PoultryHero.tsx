@@ -65,7 +65,7 @@ export default function PoultryHero() {
 
           <div className="mt-8 flex flex-col flex-wrap gap-4 sm:flex-row">
             <Link
-              href="/terrasense/contact"
+              href="/contact"
               className="inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--ts-green)] px-6 py-3.5 text-base font-semibold text-[var(--ts-navy)] shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--ts-accent)] hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[var(--ts-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ts-navy)]"
             >
               Discuss Your Poultry Project

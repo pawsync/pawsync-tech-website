@@ -87,7 +87,7 @@ export default function EngineeredHardware() {
             ))}
           </ul>
           <Link
-            href="/terrasense/solutions#tracking-location"
+            href="/solutions#tracking-location"
             className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--ts-green)] px-6 py-3.5 text-base font-semibold text-[var(--ts-navy)] shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--ts-accent)] hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[var(--ts-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ts-navy)]"
           >
             Explore Animal Tracking

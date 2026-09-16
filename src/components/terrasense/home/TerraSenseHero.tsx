@@ -54,14 +54,14 @@ export default function TerraSenseHero() {
 
           <div className="mt-8 flex flex-col flex-wrap gap-4 sm:flex-row">
             <Link
-              href="/terrasense/contact"
+              href="/contact"
               className="inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--ts-green)] px-6 py-3.5 text-base font-semibold text-[var(--ts-navy)] shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--ts-accent)] hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[var(--ts-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ts-navy)]"
             >
               Start Your Project
               <ArrowRight className="h-5 w-5" aria-hidden="true" />
             </Link>
             <Link
-              href="/terrasense/solutions"
+              href="/solutions"
               className="inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full border-2 border-white/25 px-6 py-3.5 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white/10 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ts-navy)]"
             >
               Explore Solutions

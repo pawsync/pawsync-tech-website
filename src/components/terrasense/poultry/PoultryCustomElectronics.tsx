@@ -49,7 +49,7 @@ export default function PoultryCustomElectronics() {
 
       <div className="mt-10 text-center">
         <Link
-          href="/terrasense/contact"
+          href="/contact"
           className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--ts-dark-green)] px-6 py-3.5 text-base font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--ts-navy)] hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[var(--ts-green)] focus-visible:ring-offset-2"
         >
           Discuss Your Poultry Project

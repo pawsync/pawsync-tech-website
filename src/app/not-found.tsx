@@ -1,22 +1,25 @@
 import Link from "next/link";
+import { Compass, Radar } from "lucide-react";
 
-// Brand-neutral fallback for URLs that don't match any route at all (not
-// even /adopt/... or /terrasense/...). Routes within either product get a
-// branded 404 from their own nested not-found.tsx instead:
-//   src/app/(pawhaven)/not-found.tsx
-//   src/app/terrasense/not-found.tsx
-export default function NotFound() {
+export default function TerraSenseNotFound() {
   return (
-    <div className="mx-auto flex min-h-screen max-w-xl flex-col items-center justify-center bg-white px-4 py-20 text-center text-stone-900 sm:px-6">
-      <h1 className="text-3xl font-bold tracking-tight">Page not found</h1>
-      <p className="mt-3 text-stone-600">
-        The page you&apos;re looking for doesn&apos;t exist.
+    <div className="mx-auto flex min-h-[60vh] max-w-xl flex-col items-center justify-center px-4 py-20 text-center sm:px-6">
+      <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--ts-dark-green)]/10">
+        <Radar className="h-8 w-8 text-[var(--ts-dark-green)]" aria-hidden="true" />
+      </span>
+      <h1 className="mt-6 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)]">
+        We couldn&apos;t find that page
+      </h1>
+      <p className="mt-3 text-[var(--ts-gray)]">
+        The page you&apos;re looking for may have moved, or the link might
+        be out of date.
       </p>
       <Link
         href="/"
-        className="mt-8 inline-flex items-center justify-center rounded-full bg-stone-900 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-stone-700"
+        className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--ts-dark-green)] px-6 py-3.5 text-base font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--ts-navy)] hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[var(--ts-green)] focus-visible:ring-offset-2"
       >
-        Go to homepage
+        <Compass className="h-5 w-5" aria-hidden="true" />
+        Back to PawSync home
       </Link>
     </div>
   );
