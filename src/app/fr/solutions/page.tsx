@@ -21,7 +21,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Solutions technologiques intelligentes pour animaux & exploitations agricoles | PawSync",
   description:
-    "Suivi GPS des animaux, clôture virtuelle, suivi de la santé, alimentation intelligente, surveillance du bétail, automatisation agricole, irrigation intelligente, surveillance environnementale, détection des risques, réseaux de capteurs sans fil et systèmes IoT sur mesure.",
+    "Suivi GPS des animaux, clôture virtuelle, santé, alimentation intelligente, automatisation agricole et surveillance environnementale — IoT sur mesure pour animaux et exploitations.",
   alternates: buildAlternates("fr", "solutions"),
 };
 

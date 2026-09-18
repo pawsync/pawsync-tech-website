@@ -25,7 +25,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Secteurs | PawSync",
   description:
-    "PawSync conçoit de l'électronique pour les entreprises de pet-tech, les exploitations d'élevage, laitières et avicoles, la technologie vétérinaire, la recherche sur la faune sauvage et les start-ups AgriTech.",
+    "PawSync conçoit de l'électronique pour les entreprises pet-tech, les exploitations d'élevage et avicoles, la technologie vétérinaire et les start-ups AgriTech.",
   alternates: buildAlternates("fr", "industries"),
 };
 

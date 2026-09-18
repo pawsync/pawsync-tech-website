@@ -21,7 +21,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Smart Animal & Farm Technology Solutions | PawSync",
   description:
-    "GPS animal tracking, virtual fencing, health monitoring, smart feeding, livestock monitoring, farm automation, smart irrigation, environmental monitoring, disaster detection, wireless sensor networks and custom IoT systems.",
+    "GPS animal tracking, virtual fencing, health monitoring, smart feeding, farm automation and environmental monitoring — custom IoT solutions for animals and farms.",
   alternates: buildAlternates("en", "solutions"),
 };
 

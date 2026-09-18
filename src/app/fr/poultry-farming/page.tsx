@@ -20,7 +20,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Technologie et automatisation pour élevages avicoles | PawSync",
   description:
-    "Dispositifs IoT sur mesure et ingénierie pour l'automatisation des élevages avicoles — surveillance des bâtiments, capteurs de température et d'humidité, contrôle de la ventilation, alimentation intelligente, suivi de l'eau et contrôleurs avicoles connectés en LoRa.",
+    "Dispositifs IoT sur mesure pour l'automatisation avicole — surveillance des bâtiments, capteurs climatiques, ventilation, alimentation intelligente et contrôleurs connectés en LoRa.",
   alternates: buildAlternates("fr", "poultry-farming"),
 };
 

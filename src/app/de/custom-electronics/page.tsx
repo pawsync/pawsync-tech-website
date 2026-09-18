@@ -25,7 +25,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Kundenspezifische Elektronik & IoT-Produktentwicklung | PawSync",
   description:
-    "Kundenspezifisches Leiterplattendesign, Embedded-Firmware-Entwicklung, GPS- und LoRa-IoT-Engineering sowie Unterstützung vom Prototyp bis zur Serienproduktion für Tier- und Hoftechnologieprodukte.",
+    "Kundenspezifisches Leiterplattendesign, Embedded-Firmware und GPS-/LoRa-IoT-Engineering — von der Prototypentwicklung bis zur Serienproduktion für Tier- und Hoftechnologie.",
   alternates: buildAlternates("de", "custom-electronics"),
 };
 

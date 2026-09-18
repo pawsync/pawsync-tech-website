@@ -14,7 +14,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "PawSync | Électronique intelligente pour animaux, exploitations agricoles et environnements connectés",
   description:
-    "PawSync conçoit du matériel IoT sur mesure, du suivi GPS des animaux, des clôtures virtuelles, de l'alimentation intelligente, la surveillance du bétail, l'automatisation agricole et des capteurs environnementaux — du concept à la production.",
+    "PawSync conçoit du matériel IoT sur mesure : suivi GPS, clôtures virtuelles, alimentation intelligente, automatisation agricole et capteurs environnementaux — du concept à la production.",
   alternates: buildAlternates("fr", ""),
   openGraph: {
     siteName: "PawSync",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "PawSync | Électronique intelligente pour animaux, exploitations agricoles et environnements connectés",
     description:
-      "PawSync conçoit du matériel IoT sur mesure, du suivi GPS des animaux, des clôtures virtuelles, de l'alimentation intelligente, la surveillance du bétail, l'automatisation agricole et des capteurs environnementaux — du concept à la production.",
+      "PawSync conçoit du matériel IoT sur mesure : suivi GPS, clôtures virtuelles, alimentation intelligente, automatisation agricole et capteurs environnementaux — du concept à la production.",
   },
 };
 

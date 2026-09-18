@@ -20,7 +20,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Geflügelfarm-Technologie & Automatisierung | PawSync",
   description:
-    "Kundenspezifische IoT-Geräte und Engineering für die Automatisierung von Geflügelbetrieben — Stallüberwachung, Temperatur- und Feuchtigkeitssensoren, Belüftungssteuerung, intelligente Fütterung, Wasserüberwachung und LoRa-vernetzte Geflügelfarm-Controller.",
+    "Kundenspezifische IoT-Geräte für die Geflügelautomatisierung — Stallüberwachung, Klimasensoren, Belüftungssteuerung, intelligente Fütterung und LoRa-vernetzte Controller.",
   alternates: buildAlternates("de", "poultry-farming"),
 };
 

@@ -20,7 +20,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Poultry Farm Technology & Automation | PawSync",
   description:
-    "Custom IoT devices and engineering for poultry farm automation — poultry house monitoring, temperature and humidity sensors, ventilation control, smart feeding, water monitoring, and LoRa-connected poultry farm controllers.",
+    "Custom IoT devices for poultry farm automation — house monitoring, temperature and humidity sensors, ventilation control, smart feeding and LoRa-connected controllers.",
   alternates: buildAlternates("en", "poultry-farming"),
 };
 

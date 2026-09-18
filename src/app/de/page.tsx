@@ -14,7 +14,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "PawSync | Intelligente Elektronik für Tiere, Höfe & vernetzte Umgebungen",
   description:
-    "PawSync entwickelt kundenspezifische IoT-Hardware, GPS-Tiertracking, virtuelle Einzäunung, intelligente Fütterung, Nutztierüberwachung, Hofautomatisierung und Umweltsensoren — vom Konzept bis zur Serienproduktion.",
+    "PawSync entwickelt kundenspezifische IoT-Hardware für GPS-Tiertracking, virtuelle Einzäunung, intelligente Fütterung, Hofautomatisierung und Umweltsensorik — vom Konzept bis zur Produktion.",
   alternates: buildAlternates("de", ""),
   openGraph: {
     siteName: "PawSync",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "PawSync | Intelligente Elektronik für Tiere, Höfe & vernetzte Umgebungen",
     description:
-      "PawSync entwickelt kundenspezifische IoT-Hardware, GPS-Tiertracking, virtuelle Einzäunung, intelligente Fütterung, Nutztierüberwachung, Hofautomatisierung und Umweltsensoren — vom Konzept bis zur Serienproduktion.",
+      "PawSync entwickelt kundenspezifische IoT-Hardware für GPS-Tiertracking, virtuelle Einzäunung, intelligente Fütterung, Hofautomatisierung und Umweltsensorik — vom Konzept bis zur Produktion.",
   },
 };
 

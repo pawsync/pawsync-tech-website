@@ -21,7 +21,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Intelligente Tier- & Hoftechnologielösungen | PawSync",
   description:
-    "GPS-Tiertracking, virtuelle Einzäunung, Gesundheitsüberwachung, intelligente Fütterung, Nutztierüberwachung, Hofautomatisierung, intelligente Bewässerung, Umweltüberwachung, Gefahrenerkennung, drahtlose Sensornetzwerke und kundenspezifische IoT-Systeme.",
+    "GPS-Tiertracking, virtuelle Einzäunung, Gesundheitsüberwachung, intelligente Fütterung, Hofautomatisierung und Umweltüberwachung — kundenspezifische IoT-Lösungen für Tiere und Höfe.",
   alternates: buildAlternates("de", "solutions"),
 };
 

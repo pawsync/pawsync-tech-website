@@ -25,7 +25,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Électronique sur mesure & développement de produits IoT | PawSync",
   description:
-    "Conception de cartes PCB sur mesure, développement de micrologiciels embarqués, ingénierie IoT GPS et LoRa, et accompagnement du prototype à la production pour les produits de technologie animale et agricole.",
+    "Conception de cartes PCB sur mesure, micrologiciels embarqués, ingénierie IoT GPS et LoRa, et accompagnement du prototype à la production pour la technologie animale et agricole.",
   alternates: buildAlternates("fr", "custom-electronics"),
 };
 

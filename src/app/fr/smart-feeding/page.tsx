@@ -20,7 +20,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Alimentation intelligente | PawSync",
   description:
-    "Systèmes d'alimentation automatisés avec horaires, contrôle des portions, identification RFID, capteurs de niveau d'aliment et surveillance à distance pour animaux de compagnie, bétail et sites multi-animaux.",
+    "Systèmes d'alimentation automatisés avec horaires, contrôle des portions, identification RFID et surveillance à distance pour animaux de compagnie et bétail.",
   alternates: buildAlternates("fr", "smart-feeding"),
 };
 

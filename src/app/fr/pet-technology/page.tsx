@@ -22,7 +22,7 @@ import { buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Technologie pour animaux de compagnie | PawSync",
   description:
-    "Des dispositifs intelligents pour animaux de compagnie que nous concevons et fabriquons — trackers GPS, moniteurs d'activité, colliers intelligents, clôture virtuelle, accès RFID, distributeurs intelligents et plus encore.",
+    "Dispositifs intelligents pour animaux de compagnie conçus par PawSync — trackers GPS, moniteurs d'activité, colliers intelligents, clôture virtuelle et distributeurs intelligents.",
   alternates: buildAlternates("fr", "pet-technology"),
 };
 
