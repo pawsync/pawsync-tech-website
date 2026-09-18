@@ -1,3 +1,5 @@
+import type { Locale } from "@/i18n/config";
+
 interface ProjectCardProps {
   title: string;
   industry: string;
@@ -6,7 +8,14 @@ interface ProjectCardProps {
   challenge: string;
   solution: string;
   features: string[];
+  locale?: Locale;
 }
+
+const labels: Record<Locale, { challenge: string; solution: string }> = {
+  en: { challenge: "Challenge", solution: "Solution" },
+  de: { challenge: "Herausforderung", solution: "Lösung" },
+  fr: { challenge: "Défi", solution: "Solution" },
+};
 
 export default function ProjectCard({
   title,
@@ -16,7 +25,9 @@ export default function ProjectCard({
   challenge,
   solution,
   features,
+  locale = "en",
 }: ProjectCardProps) {
+  const t = labels[locale];
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:shadow-[0_20px_40px_-12px_rgba(14,27,38,0.16)]">
       <span
@@ -38,11 +49,11 @@ export default function ProjectCard({
 
       <dl className="mt-3 space-y-2 text-sm">
         <div>
-          <dt className="font-semibold text-[var(--ts-navy)]">Challenge</dt>
+          <dt className="font-semibold text-[var(--ts-navy)]">{t.challenge}</dt>
           <dd className="text-[var(--ts-gray)]">{challenge}</dd>
         </div>
         <div>
-          <dt className="font-semibold text-[var(--ts-navy)]">Solution</dt>
+          <dt className="font-semibold text-[var(--ts-navy)]">{t.solution}</dt>
           <dd className="text-[var(--ts-gray)]">{solution}</dd>
         </div>
       </dl>

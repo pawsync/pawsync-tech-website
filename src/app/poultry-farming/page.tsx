@@ -15,11 +15,13 @@ import PoultryMultiHouseMonitoring from "@/components/terrasense/poultry/Poultry
 import PoultryConnectivity from "@/components/terrasense/poultry/PoultryConnectivity";
 import PoultryCustomElectronics from "@/components/terrasense/poultry/PoultryCustomElectronics";
 import PoultryApplications from "@/components/terrasense/poultry/PoultryApplications";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Poultry Farm Technology & Automation | PawSync",
   description:
     "Custom IoT devices and engineering for poultry farm automation — poultry house monitoring, temperature and humidity sensors, ventilation control, smart feeding, water monitoring, and LoRa-connected poultry farm controllers.",
+  alternates: buildAlternates("en", "poultry-farming"),
 };
 
 const faqs = [

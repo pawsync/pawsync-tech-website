@@ -20,11 +20,13 @@ import ServiceCard from "@/components/terrasense/ServiceCard";
 import FAQAccordion, { type FAQItem } from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Custom Electronics & IoT Product Development | PawSync",
   description:
     "Custom PCB design, embedded firmware development, GPS and LoRa IoT engineering, and prototype-to-production support for animal and farm technology products.",
+  alternates: buildAlternates("en", "custom-electronics"),
 };
 
 const services: { icon: LucideIcon; title: string; description: string }[] = [

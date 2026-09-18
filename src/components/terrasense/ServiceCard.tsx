@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, type LucideIcon } from "lucide-react";
+import type { Locale } from "@/i18n/config";
 
 interface ServiceCardProps {
   id?: string;
@@ -7,9 +8,16 @@ interface ServiceCardProps {
   title: string;
   description: string;
   href?: string;
+  locale?: Locale;
 }
 
-export default function ServiceCard({ id, icon: Icon, title, description, href }: ServiceCardProps) {
+const learnMoreLabels: Record<Locale, string> = {
+  en: "Learn more",
+  de: "Mehr erfahren",
+  fr: "En savoir plus",
+};
+
+export default function ServiceCard({ id, icon: Icon, title, description, href, locale = "en" }: ServiceCardProps) {
   const content = (
     <>
       <span
@@ -25,7 +33,7 @@ export default function ServiceCard({ id, icon: Icon, title, description, href }
       <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{description}</p>
       {href && (
         <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
-          Learn more
+          {learnMoreLabels[locale]}
           <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
         </span>
       )}

@@ -17,11 +17,13 @@ import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Pet Technology | PawSync",
   description:
     "Smart pet devices we design and build — GPS trackers, activity monitors, smart collars, virtual fencing, RFID access, smart feeders, and more.",
+  alternates: buildAlternates("en", "pet-technology"),
 };
 
 const solutions = [

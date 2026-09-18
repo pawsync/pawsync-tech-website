@@ -15,11 +15,13 @@ import ServiceCard from "@/components/terrasense/ServiceCard";
 import FarmMapDashboard from "@/components/terrasense/FarmMapDashboard";
 import FAQAccordion from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Virtual Fencing | PawSync",
   description:
     "GPS and wireless virtual fencing systems that give animals freedom to roam within defined zones, reducing dependency on traditional physical fencing.",
+  alternates: buildAlternates("en", "virtual-fencing"),
 };
 
 const capabilities = [

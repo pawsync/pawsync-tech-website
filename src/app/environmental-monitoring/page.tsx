@@ -13,11 +13,13 @@ import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Environmental Monitoring | PawSync",
   description:
     "24/7 environmental sensing for barns, poultry houses, greenhouses, and shelters — temperature, humidity, air quality, and more.",
+  alternates: buildAlternates("en", "environmental-monitoring"),
 };
 
 const sensors = [

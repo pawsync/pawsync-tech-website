@@ -12,11 +12,13 @@ import {
   WHATSAPP_DISPLAY,
   WHATSAPP_URL,
 } from "@/lib/contact";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Contact | PawSync",
   description:
     "Tell PawSync about your animal-tech or farm IoT idea and our engineering team will help turn the concept into a practical electronic product.",
+  alternates: buildAlternates("en", "contact"),
 };
 
 export default function ContactPage() {

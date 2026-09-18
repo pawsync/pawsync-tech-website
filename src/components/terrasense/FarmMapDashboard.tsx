@@ -1,15 +1,38 @@
 import { MapPin, Radio } from "lucide-react";
+import type { Locale } from "@/i18n/config";
 
-const markers = [
-  { top: "28%", left: "22%", label: "Herd A · 42 head", tone: "accent" as const },
-  { top: "55%", left: "48%", label: "Herd B · 18 head", tone: "accent" as const },
-  { top: "70%", left: "74%", label: "Gateway", tone: "gateway" as const },
-  { top: "20%", left: "68%", label: "Unit #114", tone: "warn" as const },
-];
+const markersByLocale: Record<Locale, { top: string; left: string; label: string; tone: "accent" | "gateway" | "warn" }[]> = {
+  en: [
+    { top: "28%", left: "22%", label: "Herd A · 42 head", tone: "accent" },
+    { top: "55%", left: "48%", label: "Herd B · 18 head", tone: "accent" },
+    { top: "70%", left: "74%", label: "Gateway", tone: "gateway" },
+    { top: "20%", left: "68%", label: "Unit #114", tone: "warn" },
+  ],
+  de: [
+    { top: "28%", left: "22%", label: "Herde A · 42 Tiere", tone: "accent" },
+    { top: "55%", left: "48%", label: "Herde B · 18 Tiere", tone: "accent" },
+    { top: "70%", left: "74%", label: "Gateway", tone: "gateway" },
+    { top: "20%", left: "68%", label: "Einheit #114", tone: "warn" },
+  ],
+  fr: [
+    { top: "28%", left: "22%", label: "Troupeau A · 42 têtes", tone: "accent" },
+    { top: "55%", left: "48%", label: "Troupeau B · 18 têtes", tone: "accent" },
+    { top: "70%", left: "74%", label: "Passerelle", tone: "gateway" },
+    { top: "20%", left: "68%", label: "Unité #114", tone: "warn" },
+  ],
+};
+
+const captions: Record<Locale, { mapLabel: string; connected: string }> = {
+  en: { mapLabel: "Farm Map — Sample View", connected: "4 units connected" },
+  de: { mapLabel: "Hofkarte — Beispielansicht", connected: "4 Einheiten verbunden" },
+  fr: { mapLabel: "Carte de l'exploitation — Exemple", connected: "4 unités connectées" },
+};
 
 // A dashboard mockup, not a real map — illustrates what a farm map view of
 // tracked animals and zones would show.
-export default function FarmMapDashboard() {
+export default function FarmMapDashboard({ locale = "en" }: { locale?: Locale }) {
+  const markers = markersByLocale[locale];
+  const caption = captions[locale];
   return (
     <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-white/10 bg-[var(--ts-navy)] shadow-xl">
       <div
@@ -54,11 +77,11 @@ export default function FarmMapDashboard() {
 
       <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
         <MapPin className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />
-        Farm Map — Sample View
+        {caption.mapLabel}
       </div>
       <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
         <Radio className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />
-        4 units connected
+        {caption.connected}
       </div>
     </div>
   );

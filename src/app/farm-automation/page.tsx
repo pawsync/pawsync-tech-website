@@ -3,11 +3,13 @@ import { Fan, MonitorSmartphone, Terminal, UtensilsCrossed, Warehouse, Droplets 
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Farm Automation | PawSync",
   description:
     "Intelligent control systems for climate, water, feeding, and infrastructure — with smartphone and dashboard control for modern farms.",
+  alternates: buildAlternates("en", "farm-automation"),
 };
 
 const categories = [

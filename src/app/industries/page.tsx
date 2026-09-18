@@ -20,11 +20,13 @@ import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Industries | PawSync",
   description:
     "PawSync designs electronics for pet-tech companies, livestock, dairy and poultry farms, veterinary technology, wildlife research, and AgriTech startups.",
+  alternates: buildAlternates("en", "industries"),
 };
 
 const industries: { icon: LucideIcon; label: string; href?: string }[] = [

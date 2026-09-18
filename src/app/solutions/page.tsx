@@ -16,11 +16,13 @@ import {
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import CTABanner from "@/components/terrasense/CTABanner";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Smart Animal & Farm Technology Solutions | PawSync",
   description:
     "GPS animal tracking, virtual fencing, health monitoring, smart feeding, livestock monitoring, farm automation, smart irrigation, environmental monitoring, disaster detection, wireless sensor networks and custom IoT systems.",
+  alternates: buildAlternates("en", "solutions"),
 };
 
 interface Category {

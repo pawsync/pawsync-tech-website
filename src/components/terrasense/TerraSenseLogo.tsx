@@ -1,17 +1,24 @@
 import Image from "next/image";
+import type { Locale } from "@/i18n/config";
+
+const altTextByLocale: Record<Locale, string> = {
+  en: "PawSync — Home",
+  de: "PawSync — Startseite",
+  fr: "PawSync — Accueil",
+};
 
 // Official PawSync logo, supplied as a flat (non-transparent) white-background
 // PNG at 1536x1024 (3:2). On the light header background it blends in; on the
 // dark footer it's wrapped in a small white card so the baked-in white
 // background reads as an intentional badge rather than a rendering glitch.
 // The image itself is never cropped, stretched, or recolored.
-export default function TerraSenseLogo({ variant = "dark" }: { variant?: "dark" | "light" }) {
+export default function TerraSenseLogo({ variant = "dark", locale = "en" }: { variant?: "dark" | "light"; locale?: Locale }) {
   const isLight = variant === "light";
 
   const image = (
     <Image
       src="/brand/pawsync-logo.png"
-      alt="PawSync — Home"
+      alt={altTextByLocale[locale]}
       width={1536}
       height={1024}
       priority

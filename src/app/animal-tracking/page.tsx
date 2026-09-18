@@ -15,11 +15,13 @@ import ServiceCard from "@/components/terrasense/ServiceCard";
 import FarmMapDashboard from "@/components/terrasense/FarmMapDashboard";
 import FAQAccordion from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Animal Tracking | PawSync",
   description:
     "GPS and GNSS animal tracking systems for pets, livestock and other animals — real-time location, geofence alerts, and long-range connectivity.",
+  alternates: buildAlternates("en", "animal-tracking"),
 };
 
 const capabilities = [

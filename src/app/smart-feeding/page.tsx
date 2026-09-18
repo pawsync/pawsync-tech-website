@@ -15,11 +15,13 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import FAQAccordion from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Smart Feeding | PawSync",
   description:
     "Automated feeding systems with schedules, portion control, RFID identification, feed-level sensors and remote monitoring for pets, livestock and multi-animal facilities.",
+  alternates: buildAlternates("en", "smart-feeding"),
 };
 
 const capabilities = [

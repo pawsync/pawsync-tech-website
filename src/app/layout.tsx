@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import TerraSenseHeader from "@/components/terrasense/TerraSenseHeader";
 import TerraSenseFooter from "@/components/terrasense/TerraSenseFooter";
 import BackToTop from "@/components/terrasense/BackToTop";
+import type { Locale } from "@/i18n/config";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,10 +32,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const headersList = await headers();
+  const locale = (headersList.get("x-locale") as Locale | null) ?? "en";
+
   return (
     <html
-      lang="en"
+      lang={locale}
       data-scroll-behavior="smooth"
       className={`${inter.variable} ${manrope.variable} h-full antialiased`}
     >

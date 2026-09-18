@@ -12,11 +12,13 @@ import {
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "About | PawSync",
   description:
     "PawSync combines electronics engineering, IoT connectivity, embedded systems, sensors, and automation to build practical technology for animal care and agriculture.",
+  alternates: buildAlternates("en", "about"),
 };
 
 const focusAreas = [

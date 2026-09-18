@@ -17,11 +17,13 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import FarmMapDashboard from "@/components/terrasense/FarmMapDashboard";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Livestock Technology | PawSync",
   description:
     "Livestock GPS tracking, virtual fencing, RFID identification, and health monitoring hardware for cattle, sheep, goats, and horses.",
+  alternates: buildAlternates("en", "livestock-technology"),
 };
 
 const solutions = [

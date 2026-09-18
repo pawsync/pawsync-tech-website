@@ -3,11 +3,13 @@ import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import ProjectCard from "@/components/terrasense/ProjectCard";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Projects | PawSync",
   description:
     "Example PawSync engineering builds — GPS trackers, virtual fencing prototypes, farm sensors, and IoT gateways.",
+  alternates: buildAlternates("en", "projects"),
 };
 
 const projects = [

@@ -3,11 +3,13 @@ import { CheckCircle2 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import { buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "How We Work | PawSync",
   description:
     "Our engineering process from requirement analysis through production support — the stages every PawSync project moves through.",
+  alternates: buildAlternates("en", "how-we-work"),
 };
 
 const stages = [
