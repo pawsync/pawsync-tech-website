@@ -159,12 +159,21 @@ export default function TerraSenseContactForm({ locale = "en" }: { locale?: Loca
     setStatus("submitting");
 
     try {
+      // Every page on this site — including "/" — is rendered on demand
+      // by a Next.js function, not served as a static file, and those
+      // functions have no POST handler. Posting there returns a non-OK
+      // response before Netlify's Forms processing ever sees it. We post
+      // to /project-inquiry.html instead: the one genuine static file in
+      // this deploy (see public/project-inquiry.html), which is served
+      // directly from Netlify's CDN and is what Netlify actually scanned
+      // to register this form, so a POST to it is reliably intercepted.
+      //
       // Sent as multipart/form-data (not URL-encoded) so any attached
       // files are transmitted along with the rest of the fields — the
       // browser sets the correct Content-Type header, including the
       // multipart boundary, automatically when the body is a FormData
       // instance. Do not set Content-Type manually here.
-      const response = await fetch("/", {
+      const response = await fetch("/project-inquiry.html", {
         method: "POST",
         body: new FormData(event.currentTarget),
       });
@@ -197,7 +206,7 @@ export default function TerraSenseContactForm({ locale = "en" }: { locale?: Loca
     <form
       name="project-inquiry"
       method="POST"
-      action="/"
+      action="/project-inquiry.html"
       encType="multipart/form-data"
       data-netlify="true"
       netlify-honeypot="bot-field"
