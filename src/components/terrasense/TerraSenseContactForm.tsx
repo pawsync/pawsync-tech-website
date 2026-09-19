@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
-import { CheckCircle2, Paperclip, Send } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Paperclip, Send } from "lucide-react";
 import type { Locale } from "@/i18n/config";
 
 const projectTypesByLocale: Record<Locale, string[]> = {
@@ -43,6 +43,9 @@ const projectTypesByLocale: Record<Locale, string[]> = {
   ],
 };
 
+// Kept identical to the values in public/project-inquiry.html (the static
+// detection copy of this form) so Netlify's dashboard shows the same
+// option set regardless of which locale a visitor submitted from.
 const quantitiesByLocale: Record<Locale, string[]> = {
   en: ["Prototype Only", "1–10", "10–100", "100–1,000", "1,000+"],
   de: ["Nur Prototyp", "1–10", "10–100", "100–1.000", "1.000+"],
@@ -52,6 +55,7 @@ const quantitiesByLocale: Record<Locale, string[]> = {
 const dict: Record<Locale, {
   successHeading: string;
   successBody: string;
+  errorMessage: string;
   fullName: string;
   company: string;
   email: string;
@@ -66,11 +70,14 @@ const dict: Record<Locale, {
   uploadLabel: string;
   uploadCta: string;
   submit: string;
+  submitting: string;
 }> = {
   en: {
-    successHeading: "Thanks — your project request has been recorded",
+    successHeading: "Thank you.",
     successBody:
-      "This is a demo form with no backend connected yet, so nothing was actually sent. A production version of this site would route this request to our engineering team and follow up by email.",
+      "Your project request has been received. The PawSync team will review your requirements and contact you shortly.",
+    errorMessage:
+      "Something went wrong and your request could not be sent. Please try again, or email us directly at contact@pawsync.tech.",
     fullName: "Full Name",
     company: "Company",
     email: "Email",
@@ -85,11 +92,14 @@ const dict: Record<Locale, {
     uploadLabel: "Upload specifications or product requirements",
     uploadCta: "Attach a file (optional)",
     submit: "Submit Project Request",
+    submitting: "Sending…",
   },
   de: {
-    successHeading: "Vielen Dank — Ihre Projektanfrage wurde erfasst",
+    successHeading: "Vielen Dank.",
     successBody:
-      "Dies ist ein Demoformular ohne angebundenes Backend, es wurde also nichts tatsächlich versendet. Eine Produktivversion dieser Website würde diese Anfrage an unser Engineering-Team weiterleiten und per E-Mail nachfassen.",
+      "Ihre Projektanfrage ist bei uns eingegangen. Das PawSync-Team prüft Ihre Anforderungen und meldet sich in Kürze bei Ihnen.",
+    errorMessage:
+      "Leider ist ein Fehler aufgetreten, und Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an contact@pawsync.tech.",
     fullName: "Vollständiger Name",
     company: "Unternehmen",
     email: "E-Mail",
@@ -104,11 +114,14 @@ const dict: Record<Locale, {
     uploadLabel: "Spezifikationen oder Anforderungen hochladen",
     uploadCta: "Datei anhängen (optional)",
     submit: "Projektanfrage senden",
+    submitting: "Wird gesendet…",
   },
   fr: {
-    successHeading: "Merci — votre demande de projet a été enregistrée",
+    successHeading: "Merci.",
     successBody:
-      "Il s'agit d'un formulaire de démonstration sans backend connecté ; rien n'a donc été réellement envoyé. Une version en production de ce site transmettrait cette demande à notre équipe d'ingénierie et assurerait un suivi par e-mail.",
+      "Votre demande de projet a bien été reçue. L'équipe PawSync examinera vos besoins et vous contactera prochainement.",
+    errorMessage:
+      "Une erreur s'est produite et votre demande n'a pas pu être envoyée. Veuillez réessayer ou nous écrire directement à contact@pawsync.tech.",
     fullName: "Nom complet",
     company: "Entreprise",
     email: "E-mail",
@@ -123,30 +136,54 @@ const dict: Record<Locale, {
     uploadLabel: "Téléverser des spécifications ou exigences produit",
     uploadCta: "Joindre un fichier (facultatif)",
     submit: "Envoyer la demande de projet",
+    submitting: "Envoi en cours…",
   },
 };
 
 const inputClasses =
   "w-full rounded-xl border border-[var(--ts-navy)]/15 bg-white px-3.5 py-2.5 text-[0.9375rem] text-[var(--ts-navy)] transition-colors focus:border-[var(--ts-green)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ts-green)] focus-visible:ring-offset-1";
 
+type Status = "idle" | "submitting" | "success" | "error";
+
 export default function TerraSenseContactForm({ locale = "en" }: { locale?: Locale }) {
   const idPrefix = useId();
-  const [status, setStatus] = useState<"idle" | "submitted">("idle");
+  const [status, setStatus] = useState<Status>("idle");
   const [fileNames, setFileNames] = useState<string[]>([]);
   const t = dict[locale];
   const projectTypes = projectTypesByLocale[locale];
   const quantities = quantitiesByLocale[locale];
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // No backend is connected yet — this records the request locally and
-    // tells the visitor honestly rather than pretending it was sent.
-    setStatus("submitted");
+    if (status === "submitting") return;
+    setStatus("submitting");
+
+    try {
+      // Sent as multipart/form-data (not URL-encoded) so any attached
+      // files are transmitted along with the rest of the fields — the
+      // browser sets the correct Content-Type header, including the
+      // multipart boundary, automatically when the body is a FormData
+      // instance. Do not set Content-Type manually here.
+      const response = await fetch("/", {
+        method: "POST",
+        body: new FormData(event.currentTarget),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+      } else {
+        console.error("Netlify Forms submission failed:", response.status, response.statusText);
+        setStatus("error");
+      }
+    } catch (err) {
+      console.error("Netlify Forms submission error:", err);
+      setStatus("error");
+    }
   };
 
-  if (status === "submitted") {
+  if (status === "success") {
     return (
-      <div className="rounded-2xl border border-[var(--ts-green)]/30 bg-[var(--ts-green)]/8 p-8 text-center">
+      <div role="status" aria-live="polite" className="rounded-2xl border border-[var(--ts-green)]/30 bg-[var(--ts-green)]/8 p-8 text-center">
         <CheckCircle2 className="mx-auto h-10 w-10 text-[var(--ts-green)]" aria-hidden="true" />
         <h3 className="mt-4 font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
           {t.successHeading}
@@ -157,7 +194,31 @@ export default function TerraSenseContactForm({ locale = "en" }: { locale?: Loca
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+    <form
+      name="project-inquiry"
+      method="POST"
+      action="/"
+      encType="multipart/form-data"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
+      className="space-y-6"
+      noValidate
+    >
+      <input type="hidden" name="form-name" value="project-inquiry" />
+      <p hidden>
+        <label>
+          Don&apos;t fill this out if you&apos;re human: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
+
+      {status === "error" && (
+        <div role="status" aria-live="polite" className="flex items-start gap-2.5 rounded-xl border border-red-400/30 bg-red-50 px-4 py-3 text-sm text-red-700">
+          <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+          <p>{t.errorMessage}</p>
+        </div>
+      )}
+
       <div className="grid gap-6 sm:grid-cols-2">
         <Field id={`${idPrefix}-name`} label={t.fullName} required>
           <input id={`${idPrefix}-name`} name="name" type="text" required className={inputClasses} />
@@ -241,10 +302,11 @@ export default function TerraSenseContactForm({ locale = "en" }: { locale?: Loca
 
       <button
         type="submit"
-        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--ts-dark-green)] px-6 py-3.5 text-base font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--ts-navy)] hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[var(--ts-green)] focus-visible:ring-offset-2 sm:w-auto"
+        disabled={status === "submitting"}
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--ts-dark-green)] px-6 py-3.5 text-base font-semibold text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[var(--ts-navy)] hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[var(--ts-green)] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:bg-[var(--ts-dark-green)] sm:w-auto"
       >
         <Send className="h-4 w-4" aria-hidden="true" />
-        {t.submit}
+        {status === "submitting" ? t.submitting : t.submit}
       </button>
     </form>
   );

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>PawSync — Form detection</title>
+</head>
+<body>
+<!--
+  This page exists only so Netlify's build-time form scanner can discover
+  the "project-inquiry" form. Every real page on this site (/contact,
+  /de/contact, /fr/contact) is server-rendered on demand rather than
+  exported as static HTML, so Netlify never sees their markup at deploy
+  time. This file mirrors the same form name, honeypot field, field
+  names, and multipart encoding (needed for the file-attachment field)
+  so Netlify registers the form correctly; the real, styled, localized
+  form on the contact pages submits to it via fetch(). This page itself
+  is never linked to and is marked noindex.
+-->
+<form name="project-inquiry" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="project-inquiry" />
+  <p hidden>
+    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+  </p>
+  <input type="text" name="name" />
+  <input type="text" name="company" />
+  <input type="email" name="email" />
+  <input type="tel" name="phone" />
+  <input type="text" name="country" />
+  <select name="projectType">
+    <option value="Animal Tracking">Animal Tracking</option>
+    <option value="Virtual Fencing">Virtual Fencing</option>
+    <option value="Smart Feeding">Smart Feeding</option>
+    <option value="Health Monitoring">Health Monitoring</option>
+    <option value="Farm Automation">Farm Automation</option>
+    <option value="Environmental Monitoring">Environmental Monitoring</option>
+    <option value="Custom PCB">Custom PCB</option>
+    <option value="IoT Product Development">IoT Product Development</option>
+    <option value="Prototype Development">Prototype Development</option>
+    <option value="Other">Other</option>
+  </select>
+  <select name="quantity">
+    <option value="Prototype Only">Prototype Only</option>
+    <option value="1–10">1–10</option>
+    <option value="10–100">10–100</option>
+    <option value="100–1,000">100–1,000</option>
+    <option value="1,000+">1,000+</option>
+  </select>
+  <textarea name="description"></textarea>
+  <input type="file" name="files" multiple />
+</form>
+</body>
+</html>
