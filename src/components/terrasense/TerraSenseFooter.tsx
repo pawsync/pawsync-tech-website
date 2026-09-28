@@ -24,9 +24,9 @@ const columns: FooterColumn[] = [
   {
     headingKey: "solutions",
     links: [
-      { key: "animalTracking", href: "/solutions#tracking-location" },
-      { key: "virtualFencing", href: "/solutions#virtual-fencing" },
-      { key: "smartFeeding", href: "/solutions#smart-feeding" },
+      { key: "animalTracking", href: "/animal-tracking" },
+      { key: "virtualFencing", href: "/virtual-fencing" },
+      { key: "smartFeeding", href: "/smart-feeding" },
       { key: "healthMonitoring", href: "/solutions#health-monitoring" },
       { key: "farmAutomation", href: "/farm-automation" },
       { key: "smartIrrigation", href: "/solutions#smart-irrigation" },
@@ -63,6 +63,7 @@ const columns: FooterColumn[] = [
       { key: "projects", href: "/projects" },
       { key: "blog", href: "/blog" },
       { key: "contact", href: "/contact" },
+      { key: "privacy", href: "/privacy" },
     ],
   },
 ];
@@ -97,10 +98,12 @@ const dict: Record<Locale, Record<string, string>> = {
     projects: "Projects",
     blog: "Blog",
     contact: "Contact",
+    privacy: "Privacy Notice",
     tagline:
       "Smart electronics for animals, farms & connected environments. Custom IoT hardware, embedded firmware, and PCB engineering — from concept to production.",
     location: "Engineering & product development, remote-first",
-    rights: "PawSync Technologies. All rights reserved.",
+    rights: "PawSync. All rights reserved.",
+    engineeringCredit: "Engineering by Pak-EL LAB",
   },
   de: {
     solutions: "Lösungen",
@@ -131,10 +134,12 @@ const dict: Record<Locale, Record<string, string>> = {
     projects: "Projekte",
     blog: "Blog",
     contact: "Kontakt",
+    privacy: "Datenschutzhinweis",
     tagline:
       "Intelligente Elektronik für Tiere, Höfe und vernetzte Umgebungen. Kundenspezifische IoT-Hardware, Embedded-Firmware und Leiterplattenentwicklung — vom Konzept bis zur Serienproduktion.",
     location: "Engineering & Produktentwicklung, remote-first",
-    rights: "PawSync Technologies. Alle Rechte vorbehalten.",
+    rights: "PawSync. Alle Rechte vorbehalten.",
+    engineeringCredit: "Engineering by Pak-EL LAB",
   },
   fr: {
     solutions: "Solutions",
@@ -165,10 +170,12 @@ const dict: Record<Locale, Record<string, string>> = {
     projects: "Projets",
     blog: "Blog",
     contact: "Contact",
+    privacy: "Avis de confidentialité",
     tagline:
       "Électronique intelligente pour les animaux, les exploitations agricoles et les environnements connectés. Matériel IoT sur mesure, micrologiciels embarqués et conception de cartes PCB — du concept à la production.",
     location: "Ingénierie et développement produit, en télétravail",
-    rights: "PawSync Technologies. Tous droits réservés.",
+    rights: "PawSync. Tous droits réservés.",
+    engineeringCredit: "Engineering by Pak-EL LAB",
   },
 };
 
@@ -226,6 +233,7 @@ export default function TerraSenseFooter() {
 
         <div className="mt-14 border-t border-white/10 pt-8 text-center text-sm text-white/50 sm:text-left">
           <p>© {new Date().getFullYear()} {t.rights}</p>
+          <p className="mt-1 text-xs text-white/30">{t.engineeringCredit}</p>
         </div>
       </div>
     </footer>

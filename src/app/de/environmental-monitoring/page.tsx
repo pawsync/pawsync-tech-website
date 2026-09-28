@@ -13,13 +13,14 @@ import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import CTABanner from "@/components/terrasense/CTABanner";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Umweltüberwachung | PawSync",
   description:
     "24/7-Umweltsensorik für Ställe, Geflügelhäuser, Gewächshäuser und Unterkünfte — Temperatur, Luftfeuchtigkeit, Luftqualität und mehr.",
   alternates: buildAlternates("de", "environmental-monitoring"),
+  openGraph: buildOpenGraph("de", "environmental-monitoring"),
 };
 
 const sensors = [
@@ -44,7 +45,7 @@ export default function EnvironmentalMonitoringPageDe() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Umweltüberwachung</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           24/7-Umweltbewusstsein für den Hof
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">

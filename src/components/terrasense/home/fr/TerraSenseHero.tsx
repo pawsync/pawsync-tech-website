@@ -101,14 +101,13 @@ export default function TerraSenseHero() {
           </div>
 
           {/* Overlay 1 — live animal tracking card */}
-          <div className="absolute bottom-3 left-3 w-52 rounded-2xl border border-white/10 bg-[var(--ts-navy)]/95 p-4 shadow-xl backdrop-blur sm:-bottom-6 sm:-left-8 sm:w-60">
+          <div className="absolute bottom-3 left-3 w-52 rounded-2xl border border-white/10 bg-[var(--ts-navy)]/95 p-4 shadow-xl backdrop-blur lg:-bottom-6 lg:-left-8 lg:w-60">
             <div className="flex items-center justify-between">
               <span className="flex items-center gap-1.5 text-xs font-semibold text-[var(--ts-accent)]">
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--ts-accent)] opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--ts-accent)]" />
                 </span>
-                Bovin n°248 — En direct
+                Bovin n°248
               </span>
               <Satellite className="h-3.5 w-3.5 text-white/40" aria-hidden="true" />
             </div>
@@ -134,7 +133,7 @@ export default function TerraSenseHero() {
                 <span className="font-medium text-white/80">Fort</span>
               </div>
             </dl>
-            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] text-white/40">Dernière mise à jour : il y a 12 s</p>
+            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">Interface illustrative · données d&apos;exemple</p>
           </div>
 
           {/* Overlay 2 — environmental sensor card */}
@@ -161,6 +160,7 @@ export default function TerraSenseHero() {
                 <span className="font-medium text-[var(--ts-accent)]">En ligne</span>
               </div>
             </dl>
+            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">Interface illustrative · données d&apos;exemple</p>
           </div>
         </div>
       </div>

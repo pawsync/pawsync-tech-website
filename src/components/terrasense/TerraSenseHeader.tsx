@@ -31,9 +31,9 @@ import {
 
 const solutionsMenu: { key: string; href: string; icon: LucideIcon }[] = [
   { key: "solutionsOverview", href: "/solutions", icon: Sparkles },
-  { key: "animalTracking", href: "/solutions#tracking-location", icon: Satellite },
-  { key: "virtualFencing", href: "/solutions#virtual-fencing", icon: Radar },
-  { key: "smartFeeding", href: "/solutions#smart-feeding", icon: UtensilsCrossed },
+  { key: "animalTracking", href: "/animal-tracking", icon: Satellite },
+  { key: "virtualFencing", href: "/virtual-fencing", icon: Radar },
+  { key: "smartFeeding", href: "/smart-feeding", icon: UtensilsCrossed },
   { key: "healthMonitoring", href: "/solutions#health-monitoring", icon: HeartPulse },
   { key: "livestockMonitoring", href: "/livestock-technology", icon: Tractor },
   { key: "petTechnology", href: "/pet-technology", icon: Dog },

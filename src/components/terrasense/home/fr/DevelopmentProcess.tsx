@@ -68,7 +68,7 @@ export default function DevelopmentProcess() {
             <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--ts-dark-green)] shadow-md ring-4 ring-[var(--ts-bg)]">
               <step.icon className="h-5 w-5 text-white" aria-hidden="true" />
             </div>
-            <div className="min-w-0 sm:mt-4 sm:px-1.5">
+            <div className="min-w-0 [overflow-wrap:anywhere] sm:mt-4 sm:px-1.5">
               <span className="text-xs font-bold text-[var(--ts-green)]">{String(index + 1).padStart(2, "0")}</span>
               <h3 className="mt-1 font-[family-name:var(--font-manrope)] text-base font-bold text-[var(--ts-navy)]">
                 {step.title}

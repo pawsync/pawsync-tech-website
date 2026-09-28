@@ -15,6 +15,8 @@ export const routes = [
   "about",
   "animal-tracking",
   "blog",
+  "blog/gnss-lora-vs-gnss-ltem",
+  "blog/low-power-animal-tracker-design",
   "contact",
   "custom-electronics",
   "environmental-monitoring",
@@ -24,6 +26,7 @@ export const routes = [
   "livestock-technology",
   "pet-technology",
   "poultry-farming",
+  "privacy",
   "projects",
   "smart-feeding",
   "solutions",
@@ -97,5 +100,27 @@ export function buildAlternates(locale: Locale, route: string): Metadata["altern
   return {
     canonical: absoluteUrl(locale, route),
     languages,
+  };
+}
+
+// Builds a page's `openGraph` field. Next.js does not field-merge nested
+// metadata objects between layout and page — a page-level `openGraph`
+// entirely replaces the root layout's, rather than filling in just the
+// fields it omits. Every page that needs its own canonical `url` here must
+// therefore also restate `siteName`/`type`/`images`, or those silently
+// disappear from that page's social metadata.
+export function buildOpenGraph(locale: Locale, route: string): Metadata["openGraph"] {
+  return {
+    siteName: "PawSync",
+    type: "website",
+    url: absoluteUrl(locale, route),
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "PawSync — Custom Electronics & IoT Engineering for Animals & Farms",
+      },
+    ],
   };
 }

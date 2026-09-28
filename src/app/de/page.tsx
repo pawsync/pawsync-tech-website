@@ -9,7 +9,7 @@ import IndustriesGrid from "@/components/terrasense/home/de/IndustriesGrid";
 import DevelopmentProcess from "@/components/terrasense/home/de/DevelopmentProcess";
 import CapabilitiesStrip from "@/components/terrasense/home/de/CapabilitiesStrip";
 import CTABanner from "@/components/terrasense/CTABanner";
-import { buildAlternates } from "@/i18n/config";
+import { absoluteUrl, buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "PawSync | Intelligente Elektronik für Tiere, Höfe & vernetzte Umgebungen",
@@ -18,11 +18,19 @@ export const metadata: Metadata = {
   alternates: buildAlternates("de", ""),
   openGraph: {
     siteName: "PawSync",
-    url: "https://pawsync.tech/de",
+    url: absoluteUrl("de", ""),
     type: "website",
     title: "PawSync | Intelligente Elektronik für Tiere, Höfe & vernetzte Umgebungen",
     description:
       "PawSync entwickelt kundenspezifische IoT-Hardware für GPS-Tiertracking, virtuelle Einzäunung, intelligente Fütterung, Hofautomatisierung und Umweltsensorik — vom Konzept bis zur Produktion.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "PawSync — Individuelle Elektronik- und IoT-Entwicklung für Tiere & Höfe",
+      },
+    ],
   },
 };
 

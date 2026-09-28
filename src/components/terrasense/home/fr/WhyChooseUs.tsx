@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
           Pourquoi travailler avec PawSync
         </h2>
         <p className="mt-4 text-lg text-[var(--ts-gray)]">
-          Rigueur d&apos;ingénierie alliée à une conception pratique et éprouvée sur le terrain.
+          Rigueur d&apos;ingénierie alliée à une conception pratique et adaptée au terrain.
         </p>
       </div>
 

@@ -16,13 +16,14 @@ import {
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import CTABanner from "@/components/terrasense/CTABanner";
 import Eyebrow from "@/components/terrasense/Eyebrow";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Smart Animal & Farm Technology Solutions | PawSync",
   description:
     "GPS animal tracking, virtual fencing, health monitoring, smart feeding, farm automation and environmental monitoring — custom IoT solutions for animals and farms.",
   alternates: buildAlternates("en", "solutions"),
+  openGraph: buildOpenGraph("en", "solutions"),
 };
 
 interface Category {
@@ -131,11 +132,11 @@ export default function SolutionsPage() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Solutions</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Smart Animal &amp; Farm Technology Solutions
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Ten problem areas, one engineering team. Every category below is
+          Eleven problem areas, one engineering team. Every category below is
           hardware, firmware and connectivity we design in-house — jump to
           the one you need, or talk to us about something that isn&apos;t
           listed yet.

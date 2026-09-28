@@ -1,8 +1,10 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
+import Link from "next/link";
 import { AlertTriangle, CheckCircle2, Paperclip, Send } from "lucide-react";
 import type { Locale } from "@/i18n/config";
+import { localizeInternalHref } from "@/i18n/config";
 
 const projectTypesByLocale: Record<Locale, string[]> = {
   en: [
@@ -69,6 +71,9 @@ const dict: Record<Locale, {
   descriptionPlaceholder: string;
   uploadLabel: string;
   uploadCta: string;
+  uploadHint: string;
+  dataUsageNote: string;
+  privacyLinkText: string;
   submit: string;
   submitting: string;
 }> = {
@@ -91,6 +96,10 @@ const dict: Record<Locale, {
     descriptionPlaceholder: "Tell us about the animals, environment, and functionality you have in mind…",
     uploadLabel: "Upload specifications or product requirements",
     uploadCta: "Attach a file (optional)",
+    uploadHint: "One file, any common document or image format, up to 8 MB total for the whole submission.",
+    dataUsageNote:
+      "The details and any file you submit here are used only to review and respond to your project inquiry.",
+    privacyLinkText: "Read our privacy notice",
     submit: "Submit Project Request",
     submitting: "Sending…",
   },
@@ -113,6 +122,10 @@ const dict: Record<Locale, {
     descriptionPlaceholder: "Erzählen Sie uns von den Tieren, der Umgebung und der gewünschten Funktionalität…",
     uploadLabel: "Spezifikationen oder Anforderungen hochladen",
     uploadCta: "Datei anhängen (optional)",
+    uploadHint: "Eine Datei, gängiges Dokument- oder Bildformat, insgesamt bis zu 8 MB für die gesamte Übermittlung.",
+    dataUsageNote:
+      "Die hier angegebenen Daten und eine eventuell beigefügte Datei werden ausschließlich zur Prüfung und Beantwortung Ihrer Projektanfrage verwendet.",
+    privacyLinkText: "Unseren Datenschutzhinweis lesen",
     submit: "Projektanfrage senden",
     submitting: "Wird gesendet…",
   },
@@ -135,6 +148,10 @@ const dict: Record<Locale, {
     descriptionPlaceholder: "Parlez-nous des animaux, de l'environnement et des fonctionnalités envisagées…",
     uploadLabel: "Téléverser des spécifications ou exigences produit",
     uploadCta: "Joindre un fichier (facultatif)",
+    uploadHint: "Un seul fichier, format de document ou d'image courant, jusqu'à 8 Mo au total pour l'ensemble de l'envoi.",
+    dataUsageNote:
+      "Les informations et le fichier éventuellement joints ici ne servent qu'à examiner et répondre à votre demande de projet.",
+    privacyLinkText: "Lire notre avis de confidentialité",
     submit: "Envoyer la demande de projet",
     submitting: "Envoi en cours…",
   },
@@ -212,7 +229,6 @@ export default function TerraSenseContactForm({ locale = "en" }: { locale?: Loca
       netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       className="space-y-6"
-      noValidate
     >
       <input type="hidden" name="form-name" value="project-inquiry" />
       <p hidden>
@@ -299,15 +315,22 @@ export default function TerraSenseContactForm({ locale = "en" }: { locale?: Loca
           <Paperclip className="h-4 w-4 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
           {fileNames.length > 0 ? fileNames.join(", ") : t.uploadCta}
         </label>
+        <p className="mt-1.5 text-xs text-[var(--ts-gray)]">{t.uploadHint}</p>
         <input
           id={`${idPrefix}-files`}
           name="files"
           type="file"
-          multiple
           className="sr-only"
           onChange={(event) => setFileNames(Array.from(event.target.files ?? []).map((f) => f.name))}
         />
       </div>
+
+      <p className="text-xs text-[var(--ts-gray)]">
+        {t.dataUsageNote}{" "}
+        <Link href={localizeInternalHref(locale, "/privacy")} className="font-semibold text-[var(--ts-dark-green)] hover:underline">
+          {t.privacyLinkText}
+        </Link>
+      </p>
 
       <button
         type="submit"

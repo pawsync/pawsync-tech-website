@@ -16,13 +16,14 @@ import {
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import CTABanner from "@/components/terrasense/CTABanner";
 import Eyebrow from "@/components/terrasense/Eyebrow";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Solutions technologiques intelligentes pour animaux & exploitations agricoles | PawSync",
   description:
     "Suivi GPS des animaux, clôture virtuelle, santé, alimentation intelligente, automatisation agricole et surveillance environnementale — IoT sur mesure pour animaux et exploitations.",
   alternates: buildAlternates("fr", "solutions"),
+  openGraph: buildOpenGraph("fr", "solutions"),
 };
 
 interface Category {
@@ -131,11 +132,11 @@ export default function SolutionsPageFr() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Solutions</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Solutions technologiques intelligentes pour animaux &amp; exploitations agricoles
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Dix domaines de problèmes, une seule équipe d&apos;ingénierie.
+          Onze domaines de problèmes, une seule équipe d&apos;ingénierie.
           Chaque catégorie ci-dessous représente du matériel, du
           micrologiciel et de la connectivité que nous concevons en interne
           — accédez directement à celle dont vous avez besoin, ou

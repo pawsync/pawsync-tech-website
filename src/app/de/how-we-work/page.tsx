@@ -3,13 +3,14 @@ import { CheckCircle2 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "So arbeiten wir | PawSync",
   description:
     "Unser Engineering-Prozess von der Anforderungsanalyse bis zur Produktionsunterstützung — die Phasen, die jedes PawSync-Projekt durchläuft.",
   alternates: buildAlternates("de", "how-we-work"),
+  openGraph: buildOpenGraph("de", "how-we-work"),
 };
 
 const stages = [
@@ -40,7 +41,7 @@ export default function HowWeWorkPageDe() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>So arbeiten wir</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Engineering vom Konzept bis zur Serienproduktion
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
@@ -75,7 +76,7 @@ export default function HowWeWorkPageDe() {
             {deliverables.map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-2 rounded-xl border border-[var(--ts-navy)]/8 bg-white px-3.5 py-2.5 text-left text-sm font-medium text-[var(--ts-navy)] shadow-[0_1px_2px_rgba(14,27,38,0.04)]"
+                className="flex min-w-0 items-center gap-2 rounded-xl border border-[var(--ts-navy)]/8 bg-white px-3.5 py-2.5 text-left text-sm font-medium text-[var(--ts-navy)] shadow-[0_1px_2px_rgba(14,27,38,0.04)] [overflow-wrap:anywhere]"
               >
                 <CheckCircle2 className="h-4 w-4 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
                 {item}

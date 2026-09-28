@@ -12,13 +12,14 @@ import {
   WHATSAPP_DISPLAY,
   WHATSAPP_URL,
 } from "@/lib/contact";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Contact | PawSync",
   description:
     "Parlez à PawSync de votre idée Animal-Tech ou d'IoT agricole, et notre équipe d'ingénierie vous aidera à transformer le concept en un produit électronique concret.",
   alternates: buildAlternates("fr", "contact"),
+  openGraph: buildOpenGraph("fr", "contact"),
 };
 
 export default function ContactPageFr() {
@@ -30,7 +31,7 @@ export default function ContactPageFr() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           <div>
             <Eyebrow align="left">Contact</Eyebrow>
-            <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+            <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
               Une idée Animal-Tech ou d&apos;IoT agricole ?
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-[var(--ts-gray)]">

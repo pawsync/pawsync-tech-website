@@ -26,13 +26,13 @@ const smallerSolutions: { icon: LucideIcon; title: string; description: string; 
     icon: Radar,
     title: "Virtuelle Einzäunung",
     description: "GPS- oder Funk-basierte Grenzsysteme, die helfen, Tierbewegungen ohne physische Einzäunung zu überwachen.",
-    href: "/de/solutions#virtual-fencing",
+    href: "/de/virtual-fencing",
   },
   {
     icon: UtensilsCrossed,
     title: "Intelligente Fütterungssysteme",
     description: "Automatisierte Fütterungsgeräte mit Zeitplänen, Portionskontrolle, Sensoren und Fernüberwachung.",
-    href: "/de/solutions#smart-feeding",
+    href: "/de/smart-feeding",
   },
   {
     icon: HeartPulse,
@@ -92,7 +92,7 @@ export default function SolutionsOverview() {
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         {/* Featured 1: real photo */}
         <Link
-          href="/de/solutions#tracking-location"
+          href="/de/animal-tracking"
           className="group relative flex flex-col overflow-hidden rounded-3xl border border-[var(--ts-navy)]/8 bg-white shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-12px_rgba(14,27,38,0.18)]"
         >
           <div className="relative h-48 w-full overflow-hidden">

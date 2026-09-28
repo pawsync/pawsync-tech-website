@@ -26,13 +26,13 @@ const smallerSolutions: { icon: LucideIcon; title: string; description: string; 
     icon: Radar,
     title: "Virtual Fencing",
     description: "GPS or wireless boundary systems that help monitor animal movement without traditional physical fencing.",
-    href: "/solutions#virtual-fencing",
+    href: "/virtual-fencing",
   },
   {
     icon: UtensilsCrossed,
     title: "Smart Feeding Systems",
     description: "Automated feeding devices with schedules, portion control, sensors and remote monitoring.",
-    href: "/solutions#smart-feeding",
+    href: "/smart-feeding",
   },
   {
     icon: HeartPulse,
@@ -92,7 +92,7 @@ export default function SolutionsOverview() {
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         {/* Featured 1: real photo */}
         <Link
-          href="/solutions#tracking-location"
+          href="/animal-tracking"
           className="group relative flex flex-col overflow-hidden rounded-3xl border border-[var(--ts-navy)]/8 bg-white shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-12px_rgba(14,27,38,0.18)]"
         >
           <div className="relative h-48 w-full overflow-hidden">

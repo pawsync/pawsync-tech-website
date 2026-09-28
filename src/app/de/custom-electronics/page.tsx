@@ -20,13 +20,14 @@ import ServiceCard from "@/components/terrasense/ServiceCard";
 import FAQAccordion, { type FAQItem } from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
 import Eyebrow from "@/components/terrasense/Eyebrow";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Kundenspezifische Elektronik & IoT-Produktentwicklung | PawSync",
   description:
     "Kundenspezifisches Leiterplattendesign, Embedded-Firmware und GPS-/LoRa-IoT-Engineering — von der Prototypentwicklung bis zur Serienproduktion für Tier- und Hoftechnologie.",
   alternates: buildAlternates("de", "custom-electronics"),
+  openGraph: buildOpenGraph("de", "custom-electronics"),
 };
 
 const services: { icon: LucideIcon; title: string; description: string }[] = [
@@ -155,7 +156,7 @@ export default function CustomElectronicsPageDe() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Engineering-Dienstleistungen</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Kundenspezifische Elektronik &amp; IoT-Produktentwicklung
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
@@ -234,7 +235,7 @@ export default function CustomElectronicsPageDe() {
       <CTABanner
         heading="Haben Sie eine Animal-Tech-Produktidee?"
         description="Von GPS-Trackern bis zu automatisierten Hofcontrollern — wir helfen, Ihre Elektronik vom Konzept bis zum Prototyp zu entwickeln."
-        primaryLabel="Ein Pet-Technology-Produkt entwickeln"
+        primaryLabel="Ihr individuelles Engineering-Projekt starten"
         primaryHref="/de/contact"
         secondaryLabel="Alle Lösungen ansehen"
         secondaryHref="/de/solutions"

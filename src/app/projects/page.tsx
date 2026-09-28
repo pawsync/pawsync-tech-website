@@ -3,29 +3,30 @@ import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import ProjectCard from "@/components/terrasense/ProjectCard";
 import CTABanner from "@/components/terrasense/CTABanner";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Projects | PawSync",
   description:
-    "Example PawSync engineering builds — GPS trackers, virtual fencing prototypes, farm sensors, and IoT gateways.",
+    "Reference designs and concept builds from PawSync — GPS trackers, virtual fencing, farm sensors, and IoT gateways.",
   alternates: buildAlternates("en", "projects"),
+  openGraph: buildOpenGraph("en", "projects"),
 };
 
 const projects = [
   {
     title: "GPS Animal Tracker",
     industry: "Pet Technology",
-    stage: "Production-Ready",
+    stage: "Reference Design",
     technology: ["GPS/GNSS", "BLE", "LTE-M"],
-    challenge: "Needed sub-meter location accuracy in a collar-mountable form factor with multi-day battery life.",
+    challenge: "Needed high-accuracy location tracking in a collar-mountable form factor with multi-day battery life.",
     solution: "Combined a low-power GNSS module with duty-cycled cellular reporting and motion-triggered wake.",
     features: ["Geofence alerts", "Activity history", "Mobile app"],
   },
   {
     title: "Smart Pet Collar",
     industry: "Pet Technology",
-    stage: "Prototype",
+    stage: "Reference Design",
     technology: ["BLE", "IMU", "Temp Sensor"],
     challenge: "Combine health monitoring and location awareness without a bulky, uncomfortable device.",
     solution: "Integrated an IMU and temperature sensor onto a compact PCB with a flexible collar housing.",
@@ -34,7 +35,7 @@ const projects = [
   {
     title: "Virtual Fencing Prototype",
     industry: "Livestock",
-    stage: "Field Testing",
+    stage: "Reference Design",
     technology: ["GPS/GNSS", "LoRa", "Solar"],
     challenge: "Contain grazing cattle across large pastures without installing physical fencing.",
     solution: "GPS collar with progressive audio cues, reporting position over a LoRa mesh to a solar gateway.",
@@ -43,7 +44,7 @@ const projects = [
   {
     title: "Livestock Monitoring Node",
     industry: "Livestock",
-    stage: "Production-Ready",
+    stage: "Reference Design",
     technology: ["LoRa", "IMU", "RFID"],
     challenge: "Track herd activity and location across terrain with poor cellular coverage.",
     solution: "Long-range LoRa nodes reporting to a central gateway, with RFID for individual identification.",
@@ -52,7 +53,7 @@ const projects = [
   {
     title: "LoRa Farm Sensor",
     industry: "Smart Agriculture",
-    stage: "Production-Ready",
+    stage: "Reference Design",
     technology: ["LoRa", "Environmental Sensors"],
     challenge: "Monitor temperature, humidity, and soil moisture across a large property with one gateway.",
     solution: "Battery-powered sensor nodes with multi-year life, reporting over a long-range LoRa network.",
@@ -61,7 +62,7 @@ const projects = [
   {
     title: "Smart Feeding Controller",
     industry: "Farm Automation",
-    stage: "Production-Ready",
+    stage: "Reference Design",
     technology: ["Load Cell", "RFID", "Wi-Fi"],
     challenge: "Deliver accurate, individually-tracked feed portions across multiple animals.",
     solution: "Load-cell dispensing with RFID recognition, logged and reviewable via a mobile dashboard.",
@@ -70,7 +71,7 @@ const projects = [
   {
     title: "Temperature & Humidity Monitor",
     industry: "Poultry Farming",
-    stage: "Production-Ready",
+    stage: "Reference Design",
     technology: ["Environmental Sensors", "Wi-Fi"],
     challenge: "Hold tight environmental tolerances in a poultry house with instant alerting on drift.",
     solution: "Multi-point sensor array with threshold-based alerts delivered to a facility dashboard.",
@@ -79,7 +80,7 @@ const projects = [
   {
     title: "Automatic Watering Controller",
     industry: "Smart Agriculture",
-    stage: "Prototype",
+    stage: "Reference Design",
     technology: ["Flow Sensor", "Soil Moisture", "Cellular IoT"],
     challenge: "Automate irrigation based on real soil conditions rather than fixed timers.",
     solution: "Soil-moisture-triggered valve control with flow monitoring and leak detection.",
@@ -88,7 +89,7 @@ const projects = [
   {
     title: "RFID Animal Identification System",
     industry: "Livestock",
-    stage: "Production-Ready",
+    stage: "Reference Design",
     technology: ["RFID", "Embedded Controller"],
     challenge: "Reliably identify individual animals at feeding and access points in outdoor conditions.",
     solution: "Weatherproof RFID readers integrated with feed and gate controllers for automated counting.",
@@ -97,7 +98,7 @@ const projects = [
   {
     title: "Environmental Alert Device",
     industry: "Animal Shelters",
-    stage: "Field Testing",
+    stage: "Reference Design",
     technology: ["Smoke Sensor", "Temp Sensor", "Cellular IoT"],
     challenge: "Detect fire and extreme-temperature risk in unattended animal housing.",
     solution: "Redundant smoke and temperature sensing with cellular-backed alerts independent of Wi-Fi.",
@@ -106,7 +107,7 @@ const projects = [
   {
     title: "Farm Gateway",
     industry: "Smart Agriculture",
-    stage: "Production-Ready",
+    stage: "Reference Design",
     technology: ["LoRaWAN", "Cellular", "Solar"],
     challenge: "Aggregate data from dozens of field sensors with no existing network infrastructure.",
     solution: "Solar-powered LoRaWAN gateway with cellular backhaul to the cloud dashboard.",
@@ -115,7 +116,7 @@ const projects = [
   {
     title: "Battery-Powered IoT Device",
     industry: "Custom Electronics",
-    stage: "Prototype",
+    stage: "Reference Design",
     technology: ["Power Management", "BLE", "Low-Power MCU"],
     challenge: "Push battery life from days to months without sacrificing sensor accuracy.",
     solution: "Aggressive duty-cycling and power-gated sensors managed by a low-power microcontroller.",
@@ -130,13 +131,16 @@ export default function ProjectsPage() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Projects</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Example engineering builds
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+          Reference designs &amp; concept builds
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Representative projects across pet technology, livestock, and
-          farm automation — the kinds of problems we design hardware to
-          solve.
+          These cards illustrate the kinds of hardware and firmware problems
+          we design for — pet technology, livestock, and farm automation.
+          They are engineering reference designs and concept work, not
+          completed client deliverables, shipped products, or field-tested
+          results. Tell us about your project and we&apos;ll scope what it
+          takes to build it.
         </p>
       </section>
 

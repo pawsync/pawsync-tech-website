@@ -15,13 +15,14 @@ import PoultryMultiHouseMonitoring from "@/components/terrasense/poultry/fr/Poul
 import PoultryConnectivity from "@/components/terrasense/poultry/fr/PoultryConnectivity";
 import PoultryCustomElectronics from "@/components/terrasense/poultry/fr/PoultryCustomElectronics";
 import PoultryApplications from "@/components/terrasense/poultry/fr/PoultryApplications";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Technologie et automatisation pour élevages avicoles | PawSync",
   description:
     "Dispositifs IoT sur mesure pour l'automatisation avicole — surveillance des bâtiments, capteurs climatiques, ventilation, alimentation intelligente et contrôleurs connectés en LoRa.",
   alternates: buildAlternates("fr", "poultry-farming"),
+  openGraph: buildOpenGraph("fr", "poultry-farming"),
 };
 
 const faqs = [

@@ -20,13 +20,14 @@ import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Branchen | PawSync",
   description:
     "PawSync entwickelt Elektronik für Pet-Tech-Unternehmen, Nutztier-, Milchvieh- und Geflügelbetriebe, Veterinärtechnologie, Wildtierforschung und AgriTech-Start-ups.",
   alternates: buildAlternates("de", "industries"),
+  openGraph: buildOpenGraph("de", "industries"),
 };
 
 const industries: { icon: LucideIcon; label: string; href?: string }[] = [
@@ -53,7 +54,7 @@ export default function IndustriesPageDe() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Branchen</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Entwickelt für Tier- &amp; Agrartechnologie
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">

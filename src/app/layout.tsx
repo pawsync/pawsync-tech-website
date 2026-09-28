@@ -29,6 +29,18 @@ export const metadata: Metadata = {
     siteName: "PawSync",
     url: "https://pawsync.tech",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "PawSync — Custom Electronics & IoT Engineering for Animals & Farms",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
   },
 };
 

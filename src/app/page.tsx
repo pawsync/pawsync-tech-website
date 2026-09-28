@@ -9,13 +9,14 @@ import IndustriesGrid from "@/components/terrasense/home/IndustriesGrid";
 import DevelopmentProcess from "@/components/terrasense/home/DevelopmentProcess";
 import CapabilitiesStrip from "@/components/terrasense/home/CapabilitiesStrip";
 import CTABanner from "@/components/terrasense/CTABanner";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "PawSync | Smart Electronics for Animals, Farms & Connected Environments",
   description:
     "PawSync designs custom IoT hardware, GPS animal tracking, virtual fencing, smart feeding, livestock monitoring, farm automation and environmental sensors — from concept to production.",
   alternates: buildAlternates("en", ""),
+  openGraph: buildOpenGraph("en", ""),
 };
 
 export default function TerraSenseHomePage() {

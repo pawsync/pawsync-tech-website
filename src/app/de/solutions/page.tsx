@@ -16,13 +16,14 @@ import {
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import CTABanner from "@/components/terrasense/CTABanner";
 import Eyebrow from "@/components/terrasense/Eyebrow";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Intelligente Tier- & Hoftechnologielösungen | PawSync",
   description:
     "GPS-Tiertracking, virtuelle Einzäunung, Gesundheitsüberwachung, intelligente Fütterung, Hofautomatisierung und Umweltüberwachung — kundenspezifische IoT-Lösungen für Tiere und Höfe.",
   alternates: buildAlternates("de", "solutions"),
+  openGraph: buildOpenGraph("de", "solutions"),
 };
 
 interface Category {
@@ -131,11 +132,11 @@ export default function SolutionsPageDe() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Lösungen</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Intelligente Tier- &amp; Hoftechnologielösungen
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Zehn Problemfelder, ein Engineering-Team. Jede Kategorie unten ist
+          Elf Problemfelder, ein Engineering-Team. Jede Kategorie unten ist
           Hardware, Firmware und Konnektivität, die wir hausintern
           entwickeln — springen Sie zu der, die Sie benötigen, oder
           sprechen Sie mit uns über etwas, das noch nicht aufgeführt ist.

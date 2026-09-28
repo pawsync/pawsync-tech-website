@@ -20,13 +20,14 @@ import ServiceCard from "@/components/terrasense/ServiceCard";
 import FAQAccordion, { type FAQItem } from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
 import Eyebrow from "@/components/terrasense/Eyebrow";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Électronique sur mesure & développement de produits IoT | PawSync",
   description:
     "Conception de cartes PCB sur mesure, micrologiciels embarqués, ingénierie IoT GPS et LoRa, et accompagnement du prototype à la production pour la technologie animale et agricole.",
   alternates: buildAlternates("fr", "custom-electronics"),
+  openGraph: buildOpenGraph("fr", "custom-electronics"),
 };
 
 const services: { icon: LucideIcon; title: string; description: string }[] = [
@@ -155,7 +156,7 @@ export default function CustomElectronicsPageFr() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Services d&apos;ingénierie</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Électronique sur mesure &amp; développement de produits IoT
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
@@ -234,7 +235,7 @@ export default function CustomElectronicsPageFr() {
       <CTABanner
         heading="Une idée de produit Animal-Tech ?"
         description="Des trackers GPS aux contrôleurs agricoles automatisés, nous pouvons vous aider à développer votre électronique du concept au prototype."
-        primaryLabel="Développer un produit de technologie animale"
+        primaryLabel="Démarrer votre projet d&apos;ingénierie sur mesure"
         primaryHref="/fr/contact"
         secondaryLabel="Voir toutes les solutions"
         secondaryHref="/fr/solutions"

@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
           Warum mit PawSync zusammenarbeiten
         </h2>
         <p className="mt-4 text-lg text-[var(--ts-gray)]">
-          Ingenieurdisziplin gepaart mit praxisnahem, felderprobtem Design.
+          Ingenieurdisziplin gepaart mit praxisnahem, feldtauglichem Design.
         </p>
       </div>
 

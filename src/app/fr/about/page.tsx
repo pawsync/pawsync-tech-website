@@ -12,13 +12,14 @@ import {
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "À propos | PawSync",
   description:
     "PawSync associe ingénierie électronique, connectivité IoT, systèmes embarqués, capteurs et automatisation pour créer une technologie pratique au service des animaux et de l'agriculture.",
   alternates: buildAlternates("fr", "about"),
+  openGraph: buildOpenGraph("fr", "about"),
 };
 
 const focusAreas = [
@@ -47,7 +48,7 @@ export default function AboutPageFr() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>À propos de PawSync</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Une technologie au service d&apos;une meilleure gestion animale et agricole
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">

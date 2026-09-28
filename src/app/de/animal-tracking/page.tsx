@@ -15,13 +15,14 @@ import ServiceCard from "@/components/terrasense/ServiceCard";
 import FarmMapDashboard from "@/components/terrasense/FarmMapDashboard";
 import FAQAccordion from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Tier-Tracking | PawSync",
   description:
     "GPS- und GNSS-Tier-Trackingsysteme für Haustiere, Nutztiere und andere Tiere — Echtzeit-Standort, Geofence-Alarme und weitreichende Konnektivität.",
   alternates: buildAlternates("de", "animal-tracking"),
+  openGraph: buildOpenGraph("de", "animal-tracking"),
 };
 
 const capabilities = [
@@ -48,7 +49,7 @@ export default function AnimalTrackingPageDe() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Tier-Tracking</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           GPS- &amp; GNSS-Tier-Trackingsysteme
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">

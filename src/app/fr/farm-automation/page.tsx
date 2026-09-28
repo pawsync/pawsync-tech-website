@@ -3,13 +3,14 @@ import { Fan, MonitorSmartphone, Terminal, UtensilsCrossed, Warehouse, Droplets 
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Automatisation agricole | PawSync",
   description:
     "Systèmes de contrôle intelligents pour le climat, l'eau, l'alimentation et les infrastructures — avec contrôle par smartphone et tableau de bord pour les exploitations modernes.",
   alternates: buildAlternates("fr", "farm-automation"),
+  openGraph: buildOpenGraph("fr", "farm-automation"),
 };
 
 const categories = [
@@ -47,7 +48,7 @@ export default function FarmAutomationPageFr() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Automatisation agricole</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Systèmes de contrôle intelligents pour les exploitations modernes
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">

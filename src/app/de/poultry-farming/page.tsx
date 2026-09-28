@@ -15,13 +15,14 @@ import PoultryMultiHouseMonitoring from "@/components/terrasense/poultry/de/Poul
 import PoultryConnectivity from "@/components/terrasense/poultry/de/PoultryConnectivity";
 import PoultryCustomElectronics from "@/components/terrasense/poultry/de/PoultryCustomElectronics";
 import PoultryApplications from "@/components/terrasense/poultry/de/PoultryApplications";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Geflügelfarm-Technologie & Automatisierung | PawSync",
   description:
     "Kundenspezifische IoT-Geräte für die Geflügelautomatisierung — Stallüberwachung, Klimasensoren, Belüftungssteuerung, intelligente Fütterung und LoRa-vernetzte Controller.",
   alternates: buildAlternates("de", "poultry-farming"),
+  openGraph: buildOpenGraph("de", "poultry-farming"),
 };
 
 const faqs = [

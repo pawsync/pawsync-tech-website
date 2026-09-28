@@ -20,13 +20,14 @@ import ServiceCard from "@/components/terrasense/ServiceCard";
 import FAQAccordion, { type FAQItem } from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
 import Eyebrow from "@/components/terrasense/Eyebrow";
-import { buildAlternates } from "@/i18n/config";
+import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Custom Electronics & IoT Product Development | PawSync",
   description:
     "Custom PCB design, embedded firmware development, GPS and LoRa IoT engineering, and prototype-to-production support for animal and farm technology products.",
   alternates: buildAlternates("en", "custom-electronics"),
+  openGraph: buildOpenGraph("en", "custom-electronics"),
 };
 
 const services: { icon: LucideIcon; title: string; description: string }[] = [
@@ -155,7 +156,7 @@ export default function CustomElectronicsPage() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Engineering Services</Eyebrow>
-        <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
           Custom Electronics &amp; IoT Product Development
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
@@ -234,7 +235,7 @@ export default function CustomElectronicsPage() {
       <CTABanner
         heading="Have an Animal-Tech Product Idea?"
         description="From GPS trackers to automated farm controllers, we can help develop your electronics from concept through prototype."
-        primaryLabel="Build a Pet Technology Product"
+        primaryLabel="Start Your Custom Engineering Project"
         primaryHref="/contact"
         secondaryLabel="View All Solutions"
         secondaryHref="/solutions"

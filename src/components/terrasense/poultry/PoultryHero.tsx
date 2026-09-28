@@ -118,10 +118,9 @@ export default function PoultryHero() {
             <div className="flex items-center justify-between">
               <span className="flex items-center gap-1.5 text-xs font-semibold text-[var(--ts-accent)]">
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--ts-accent)] opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--ts-accent)]" />
                 </span>
-                House Environment — Live
+                House Environment
               </span>
             </div>
             <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-[11px] text-white/60">
@@ -134,6 +133,7 @@ export default function PoultryHero() {
                 </div>
               ))}
             </dl>
+            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">Illustrative interface · sample data</p>
           </div>
         </div>
       </div>
