@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/og-image.png"],
   },
+  other: {
+    "p:domain_verify": "186bfd5674dd53697dc09c7373e4faa3",
+  },
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
