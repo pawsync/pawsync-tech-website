@@ -74,7 +74,7 @@ export default function EngineeredHardware() {
             Matériel connecté conçu pour les animaux et les exploitations
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-white/70">
-            Smart Livestock Tracking Device — un exemple de référence du
+            Dispositif intelligent de suivi du bétail — un exemple de référence du
             type de matériel portable que nous concevons : robuste, basse
             consommation et conçu pour résister au quotidien sur une
             exploitation agricole.

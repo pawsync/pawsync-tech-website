@@ -48,7 +48,7 @@ const categories: Category[] = [
     icon: Radar,
     title: "Clôture virtuelle",
     description:
-      "Des systèmes de délimitation GPS et sans fil qui donnent aux animaux la liberté de se déplacer dans des zones définies, avec une conscience de la localisation à la place de la clôture traditionnelle.",
+      "Des systèmes de délimitation GPS et sans fil qui donnent aux animaux la liberté de se déplacer dans des zones définies, grâce à un suivi de localisation à la place de la clôture traditionnelle.",
     points: ["Limites personnalisées et ajustables", "Alertes de mouvement en temps réel", "Prise en charge de plusieurs zones", "Configuration à distance depuis le terrain ou le bureau"],
   },
   {
@@ -113,7 +113,7 @@ const categories: Category[] = [
     title: "Réseaux de capteurs sans fil",
     description:
       "Des réseaux de nœuds de capteurs basse consommation communiquant via LoRa, BLE, Wi-Fi ou cellulaire — conçus pour couvrir de grandes exploitations sans le moindre câble.",
-    points: ["Couverture maillée LoRa longue portée", "Architecture de passerelle et de station de base", "Nœuds optimisés pour la batterie", "S'adapte d'un seul bâtiment à toute une exploitation"],
+    points: ["Couverture LoRa longue portée", "Architecture de passerelle et de station de base", "Nœuds optimisés pour la batterie", "S'adapte d'un seul bâtiment à toute une exploitation"],
   },
   {
     id: "custom-iot",

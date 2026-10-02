@@ -58,8 +58,8 @@ export default function IndustriesPage() {
           Built for animal &amp; agriculture technology
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Wherever animals and electronics meet, we&apos;ve likely built
-          something similar.
+          Wherever animals and electronics meet, it&apos;s the kind of
+          problem we design hardware to solve.
         </p>
       </section>
 

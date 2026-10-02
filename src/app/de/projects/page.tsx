@@ -38,7 +38,7 @@ const projects = [
     stage: "Referenzdesign",
     technology: ["GPS/GNSS", "LoRa", "Solar"],
     challenge: "Weidende Rinder auf großen Weideflächen eingrenzen, ohne physische Zäune zu installieren.",
-    solution: "GPS-Halsband mit progressiven Audiosignalen, das die Position über ein LoRa-Mesh an ein Solar-Gateway meldet.",
+    solution: "GPS-Halsband mit progressiven Audiosignalen, das die Position über eine LoRa-Funkstrecke an ein Solar-Gateway meldet.",
     features: ["Individuelle Zonen", "Ausbruchsalarme", "Solargestützt"],
   },
   {

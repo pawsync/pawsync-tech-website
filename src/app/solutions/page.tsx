@@ -113,7 +113,7 @@ const categories: Category[] = [
     title: "Wireless Sensor Networks",
     description:
       "Networks of low-power sensor nodes communicating over LoRa, BLE, Wi-Fi or cellular — built to cover large farms without a wire in sight.",
-    points: ["Long-range LoRa mesh coverage", "Gateway & base-station architecture", "Battery-optimized nodes", "Scales from one barn to a whole ranch"],
+    points: ["Long-range LoRa coverage", "Gateway & base-station architecture", "Battery-optimized nodes", "Scales from one barn to a whole ranch"],
   },
   {
     id: "custom-iot",

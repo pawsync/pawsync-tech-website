@@ -113,7 +113,7 @@ const categories: Category[] = [
     title: "Drahtlose Sensornetzwerke",
     description:
       "Netzwerke stromsparender Sensorknoten, die über LoRa, BLE, Wi-Fi oder Mobilfunk kommunizieren — entwickelt, um große Höfe ohne ein einziges Kabel abzudecken.",
-    points: ["Weitreichende LoRa-Mesh-Abdeckung", "Gateway- & Basisstationsarchitektur", "Stromoptimierte Knoten", "Skaliert von einem Stall bis zu einer ganzen Ranch"],
+    points: ["Weitreichende LoRa-Abdeckung", "Gateway- & Basisstationsarchitektur", "Stromoptimierte Knoten", "Skaliert von einem Stall bis zu einer ganzen Ranch"],
   },
   {
     id: "custom-iot",

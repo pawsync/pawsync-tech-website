@@ -28,7 +28,7 @@ const projects = [
     industry: "Technologie pour animaux de compagnie",
     stage: "Modèle de référence",
     technology: ["BLE", "IMU", "Capteur de temp."],
-    challenge: "Combiner suivi de santé et conscience de la localisation sans dispositif encombrant ni inconfortable.",
+    challenge: "Combiner suivi de santé et suivi de localisation sans dispositif encombrant ni inconfortable.",
     solution: "Intégration d'un IMU et d'un capteur de température sur une carte compacte avec un boîtier de collier flexible.",
     features: ["Suivi d'activité", "Alertes de température", "Rechargeable"],
   },
@@ -38,7 +38,7 @@ const projects = [
     stage: "Modèle de référence",
     technology: ["GPS/GNSS", "LoRa", "Solaire"],
     challenge: "Contenir des bovins en pâturage sur de grandes étendues sans installer de clôture physique.",
-    solution: "Collier GPS avec signaux audio progressifs, transmettant la position via un maillage LoRa vers une passerelle solaire.",
+    solution: "Collier GPS avec signaux audio progressifs, transmettant la position via une liaison LoRa longue portée vers une passerelle solaire.",
     features: ["Zones personnalisées", "Alertes d'évasion", "Alimenté par le solaire"],
   },
   {

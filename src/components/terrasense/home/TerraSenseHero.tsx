@@ -111,24 +111,24 @@ export default function TerraSenseHero() {
             </div>
             <dl className="mt-3 space-y-1.5 text-[11px] text-white/60">
               <div className="flex items-center justify-between gap-2">
-                <span className="flex items-center gap-1.5"><MapPin className="h-3 w-3 text-white/40" aria-hidden="true" />Location</span>
-                <span className="font-medium text-white/80">Pasture A</span>
+                <dt className="flex items-center gap-1.5"><MapPin className="h-3 w-3 text-white/40" aria-hidden="true" />Location</dt>
+                <dd className="font-medium text-white/80">Pasture A</dd>
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span>Geofence</span>
-                <span className="font-medium text-[var(--ts-accent)]">Inside Zone</span>
+                <dt>Geofence</dt>
+                <dd className="font-medium text-[var(--ts-accent)]">Inside Zone</dd>
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span>Activity</span>
-                <span className="font-medium text-white/80">Normal</span>
+                <dt>Activity</dt>
+                <dd className="font-medium text-white/80">Normal</dd>
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span className="flex items-center gap-1.5"><Battery className="h-3 w-3 text-white/40" aria-hidden="true" />Battery</span>
-                <span className="font-medium text-white/80">82%</span>
+                <dt className="flex items-center gap-1.5"><Battery className="h-3 w-3 text-white/40" aria-hidden="true" />Battery</dt>
+                <dd className="font-medium text-white/80">82%</dd>
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span className="flex items-center gap-1.5"><Wifi className="h-3 w-3 text-white/40" aria-hidden="true" />Signal</span>
-                <span className="font-medium text-white/80">Strong</span>
+                <dt className="flex items-center gap-1.5"><Wifi className="h-3 w-3 text-white/40" aria-hidden="true" />Signal</dt>
+                <dd className="font-medium text-white/80">Strong</dd>
               </div>
             </dl>
             <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">Illustrative interface · sample data</p>
@@ -142,20 +142,20 @@ export default function TerraSenseHero() {
             </div>
             <dl className="mt-2.5 space-y-1.5 text-[11px] text-white/60">
               <div className="flex items-center justify-between gap-2">
-                <span className="flex items-center gap-1.5"><Thermometer className="h-3 w-3 text-white/40" aria-hidden="true" />Temperature</span>
-                <span className="font-medium text-white/80">24.6°C</span>
+                <dt className="flex items-center gap-1.5"><Thermometer className="h-3 w-3 text-white/40" aria-hidden="true" />Temperature</dt>
+                <dd className="font-medium text-white/80">24.6°C</dd>
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span>Humidity</span>
-                <span className="font-medium text-white/80">61%</span>
+                <dt>Humidity</dt>
+                <dd className="font-medium text-white/80">61%</dd>
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span className="flex items-center gap-1.5"><Activity className="h-3 w-3 text-white/40" aria-hidden="true" />Air Quality</span>
-                <span className="font-medium text-[var(--ts-accent)]">Good</span>
+                <dt className="flex items-center gap-1.5"><Activity className="h-3 w-3 text-white/40" aria-hidden="true" />Air Quality</dt>
+                <dd className="font-medium text-[var(--ts-accent)]">Good</dd>
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span className="flex items-center gap-1.5"><Radio className="h-3 w-3 text-white/40" aria-hidden="true" />Gateway</span>
-                <span className="font-medium text-[var(--ts-accent)]">Online</span>
+                <dt className="flex items-center gap-1.5"><Radio className="h-3 w-3 text-white/40" aria-hidden="true" />Gateway</dt>
+                <dd className="font-medium text-[var(--ts-accent)]">Online</dd>
               </div>
             </dl>
             <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">Illustrative interface · sample data</p>

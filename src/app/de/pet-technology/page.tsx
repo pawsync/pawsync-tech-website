@@ -37,7 +37,7 @@ const solutions = [
   { icon: DoorClosed, title: "Intelligente Haustiertüren", description: "App-gesteuerte Türen, die sich nur für erkannte, autorisierte Haustiere öffnen." },
   { icon: UtensilsCrossed, title: "Intelligente Futterautomaten", description: "Geplante, portionsgesteuerte Fütterung mit Fernüberwachung." },
   { icon: Droplets, title: "Automatische Wasserüberwachung", description: "Wasserstands- und Verbrauchssensoren, die ungewöhnliche Trinkmuster erkennen." },
-  { icon: Thermometer, title: "Temperaturüberwachung für Haustiere", description: "Kontinuierliche Temperaturerfassung für frühzeitiges Bewusstsein bei möglichen Problemen." },
+  { icon: Thermometer, title: "Temperaturüberwachung für Haustiere", description: "Kontinuierliche Temperaturerfassung zur frühzeitigen Erkennung möglicher Probleme." },
   { icon: Bluetooth, title: "BLE-Haustiergeräte", description: "Stromsparende Bluetooth-Hardware für smartphone-verbundenes Zubehör." },
   { icon: MapPin, title: "Systeme zur Standortbestimmung entlaufener Haustiere", description: "Standortverlauf und Alarme zur letzten bekannten Position, um die Wiederauffindung zu beschleunigen." },
 ];

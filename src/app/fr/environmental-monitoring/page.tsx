@@ -29,7 +29,7 @@ const sensors = [
 ];
 
 const applications = [
-  { icon: Warehouse, title: "Surveillance des bâtiments d'élevage", description: "Une conscience climatique continue pour les bâtiments bovins et équins." },
+  { icon: Warehouse, title: "Surveillance des bâtiments d'élevage", description: "Une surveillance climatique continue pour les bâtiments bovins et équins." },
   { icon: PawPrint, title: "Surveillance des bâtiments avicoles", description: "Des tolérances environnementales étroites suivies en permanence." },
   { icon: Flower2, title: "Surveillance des serres", description: "Suivi de la température, de l'humidité et de la lumière pour une culture maîtrisée." },
   { icon: Home, title: "Surveillance des refuges pour animaux", description: "Des conditions confortables et sûres pour les animaux hébergés et en famille d'accueil." },
@@ -46,7 +46,7 @@ export default function EnvironmentalMonitoringPageFr() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Surveillance environnementale</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Une conscience environnementale agricole 24 h/24
+          Une surveillance environnementale agricole 24 h/24
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Des réseaux de capteurs qui veillent jour et nuit sur les

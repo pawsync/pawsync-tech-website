@@ -58,9 +58,9 @@ export default function IndustriesPageFr() {
           Conçu pour la technologie animale &amp; agricole
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Partout où les animaux et l&apos;électronique se rencontrent, il y a
-          de fortes chances que nous ayons déjà conçu quelque chose de
-          similaire.
+          Partout où les animaux et l&apos;électronique se rencontrent, c&apos;est
+          précisément le type de problème pour lequel nous concevons du
+          matériel.
         </p>
       </section>
 

@@ -74,7 +74,7 @@ export default function EngineeredHardware() {
             Vernetzte Hardware für Tiere &amp; Höfe
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-white/70">
-            Smart Livestock Tracking Device — ein Referenzbeispiel für die
+            Intelligentes Vieh-Tracking-Gerät — ein Referenzbeispiel für die
             Art von tragbarer Hardware, die wir entwickeln: robust,
             stromsparend und für den täglichen Einsatz auf dem Hof gebaut.
           </p>

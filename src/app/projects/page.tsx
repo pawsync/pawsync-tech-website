@@ -38,7 +38,7 @@ const projects = [
     stage: "Reference Design",
     technology: ["GPS/GNSS", "LoRa", "Solar"],
     challenge: "Contain grazing cattle across large pastures without installing physical fencing.",
-    solution: "GPS collar with progressive audio cues, reporting position over a LoRa mesh to a solar gateway.",
+    solution: "GPS collar with progressive audio cues, reporting position over a long-range LoRa link to a solar gateway.",
     features: ["Custom zones", "Escape alerts", "Solar-backed"],
   },
   {

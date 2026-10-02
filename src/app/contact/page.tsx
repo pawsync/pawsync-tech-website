@@ -39,66 +39,66 @@ export default function ContactPage() {
               concept into a practical electronic product.
             </p>
 
-            <dl className="mt-10 space-y-5">
+            <div className="mt-10 space-y-5">
               <div className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
-                <div className="min-w-0">
+                <dl className="min-w-0">
                   <dt className="text-sm font-semibold text-[var(--ts-navy)]">Email</dt>
                   <dd className="break-words text-sm text-[var(--ts-gray)]">
                     <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-[var(--ts-dark-green)]">
                       {CONTACT_EMAIL}
                     </a>
                   </dd>
-                </div>
+                </dl>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
-                <div className="min-w-0">
+                <dl className="min-w-0">
                   <dt className="text-sm font-semibold text-[var(--ts-navy)]">Phone</dt>
                   <dd className="break-words text-sm text-[var(--ts-gray)]">
                     <a href={`tel:${PHONE_TEL}`} className="hover:text-[var(--ts-dark-green)]">
                       {PHONE_DISPLAY}
                     </a>
                   </dd>
-                </div>
+                </dl>
               </div>
               <div className="flex items-start gap-3">
                 <MessageCircle className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
-                <div className="min-w-0">
+                <dl className="min-w-0">
                   <dt className="text-sm font-semibold text-[var(--ts-navy)]">WhatsApp</dt>
                   <dd className="break-words text-sm text-[var(--ts-gray)]">
                     <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--ts-dark-green)]">
                       {WHATSAPP_DISPLAY}
                     </a>
                   </dd>
-                </div>
+                </dl>
               </div>
               <div className="flex items-start gap-3">
                 <Globe className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
-                <div className="min-w-0">
+                <dl className="min-w-0">
                   <dt className="text-sm font-semibold text-[var(--ts-navy)]">Website</dt>
                   <dd className="break-words text-sm text-[var(--ts-gray)]">
                     <a href={WEBSITE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--ts-dark-green)]">
                       {WEBSITE_DISPLAY}
                     </a>
                   </dd>
-                </div>
+                </dl>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
-                <div className="min-w-0">
+                <dl className="min-w-0">
                   <dt className="text-sm font-semibold text-[var(--ts-navy)]">Where we work</dt>
                   <dd className="text-sm text-[var(--ts-gray)]">Remote-first engineering team, projects worldwide</dd>
-                </div>
+                </dl>
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
-                <div className="min-w-0">
+                <dl className="min-w-0">
                   <dt className="text-sm font-semibold text-[var(--ts-navy)]">Response time</dt>
                   <dd className="text-sm text-[var(--ts-gray)]">We typically reply within a few business days</dd>
-                </div>
+                </dl>
               </div>
-            </dl>
+            </div>
           </div>
 
           <div className="rounded-3xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] sm:p-8">

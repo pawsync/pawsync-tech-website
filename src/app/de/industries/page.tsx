@@ -58,8 +58,8 @@ export default function IndustriesPageDe() {
           Entwickelt für Tier- &amp; Agrartechnologie
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Wo Tiere und Elektronik aufeinandertreffen, haben wir vermutlich
-          bereits Ähnliches entwickelt.
+          Wo Tiere und Elektronik aufeinandertreffen, ist genau das die Art
+          von Problem, für die wir Hardware entwickeln.
         </p>
       </section>
 

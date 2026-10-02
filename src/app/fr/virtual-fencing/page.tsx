@@ -54,7 +54,7 @@ export default function VirtualFencingPageFr() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Donnez aux animaux la liberté de se déplacer dans des zones
-          définies, avec une conscience de la localisation à la place — ou
+          définies, grâce à un suivi de localisation à la place — ou
           en complément — de la clôture traditionnelle.
         </p>
       </section>

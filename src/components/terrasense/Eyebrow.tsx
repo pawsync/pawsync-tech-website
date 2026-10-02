@@ -9,7 +9,7 @@ export default function Eyebrow({ children, align = "center", tone = "light" }: 
     <span
       className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] ${
         align === "center" ? "justify-center" : ""
-      } ${tone === "dark" ? "text-[var(--ts-accent)]" : "text-[var(--ts-green)]"}`}
+      } ${tone === "dark" ? "text-[var(--ts-accent)]" : "text-[var(--ts-dark-green)]"}`}
     >
       <span
         aria-hidden="true"
