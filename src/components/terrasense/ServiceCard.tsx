@@ -32,7 +32,7 @@ export default function ServiceCard({ id, icon: Icon, title, description, href, 
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{description}</p>
       {href && (
-        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
           {learnMoreLabels[locale]}
           <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
         </span>

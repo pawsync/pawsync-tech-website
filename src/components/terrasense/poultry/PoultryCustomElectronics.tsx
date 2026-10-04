@@ -21,7 +21,16 @@ export default function PoultryCustomElectronics() {
         </h2>
         <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
           PawSync can develop custom electronics and IoT hardware around
-          your poultry operation or commercial product idea.
+          your poultry operation or commercial product idea — the same
+          engineering process we use for{" "}
+          <Link href="/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            livestock tracking hardware
+          </Link>{" "}
+          and other connected farm devices. See our{" "}
+          <Link href="/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            low-power sensor node design
+          </Link>{" "}
+          write-up for how we approach battery-powered hardware.
         </p>
       </div>
 

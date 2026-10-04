@@ -160,7 +160,7 @@ export default function SolutionsPageFr() {
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10 ring-1 ring-inset ring-[var(--ts-dark-green)]/10">
                   <category.icon className="h-7 w-7 text-[var(--ts-dark-green)]" aria-hidden="true" />
                 </div>
-                <span className="font-[family-name:var(--font-manrope)] text-3xl font-extrabold text-[var(--ts-navy)]/10">
+                <span aria-hidden="true" className="font-[family-name:var(--font-manrope)] text-3xl font-extrabold text-[var(--ts-navy)]/50">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>

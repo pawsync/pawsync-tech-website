@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowRight,
   BatteryCharging,
@@ -147,6 +148,14 @@ const faqs: FAQItem[] = [
     question: "Können Sie RFID-Geräte zur Nutztieridentifikation entwickeln?",
     answer: "Ja. RFID-Identifikation ist einer unserer Standardbausteine für Fütterungserkennung, Zutrittskontrolle und Tierzählung.",
   },
+  {
+    question: "Funktioniert die Hardware auch ohne Internet- oder Cloud-Zugang?",
+    answer: "Lokale Steuerung und Datenprotokollierung können so ausgelegt werden, dass sie bei einem Ausfall vor Ort weiterlaufen und nach Wiederherstellung der Verbindung mit der Cloud synchronisieren — eine Designentscheidung, die wir danach treffen, wie wichtig durchgehende Sichtbarkeit für Ihren Anwendungsfall ist, nicht als Standardannahme.",
+  },
+  {
+    question: "Welche Informationen benötigen Sie von uns zur Einschätzung eines individuellen Elektronikprojekts?",
+    answer: "In der Regel: das zu lösende Problem, die Einsatzumgebung des Geräts, gewünschte Akkulaufzeit oder Stromquelle, erforderliche Reichweite und Konnektivität, Ausrüstung, mit der es zusammenarbeiten soll, sowie eine grobe Stückzahlerwartung. Den Rest klären wir gemeinsam in der Discovery-Phase.",
+  },
 ];
 
 export default function CustomElectronicsPageDe() {
@@ -162,7 +171,15 @@ export default function CustomElectronicsPageDe() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Wenn ein Standardgerät nicht ausreicht, entwickeln wir eines, das
           es tut — Hardware, Firmware und die Konnektivität, die alles
-          verbindet.
+          verbindet. Das ist derselbe Entwicklungsprozess hinter unseren{" "}
+          <Link href="/de/poultry-farming" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            Geflügelfarm-Controllern
+          </Link>{" "}
+          und unserer{" "}
+          <Link href="/de/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            Nutztier-Tracking-Hardware
+          </Link>
+          .
         </p>
       </section>
 
@@ -204,7 +221,16 @@ export default function CustomElectronicsPageDe() {
               Beispiel-Spezifikation eines Smart-Geräts
             </h3>
             <p className="mt-1 text-sm text-[var(--ts-gray)]">
-              Ein repräsentativer Aufbau für einen vernetzten Tier-Tracker:
+              Ein repräsentativer Aufbau für einen vernetzten Tier-Tracker —
+              siehe unseren Beitrag zur{" "}
+              <Link href="/de/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                stromsparenden Tracker-Entwicklung
+              </Link>{" "}
+              und unseren Vergleich{" "}
+              <Link href="/de/blog/gnss-lora-vs-gnss-ltem" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                GNSS + LoRa vs. GNSS + LTE-M
+              </Link>{" "}
+              für die zugrunde liegenden Abwägungen:
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {exampleSpecs.map((spec) => (

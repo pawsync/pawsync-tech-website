@@ -17,8 +17,8 @@ const mapNodes = [
 ];
 
 const statusStyles = {
-  normal: "border-[var(--ts-accent)]/25 bg-[var(--ts-accent)]/10 text-[var(--ts-accent)]",
-  warning: "border-amber-400/25 bg-amber-400/10 text-amber-300",
+  normal: "border-[var(--ts-accent)]/25 bg-[var(--ts-accent)]/10 text-[var(--ts-dark-green)]",
+  warning: "border-amber-400/25 bg-amber-400/10 text-amber-800",
 };
 
 export default function PoultryMultiHouseMonitoring() {
@@ -59,11 +59,11 @@ export default function PoultryMultiHouseMonitoring() {
                 </span>
               </div>
             ))}
-            <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
+            <div className="absolute bottom-2 left-1.5 flex items-center gap-1.5 rounded-full bg-black/40 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:bottom-4 sm:left-4 sm:gap-2 sm:px-3 sm:py-1.5 sm:text-xs">
               <MapPin className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />
               Betriebslayout — Beispielansicht
             </div>
-            <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
+            <div className="absolute bottom-2 right-1.5 flex items-center gap-1.5 rounded-full bg-black/40 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:bottom-4 sm:right-4 sm:gap-2 sm:px-3 sm:py-1.5 sm:text-xs">
               <Radio className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />
               4 Ställe verbunden
             </div>

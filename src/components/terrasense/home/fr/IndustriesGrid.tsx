@@ -121,7 +121,7 @@ export default function IndustriesGrid() {
         <div className="mt-10 text-center">
           <Link
             href="/fr/industries"
-            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]"
+            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]"
           >
             Voir tous les secteurs
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />

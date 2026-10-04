@@ -69,7 +69,7 @@ export default function TerraSenseHero() {
           </div>
 
           <div className="mt-9 border-t border-white/10 pt-6">
-            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/40">
+            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/60">
               Expertise für vernetzte Hardware
             </p>
             <ul className="mt-3 flex flex-wrap gap-2.5">
@@ -131,7 +131,7 @@ export default function TerraSenseHero() {
                 <dd className="font-medium text-white/80">Stark</dd>
               </div>
             </dl>
-            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">Illustrative Oberfläche · Beispieldaten</p>
+            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/60">Illustrative Oberfläche · Beispieldaten</p>
           </div>
 
           {/* Overlay 2 — environmental sensor card */}
@@ -158,7 +158,7 @@ export default function TerraSenseHero() {
                 <dd className="font-medium text-[var(--ts-accent)]">Online</dd>
               </div>
             </dl>
-            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">Illustrative Oberfläche · Beispieldaten</p>
+            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/60">Illustrative Oberfläche · Beispieldaten</p>
           </div>
         </div>
       </div>

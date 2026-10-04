@@ -22,7 +22,17 @@ export default function PoultryCustomElectronics() {
         <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
           PawSync peut développer de l&apos;électronique et du matériel IoT
           sur mesure autour de votre exploitation avicole ou de votre idée
-          de produit commercial.
+          de produit commercial — le même processus d&apos;ingénierie que
+          celui utilisé pour notre{" "}
+          <Link href="/fr/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            matériel de suivi du bétail
+          </Link>{" "}
+          et d&apos;autres dispositifs agricoles connectés. Voir notre
+          article sur la{" "}
+          <Link href="/fr/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            conception de nœuds capteurs basse consommation
+          </Link>{" "}
+          pour notre approche du matériel alimenté par batterie.
         </p>
       </div>
 

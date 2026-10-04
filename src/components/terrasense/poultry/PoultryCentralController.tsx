@@ -99,7 +99,7 @@ export default function PoultryCentralController() {
 
         {/* Connected systems */}
         <div>
-          <p className="text-sm font-bold uppercase tracking-wide text-[var(--ts-green)]">Connected Systems</p>
+          <p className="text-sm font-bold uppercase tracking-wide text-[var(--ts-dark-green)]">Connected Systems</p>
           <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-5">
             {connectedSystems.map((s) => (
               <div key={s.label} className="flex flex-col items-center gap-1.5 rounded-xl border border-[var(--ts-navy)]/8 bg-white p-3 text-center shadow-[0_1px_2px_rgba(14,27,38,0.04)]">

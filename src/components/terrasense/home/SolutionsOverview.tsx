@@ -116,7 +116,7 @@ export default function SolutionsOverview() {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
               Real-time or periodic GPS location systems for pets, livestock and other animals — built around range, battery life and terrain.
             </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               Learn More
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </span>
@@ -162,7 +162,7 @@ export default function SolutionsOverview() {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
               Control watering, feeding, ventilation, pumps, fans, heaters and cooling systems from one connected platform.
             </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               Learn More
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </span>
@@ -198,7 +198,7 @@ export default function SolutionsOverview() {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
               Monitor temperature, humidity, air quality, water conditions and other environmental parameters in real time.
             </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               Learn More
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </span>

@@ -82,8 +82,8 @@ export default function PoultrySafetyWarning() {
         </div>
 
         <div className="mx-auto mt-8 flex max-w-2xl items-start justify-center gap-2.5 rounded-xl border border-white/10 bg-white/5 p-4 text-center">
-          <Bell className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/40" aria-hidden="true" />
-          <p className="text-xs leading-relaxed text-white/40">
+          <Bell className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/60" aria-hidden="true" />
+          <p className="text-xs leading-relaxed text-white/60">
             Statuts d&apos;exemple fournis à titre d&apos;illustration. Les
             systèmes de surveillance peuvent aider à identifier des
             conditions anormales, mais ne garantissent pas la prévention des

@@ -116,7 +116,7 @@ export default function SolutionsOverview() {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
               Systèmes de localisation GPS en temps réel ou périodique pour les animaux de compagnie, le bétail et d&apos;autres animaux — conçus selon l&apos;autonomie, le terrain et la portée requise.
             </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               En savoir plus
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </span>
@@ -162,7 +162,7 @@ export default function SolutionsOverview() {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
               Contrôlez l&apos;irrigation, l&apos;alimentation, la ventilation, les pompes, les ventilateurs, le chauffage et le refroidissement depuis une seule plateforme connectée.
             </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               En savoir plus
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </span>
@@ -198,7 +198,7 @@ export default function SolutionsOverview() {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
               Surveillez en temps réel la température, l&apos;humidité, la qualité de l&apos;air, les conditions de l&apos;eau et d&apos;autres paramètres environnementaux.
             </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               En savoir plus
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </span>

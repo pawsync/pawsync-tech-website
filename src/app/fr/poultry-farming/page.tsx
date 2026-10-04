@@ -72,6 +72,11 @@ const faqs = [
       "Dans de nombreux cas, oui. Nous évaluons votre équipement existant lors de la phase de découverte pour déterminer la bonne approche d'intégration des capteurs, relais ou commandes.",
   },
   {
+    question: "De quelles informations avez-vous besoin pour cadrer un projet ?",
+    answer:
+      "En général : le nombre et la taille des bâtiments, l'équipement existant à intégrer, la disponibilité d'Internet/réseau sur site, vos exigences d'alerte et de rapport souhaitées, ainsi que toute contrainte de budget ou de délai. Nous cadrons le reste ensemble en phase de découverte.",
+  },
+  {
     question: "Pouvez-vous concevoir la carte PCB et le micrologiciel ?",
     answer:
       "Oui. La conception de cartes PCB sur mesure et le développement de micrologiciels embarqués font partie intégrante de notre processus d'ingénierie, du schéma aux fichiers de fabrication.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowRight,
   BatteryCharging,
@@ -147,6 +148,14 @@ const faqs: FAQItem[] = [
     question: "Pouvez-vous développer des dispositifs RFID d'identification du bétail ?",
     answer: "Oui. L'identification RFID est l'un de nos éléments de base standard pour la reconnaissance à l'alimentation, le contrôle d'accès et le comptage des animaux.",
   },
+  {
+    question: "Le matériel continue-t-il de fonctionner sans accès Internet ou cloud ?",
+    answer: "Le contrôle local et l'enregistrement des données peuvent être conçus pour continuer à fonctionner sur site pendant une coupure, en synchronisant avec le cloud une fois la connexion rétablie — une décision de conception qui dépend de l'importance d'une visibilité continue pour votre cas d'usage, et non une hypothèse par défaut.",
+  },
+  {
+    question: "De quelles informations avez-vous besoin pour cadrer un projet d'électronique sur mesure ?",
+    answer: "En général : le problème à résoudre, l'environnement d'utilisation du dispositif, l'autonomie ou la source d'alimentation cible, la portée et la connectivité requises, l'équipement avec lequel il doit s'intégrer, et une estimation approximative des volumes. Nous cadrons le reste ensemble en phase de découverte.",
+  },
 ];
 
 export default function CustomElectronicsPageFr() {
@@ -162,7 +171,16 @@ export default function CustomElectronicsPageFr() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Lorsqu&apos;un dispositif standard ne suffit pas, nous en
           concevons un qui convient — le matériel, le micrologiciel et la
-          connectivité qui relient le tout.
+          connectivité qui relient le tout. C&apos;est le même processus
+          d&apos;ingénierie derrière nos{" "}
+          <Link href="/fr/poultry-farming" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            contrôleurs avicoles
+          </Link>{" "}
+          et notre{" "}
+          <Link href="/fr/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            matériel de suivi du bétail
+          </Link>
+          .
         </p>
       </section>
 
@@ -204,7 +222,16 @@ export default function CustomElectronicsPageFr() {
               Exemple de spécification d&apos;un dispositif intelligent
             </h3>
             <p className="mt-1 text-sm text-[var(--ts-gray)]">
-              Une configuration représentative pour un tracker animal connecté :
+              Une configuration représentative pour un tracker animal
+              connecté — voir notre article sur la{" "}
+              <Link href="/fr/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                conception de trackers basse consommation
+              </Link>{" "}
+              et notre comparaison{" "}
+              <Link href="/fr/blog/gnss-lora-vs-gnss-ltem" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                GNSS + LoRa vs. GNSS + LTE-M
+              </Link>{" "}
+              pour les compromis sous-jacents :
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {exampleSpecs.map((spec) => (

@@ -97,12 +97,12 @@ export default function PoultryClimateAutomation() {
           {rules.map((rule) => (
             <div key={rule.condition} className="rounded-2xl border border-white/10 bg-white/5 p-5 font-mono text-xs leading-relaxed text-[var(--ts-accent)]">
               <div className="flex items-start gap-2">
-                <Terminal className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/40" aria-hidden="true" />
+                <Terminal className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/60" aria-hidden="true" />
                 <div>
-                  <p><span className="text-white/40">WENN</span> {rule.condition}</p>
-                  <p className="mt-1.5"><span className="text-white/40">DANN</span> {rule.action}</p>
+                  <p><span className="text-white/60">WENN</span> {rule.condition}</p>
+                  <p className="mt-1.5"><span className="text-white/60">DANN</span> {rule.action}</p>
                   {rule.extra && (
-                    <p className="mt-1.5"><span className="text-white/40">UND</span> {rule.extra}</p>
+                    <p className="mt-1.5"><span className="text-white/60">UND</span> {rule.extra}</p>
                   )}
                 </div>
               </div>
@@ -110,7 +110,7 @@ export default function PoultryClimateAutomation() {
           ))}
         </div>
 
-        <p className="mx-auto mt-6 flex max-w-2xl items-center justify-center gap-2 text-center text-xs text-white/40">
+        <p className="mx-auto mt-6 flex max-w-2xl items-center justify-center gap-2 text-center text-xs text-white/60">
           <Bell className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
           Schwellenwerte und Steuerlogik sind an die Anforderungen des
           Betriebs konfigurierbar.

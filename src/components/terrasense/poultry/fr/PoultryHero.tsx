@@ -126,15 +126,16 @@ export default function PoultryHero() {
             </div>
             <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-[11px] text-white/60">
               {readout.map((row) => (
-                <div key={row.label} className="flex items-center gap-1.5">
-                  <row.icon className="h-3 w-3 text-white/40" aria-hidden="true" />
-                  <span>
-                    {row.label} : <span className="font-medium text-white/85">{row.value}</span>
-                  </span>
+                <div key={row.label} className="contents">
+                  <dt className="flex items-center gap-1.5">
+                    <row.icon className="h-3 w-3 text-white/60" aria-hidden="true" />
+                    {row.label}
+                  </dt>
+                  <dd className="font-medium text-white/85">{row.value}</dd>
                 </div>
               ))}
             </dl>
-            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">Interface illustrative · données d&apos;exemple</p>
+            <p className="mt-2 border-t border-white/10 pt-2 text-[10px] font-semibold uppercase tracking-wide text-white/60">Interface illustrative · données d&apos;exemple</p>
           </div>
         </div>
       </div>

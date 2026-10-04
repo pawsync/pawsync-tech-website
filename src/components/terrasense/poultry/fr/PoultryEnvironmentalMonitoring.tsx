@@ -64,7 +64,7 @@ export default function PoultryEnvironmentalMonitoring() {
                 </div>
               ))}
             </dl>
-            <p className="mt-5 flex items-center gap-2 border-t border-white/10 pt-4 text-xs text-white/40">
+            <p className="mt-5 flex items-center gap-2 border-t border-white/10 pt-4 text-xs text-white/60">
               <Fan className="h-3.5 w-3.5" aria-hidden="true" />
               Tableau de bord fourni à titre d&apos;illustration — les valeurs sont configurables par bâtiment.
             </p>

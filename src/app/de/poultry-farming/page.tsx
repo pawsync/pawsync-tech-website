@@ -72,6 +72,11 @@ const faqs = [
       "In vielen Fällen ja. Wir bewerten Ihre bestehende Ausrüstung in der Discovery-Phase, um den richtigen Ansatz für Sensor-, Relais- oder Steuerungsintegration zu bestimmen.",
   },
   {
+    question: "Welche Informationen benötigen Sie von uns zur Projektabschätzung?",
+    answer:
+      "In der Regel: Anzahl und Größe der Ställe, vorhandene Ausrüstung, die integriert werden soll, Internet-/Netzwerkverfügbarkeit vor Ort, Ihre gewünschten Alarm- und Berichtsanforderungen sowie etwaige Budget- oder Zeitvorgaben. Den Rest klären wir gemeinsam in der Discovery-Phase.",
+  },
+  {
     question: "Können Sie die Leiterplatte und die Firmware entwickeln?",
     answer:
       "Ja. Individuelles Leiterplattendesign und Embedded-Firmware-Entwicklung sind zentrale Bestandteile unseres Engineering-Prozesses, vom Schaltplan bis zu den Fertigungsdaten.",

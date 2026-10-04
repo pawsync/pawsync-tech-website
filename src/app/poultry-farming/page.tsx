@@ -72,6 +72,11 @@ const faqs = [
       "In many cases, yes. We assess your existing equipment during the discovery phase to determine the right sensor, relay, or control integration approach.",
   },
   {
+    question: "What information do you need from us to scope a project?",
+    answer:
+      "Typically: the number and size of houses, existing equipment you want integrated, internet/network availability on site, your target alert and reporting requirements, and any budget or timeline constraints. We confirm the rest together during discovery.",
+  },
+  {
     question: "Can you design the PCB and firmware?",
     answer:
       "Yes. Custom PCB design and embedded firmware development are core parts of our engineering process, from schematic through production files.",

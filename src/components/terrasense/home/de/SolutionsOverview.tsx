@@ -116,7 +116,7 @@ export default function SolutionsOverview() {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
               Echtzeit- oder periodische GPS-Ortungssysteme für Haustiere, Nutztiere und andere Tiere — ausgelegt auf Reichweite, Akkulaufzeit und Gelände.
             </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               Mehr erfahren
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </span>
@@ -162,7 +162,7 @@ export default function SolutionsOverview() {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
               Steuern Sie Bewässerung, Fütterung, Belüftung, Pumpen, Ventilatoren, Heizungen und Kühlsysteme über eine vernetzte Plattform.
             </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               Mehr erfahren
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </span>
@@ -198,7 +198,7 @@ export default function SolutionsOverview() {
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
               Überwachen Sie Temperatur, Luftfeuchtigkeit, Luftqualität, Wasserbedingungen und weitere Umweltparameter in Echtzeit.
             </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-green)]">
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               Mehr erfahren
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
             </span>

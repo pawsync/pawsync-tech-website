@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowRight,
   BatteryCharging,
@@ -147,6 +148,14 @@ const faqs: FAQItem[] = [
     question: "Can you develop RFID livestock identification devices?",
     answer: "Yes. RFID identification is one of our standard building blocks for feeding recognition, access control and animal counting.",
   },
+  {
+    question: "Does the hardware keep working without internet or cloud access?",
+    answer: "Local control and data logging can be designed to keep running on-site during an outage, syncing to the cloud once connectivity returns — this is a design decision scoped around how critical continuous visibility is for your use case, not a default we assume.",
+  },
+  {
+    question: "What do you need from us to scope a custom electronics project?",
+    answer: "Typically: the problem you're solving, the environment the device will operate in, target battery life or power source, required range and connectivity, any equipment it needs to integrate with, and rough volume expectations. We confirm the rest together during discovery.",
+  },
 ];
 
 export default function CustomElectronicsPage() {
@@ -162,7 +171,15 @@ export default function CustomElectronicsPage() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           When an off-the-shelf device won&apos;t do the job, we design one
           that will — hardware, firmware, and the connectivity that ties it
-          all together.
+          all together. This is the same engineering process behind our{" "}
+          <Link href="/poultry-farming" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            poultry farm controllers
+          </Link>{" "}
+          and{" "}
+          <Link href="/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            livestock tracking hardware
+          </Link>
+          .
         </p>
       </section>
 
@@ -204,7 +221,15 @@ export default function CustomElectronicsPage() {
               Example Smart Device Specification
             </h3>
             <p className="mt-1 text-sm text-[var(--ts-gray)]">
-              A representative build for a connected animal tracker:
+              A representative build for a connected animal tracker — see our{" "}
+              <Link href="/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                low-power tracker design
+              </Link>{" "}
+              write-up and our{" "}
+              <Link href="/blog/gnss-lora-vs-gnss-ltem" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                GNSS + LoRa vs. GNSS + LTE-M
+              </Link>{" "}
+              comparison for the trade-offs behind it:
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {exampleSpecs.map((spec) => (

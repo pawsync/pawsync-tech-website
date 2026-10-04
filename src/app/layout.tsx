@@ -5,7 +5,7 @@ import "./globals.css";
 import TerraSenseHeader from "@/components/terrasense/TerraSenseHeader";
 import TerraSenseFooter from "@/components/terrasense/TerraSenseFooter";
 import BackToTop from "@/components/terrasense/BackToTop";
-import type { Locale } from "@/i18n/config";
+import { siteUrl, type Locale } from "@/i18n/config";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -50,6 +50,14 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const headersList = await headers();
   const locale = (headersList.get("x-locale") as Locale | null) ?? "en";
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "PawSync",
+    url: siteUrl,
+    inLanguage: locale,
+    publisher: { "@type": "Person", name: "Tahir Nazeer" },
+  };
 
   return (
     <html
@@ -58,6 +66,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       className={`${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="terrasense-theme flex min-h-full flex-col bg-[var(--ts-bg)] text-[var(--ts-navy)]">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
         <a
           href="#terrasense-main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[var(--ts-dark-green)] focus:px-5 focus:py-3 focus:text-white focus:shadow-lg"

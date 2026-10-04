@@ -233,7 +233,7 @@ export default function TerraSenseFooter() {
 
         <div className="mt-14 border-t border-white/10 pt-8 text-center text-sm text-white/50 sm:text-left">
           <p>© {new Date().getFullYear()} {t.rights}</p>
-          <p className="mt-1 text-xs text-white/30">{t.engineeringCredit}</p>
+          <p className="mt-1 text-xs text-white/60">{t.engineeringCredit}</p>
         </div>
       </div>
     </footer>
