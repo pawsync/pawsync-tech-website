@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
-import { CONTACT_EMAIL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "@/lib/contact";
+import { CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "@/lib/contact";
 import TerraSenseLogo from "@/components/terrasense/TerraSenseLogo";
+import InstagramIcon from "@/components/terrasense/InstagramIcon";
 import type { Locale } from "@/i18n/config";
 import { localeFromPathname, localizeInternalHref } from "@/i18n/config";
 
@@ -104,6 +105,7 @@ const dict: Record<Locale, Record<string, string>> = {
     location: "Engineering & product development, remote-first",
     rights: "PawSync. All rights reserved.",
     engineeringCredit: "Engineering by Pak-EL LAB",
+    instagramLabel: "PawSync on Instagram",
   },
   de: {
     solutions: "Lösungen",
@@ -140,6 +142,7 @@ const dict: Record<Locale, Record<string, string>> = {
     location: "Engineering & Produktentwicklung, remote-first",
     rights: "PawSync. Alle Rechte vorbehalten.",
     engineeringCredit: "Engineering by Pak-EL LAB",
+    instagramLabel: "PawSync auf Instagram",
   },
   fr: {
     solutions: "Solutions",
@@ -176,6 +179,7 @@ const dict: Record<Locale, Record<string, string>> = {
     location: "Ingénierie et développement produit, en télétravail",
     rights: "PawSync. Tous droits réservés.",
     engineeringCredit: "Engineering by Pak-EL LAB",
+    instagramLabel: "PawSync sur Instagram",
   },
 };
 
@@ -208,6 +212,12 @@ export default function TerraSenseFooter() {
                 <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="break-words hover:text-white">
                   {WHATSAPP_DISPLAY}
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <InstagramIcon className="mt-0.5 h-4 w-4 shrink-0 text-[var(--ts-green)]" />
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label={t.instagramLabel} className="break-words hover:text-white">
+                  {INSTAGRAM_HANDLE}
                 </a>
               </li>
             </ul>

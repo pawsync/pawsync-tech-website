@@ -11,3 +11,6 @@ export const WHATSAPP_MESSAGE =
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_INTERNATIONAL}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 export const WEBSITE_DISPLAY = "pawsync.tech";
 export const WEBSITE_URL = "https://pawsync.tech";
+
+export const INSTAGRAM_URL = "https://www.instagram.com/pawsync.tech/";
+export const INSTAGRAM_HANDLE = "@pawsync.tech";

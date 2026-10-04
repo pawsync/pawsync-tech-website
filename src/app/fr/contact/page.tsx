@@ -3,6 +3,7 @@ import { Clock, Globe, Mail, MessageCircle, MapPin, Phone } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import TerraSenseContactForm from "@/components/terrasense/TerraSenseContactForm";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import InstagramIcon from "@/components/terrasense/InstagramIcon";
 import {
   CONTACT_EMAIL,
   PHONE_DISPLAY,
@@ -11,6 +12,7 @@ import {
   WEBSITE_URL,
   WHATSAPP_DISPLAY,
   WHATSAPP_URL,
+  INSTAGRAM_URL,
 } from "@/lib/contact";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
@@ -83,6 +85,17 @@ export default function ContactPageFr() {
                     </a>
                   </dd>
                 </dl>
+              </div>
+              <div className="pl-8">
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[var(--ts-dark-green)] hover:underline"
+                >
+                  <InstagramIcon className="h-4 w-4" />
+                  Suivez PawSync sur Instagram
+                </a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
