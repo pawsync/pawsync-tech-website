@@ -18,9 +18,9 @@ import PoultryApplications from "@/components/terrasense/poultry/PoultryApplicat
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Poultry Farm Technology & Automation | PawSync",
+  title: "Wireless Poultry Monitoring System Development | PawSync",
   description:
-    "Custom IoT devices for poultry farm automation — house monitoring, temperature and humidity sensors, ventilation control, smart feeding and LoRa-connected controllers.",
+    "Custom wireless poultry monitoring development: house sensors, controllers, LoRa connectivity and prototyping for poultry operations.",
   alternates: buildAlternates("en", "poultry-farming"),
   openGraph: buildOpenGraph("en", "poultry-farming"),
 };

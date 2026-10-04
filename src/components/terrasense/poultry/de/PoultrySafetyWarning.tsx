@@ -67,7 +67,7 @@ export default function PoultrySafetyWarning() {
                 <span className="h-1.5 w-1.5 rounded-full bg-current" aria-hidden="true" />
                 {statusLabels[c.status]}
               </span>
-              <p className="mt-2.5 text-sm font-medium text-white/80">{c.label}</p>
+              <p className="mt-2.5 break-words text-sm font-medium text-white/80">{c.label}</p>
             </div>
           ))}
         </div>

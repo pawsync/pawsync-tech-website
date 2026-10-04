@@ -12,15 +12,16 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import ServiceScope, { type ServiceScopeCopy } from "@/components/terrasense/ServiceScope";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import FAQAccordion from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Smart Feeding | PawSync",
+  title: "Smart Pet Feeder Development | PawSync",
   description:
-    "Automated feeding systems with schedules, portion control, RFID identification, feed-level sensors and remote monitoring for pets, livestock and multi-animal facilities.",
+    "Smart pet feeder development: portion-control firmware, load-cell feed sensing, RFID recognition and app connectivity.",
   alternates: buildAlternates("en", "smart-feeding"),
   openGraph: buildOpenGraph("en", "smart-feeding"),
 };
@@ -50,6 +51,87 @@ const faqs = [
   { question: "Can I monitor feed levels remotely?", answer: "Yes — level sensors on hoppers or silos report status to the dashboard, with low-feed alerts configurable to your schedule." },
 ];
 
+const scope: ServiceScopeCopy = {
+  "eyebrow": "Engineering Services",
+  "heading": "What a Feeder Project Includes",
+  "intro": "Feeders combine electronics, sensing and dispensing mechanics. We design the electronics and firmware, and scope the mechanical side with you.",
+  "options": [
+    {
+      "title": "Feeder control PCB",
+      "description": "Motor drive, sensing interfaces and power management designed around the dispensing hardware."
+    },
+    {
+      "title": "Portion & dispensing firmware",
+      "description": "Schedules, portion control, and jam or fault detection implemented in firmware."
+    },
+    {
+      "title": "Feed-level & load sensing",
+      "description": "Load-cell or level sensing integrated and calibrated for your hopper and feed type."
+    },
+    {
+      "title": "RFID recognition (optional)",
+      "description": "Animal identification for selective feeding, integrated with the controller."
+    },
+    {
+      "title": "App & data integration",
+      "description": "Feeding history and remote control through the device-to-app data path."
+    }
+  ],
+  "stages": [
+    "Discovery",
+    "Architecture",
+    "Schematic & PCB",
+    "Firmware",
+    "Prototype",
+    "Testing",
+    "Production preparation"
+  ],
+  "tradeoffsHeading": "Engineering trade-offs",
+  "tradeoffs": [
+    {
+      "title": "Portion accuracy vs. hopper size",
+      "description": "Larger hoppers hold more feed but need steadier sensing and calibration to keep portions consistent."
+    },
+    {
+      "title": "Mains vs. battery power",
+      "description": "Mains power allows continuous dispensing and sensing; battery operation limits motor duty and reporting."
+    },
+    {
+      "title": "Local control vs. cloud",
+      "description": "Scheduled feeding can run on the controller itself, with data synced to an app when connectivity is available."
+    },
+    {
+      "title": "Mechanics & enclosure",
+      "description": "Dispensing mechanics and enclosure are often designed with a mechanical partner or your team; we integrate the electronics with them."
+    }
+  ],
+  "inquiryHeading": "Information that helps us scope a project",
+  "inquiry": [
+    "Animal type, count and feeding frequency",
+    "Feed type and hopper capacity",
+    "Power source available (mains or battery)",
+    "Connectivity and app requirements",
+    "Whether RFID identification is needed",
+    "Target volume and timeline"
+  ],
+  "linksHeading": "Related pages and articles",
+  "links": [
+    {
+      "label": "Pet device development",
+      "href": "/pet-technology"
+    },
+    {
+      "label": "Custom electronics & firmware",
+      "href": "/custom-electronics"
+    },
+    {
+      "label": "Livestock feeding monitoring",
+      "href": "/livestock-technology"
+    }
+  ],
+  "note": "This section describes custom engineering services. Reference designs on our Projects page are concepts and prototypes, not products available to purchase."
+};
+
 export default function SmartFeedingPage() {
   return (
     <>
@@ -57,9 +139,7 @@ export default function SmartFeedingPage() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Smart Feeding</Eyebrow>
-        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Smart Feeding Systems
-        </h1>
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Smart Pet Feeder & Feeding System Development</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Automated feeding devices with schedules, portion control, sensors
           and remote monitoring for pets, livestock and multi-animal
@@ -111,6 +191,8 @@ export default function SmartFeedingPage() {
           <FAQAccordion items={faqs} />
         </div>
       </section>
+
+      <ServiceScope id="feeder-scope" copy={scope} />
 
       <CTABanner
         heading="Need a Custom Feeding Controller?"

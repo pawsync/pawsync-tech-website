@@ -15,14 +15,15 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import ServiceScope, { type ServiceScopeCopy } from "@/components/terrasense/ServiceScope";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Technologie pour animaux de compagnie | PawSync",
+  title: "Développement de dispositifs pour animaux | PawSync",
   description:
-    "Dispositifs intelligents pour animaux de compagnie conçus par PawSync — trackers GPS, moniteurs d'activité, colliers intelligents, clôture virtuelle et distributeurs intelligents.",
+    "Développement sur mesure de dispositifs pour animaux : wearables, colliers et trackers avec carte PCB, micrologiciel et prototype.",
   alternates: buildAlternates("fr", "pet-technology"),
   openGraph: buildOpenGraph("fr", "pet-technology"),
 };
@@ -47,6 +48,95 @@ const deviceSpec = [
   "Batterie rechargeable", "Application mobile", "Alertes de zone virtuelle", "Historique d'activité",
 ];
 
+const scope: ServiceScopeCopy = {
+  "eyebrow": "Services d'ingénierie",
+  "heading": "Ce que vous pouvez commander",
+  "intro": "Confiez à PawSync une seule étape ou le parcours complet, du concept à un prototype testé. Les équipes produit déjà structurées commencent souvent par une revue d'architecture ou par la seule conception de carte PCB.",
+  "options": [
+    {
+      "title": "Architecture & faisabilité",
+      "description": "Définir capteurs, connectivité, contraintes de batterie et de boîtier avant de figer une carte."
+    },
+    {
+      "title": "Conception de carte PCB",
+      "description": "Schéma et routage de cartes compactes alimentées par batterie, revus pour l'alimentation et les performances RF."
+    },
+    {
+      "title": "Micrologiciel embarqué",
+      "description": "Firmware pour l'acquisition des capteurs, le fonctionnement basse consommation, la connectivité sans fil et les échanges avec l'application."
+    },
+    {
+      "title": "Prototype & tests",
+      "description": "Prototypes fonctionnels, essais en laboratoire et essais de terrain documentés par rapport à vos exigences."
+    },
+    {
+      "title": "Préparation à la fabrication",
+      "description": "Nomenclature, fichiers de fabrication et procédures de test pour un transfert à un fabricant de votre choix. PawSync prépare ces documents ; il n'assure pas lui-même la production en série."
+    }
+  ],
+  "stages": [
+    "Découverte",
+    "Architecture",
+    "Schéma & PCB",
+    "Micrologiciel",
+    "Prototype",
+    "Tests",
+    "Préparation à la fabrication"
+  ],
+  "tradeoffsHeading": "Compromis techniques",
+  "tradeoffs": [
+    {
+      "title": "Autonomie vs. fréquence de rapport",
+      "description": "Des mises à jour de position ou de capteurs plus fréquentes réduisent l'autonomie. Nous calons l'intervalle sur la durée de fonctionnement requise."
+    },
+    {
+      "title": "Taille et confort vs. capacité de batterie",
+      "description": "Un dispositif porté au cou est limité par le poids, la taille du boîtier et le confort de l'animal, ce qui plafonne la batterie embarquée."
+    },
+    {
+      "title": "GNSS et une seconde radio",
+      "description": "Le GNSS détermine la position ; le LoRa ou le cellulaire la transmet à une passerelle ou au cloud. Le bon choix dépend de la portée, de la couverture et du coût d'exploitation."
+    },
+    {
+      "title": "Protection contre l'eau et les chocs",
+      "description": "L'étanchéité et la robustesse sont vérifiées par des essais sur le boîtier fini. Nous ne supposons aucun indice de protection avant de l'avoir testé."
+    }
+  ],
+  "inquiryHeading": "Informations utiles pour cadrer un projet",
+  "inquiry": [
+    "Type de dispositif et taille de l'animal visé",
+    "Fonctions souhaitées : localisation, activité, capteurs de santé, alimentation ou accès",
+    "Fréquence de rapport et autonomie visées",
+    "Connectivité et environnement de couverture",
+    "Volume cible et calendrier",
+    "Matériel ou boîtier existant à réutiliser"
+  ],
+  "linksHeading": "Pages et articles associés",
+  "links": [
+    {
+      "label": "Développement de trackers animaux",
+      "href": "/fr/animal-tracking"
+    },
+    {
+      "label": "Développement de distributeurs intelligents",
+      "href": "/fr/smart-feeding"
+    },
+    {
+      "label": "Électronique & micrologiciel sur mesure",
+      "href": "/fr/custom-electronics"
+    },
+    {
+      "label": "Conception basse consommation (article)",
+      "href": "/fr/blog/low-power-animal-tracker-design"
+    },
+    {
+      "label": "GNSS + LoRa vs. GNSS + LTE-M (article)",
+      "href": "/fr/blog/gnss-lora-vs-gnss-ltem"
+    }
+  ],
+  "note": "Cette section décrit des services d'ingénierie sur mesure. Les designs de référence présentés sur notre page Projets sont des concepts et des prototypes, et non des produits à acheter."
+};
+
 export default function PetTechnologyPageFr() {
   return (
     <>
@@ -54,9 +144,7 @@ export default function PetTechnologyPageFr() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Technologie pour animaux de compagnie</Eyebrow>
-        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Une technologie connectée pour des soins plus intelligents
-        </h1>
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Développement sur mesure de dispositifs pour animaux</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Des trackers GPS aux distributeurs intelligents, nous concevons le
           matériel derrière les produits pet-tech modernes — pour les
@@ -98,6 +186,8 @@ export default function PetTechnologyPageFr() {
           </div>
         </div>
       </section>
+
+      <ServiceScope id="pet-scope" copy={scope} />
 
       <CTABanner
         heading="Développer un produit de technologie pour animaux de compagnie"

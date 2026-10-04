@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import ServiceScope, { type ServiceScopeCopy } from "@/components/terrasense/ServiceScope";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import FarmMapDashboard from "@/components/terrasense/FarmMapDashboard";
 import FAQAccordion from "@/components/terrasense/FAQAccordion";
@@ -18,9 +19,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Tier-Tracking | PawSync",
+  title: "GPS-Tracker-Entwicklung für Tiere | PawSync",
   description:
-    "GPS- und GNSS-Tier-Trackingsysteme für Haustiere, Nutztiere und andere Tiere — Echtzeit-Standort, Geofence-Alarme und weitreichende Konnektivität.",
+    "Individuelle GPS- und GNSS-Tracker für Tiere: stromsparende Leiterplatte, Firmware, LoRa- oder Mobilfunkanbindung und Prototyp.",
   alternates: buildAlternates("de", "animal-tracking"),
   openGraph: buildOpenGraph("de", "animal-tracking"),
 };
@@ -42,6 +43,91 @@ const faqs = [
   { question: "Können Sie mehrere Tierarten mit einer Plattform tracken?", answer: "Ja. Dashboard und Backend können gemischte Flotten unterstützen — Haustiere, Nutztiere und Arbeitstiere — mit Gerätehardware, die je Tierart dimensioniert ist." },
 ];
 
+const scope: ServiceScopeCopy = {
+  "eyebrow": "Engineering-Dienstleistungen",
+  "heading": "So wird ein Tracker-Projekt eingegrenzt",
+  "intro": "Tracker-Projekte hängen an Energiebudget, Funktechnik und Gehäusegröße. Diese Punkte klären wir gemeinsam mit Ihnen, bevor eine Platine festgelegt wird.",
+  "options": [
+    {
+      "title": "Leiterplatte für GNSS-Tracker",
+      "description": "Kompakte, batteriebetriebene Platine mit GNSS-Empfänger, Antennenplatzierung und Stromversorgung."
+    },
+    {
+      "title": "Stromsparende Firmware",
+      "description": "Getaktete Betriebsweise, bewegungsgesteuertes Aufwachen und Meldelogik, abgestimmt auf Ihre Laufzeit."
+    },
+    {
+      "title": "Konnektivität",
+      "description": "LoRa-, LTE-M- oder BLE-Übergabe an ein Gateway, gewählt nach Reichweite, Abdeckung und Betriebskosten."
+    },
+    {
+      "title": "Energiebudget & Gehäuse",
+      "description": "Akkudimensionierung, Ladeschaltung und Gehäusevorgaben werden gemeinsam geprüft, nicht nacheinander."
+    },
+    {
+      "title": "Prototyp & Feldtest",
+      "description": "Prototypen, geprüft gegen Ihr Meldeintervall und Ihre Umgebung, mit dokumentierten Ergebnissen."
+    }
+  ],
+  "stages": [
+    "Discovery",
+    "Energie- & Funkbudget",
+    "Schaltplan & Leiterplatte",
+    "Firmware",
+    "Prototyp",
+    "Feldtest",
+    "Fertigungsvorbereitung"
+  ],
+  "tradeoffsHeading": "Technische Abwägungen",
+  "tradeoffs": [
+    {
+      "title": "Meldeintervall vs. Akkulaufzeit",
+      "description": "Häufigere Meldungen verkürzen die Akkulaufzeit. Wir stimmen das Intervall auf Ihren Laufzeitbedarf ab."
+    },
+    {
+      "title": "GNSS-Erfassungszeit vs. Stromverbrauch",
+      "description": "Eine schnellere Positionsbestimmung benötigt meist mehr Strom. Die Strategie richtet sich danach, wie oft tatsächlich eine Position gebraucht wird."
+    },
+    {
+      "title": "Reichweite vs. Betriebskosten",
+      "description": "Mobilfunk deckt große Flächen ab, verursacht aber Datentarife. LoRa benötigt Gateways, vermeidet in privaten Netzen aber Mobilfunkgebühren pro Gerät."
+    },
+    {
+      "title": "Größe vs. Akkukapazität",
+      "description": "Ein Halsbandgerät ist durch Gewicht und Tragekomfort begrenzt – das bestimmt die größtmögliche Akkukapazität."
+    }
+  ],
+  "inquiryHeading": "Angaben, die die Projektabschätzung ermöglichen",
+  "inquiry": [
+    "Tierart, Größe und typisches Verhalten",
+    "Gewünschtes Ortungsintervall und akzeptabler Akkuwechsel",
+    "Einsatzumgebung: offenes Gelände, Gebäude, urbane Gebiete",
+    "Vorhandene Gateway- oder Mobilfunkinfrastruktur",
+    "Zielstückzahl und Zeitplan",
+    "Vorhandenes Halsband oder Gehäuse, das integriert werden soll"
+  ],
+  "linksHeading": "Verwandte Seiten und Artikel",
+  "links": [
+    {
+      "label": "Entwicklung von Haustiergeräten",
+      "href": "/de/pet-technology"
+    },
+    {
+      "label": "Nutztier-Tracking-Hardware",
+      "href": "/de/livestock-technology"
+    },
+    {
+      "label": "Stromsparendes Tracker-Design (Artikel)",
+      "href": "/de/blog/low-power-animal-tracker-design"
+    },
+    {
+      "label": "GNSS + LoRa vs. GNSS + LTE-M (Artikel)",
+      "href": "/de/blog/gnss-lora-vs-gnss-ltem"
+    }
+  ],
+  "note": "Dieser Bereich beschreibt individuelle Engineering-Dienstleistungen. Referenzdesigns auf unserer Projektseite sind Konzepte und Prototypen, keine käuflichen Produkte."
+};
+
 export default function AnimalTrackingPageDe() {
   return (
     <>
@@ -49,9 +135,7 @@ export default function AnimalTrackingPageDe() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Tier-Tracking</Eyebrow>
-        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          GPS- &amp; GNSS-Tier-Trackingsysteme
-        </h1>
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Individuelle GPS- & GNSS-Tracker-Entwicklung</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Echtzeit- oder periodische Ortungssysteme, die Haustiere,
           Nutztiere und andere Tiere auffindbar halten — auf dem Betrieb
@@ -90,6 +174,8 @@ export default function AnimalTrackingPageDe() {
           <FAQAccordion items={faqs} />
         </div>
       </section>
+
+      <ServiceScope id="tracking-scope" copy={scope} />
 
       <CTABanner
         heading="Benötigen Sie ein individuelles Tracking-Gerät?"

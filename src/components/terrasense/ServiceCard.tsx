@@ -27,7 +27,7 @@ export default function ServiceCard({ id, icon: Icon, title, description, href, 
       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10 ring-1 ring-inset ring-[var(--ts-dark-green)]/10 transition-transform duration-300 group-hover:scale-110">
         <Icon className="h-6 w-6 text-[var(--ts-dark-green)]" aria-hidden="true" />
       </div>
-      <h3 className="mt-5 font-[family-name:var(--font-manrope)] text-lg font-bold text-[var(--ts-navy)]">
+      <h3 className="mt-5 break-words font-[family-name:var(--font-manrope)] text-lg font-bold text-[var(--ts-navy)]">
         {title}
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{description}</p>

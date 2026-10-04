@@ -15,14 +15,15 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import ServiceScope, { type ServiceScopeCopy } from "@/components/terrasense/ServiceScope";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Pet Technology | PawSync",
+  title: "Custom Pet Device Development | PawSync",
   description:
-    "Smart pet devices we design and build — GPS trackers, activity monitors, smart collars, virtual fencing, RFID access, smart feeders, and more.",
+    "Custom pet device development for pet-tech teams: wearable, collar and tracker hardware with PCB design, firmware and prototyping.",
   alternates: buildAlternates("en", "pet-technology"),
   openGraph: buildOpenGraph("en", "pet-technology"),
 };
@@ -47,6 +48,95 @@ const deviceSpec = [
   "Rechargeable battery", "Mobile app", "Geofence alerts", "Activity history",
 ];
 
+const scope: ServiceScopeCopy = {
+  "eyebrow": "Engineering Services",
+  "heading": "What You Can Commission",
+  "intro": "Engage PawSync for a single stage or for the full path from concept to a tested prototype. Teams with an in-house product group often start with an architecture review or PCB design alone.",
+  "options": [
+    {
+      "title": "Architecture & feasibility",
+      "description": "Define sensors, connectivity, battery and enclosure constraints before committing to a board."
+    },
+    {
+      "title": "PCB design",
+      "description": "Schematic and layout for compact, battery-powered boards, reviewed for power and RF integrity."
+    },
+    {
+      "title": "Embedded firmware",
+      "description": "Firmware for sensor acquisition, low-power operation, wireless connectivity and app data flow."
+    },
+    {
+      "title": "Prototype build & testing",
+      "description": "Working prototypes, bench tests and field-style test runs documented against your requirements."
+    },
+    {
+      "title": "Production preparation",
+      "description": "BOM, manufacturing files and test procedures for handover to a manufacturer you select. PawSync prepares these files; it does not run volume production itself."
+    }
+  ],
+  "stages": [
+    "Discovery",
+    "Architecture",
+    "Schematic & PCB",
+    "Firmware",
+    "Prototype",
+    "Testing",
+    "Production preparation"
+  ],
+  "tradeoffsHeading": "Engineering trade-offs",
+  "tradeoffs": [
+    {
+      "title": "Battery life vs. reporting interval",
+      "description": "More frequent location or sensor updates shorten battery life. We set the reporting interval against the run time you need."
+    },
+    {
+      "title": "Size and comfort vs. battery capacity",
+      "description": "A collar-mounted device is limited by weight, enclosure size and wearer comfort, which caps the battery you can carry."
+    },
+    {
+      "title": "GNSS plus a second radio",
+      "description": "GNSS determines position; LoRa or cellular carries it to a gateway or cloud. The right radio depends on range, coverage and running cost."
+    },
+    {
+      "title": "Water and impact protection",
+      "description": "Enclosure sealing and durability are verified by testing on the finished enclosure. We do not assume a rating before it has been tested."
+    }
+  ],
+  "inquiryHeading": "Information that helps us scope a project",
+  "inquiry": [
+    "Device type and the animal size it fits",
+    "Features needed: location, activity, health sensing, feeding or access",
+    "Target reporting interval and battery run time",
+    "Connectivity and the coverage environment",
+    "Target volume and timeline",
+    "Any existing hardware or enclosure to reuse"
+  ],
+  "linksHeading": "Related pages and articles",
+  "links": [
+    {
+      "label": "Animal tracker development",
+      "href": "/animal-tracking"
+    },
+    {
+      "label": "Smart feeder development",
+      "href": "/smart-feeding"
+    },
+    {
+      "label": "Custom electronics & firmware",
+      "href": "/custom-electronics"
+    },
+    {
+      "label": "Low-power tracker design (article)",
+      "href": "/blog/low-power-animal-tracker-design"
+    },
+    {
+      "label": "GNSS + LoRa vs. GNSS + LTE-M (article)",
+      "href": "/blog/gnss-lora-vs-gnss-ltem"
+    }
+  ],
+  "note": "This section describes custom engineering services. Reference designs on our Projects page are concepts and prototypes, not products available to purchase."
+};
+
 export default function PetTechnologyPage() {
   return (
     <>
@@ -54,9 +144,7 @@ export default function PetTechnologyPage() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Pet Technology</Eyebrow>
-        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Connected Technology for Smarter Pet Care
-        </h1>
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Custom Pet Device Development</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           From GPS trackers to smart feeders, we design the hardware behind
           modern pet-tech products — for pet-tech startups, shelters, and
@@ -97,6 +185,8 @@ export default function PetTechnologyPage() {
           </div>
         </div>
       </section>
+
+      <ServiceScope id="pet-scope" copy={scope} />
 
       <CTABanner
         heading="Build a Pet Technology Product"

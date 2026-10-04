@@ -12,15 +12,16 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import ServiceScope, { type ServiceScopeCopy } from "@/components/terrasense/ServiceScope";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import FAQAccordion from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Intelligente Fütterung | PawSync",
+  title: "Entwicklung intelligenter Futterautomaten | PawSync",
   description:
-    "Automatisierte Fütterungssysteme mit Zeitplänen, Portionskontrolle, RFID-Identifikation, Futterstandssensoren und Fernüberwachung für Haustiere, Nutztiere und Mehrtieranlagen.",
+    "Entwicklung intelligenter Futterautomaten: Portionssteuerung, Wägezellenmessung, RFID-Erkennung und App-Anbindung.",
   alternates: buildAlternates("de", "smart-feeding"),
   openGraph: buildOpenGraph("de", "smart-feeding"),
 };
@@ -50,6 +51,87 @@ const faqs = [
   { question: "Kann ich Futterstände aus der Ferne überwachen?", answer: "Ja — Füllstandssensoren an Behältern oder Silos melden den Status an das Dashboard, mit Alarmen bei niedrigem Futterstand, die nach Ihrem Zeitplan konfigurierbar sind." },
 ];
 
+const scope: ServiceScopeCopy = {
+  "eyebrow": "Engineering-Dienstleistungen",
+  "heading": "Was ein Futterautomaten-Projekt umfasst",
+  "intro": "Futterautomaten verbinden Elektronik, Sensorik und Dosiermechanik. Wir entwickeln Elektronik und Firmware und stimmen den mechanischen Teil mit Ihnen ab.",
+  "options": [
+    {
+      "title": "Steuerplatine für Futterautomaten",
+      "description": "Motoransteuerung, Sensorschnittstellen und Energieverwaltung, ausgelegt auf die Dosierhardware."
+    },
+    {
+      "title": "Portions- & Dosierfirmware",
+      "description": "Zeitpläne, Portionssteuerung sowie die Erkennung von Verstopfung und Störungen in der Firmware."
+    },
+    {
+      "title": "Füllstand- & Wägezellenmessung",
+      "description": "Wägezellen- oder Füllstandsmessung, kalibriert für Ihren Behälter und Ihr Futter."
+    },
+    {
+      "title": "RFID-Erkennung (optional)",
+      "description": "Tieridentifikation für selektive Fütterung, integriert in die Steuerung."
+    },
+    {
+      "title": "App- & Datenanbindung",
+      "description": "Fütterungsverlauf und Fernsteuerung über den Datenweg Gerät–App."
+    }
+  ],
+  "stages": [
+    "Discovery",
+    "Architektur",
+    "Schaltplan & Leiterplatte",
+    "Firmware",
+    "Prototyp",
+    "Testing",
+    "Fertigungsvorbereitung"
+  ],
+  "tradeoffsHeading": "Technische Abwägungen",
+  "tradeoffs": [
+    {
+      "title": "Dosiergenauigkeit vs. Behältergröße",
+      "description": "Größere Behälter fassen mehr Futter, benötigen aber stabilere Messung und Kalibrierung, damit die Portionen konstant bleiben."
+    },
+    {
+      "title": "Netz- vs. Akkubetrieb",
+      "description": "Netzbetrieb ermöglicht durchgehende Dosierung und Messung; Akkubetrieb begrenzt Motorlaufzeit und Meldungen."
+    },
+    {
+      "title": "Lokale Steuerung vs. Cloud",
+      "description": "Zeitgesteuerte Fütterung kann direkt auf der Steuerung laufen; Daten werden bei verfügbarer Verbindung mit der App synchronisiert."
+    },
+    {
+      "title": "Mechanik & Gehäuse",
+      "description": "Dosiermechanik und Gehäuse werden oft mit einem mechanischen Partner oder Ihrem Team entwickelt; wir integrieren die Elektronik."
+    }
+  ],
+  "inquiryHeading": "Angaben, die die Projektabschätzung ermöglichen",
+  "inquiry": [
+    "Tierart, Anzahl und Fütterungshäufigkeit",
+    "Futterart und Behälterkapazität",
+    "Verfügbare Stromquelle (Netz oder Akku)",
+    "Konnektivitäts- und App-Anforderungen",
+    "Ob RFID-Identifikation benötigt wird",
+    "Zielstückzahl und Zeitplan"
+  ],
+  "linksHeading": "Verwandte Seiten und Artikel",
+  "links": [
+    {
+      "label": "Entwicklung von Haustiergeräten",
+      "href": "/de/pet-technology"
+    },
+    {
+      "label": "Individuelle Elektronik & Firmware",
+      "href": "/de/custom-electronics"
+    },
+    {
+      "label": "Nutztier-Fütterungsüberwachung",
+      "href": "/de/livestock-technology"
+    }
+  ],
+  "note": "Dieser Bereich beschreibt individuelle Engineering-Dienstleistungen. Referenzdesigns auf unserer Projektseite sind Konzepte und Prototypen, keine käuflichen Produkte."
+};
+
 export default function SmartFeedingPageDe() {
   return (
     <>
@@ -57,9 +139,7 @@ export default function SmartFeedingPageDe() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Intelligente Fütterung</Eyebrow>
-        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Intelligente Fütterungssysteme
-        </h1>
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Entwicklung intelligenter Futterautomaten & Fütterungssysteme</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Automatisierte Fütterungsgeräte mit Zeitplänen, Portionskontrolle,
           Sensoren und Fernüberwachung für Haustiere, Nutztiere und
@@ -111,6 +191,8 @@ export default function SmartFeedingPageDe() {
           <FAQAccordion items={faqs} />
         </div>
       </section>
+
+      <ServiceScope id="feeder-scope" copy={scope} />
 
       <CTABanner
         heading="Benötigen Sie einen individuellen Fütterungscontroller?"

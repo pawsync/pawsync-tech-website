@@ -18,9 +18,9 @@ import PoultryApplications from "@/components/terrasense/poultry/de/PoultryAppli
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Geflügelfarm-Technologie & Automatisierung | PawSync",
+  title: "Entwicklung drahtloser Geflügelüberwachung | PawSync",
   description:
-    "Kundenspezifische IoT-Geräte für die Geflügelautomatisierung — Stallüberwachung, Klimasensoren, Belüftungssteuerung, intelligente Fütterung und LoRa-vernetzte Controller.",
+    "Individuelle Entwicklung drahtloser Geflügelüberwachung: Stallsensoren, Controller, LoRa-Anbindung und Prototypen für Geflügelbetriebe.",
   alternates: buildAlternates("de", "poultry-farming"),
   openGraph: buildOpenGraph("de", "poultry-farming"),
 };

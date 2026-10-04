@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import ServiceScope, { type ServiceScopeCopy } from "@/components/terrasense/ServiceScope";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import FarmMapDashboard from "@/components/terrasense/FarmMapDashboard";
 import FAQAccordion from "@/components/terrasense/FAQAccordion";
@@ -18,9 +19,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Animal Tracking | PawSync",
+  title: "GPS Animal Tracker Development | PawSync",
   description:
-    "GPS and GNSS animal tracking systems for pets, livestock and other animals — real-time location, geofence alerts, and long-range connectivity.",
+    "Custom GPS and GNSS animal tracker development: low-power PCB design, firmware, LoRa or cellular connectivity and prototyping.",
   alternates: buildAlternates("en", "animal-tracking"),
   openGraph: buildOpenGraph("en", "animal-tracking"),
 };
@@ -42,6 +43,91 @@ const faqs = [
   { question: "Can you track multiple species with one platform?", answer: "Yes. The dashboard and backend can support mixed fleets — pets, livestock, and working animals — with device hardware sized per species." },
 ];
 
+const scope: ServiceScopeCopy = {
+  "eyebrow": "Engineering Services",
+  "heading": "How a Tracker Project Is Scoped",
+  "intro": "Tracker projects turn on power budget, radio choice and enclosure size. These are the parts we scope with you before any board is committed.",
+  "options": [
+    {
+      "title": "GNSS tracker PCB design",
+      "description": "Compact, battery-powered board layout with a GNSS receiver, antenna placement and power-path design."
+    },
+    {
+      "title": "Low-power firmware",
+      "description": "Duty-cycled operation, motion-triggered wake and reporting logic set around your run-time target."
+    },
+    {
+      "title": "Connectivity integration",
+      "description": "LoRa, LTE-M or BLE gateway handoff, chosen against your range, coverage and running cost."
+    },
+    {
+      "title": "Power budget & enclosure",
+      "description": "Battery sizing, charging circuit and enclosure constraints checked together rather than one at a time."
+    },
+    {
+      "title": "Prototype & field testing",
+      "description": "Prototypes tested against your reporting interval and environment, with results documented."
+    }
+  ],
+  "stages": [
+    "Discovery",
+    "Power & radio budget",
+    "Schematic & PCB",
+    "Firmware",
+    "Prototype",
+    "Field testing",
+    "Production preparation"
+  ],
+  "tradeoffsHeading": "Engineering trade-offs",
+  "tradeoffs": [
+    {
+      "title": "Reporting interval vs. battery life",
+      "description": "More frequent location updates shorten battery life. We set the interval against the run time you need."
+    },
+    {
+      "title": "GNSS acquisition time vs. power",
+      "description": "Faster position fixes usually draw more current. The acquisition strategy depends on how often a fix is genuinely needed."
+    },
+    {
+      "title": "Radio range vs. running cost",
+      "description": "Cellular covers wide areas but adds data plans; LoRa needs gateway coverage but avoids per-device cellular plans on a private network."
+    },
+    {
+      "title": "Size vs. battery capacity",
+      "description": "A collar-mounted device is limited by weight and wearer comfort, which sets the largest battery you can use."
+    }
+  ],
+  "inquiryHeading": "Information that helps us scope a project",
+  "inquiry": [
+    "Animal type, size and typical behavior",
+    "Required location interval and acceptable battery-change schedule",
+    "Coverage environment: open land, buildings, urban areas",
+    "Gateway or cellular infrastructure already available",
+    "Target volume and timeline",
+    "Any existing collar or enclosure to integrate"
+  ],
+  "linksHeading": "Related pages and articles",
+  "links": [
+    {
+      "label": "Pet device development",
+      "href": "/pet-technology"
+    },
+    {
+      "label": "Livestock tracking hardware",
+      "href": "/livestock-technology"
+    },
+    {
+      "label": "Low-power tracker design (article)",
+      "href": "/blog/low-power-animal-tracker-design"
+    },
+    {
+      "label": "GNSS + LoRa vs. GNSS + LTE-M (article)",
+      "href": "/blog/gnss-lora-vs-gnss-ltem"
+    }
+  ],
+  "note": "This section describes custom engineering services. Reference designs on our Projects page are concepts and prototypes, not products available to purchase."
+};
+
 export default function AnimalTrackingPage() {
   return (
     <>
@@ -49,9 +135,7 @@ export default function AnimalTrackingPage() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Animal Tracking</Eyebrow>
-        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          GPS &amp; GNSS Animal Tracking Systems
-        </h1>
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Custom GPS & GNSS Animal Tracker Development</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Real-time or periodic location systems that keep pets, livestock
           and other animals findable — on the property or far from it.
@@ -89,6 +173,8 @@ export default function AnimalTrackingPage() {
           <FAQAccordion items={faqs} />
         </div>
       </section>
+
+      <ServiceScope id="tracking-scope" copy={scope} />
 
       <CTABanner
         heading="Need a Custom Tracking Device?"
