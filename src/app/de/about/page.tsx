@@ -8,6 +8,7 @@ import {
   Radio,
   Settings2,
   Target,
+  User,
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
@@ -73,6 +74,26 @@ export default function AboutPageDe() {
             elektronischer Systeme, die Überwachung, Automatisierung und
             Entscheidungsfindung für Tiere und die Menschen, die sich um sie
             kümmern, verbessern.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 pb-12 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-8 shadow-[0_1px_2px_rgba(14,27,38,0.04)]">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10">
+            <User className="h-6 w-6 text-[var(--ts-dark-green)]" aria-hidden="true" />
+          </div>
+          <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
+            Wer hinter PawSync steht
+          </h2>
+          <p className="mt-2 text-[var(--ts-gray)]">
+            PawSync.tech wird unabhängig und persönlich von Tahir Nazeer
+            betrieben — es handelt sich nicht um ein eingetragenes
+            Unternehmen. Die Engineering-Arbeit an Hardware und Firmware von
+            PawSync wird Pak-EL LAB zugeschrieben, separat in der Fußzeile
+            der Website genannt. Diese Nennung spiegelt eine
+            Engineering-Zusammenarbeit wider; Pak-EL LAB besitzt oder
+            betreibt PawSync nicht.
           </p>
         </div>
       </section>

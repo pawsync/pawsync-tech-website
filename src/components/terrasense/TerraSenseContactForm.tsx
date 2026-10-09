@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AlertTriangle, CheckCircle2, Paperclip, Send } from "lucide-react";
 import type { Locale } from "@/i18n/config";
 import { localizeInternalHref } from "@/i18n/config";
+import { getCountryOptions } from "@/lib/countries";
 
 const projectTypesByLocale: Record<Locale, string[]> = {
   en: [
@@ -63,6 +64,8 @@ const dict: Record<Locale, {
   email: string;
   phone: string;
   country: string;
+  selectCountry: string;
+  otherCountry: string;
   projectType: string;
   selectProjectType: string;
   quantity: string;
@@ -88,6 +91,8 @@ const dict: Record<Locale, {
     email: "Email",
     phone: "Phone",
     country: "Country",
+    selectCountry: "Select your country",
+    otherCountry: "Other",
     projectType: "Project Type",
     selectProjectType: "Select a project type",
     quantity: "Expected Quantity",
@@ -114,6 +119,8 @@ const dict: Record<Locale, {
     email: "E-Mail",
     phone: "Telefon",
     country: "Land",
+    selectCountry: "Land auswählen",
+    otherCountry: "Sonstiges",
     projectType: "Projektart",
     selectProjectType: "Projektart auswählen",
     quantity: "Erwartete Stückzahl",
@@ -140,6 +147,8 @@ const dict: Record<Locale, {
     email: "E-mail",
     phone: "Téléphone",
     country: "Pays",
+    selectCountry: "Sélectionnez votre pays",
+    otherCountry: "Autre",
     projectType: "Type de projet",
     selectProjectType: "Sélectionnez un type de projet",
     quantity: "Quantité prévue",
@@ -169,6 +178,7 @@ export default function TerraSenseContactForm({ locale = "en" }: { locale?: Loca
   const t = dict[locale];
   const projectTypes = projectTypesByLocale[locale];
   const quantities = quantitiesByLocale[locale];
+  const countries = getCountryOptions(locale, t.otherCountry);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -258,7 +268,21 @@ export default function TerraSenseContactForm({ locale = "en" }: { locale?: Loca
           <input id={`${idPrefix}-phone`} name="phone" type="tel" className={inputClasses} />
         </Field>
         <Field id={`${idPrefix}-country`} label={t.country}>
-          <input id={`${idPrefix}-country`} name="country" type="text" className={inputClasses} />
+          <select
+            id={`${idPrefix}-country`}
+            name="country"
+            defaultValue=""
+            className={inputClasses}
+          >
+            <option value="" disabled>
+              {t.selectCountry}
+            </option>
+            {countries.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
         </Field>
         <Field id={`${idPrefix}-project-type`} label={t.projectType} required>
           <select
@@ -359,7 +383,7 @@ function Field({
     <div>
       <label htmlFor={id} className="block text-sm font-medium text-[var(--ts-navy)]">
         {label}
-        {required && <span className="text-[var(--ts-green)]"> *</span>}
+        {required && <span className="text-[var(--ts-dark-green)]"> *</span>}
       </label>
       <div className="mt-1.5">{children}</div>
     </div>

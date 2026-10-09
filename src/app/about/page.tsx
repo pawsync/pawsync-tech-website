@@ -8,6 +8,7 @@ import {
   Radio,
   Settings2,
   Target,
+  User,
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
@@ -71,6 +72,25 @@ export default function AboutPage() {
             Develop practical, reliable, and intelligent electronic systems
             that improve monitoring, automation, and decision-making for
             animals and the people who care for them.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 pb-12 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-8 shadow-[0_1px_2px_rgba(14,27,38,0.04)]">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10">
+            <User className="h-6 w-6 text-[var(--ts-dark-green)]" aria-hidden="true" />
+          </div>
+          <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
+            Who Is Behind PawSync
+          </h2>
+          <p className="mt-2 text-[var(--ts-gray)]">
+            PawSync.tech is operated independently and personally by Tahir
+            Nazeer — it is not a registered company. Engineering work on
+            PawSync&apos;s hardware and firmware is credited to Pak-EL LAB,
+            named separately in the site footer. That credit reflects an
+            engineering collaboration; Pak-EL LAB does not own or operate
+            PawSync.
           </p>
         </div>
       </section>
