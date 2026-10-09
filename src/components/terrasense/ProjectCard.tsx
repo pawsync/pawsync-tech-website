@@ -43,7 +43,7 @@ export default function ProjectCard({
         </span>
       </div>
 
-      <h3 className="mt-4 font-[family-name:var(--font-manrope)] text-lg font-bold text-[var(--ts-navy)]">
+      <h3 className="mt-4 break-words font-[family-name:var(--font-manrope)] text-lg font-bold text-[var(--ts-navy)]">
         {title}
       </h3>
 
