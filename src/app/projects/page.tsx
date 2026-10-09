@@ -56,8 +56,8 @@ const projects = [
     stage: "Reference Design",
     technology: ["LoRa", "Environmental Sensors"],
     challenge: "Monitor temperature, humidity, and soil moisture across a large property with one gateway.",
-    solution: "Battery-powered sensor nodes with multi-year life, reporting over a long-range LoRa network.",
-    features: ["Multi-sensor", "Years of battery life", "Gateway-ready"],
+    solution: "Battery-powered sensor nodes designed for multi-year battery life, reporting over a long-range LoRa network.",
+    features: ["Multi-sensor", "Multi-year battery target", "Gateway-ready"],
   },
   {
     title: "Smart Feeding Controller",
@@ -111,7 +111,7 @@ const projects = [
     technology: ["LoRaWAN", "Cellular", "Solar"],
     challenge: "Aggregate data from dozens of field sensors with no existing network infrastructure.",
     solution: "Solar-powered LoRaWAN gateway with cellular backhaul to the cloud dashboard.",
-    features: ["Solar-backed", "30-day backup", "Multi-node capacity"],
+    features: ["Solar-backed", "30-day backup target", "Multi-node capacity"],
   },
   {
     title: "Battery-Powered IoT Device",
@@ -120,7 +120,7 @@ const projects = [
     technology: ["Power Management", "BLE", "Low-Power MCU"],
     challenge: "Push battery life from days to months without sacrificing sensor accuracy.",
     solution: "Aggressive duty-cycling and power-gated sensors managed by a low-power microcontroller.",
-    features: ["Months of battery life", "Sleep-mode design", "BLE reporting"],
+    features: ["Multi-month battery target", "Sleep-mode design", "BLE reporting"],
   },
 ];
 

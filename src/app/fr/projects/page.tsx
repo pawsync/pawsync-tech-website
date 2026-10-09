@@ -56,8 +56,8 @@ const projects = [
     stage: "Modèle de référence",
     technology: ["LoRa", "Capteurs environnementaux"],
     challenge: "Surveiller la température, l'humidité et l'humidité du sol sur une grande propriété avec une seule passerelle.",
-    solution: "Nœuds de capteurs alimentés par batterie à longue autonomie, transmettant via un réseau LoRa longue portée.",
-    features: ["Multi-capteurs", "Des années d'autonomie", "Compatible passerelle"],
+    solution: "Nœuds de capteurs alimentés par batterie, conçus pour une autonomie pluriannuelle, transmettant via un réseau LoRa longue portée.",
+    features: ["Multi-capteurs", "Autonomie pluriannuelle visée", "Compatible passerelle"],
   },
   {
     title: "Contrôleur d'alimentation intelligent",
@@ -111,7 +111,7 @@ const projects = [
     technology: ["LoRaWAN", "Cellulaire", "Solaire"],
     challenge: "Agréger les données de dizaines de capteurs de terrain sans infrastructure réseau existante.",
     solution: "Passerelle LoRaWAN alimentée par le solaire avec relais cellulaire vers le tableau de bord cloud.",
-    features: ["Alimenté par le solaire", "Secours de 30 jours", "Capacité multi-nœuds"],
+    features: ["Alimenté par le solaire", "Secours de 30 jours visé", "Capacité multi-nœuds"],
   },
   {
     title: "Dispositif IoT alimenté par batterie",
@@ -120,7 +120,7 @@ const projects = [
     technology: ["Gestion de l'alimentation", "BLE", "MCU basse consommation"],
     challenge: "Faire passer l'autonomie de la batterie de quelques jours à plusieurs mois sans sacrifier la précision des capteurs.",
     solution: "Cyclage agressif et capteurs à alimentation contrôlée, gérés par un microcontrôleur basse consommation.",
-    features: ["Des mois d'autonomie", "Conception en mode veille", "Rapport BLE"],
+    features: ["Autonomie de plusieurs mois visée", "Conception en mode veille", "Rapport BLE"],
   },
 ];
 

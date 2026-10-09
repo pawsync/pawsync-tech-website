@@ -56,8 +56,8 @@ const projects = [
     stage: "Referenzdesign",
     technology: ["LoRa", "Umweltsensoren"],
     challenge: "Temperatur, Luftfeuchtigkeit und Bodenfeuchte über eine große Fläche mit einem Gateway überwachen.",
-    solution: "Batteriebetriebene Sensorknoten mit mehrjähriger Laufzeit, die über ein Weitverkehrs-LoRa-Netzwerk melden.",
-    features: ["Multisensor", "Jahrelange Akkulaufzeit", "Gateway-fähig"],
+    solution: "Batteriebetriebene Sensorknoten, ausgelegt auf mehrjährige Laufzeit, die über ein Weitverkehrs-LoRa-Netzwerk melden.",
+    features: ["Multisensor", "Mehrjähriger Akku-Zielwert", "Gateway-fähig"],
   },
   {
     title: "Intelligenter Fütterungscontroller",
@@ -111,7 +111,7 @@ const projects = [
     technology: ["LoRaWAN", "Mobilfunk", "Solar"],
     challenge: "Daten von Dutzenden Feldsensoren ohne bestehende Netzwerkinfrastruktur zusammenführen.",
     solution: "Solarbetriebenes LoRaWAN-Gateway mit Mobilfunk-Backhaul zum Cloud-Dashboard.",
-    features: ["Solargestützt", "30-Tage-Backup", "Multi-Knoten-Kapazität"],
+    features: ["Solargestützt", "30-Tage-Backup-Ziel", "Multi-Knoten-Kapazität"],
   },
   {
     title: "Batteriebetriebenes IoT-Gerät",
@@ -120,7 +120,7 @@ const projects = [
     technology: ["Power Management", "BLE", "Stromsparender Mikrocontroller"],
     challenge: "Akkulaufzeit von Tagen auf Monate erhöhen, ohne die Sensorgenauigkeit zu beeinträchtigen.",
     solution: "Aggressives Duty-Cycling und leistungsgesteuerte Sensoren, verwaltet von einem stromsparenden Mikrocontroller.",
-    features: ["Monate an Akkulaufzeit", "Schlafmodus-Design", "BLE-Meldung"],
+    features: ["Mehrmonatiger Akku-Zielwert", "Schlafmodus-Design", "BLE-Meldung"],
   },
 ];
 
