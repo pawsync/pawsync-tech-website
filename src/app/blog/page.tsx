@@ -25,6 +25,21 @@ const articles = [
     excerpt: "Battery life in a wearable tracker is a power-budget problem. The engineering techniques that determine whether a device lasts days or months.",
     href: "/blog/low-power-animal-tracker-design",
   },
+  {
+    title: "Designing a PCB for a Pet or Animal Tracker",
+    excerpt: "A collar- or tag-mounted tracker isn't a smaller GPS board. Antenna placement, stack-up, and enclosure constraints that drive the design.",
+    href: "/blog/pet-tracker-pcb-design",
+  },
+  {
+    title: "Smart Pet Feeder Hardware & Firmware Engineering",
+    excerpt: "Portion accuracy, load-cell calibration, jam detection, and RFID recognition — the engineering decisions behind a smart pet feeder.",
+    href: "/blog/smart-pet-feeder-engineering",
+  },
+  {
+    title: "Planning a Wireless Poultry House Monitoring Network",
+    excerpt: "Sensor placement, protocol choice, and gateway planning — and why one sensor per house usually isn't enough.",
+    href: "/blog/wireless-poultry-monitoring-design",
+  },
 ];
 
 export default function BlogPage() {

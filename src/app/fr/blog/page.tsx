@@ -25,6 +25,21 @@ const articles = [
     excerpt: "L'autonomie d'un tracker portable est un problème de budget énergétique. Les techniques qui déterminent si un appareil tient des jours ou des mois.",
     href: "/fr/blog/low-power-animal-tracker-design",
   },
+  {
+    title: "Concevoir une carte PCB pour un tracker animalier",
+    excerpt: "Un tracker porté au collier n'est pas une carte GPS miniature. Placement d'antenne, empilage des couches et contraintes de boîtier.",
+    href: "/fr/blog/pet-tracker-pcb-design",
+  },
+  {
+    title: "Ingénierie matérielle & logicielle d'un distributeur intelligent",
+    excerpt: "Précision des portions, calibration de cellule de charge, détection de blocage et reconnaissance RFID — les choix d'ingénierie d'un distributeur.",
+    href: "/fr/blog/smart-pet-feeder-engineering",
+  },
+  {
+    title: "Planifier un réseau de surveillance avicole sans fil",
+    excerpt: "Placement des capteurs, choix du protocole et planification des passerelles — et pourquoi un capteur ne suffit pas.",
+    href: "/fr/blog/wireless-poultry-monitoring-design",
+  },
 ];
 
 export default function BlogPageFr() {

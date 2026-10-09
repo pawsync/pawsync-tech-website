@@ -25,6 +25,21 @@ const articles = [
     excerpt: "Die Akkulaufzeit eines tragbaren Trackers ist ein Energiebudget-Problem. Die Techniken, die entscheiden, ob ein Gerät Tage oder Monate durchhält.",
     href: "/de/blog/low-power-animal-tracker-design",
   },
+  {
+    title: "Leiterplattendesign für einen Tier-Tracker",
+    excerpt: "Ein Halsband- oder Anhänger-Tracker ist keine kleinere GPS-Platine. Antennenplatzierung, Lagenaufbau und Gehäusevorgaben, die das Design bestimmen.",
+    href: "/de/blog/pet-tracker-pcb-design",
+  },
+  {
+    title: "Hardware- & Firmware-Engineering für intelligente Futterautomaten",
+    excerpt: "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung — die Engineering-Entscheidungen hinter einem Futterautomaten.",
+    href: "/de/blog/smart-pet-feeder-engineering",
+  },
+  {
+    title: "Ein drahtloses Überwachungsnetz für den Geflügelstall planen",
+    excerpt: "Sensorplatzierung, Protokollwahl und Gateway-Planung — und warum ein Sensor pro Stall meist nicht reicht.",
+    href: "/de/blog/wireless-poultry-monitoring-design",
+  },
 ];
 
 export default function BlogPageDe() {
