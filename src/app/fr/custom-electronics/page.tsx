@@ -224,6 +224,10 @@ export default function CustomElectronicsPageFr() {
             <p className="mt-1 text-sm text-[var(--ts-gray)]">
               Une configuration représentative pour un tracker animal
               connecté — voir notre article sur la{" "}
+              <Link href="/fr/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                conception de carte PCB pour tracker
+              </Link>
+              , notre article sur la{" "}
               <Link href="/fr/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
                 conception de trackers basse consommation
               </Link>{" "}

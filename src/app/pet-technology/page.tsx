@@ -132,6 +132,10 @@ const scope: ServiceScopeCopy = {
     {
       "label": "GNSS + LoRa vs. GNSS + LTE-M (article)",
       "href": "/blog/gnss-lora-vs-gnss-ltem"
+    },
+    {
+      "label": "Pet tracker PCB design (article)",
+      "href": "/blog/pet-tracker-pcb-design"
     }
   ],
   "note": "This section describes custom engineering services. Reference designs on our Projects page are concepts and prototypes, not products available to purchase."

@@ -6,7 +6,7 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Entwicklung intelligenter Futterautomaten | PawSync",
+  title: "Hardware- & Firmware-Engineering Futterautomat | PawSync",
   description:
     "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung — die Engineering-Entscheidungen hinter einem intelligenten Futterautomaten.",
   alternates: buildAlternates("de", "blog/smart-pet-feeder-engineering"),

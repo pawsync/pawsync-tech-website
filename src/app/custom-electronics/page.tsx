@@ -222,10 +222,14 @@ export default function CustomElectronicsPage() {
             </h3>
             <p className="mt-1 text-sm text-[var(--ts-gray)]">
               A representative build for a connected animal tracker — see our{" "}
+              <Link href="/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                tracker PCB design
+              </Link>{" "}
+              write-up, our{" "}
               <Link href="/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
                 low-power tracker design
               </Link>{" "}
-              write-up and our{" "}
+              write-up, and our{" "}
               <Link href="/blog/gnss-lora-vs-gnss-ltem" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
                 GNSS + LoRa vs. GNSS + LTE-M
               </Link>{" "}

@@ -204,10 +204,14 @@ export default function LivestockTechnologyPage() {
             PCB design, firmware, a prototype you can test under real
             conditions, and manufacturing-preparation files once the design
             is validated. See our related{" "}
+            <Link href="/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              tracker PCB design
+            </Link>{" "}
+            and{" "}
             <Link href="/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               low-power animal tracker design
             </Link>{" "}
-            write-up, or our{" "}
+            write-ups, or our{" "}
             <Link href="/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               custom electronics engineering
             </Link>{" "}

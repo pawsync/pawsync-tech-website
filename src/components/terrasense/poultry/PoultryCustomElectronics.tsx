@@ -30,7 +30,11 @@ export default function PoultryCustomElectronics() {
           <Link href="/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             low-power sensor node design
           </Link>{" "}
-          write-up for how we approach battery-powered hardware.
+          write-up for how we approach battery-powered hardware, or our{" "}
+          <Link href="/blog/wireless-poultry-monitoring-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            poultry monitoring network planning
+          </Link>{" "}
+          guide for how we approach sensor placement and connectivity.
         </p>
       </div>
 

@@ -132,6 +132,10 @@ const scope: ServiceScopeCopy = {
     {
       "label": "GNSS + LoRa vs. GNSS + LTE-M (Artikel)",
       "href": "/de/blog/gnss-lora-vs-gnss-ltem"
+    },
+    {
+      "label": "Leiterplattendesign für Tracker (Artikel)",
+      "href": "/de/blog/pet-tracker-pcb-design"
     }
   ],
   "note": "Dieser Bereich beschreibt individuelle Engineering-Dienstleistungen. Referenzdesigns auf unserer Projektseite sind Konzepte und Prototypen, keine käuflichen Produkte."

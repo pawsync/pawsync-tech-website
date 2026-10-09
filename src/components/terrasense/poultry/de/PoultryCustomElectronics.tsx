@@ -30,7 +30,12 @@ export default function PoultryCustomElectronics() {
           <Link href="/de/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             stromsparenden Sensorknoten-Entwicklung
           </Link>{" "}
-          für unseren Ansatz bei batteriebetriebener Hardware.
+          für unseren Ansatz bei batteriebetriebener Hardware, oder unseren
+          Leitfaden zur{" "}
+          <Link href="/de/blog/wireless-poultry-monitoring-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            Planung drahtloser Geflügelüberwachung
+          </Link>{" "}
+          für Sensorplatzierung und Konnektivität.
         </p>
       </div>
 

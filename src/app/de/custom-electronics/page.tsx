@@ -222,7 +222,11 @@ export default function CustomElectronicsPageDe() {
             </h3>
             <p className="mt-1 text-sm text-[var(--ts-gray)]">
               Ein repräsentativer Aufbau für einen vernetzten Tier-Tracker —
-              siehe unseren Beitrag zur{" "}
+              siehe unseren Beitrag zum{" "}
+              <Link href="/de/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                Tracker-Leiterplattendesign
+              </Link>
+              , unseren Beitrag zur{" "}
               <Link href="/de/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
                 stromsparenden Tracker-Entwicklung
               </Link>{" "}

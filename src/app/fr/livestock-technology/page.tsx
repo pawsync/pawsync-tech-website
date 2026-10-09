@@ -207,6 +207,10 @@ export default function LivestockTechnologyPageFr() {
             d&apos;un prototype testable en conditions réelles, puis des
             fichiers de préparation à la fabrication une fois la conception
             validée. Voir aussi notre article sur la{" "}
+            <Link href="/fr/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              conception de carte PCB pour tracker
+            </Link>
+            , notre article sur la{" "}
             <Link href="/fr/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               conception électronique basse consommation pour trackers d&apos;animaux
             </Link>{" "}

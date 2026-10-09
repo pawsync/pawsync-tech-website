@@ -205,7 +205,11 @@ export default function LivestockTechnologyPageDe() {
             Zuerst Discovery und Architektur, dann Schaltplan- und
             Leiterplattenentwicklung, Firmware, ein Prototyp zum Testen unter
             echten Bedingungen und schließlich die Fertigungsvorbereitung nach
-            erfolgreicher Validierung. Siehe auch unseren Beitrag zur{" "}
+            erfolgreicher Validierung. Siehe auch unseren Beitrag zum{" "}
+            <Link href="/de/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              Tracker-Leiterplattendesign
+            </Link>{" "}
+            und zur{" "}
             <Link href="/de/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               stromsparenden Elektronik für Tier-Tracker
             </Link>{" "}

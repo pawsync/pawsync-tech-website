@@ -127,6 +127,10 @@ const scope: ServiceScopeCopy = {
     {
       "label": "Matériel de suivi du bétail",
       "href": "/fr/livestock-technology"
+    },
+    {
+      "label": "Ingénierie du distributeur (article)",
+      "href": "/fr/blog/smart-pet-feeder-engineering"
     }
   ],
   "note": "Cette section décrit des services d'ingénierie sur mesure. Les designs de référence présentés sur notre page Projets sont des concepts et des prototypes, et non des produits à acheter."
