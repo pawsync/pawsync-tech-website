@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
@@ -154,8 +155,8 @@ export default function BlogArticleSmartFeederEngineeringFr() {
           <Link href="/fr/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Contactez-nous</Link>, nous vous aiderons à
           travailler la sensorique, l&apos;interface mécanique et l&apos;architecture du micrologiciel. Pour
           notre approche générale du développement de dispositifs sur mesure, voir{" "}
-          <Link href="/fr/smart-feeding" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Systèmes d&apos;alimentation intelligents</Link> et{" "}
-          <Link href="/fr/custom-electronics" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Électronique &amp; micrologiciel sur mesure</Link>.
+          <ArticleServiceLink locale="fr" href="/fr/smart-feeding" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Systèmes d&apos;alimentation intelligents</ArticleServiceLink> et{" "}
+          <ArticleServiceLink locale="fr" href="/fr/custom-electronics" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Électronique &amp; micrologiciel sur mesure</ArticleServiceLink>.
         </p>
       </article>
 
@@ -166,6 +167,7 @@ export default function BlogArticleSmartFeederEngineeringFr() {
         primaryHref="/fr/contact"
         secondaryLabel="Systèmes d'alimentation intelligents"
         secondaryHref="/fr/smart-feeding"
+        secondaryLocale="fr"
       />
     </>
   );

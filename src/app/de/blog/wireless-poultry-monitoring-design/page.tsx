@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
@@ -150,8 +151,8 @@ export default function BlogArticleWirelessPoultryMonitoringDe() {
           <Link href="/de/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Kontaktieren Sie uns</Link>, wir
           helfen Ihnen bei Sensorplatzierung und Protokollwahl für Ihr Stalllayout. Das gesamte
           Geflügel-Angebot zeigen{" "}
-          <Link href="/de/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Geflügelfarm-Technologie</Link> und{" "}
-          <Link href="/de/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Umweltüberwachung</Link>.
+          <ArticleServiceLink locale="de" href="/de/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Geflügelfarm-Technologie</ArticleServiceLink> und{" "}
+          <ArticleServiceLink locale="de" href="/de/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Umweltüberwachung</ArticleServiceLink>.
         </p>
       </article>
 
@@ -162,6 +163,7 @@ export default function BlogArticleWirelessPoultryMonitoringDe() {
         primaryHref="/de/contact"
         secondaryLabel="Geflügelfarm-Technologie"
         secondaryHref="/de/poultry-farming"
+        secondaryLocale="de"
       />
     </>
   );

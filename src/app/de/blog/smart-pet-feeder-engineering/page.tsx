@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
@@ -152,8 +153,8 @@ export default function BlogArticleSmartFeederEngineeringDe() {
           <Link href="/de/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Kontaktieren Sie uns</Link>, wir helfen Ihnen, Sensorik,
           Mechanikschnittstelle und Firmware-Architektur durchzudenken. Wie PawSync individuelle
           Geräteentwicklung allgemein angeht, zeigen{" "}
-          <Link href="/de/smart-feeding" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Intelligente Fütterungssysteme</Link> und{" "}
-          <Link href="/de/custom-electronics" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Kundenspezifische Elektronik &amp; Firmware</Link>.
+          <ArticleServiceLink locale="de" href="/de/smart-feeding" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Intelligente Fütterungssysteme</ArticleServiceLink> und{" "}
+          <ArticleServiceLink locale="de" href="/de/custom-electronics" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Kundenspezifische Elektronik &amp; Firmware</ArticleServiceLink>.
         </p>
       </article>
 
@@ -164,6 +165,7 @@ export default function BlogArticleSmartFeederEngineeringDe() {
         primaryHref="/de/contact"
         secondaryLabel="Intelligente Fütterungssysteme"
         secondaryHref="/de/smart-feeding"
+        secondaryLocale="de"
       />
     </>
   );

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
@@ -142,8 +143,8 @@ export default function BlogArticleSmartFeederEngineering() {
           Scoping a feeder project? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and we&apos;ll help you work through the
           sensing, mechanics interface, and firmware architecture. For how PawSync approaches custom device
           development more broadly, see{" "}
-          <Link href="/smart-feeding" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Smart Feeder Development</Link> and{" "}
-          <Link href="/custom-electronics" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Custom Electronics &amp; Firmware</Link>.
+          <ArticleServiceLink locale="en" href="/smart-feeding" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Smart Feeder Development</ArticleServiceLink> and{" "}
+          <ArticleServiceLink locale="en" href="/custom-electronics" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Custom Electronics &amp; Firmware</ArticleServiceLink>.
         </p>
       </article>
 
@@ -154,6 +155,7 @@ export default function BlogArticleSmartFeederEngineering() {
         primaryHref="/contact"
         secondaryLabel="Smart Feeder Development"
         secondaryHref="/smart-feeding"
+        secondaryLocale="en"
       />
     </>
   );

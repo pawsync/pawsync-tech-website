@@ -167,6 +167,7 @@ export default function BlogArticlePetTrackerPCB() {
         primaryHref="/contact"
         secondaryLabel="Animal Tracker Development"
         secondaryHref="/animal-tracking"
+        secondaryLocale="en"
       />
     </>
   );

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, type LucideIcon } from "lucide-react";
+import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
+import type { Locale } from "@/i18n/config";
 
 interface CTABannerProps {
   eyebrow?: string;
@@ -9,6 +11,12 @@ interface CTABannerProps {
   primaryHref: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  // Set only when secondaryHref is a genuine service/solution page reached
+  // from an article (not e.g. "Back to Blog") — fires the "Article Service
+  // Click" analytics event (a no-op while analytics is disabled). Omit to
+  // keep the secondary link as a plain, untracked Link, unchanged from
+  // every other call site.
+  secondaryLocale?: Locale;
   icon?: LucideIcon;
 }
 
@@ -20,6 +28,7 @@ export default function CTABanner({
   primaryHref,
   secondaryLabel,
   secondaryHref,
+  secondaryLocale,
   icon: Icon = ArrowRight,
 }: CTABannerProps) {
   return (
@@ -55,12 +64,22 @@ export default function CTABanner({
             {primaryLabel}
           </Link>
           {secondaryLabel && secondaryHref && (
-            <Link
-              href={secondaryHref}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/40 px-6 py-3.5 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[var(--ts-navy)] active:translate-y-0"
-            >
-              {secondaryLabel}
-            </Link>
+            secondaryLocale ? (
+              <ArticleServiceLink
+                locale={secondaryLocale}
+                href={secondaryHref}
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/40 px-6 py-3.5 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[var(--ts-navy)] active:translate-y-0"
+              >
+                {secondaryLabel}
+              </ArticleServiceLink>
+            ) : (
+              <Link
+                href={secondaryHref}
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/40 px-6 py-3.5 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-[var(--ts-navy)] active:translate-y-0"
+              >
+                {secondaryLabel}
+              </Link>
+            )
           )}
         </div>
       </div>

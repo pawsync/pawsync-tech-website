@@ -6,6 +6,7 @@ import { AlertTriangle, CheckCircle2, Paperclip, Send } from "lucide-react";
 import type { Locale } from "@/i18n/config";
 import { localizeInternalHref } from "@/i18n/config";
 import { getCountryOptions } from "@/lib/countries";
+import { trackEvent } from "@/lib/analytics";
 
 const projectTypesByLocale: Record<Locale, string[]> = {
   en: [
@@ -207,6 +208,7 @@ export default function TerraSenseContactForm({ locale = "en" }: { locale?: Loca
 
       if (response.ok) {
         setStatus("success");
+        trackEvent("Contact Form Success", { locale });
       } else {
         console.error("Netlify Forms submission failed:", response.status, response.statusText);
         setStatus("error");

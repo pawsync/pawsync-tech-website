@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import TerraSenseLogo from "@/components/terrasense/TerraSenseLogo";
 import type { Locale } from "@/i18n/config";
 import { localeFromPathname, localizeInternalHref, switchLocalePath } from "@/i18n/config";
+import { trackEvent } from "@/lib/analytics";
 import {
   Activity,
   AlertTriangle,
@@ -382,6 +383,7 @@ export default function TerraSenseHeader() {
         <div className="hidden lg:block">
           <Link
             href={contactHref}
+            onClick={() => trackEvent("Contact CTA Click", { locale })}
             className="inline-flex items-center justify-center rounded-full bg-[var(--ts-dark-green)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-[var(--ts-navy)] hover:shadow-md active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[var(--ts-green)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ts-bg)]"
           >
             {t.startProject}
@@ -507,7 +509,10 @@ export default function TerraSenseHeader() {
           <li className="pt-2">
             <Link
               href={contactHref}
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                trackEvent("Contact CTA Click", { locale });
+                setIsOpen(false);
+              }}
               className="block rounded-full bg-[var(--ts-dark-green)] px-5 py-3 text-center text-base font-semibold text-white shadow-sm transition-colors hover:bg-[var(--ts-navy)]"
             >
               {t.startProject}

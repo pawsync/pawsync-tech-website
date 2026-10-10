@@ -173,6 +173,7 @@ export default function BlogArticlePetTrackerPCBDe() {
         primaryHref="/de/contact"
         secondaryLabel="Tier-Tracking-Entwicklung"
         secondaryHref="/de/animal-tracking"
+        secondaryLocale="de"
       />
     </>
   );

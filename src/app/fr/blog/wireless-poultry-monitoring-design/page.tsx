@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
@@ -156,8 +157,8 @@ export default function BlogArticleWirelessPoultryMonitoringFr() {
           <Link href="/fr/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Contactez-nous</Link>, nous
           vous aiderons à travailler le placement des capteurs et le choix du protocole selon la
           disposition de votre bâtiment. Pour l&apos;ensemble des solutions avicoles, voir{" "}
-          <Link href="/fr/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Technologie avicole</Link> et{" "}
-          <Link href="/fr/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Surveillance environnementale</Link>.
+          <ArticleServiceLink locale="fr" href="/fr/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Technologie avicole</ArticleServiceLink> et{" "}
+          <ArticleServiceLink locale="fr" href="/fr/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Surveillance environnementale</ArticleServiceLink>.
         </p>
       </article>
 
@@ -168,6 +169,7 @@ export default function BlogArticleWirelessPoultryMonitoringFr() {
         primaryHref="/fr/contact"
         secondaryLabel="Technologie avicole"
         secondaryHref="/fr/poultry-farming"
+        secondaryLocale="fr"
       />
     </>
   );

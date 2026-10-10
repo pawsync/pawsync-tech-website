@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
+import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
@@ -142,8 +143,8 @@ export default function BlogArticleWirelessPoultryMonitoring() {
           Planning a monitoring network for a specific site? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and
           we&apos;ll help you work through sensor placement and protocol choice for your house layout. For
           the full range of poultry solutions, see{" "}
-          <Link href="/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Poultry Farm Technology</Link> and{" "}
-          <Link href="/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Environmental Monitoring</Link>.
+          <ArticleServiceLink locale="en" href="/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Poultry Farm Technology</ArticleServiceLink> and{" "}
+          <ArticleServiceLink locale="en" href="/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Environmental Monitoring</ArticleServiceLink>.
         </p>
       </article>
 
@@ -154,6 +155,7 @@ export default function BlogArticleWirelessPoultryMonitoring() {
         primaryHref="/contact"
         secondaryLabel="Poultry Farm Technology"
         secondaryHref="/poultry-farming"
+        secondaryLocale="en"
       />
     </>
   );
