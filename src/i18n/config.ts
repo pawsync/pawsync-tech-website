@@ -44,27 +44,30 @@ export type Route = (typeof routes)[number];
 // every URL with the build time. Each date was checked against the commit
 // diffs rather than taken from the latest commit: changes that only touched
 // styling, accessibility attributes, analytics, metadata titles, or added a
-// link are not counted. A per-locale object is used where translations
-// changed on different days. Update the entry when a page's content changes.
+// link are not counted, and neither are site-wide template changes that are
+// identical on every page (header, footer, the layout's WebSite/Organization
+// JSON-LD). Page-specific structured data, such as an article's BlogPosting,
+// does count. A per-locale object is used where translations changed on
+// different days. Update the entry when a page's content changes.
 export const routeLastModified: Record<Route, string | Record<Locale, string>> = {
   "": "2026-10-02",
   about: "2026-10-10",
   "animal-tracking": "2026-10-27",
   blog: "2026-10-09",
-  "blog/gnss-lora-vs-gnss-ltem": "2026-09-28",
-  "blog/low-power-animal-tracker-design": "2026-09-28",
-  "blog/pet-tracker-pcb-design": "2026-10-09",
-  "blog/smart-pet-feeder-engineering": "2026-10-09",
-  "blog/wireless-poultry-monitoring-design": "2026-10-09",
+  "blog/gnss-lora-vs-gnss-ltem": "2026-10-27",
+  "blog/low-power-animal-tracker-design": "2026-10-27",
+  "blog/pet-tracker-pcb-design": "2026-10-27",
+  "blog/smart-pet-feeder-engineering": "2026-10-27",
+  "blog/wireless-poultry-monitoring-design": "2026-10-27",
   contact: "2026-10-02",
   "custom-electronics": "2026-10-04",
-  "environmental-monitoring": { en: "2026-10-26", de: "2026-10-02", fr: "2026-10-02" },
+  "environmental-monitoring": { en: "2026-10-27", de: "2026-10-02", fr: "2026-10-02" },
   "farm-automation": "2026-10-27",
   "how-we-work": { en: "2026-09-16", de: "2026-09-18", fr: "2026-09-18" },
   industries: "2026-10-02",
   "livestock-technology": "2026-10-27",
   "pet-technology": "2026-10-27",
-  "poultry-farming": { en: "2026-10-26", de: "2026-10-04", fr: "2026-10-04" },
+  "poultry-farming": { en: "2026-10-27", de: "2026-10-04", fr: "2026-10-04" },
   privacy: "2026-09-28",
   projects: "2026-10-09",
   "smart-feeding": "2026-10-27",
