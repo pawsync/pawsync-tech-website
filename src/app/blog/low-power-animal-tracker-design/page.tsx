@@ -129,7 +129,7 @@ export default function BlogArticleLowPowerDesign() {
         </div>
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
-          Working through a battery-life target for your own device? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and we&apos;ll help you scope the power budget.
+          Designing trackers for a herd rather than a single animal? See our <Link href="/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">remote livestock monitoring</Link> engineering services. Working through a battery-life target for your own device? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and we&apos;ll help you scope the power budget.
         </p>
       </article>
 

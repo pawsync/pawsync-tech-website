@@ -95,18 +95,18 @@ const faqs: FAQItem[] = [
 
 const solutions = [
   { icon: Satellite, title: "GPS-Tracking für Nutztiere", description: "Standortverfolgung, entwickelt für offenes Weideland und große Flächen.", href: "/de/animal-tracking" },
-  { icon: Radar, title: "Rinder-Tracking", description: "Halsband- und Ohrmarkenhardware, dimensioniert für Rinderherden." },
+  { icon: Radar, title: "Rinder-Tracking", description: "Halsband- oder Ohrmarken-Hardware, ausgelegt auf Ihre Herde und Ihr Gelände." },
   { icon: Radar, title: "Schaf-Tracking", description: "Leichte Tracking-Geräte für das Herdenmanagement." },
   { icon: Radar, title: "Ziegen-Tracking", description: "Robuste Tracking-Hardware für weidende Herden." },
-  { icon: Radar, title: "Pferde-Tracking", description: "GPS- und Aktivitäts-Tracking, entwickelt für das Wohlergehen von Pferden." },
+  { icon: Radar, title: "Pferde-Tracking", description: "GPS- und Aktivitäts-Tracking, ausgelegt auf das Wohlergehen von Pferden." },
   { icon: Activity, title: "Aktivitätsüberwachung", description: "Bewegungs- und Verhaltensdaten für die gesamte Herde." },
-  { icon: HeartPulse, title: "Brunsterkennung", description: "Analyse von Aktivitätsmustern zur Unterstützung bei der Erkennung von Deckzeitfenstern." },
+  { icon: HeartPulse, title: "Brunsterkennung", description: "Auf Wunsch einplanbare Analyse von Aktivitätsmustern, um mögliche Deckzeitfenster zu erkennen." },
   { icon: MapPinned, title: "Bewegungsüberwachung", description: "Historische Bewegungsspuren für einzelne Tiere oder Gruppen." },
-  { icon: HeartPulse, title: "Gesundheitsindikatoren", description: "Vitalwerte und Aktivitätstrends, die frühere Eingriffe unterstützen." },
+  { icon: HeartPulse, title: "Gesundheitsindikatoren", description: "Aktivitäts- und Verhaltenstrends, die helfen können, auffällige Tiere früher zu erkennen." },
   { icon: Activity, title: "Weideüberwachung", description: "Aufenthaltszeit-in-Zone-Daten zur Information von Rotationsweideentscheidungen." },
   { icon: MapPinned, title: "Virtuelle Einzäunung", description: "GPS-basierte Grenzen, die die Abhängigkeit von physischer Einzäunung verringern.", href: "/de/virtual-fencing" },
   { icon: Hash, title: "RFID-Identifikation", description: "Individuelle Tieridentifikation für Aufzeichnungen und Zutrittskontrolle." },
-  { icon: Hash, title: "Tierzählung", description: "Automatisierte Kopfzahlerfassung an Toren, Triebgängen und Tränken." },
+  { icon: Hash, title: "Tierzählung", description: "RFID-basierte Kopfzahlerfassung an Toren, Triebgängen oder Tränken, ausgelegt auf Ihren Betrieb." },
   { icon: Droplets, title: "Wasserverbrauchsüberwachung", description: "Durchfluss- und Standssensoren, die abnormale Trinkmuster erkennen." },
   { icon: UtensilsCrossed, title: "Fütterungsüberwachung", description: "Futterstands- und Verbrauchsverfolgung über Fütterungsstationen hinweg." },
 ];
@@ -131,9 +131,9 @@ export default function LivestockTechnologyPageDe() {
           Vernetzte Nutztierüberwachung &amp; -management
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Tracking-, Gesundheitsüberwachungs- und virtuelle
-          Einzäunungshardware, entwickelt für Rinder, Schafe, Ziegen und
-          Pferde auf dem Betrieb.
+          Wir entwickeln individuelle Hardware für Tracking,
+          Aktivitätsüberwachung und virtuelle Einzäunung – für Rinder,
+          Schafe, Ziegen und Pferde auf dem Betrieb.
         </p>
       </section>
 
@@ -150,6 +150,10 @@ export default function LivestockTechnologyPageDe() {
             </div>
           ))}
         </div>
+        <p className="mt-4 text-center text-sm text-[var(--ts-gray)]">
+          Beispiele für Alarmtypen, die ein individuelles System auslösen
+          kann – nur zur Veranschaulichung.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
@@ -165,6 +169,13 @@ export default function LivestockTechnologyPageDe() {
               <ServiceCard key={item.title} locale="de" {...item} />
             ))}
           </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            Dies sind individuelle Engineering-Dienstleistungen: Wir
+            entwickeln Hardware nach Ihren Anforderungen. Es handelt sich
+            nicht um Standardprodukte, und die Beispiele auf unserer
+            Projektseite sind Referenzdesigns, keine im Feld erprobten
+            Installationen.
+          </p>
         </div>
       </section>
 

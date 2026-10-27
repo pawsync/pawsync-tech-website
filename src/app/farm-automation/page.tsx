@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Farm Automation | PawSync",
   description:
-    "Intelligent control systems for climate, water, feeding, and infrastructure — with smartphone and dashboard control for modern farms.",
+    "Custom control systems for climate, water, feeding, and infrastructure, with smartphone and web dashboard control developed to your requirements.",
   alternates: buildAlternates("en", "farm-automation"),
   openGraph: buildOpenGraph("en", "farm-automation"),
 };
@@ -52,8 +52,9 @@ export default function FarmAutomationPage() {
           Intelligent Control Systems for Modern Farms
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          One connected system to control climate, water, feeding, and
-          infrastructure — from a phone or a web dashboard.
+          We design connected control systems for climate, water, feeding,
+          and infrastructure — with phone or web dashboard control developed
+          to your requirements.
         </p>
       </section>
 
@@ -83,6 +84,11 @@ export default function FarmAutomationPage() {
             </div>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          These are capabilities we design into custom systems, not an
+          off-the-shelf product. Software such as dashboards, apps and alerts
+          is developed per project to your requirements.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-navy)] py-16 sm:py-20">
@@ -92,8 +98,8 @@ export default function FarmAutomationPage() {
             Simple, configurable logic
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Every controller runs on rules you set — no cloud dependency
-            required for critical actions.
+            Controllers can be designed to run on rules you set — with no
+            cloud dependency for critical actions.
           </p>
           <div className="mx-auto mt-8 flex max-w-lg items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 text-left font-mono text-sm text-[var(--ts-accent)]">
             <Terminal className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />

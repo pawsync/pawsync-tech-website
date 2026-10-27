@@ -28,19 +28,19 @@ export const metadata: Metadata = {
 
 const capabilities = [
   { icon: Satellite, title: "Localisation GPS en temps réel", description: "Mises à jour de localisation programmées ou continues, adaptées à l'animal et à l'usage." },
-  { icon: MapPinned, title: "Alertes de zone virtuelle", description: "Soyez averti dès qu'un animal suivi quitte une zone définie." },
-  { icon: History, title: "Historique de localisation", description: "Trajets complets pour un animal individuel ou des groupes entiers." },
-  { icon: Users, title: "Vue de flotte multi-animaux", description: "Surveillez animaux de compagnie, troupeaux ou animaux de travail depuis un tableau de bord unique." },
+  { icon: MapPinned, title: "Alertes de zone virtuelle", description: "Des alertes peuvent être prévues pour vous avertir lorsqu'un animal suivi quitte une zone définie." },
+  { icon: History, title: "Historique de localisation", description: "Trajets d'un animal individuel ou de groupes entiers, enregistrés et affichés selon les besoins de votre projet." },
+  { icon: Users, title: "Vue de flotte multi-animaux", description: "Un tableau de bord unique pour animaux de compagnie, troupeaux ou animaux de travail, développé dans le cadre de votre projet." },
   { icon: Radio, title: "Connectivité longue portée", description: "GPS/GNSS associé à un relais LoRa, LTE ou satellite selon la portée requise." },
-  { icon: Battery, title: "Conception optimisée pour la batterie", description: "Matériel et micrologiciel basse consommation conçus pour des semaines ou des mois entre les charges." },
-  { icon: ShieldCheck, title: "Boîtiers robustes", description: "Boîtiers résistants aux intempéries et aux chocs pour un usage en extérieur." },
+  { icon: Battery, title: "Conception optimisée pour la batterie", description: "Matériel et micrologiciel basse consommation conçus pour viser des semaines ou des mois entre les charges." },
+  { icon: ShieldCheck, title: "Boîtiers robustes", description: "Boîtiers spécifiés pour résister aux intempéries et aux chocs en usage extérieur." },
   { icon: Cpu, title: "Dimensionnement sur mesure", description: "Formats collier, boucle d'oreille ou harnais adaptés à l'espèce." },
 ];
 
 const faqs = [
   { question: "Les dispositifs de suivi peuvent-ils fonctionner sans couverture cellulaire ?", answer: "Oui. Nous concevons des systèmes autour du LoRa et d'autres protocoles basse consommation longue portée pour les sites à couverture cellulaire limitée ou inexistante, avec synchronisation des données dès qu'une passerelle ou une connexion cellulaire est atteinte." },
   { question: "Quelle est généralement la durée de vie de la batterie ?", answer: "Cela dépend de la fréquence des mises à jour, du type de connectivité et de la taille du boîtier — nous concevons le budget énergétique selon votre intervalle de rapport requis et votre cycle d'utilisation." },
-  { question: "Pouvez-vous suivre plusieurs espèces avec une seule plateforme ?", answer: "Oui. Le tableau de bord et le backend peuvent prendre en charge des flottes mixtes — animaux de compagnie, bétail et animaux de travail — avec un matériel dimensionné par espèce." },
+  { question: "Pouvez-vous suivre plusieurs espèces avec une seule plateforme ?", answer: "Oui. Un tableau de bord et un backend peuvent être conçus pour prendre en charge des flottes mixtes (animaux de compagnie, bétail et animaux de travail), avec un matériel dimensionné par espèce." },
 ];
 
 const scope: ServiceScopeCopy = {
@@ -141,9 +141,10 @@ export default function AnimalTrackingPageFr() {
         <Eyebrow>Suivi des animaux</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Développement sur mesure de trackers GPS & GNSS</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Des systèmes de localisation en temps réel ou périodiques qui
-          gardent les animaux de compagnie, le bétail et d&apos;autres animaux
-          localisables — sur l&apos;exploitation ou loin d&apos;elle.
+          Nous concevons des systèmes de localisation en temps réel ou
+          périodiques qui gardent les animaux de compagnie, le bétail et
+          d&apos;autres animaux localisables — sur l&apos;exploitation ou loin
+          d&apos;elle.
         </p>
       </section>
 

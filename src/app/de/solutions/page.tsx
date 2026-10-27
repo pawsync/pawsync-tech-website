@@ -56,7 +56,7 @@ const categories: Category[] = [
     icon: HeartPulse,
     title: "Gesundheitsüberwachung",
     description:
-      "Tragbare oder fest installierte Elektronik, die Aktivität, Temperatur und Ruhemuster erfasst, um frühere Wahrnehmung von Gesundheitsveränderungen zu unterstützen.",
+      "Tragbare oder fest installierte Elektronik, ausgelegt auf die Erfassung von Aktivität, Temperatur und Ruhemustern, um eine frühere Wahrnehmung von Gesundheitsveränderungen zu unterstützen.",
     points: ["Tägliches Aktivitäts- & Ruhe-Tracking", "Temperaturerfassung", "Alarme bei unregelmäßigen Mustern", "Historische Trenddaten"],
   },
   {
@@ -72,7 +72,7 @@ const categories: Category[] = [
     icon: Activity,
     title: "Nutztierüberwachung",
     description:
-      "Verfolgen Sie Bewegung, Verhalten, Standort und Umweltbedingungen über eine Herde hinweg, mit Dashboards für Gruppen- statt Einzeltiermanagement.",
+      "Verfolgen Sie Bewegung, Verhalten, Standort und Umweltbedingungen über eine Herde hinweg, mit Dashboards, die für Gruppen- statt Einzeltiermanagement ausgelegt werden können.",
     points: ["Herdenstandort & -bewegung", "Verhaltens- & Weidemuster", "Erfassung der Umweltexposition", "Konfigurierbare Gruppenalarme"],
   },
   {
@@ -104,7 +104,7 @@ const categories: Category[] = [
     icon: AlertTriangle,
     title: "Sicherheit & Gefahrenerkennung",
     description:
-      "Frühwarnsysteme für extreme Hitze, Kälte, Rauch, Brandrisiko, Überflutung, Wasserlecks und Geräteausfälle — bevor sie zu Notfällen werden.",
+      "Frühwarnsysteme, die extreme Hitze, Kälte, Rauch, Brandrisiko, Überflutung, Wasserlecks und Geräteausfälle frühzeitig melden sollen.",
     points: ["Status Normal / Warnung / Kritisch", "Mobil-, SMS-, E-Mail- & Lokalalarme", "Redundante Sensorik, wo es zählt", "Strom- & Pumpenausfallerkennung"],
   },
   {
@@ -112,7 +112,7 @@ const categories: Category[] = [
     icon: RadioTower,
     title: "Drahtlose Sensornetzwerke",
     description:
-      "Netzwerke stromsparender Sensorknoten, die über LoRa, BLE, Wi-Fi oder Mobilfunk kommunizieren — entwickelt, um große Höfe ohne ein einziges Kabel abzudecken.",
+      "Netzwerke stromsparender Sensorknoten, die über LoRa, BLE, Wi-Fi oder Mobilfunk kommunizieren — ausgelegt, um große Höfe ohne Kabelverlegung abzudecken.",
     points: ["Weitreichende LoRa-Abdeckung", "Gateway- & Basisstationsarchitektur", "Stromoptimierte Knoten", "Skaliert von einem Stall bis zu einer ganzen Ranch"],
   },
   {
@@ -137,8 +137,8 @@ export default function SolutionsPageDe() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Elf Problemfelder, ein Engineering-Team. Jede Kategorie unten ist
-          Hardware, Firmware und Konnektivität, die wir hausintern
-          entwickeln — springen Sie zu der, die Sie benötigen, oder
+          Hardware, Firmware und Konnektivität, die wir nach Ihren
+          Anforderungen entwickeln — springen Sie zu der, die Sie benötigen, oder
           sprechen Sie mit uns über etwas, das noch nicht aufgeführt ist.
         </p>
       </section>
@@ -178,6 +178,13 @@ export default function SolutionsPageDe() {
             </article>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          Jede Kategorie ist eine individuelle Engineering-Dienstleistung.
+          Die aufgeführten Funktionen – einschließlich Dashboards, mobiler
+          Apps und Alarme – werden pro Projekt entwickelt; es handelt sich
+          nicht um Standardprodukte. Die Beispiele auf unserer Projektseite
+          sind Referenzdesigns, keine im Feld erprobten Installationen.
+        </p>
       </section>
 
       <CTABanner

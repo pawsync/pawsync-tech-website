@@ -28,19 +28,19 @@ export const metadata: Metadata = {
 
 const capabilities = [
   { icon: Satellite, title: "Real-Time GPS Location", description: "Scheduled or continuous location updates sized to the animal and use case." },
-  { icon: MapPinned, title: "Geofence & Zone Alerts", description: "Get notified the moment a tracked animal leaves a defined area." },
-  { icon: History, title: "Location History", description: "Full movement trails for individual animals or entire groups." },
-  { icon: Users, title: "Multi-Animal Fleet View", description: "Monitor pets, herds or working animals from a single dashboard." },
+  { icon: MapPinned, title: "Geofence & Zone Alerts", description: "Alerts can be designed to notify you when a tracked animal leaves a defined area." },
+  { icon: History, title: "Location History", description: "Movement trails for individual animals or entire groups, stored and displayed as your project requires." },
+  { icon: Users, title: "Multi-Animal Fleet View", description: "A single dashboard for pets, herds or working animals, developed as part of your project." },
   { icon: Radio, title: "Long-Range Connectivity", description: "GPS/GNSS paired with LoRa, LTE or satellite backhaul depending on range." },
-  { icon: Battery, title: "Battery-Optimized Design", description: "Low-power hardware and firmware built for weeks or months between charges." },
-  { icon: ShieldCheck, title: "Rugged Enclosures", description: "Weather- and impact-resistant housings for field and outdoor use." },
+  { icon: Battery, title: "Battery-Optimized Design", description: "Low-power hardware and firmware designed toward a target of weeks or months between charges." },
+  { icon: ShieldCheck, title: "Rugged Enclosures", description: "Housings specified for weather and impact resistance in field and outdoor use." },
   { icon: Cpu, title: "Custom Device Sizing", description: "Collar, ear-tag or harness form factors sized for the species." },
 ];
 
 const faqs = [
   { question: "Can tracking devices work without cellular coverage?", answer: "Yes. We design systems around LoRa and other low-power wide-area protocols for sites with limited or no cellular signal, syncing data once a gateway or cellular connection is reached." },
   { question: "How long does battery life typically last?", answer: "It depends on update frequency, connectivity type and enclosure size — we design the power budget around your required reporting interval and duty cycle." },
-  { question: "Can you track multiple species with one platform?", answer: "Yes. The dashboard and backend can support mixed fleets — pets, livestock, and working animals — with device hardware sized per species." },
+  { question: "Can you track multiple species with one platform?", answer: "Yes. A dashboard and backend can be designed to support mixed fleets (pets, livestock, and working animals), with device hardware sized per species." },
 ];
 
 const scope: ServiceScopeCopy = {
@@ -141,8 +141,9 @@ export default function AnimalTrackingPage() {
         <Eyebrow>Animal Tracking</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Custom GPS & GNSS Animal Tracker Development</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Real-time or periodic location systems that keep pets, livestock
-          and other animals findable — on the property or far from it.
+          We design real-time or periodic location systems that keep pets,
+          livestock and other animals findable — on the property or far
+          from it.
         </p>
       </section>
 
@@ -155,7 +156,7 @@ export default function AnimalTrackingPage() {
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>Capabilities</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-              Built for reliable field tracking
+              Designed for reliable field tracking
             </h2>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

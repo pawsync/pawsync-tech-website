@@ -56,7 +56,7 @@ const categories: Category[] = [
     icon: HeartPulse,
     title: "Health Monitoring",
     description:
-      "Wearable or installed electronics that track activity, temperature, and rest patterns to support earlier awareness of health changes.",
+      "Wearable or installed electronics designed to track activity, temperature, and rest patterns to support earlier awareness of health changes.",
     points: ["Daily activity & rest tracking", "Temperature sensing", "Irregular-pattern alerts", "Historical trend data"],
   },
   {
@@ -72,7 +72,7 @@ const categories: Category[] = [
     icon: Activity,
     title: "Livestock Monitoring",
     description:
-      "Track movement, behavior, location and environmental conditions across a herd, with dashboards built for group — not individual — management.",
+      "Track movement, behavior, location and environmental conditions across a herd, with dashboards that can be designed for group — not individual — management.",
     points: ["Herd-level location & movement", "Behavior & grazing patterns", "Environmental exposure tracking", "Configurable group alerts"],
   },
   {
@@ -104,7 +104,7 @@ const categories: Category[] = [
     icon: AlertTriangle,
     title: "Safety & Disaster Detection",
     description:
-      "Early-warning systems for extreme heat, cold, smoke, fire risk, flooding, water leaks and equipment failure — before they become emergencies.",
+      "Early-warning systems designed to flag extreme heat, cold, smoke, fire risk, flooding, water leaks and equipment failure early.",
     points: ["Normal / Warning / Critical status", "Mobile, SMS, email & local alarm alerts", "Redundant sensing where it matters", "Power & pump failure detection"],
   },
   {
@@ -112,7 +112,7 @@ const categories: Category[] = [
     icon: RadioTower,
     title: "Wireless Sensor Networks",
     description:
-      "Networks of low-power sensor nodes communicating over LoRa, BLE, Wi-Fi or cellular — built to cover large farms without a wire in sight.",
+      "Networks of low-power sensor nodes communicating over LoRa, BLE, Wi-Fi or cellular — designed to cover large farms without running cable.",
     points: ["Long-range LoRa coverage", "Gateway & base-station architecture", "Battery-optimized nodes", "Scales from one barn to a whole ranch"],
   },
   {
@@ -137,7 +137,7 @@ export default function SolutionsPage() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Eleven problem areas, one engineering team. Every category below is
-          hardware, firmware and connectivity we design in-house — jump to
+          hardware, firmware and connectivity we design to your requirements — jump to
           the one you need, or talk to us about something that isn&apos;t
           listed yet.
         </p>
@@ -178,6 +178,13 @@ export default function SolutionsPage() {
             </article>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          Each category is a custom engineering service. Features listed
+          here — including dashboards, mobile apps and alerts — are designed
+          and developed per project; they are not off-the-shelf products.
+          Examples on our Projects page are reference designs, not
+          field-tested deployments.
+        </p>
       </section>
 
       <CTABanner

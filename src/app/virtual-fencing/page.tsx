@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   Bell,
   MapPinned,
@@ -54,7 +55,12 @@ export default function VirtualFencingPage() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Give animals freedom to roam within defined zones, with location
-          awareness in place of — or alongside — traditional fencing.
+          awareness in place of — or alongside — traditional fencing. Part of
+          our{" "}
+          <Link href="/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            remote livestock monitoring
+          </Link>{" "}
+          work.
         </p>
       </section>
 

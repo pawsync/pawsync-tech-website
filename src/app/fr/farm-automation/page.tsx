@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Automatisation agricole | PawSync",
   description:
-    "Systèmes de contrôle intelligents pour le climat, l'eau, l'alimentation et les infrastructures — avec contrôle par smartphone et tableau de bord pour les exploitations modernes.",
+    "Systèmes de contrôle sur mesure pour le climat, l'eau, l'alimentation et les infrastructures — avec contrôle par smartphone et tableau de bord web selon vos besoins.",
   alternates: buildAlternates("fr", "farm-automation"),
   openGraph: buildOpenGraph("fr", "farm-automation"),
 };
@@ -52,9 +52,9 @@ export default function FarmAutomationPageFr() {
           Systèmes de contrôle intelligents pour les exploitations modernes
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Un système connecté unique pour contrôler le climat, l&apos;eau,
-          l&apos;alimentation et l&apos;infrastructure — depuis un téléphone
-          ou un tableau de bord web.
+          Nous concevons des systèmes de contrôle connectés pour le climat,
+          l&apos;eau, l&apos;alimentation et l&apos;infrastructure — avec un
+          contrôle par téléphone ou tableau de bord web selon vos besoins.
         </p>
       </section>
 
@@ -84,6 +84,12 @@ export default function FarmAutomationPageFr() {
             </div>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          Ce sont des fonctionnalités que nous intégrons à des systèmes sur
+          mesure, et non un produit standard. Les logiciels tels que tableaux
+          de bord, applications et alertes sont développés pour chaque projet
+          selon vos besoins.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-navy)] py-16 sm:py-20">
@@ -93,9 +99,9 @@ export default function FarmAutomationPageFr() {
             Une logique simple et configurable
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Chaque contrôleur fonctionne selon les règles que vous définissez
-            — aucune dépendance au cloud n&apos;est requise pour les actions
-            critiques.
+            Les contrôleurs peuvent être conçus pour fonctionner selon les
+            règles que vous définissez — sans dépendance au cloud pour les
+            actions critiques.
           </p>
           <div className="mx-auto mt-8 flex max-w-lg items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 text-left font-mono text-sm text-[var(--ts-accent)]">
             <Terminal className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />

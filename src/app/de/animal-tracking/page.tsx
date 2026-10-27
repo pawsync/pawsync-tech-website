@@ -28,19 +28,19 @@ export const metadata: Metadata = {
 
 const capabilities = [
   { icon: Satellite, title: "Echtzeit-GPS-Standort", description: "Geplante oder kontinuierliche Standortaktualisierungen, abgestimmt auf Tier und Anwendungsfall." },
-  { icon: MapPinned, title: "Geofence- & Zonenalarme", description: "Werden Sie sofort benachrichtigt, wenn ein getracktes Tier einen definierten Bereich verlässt." },
-  { icon: History, title: "Standortverlauf", description: "Vollständige Bewegungsspuren für einzelne Tiere oder ganze Gruppen." },
-  { icon: Users, title: "Mehrtier-Flottenansicht", description: "Überwachen Sie Haustiere, Herden oder Arbeitstiere über ein einziges Dashboard." },
+  { icon: MapPinned, title: "Geofence- & Zonenalarme", description: "Alarme können so ausgelegt werden, dass Sie benachrichtigt werden, wenn ein getracktes Tier einen definierten Bereich verlässt." },
+  { icon: History, title: "Standortverlauf", description: "Bewegungsspuren für einzelne Tiere oder ganze Gruppen, gespeichert und dargestellt nach Ihren Projektanforderungen." },
+  { icon: Users, title: "Mehrtier-Flottenansicht", description: "Ein gemeinsames Dashboard für Haustiere, Herden oder Arbeitstiere, entwickelt als Teil Ihres Projekts." },
   { icon: Radio, title: "Weitreichende Konnektivität", description: "GPS/GNSS kombiniert mit LoRa-, LTE- oder Satelliten-Backhaul, je nach Reichweite." },
-  { icon: Battery, title: "Akku-optimiertes Design", description: "Stromsparende Hardware und Firmware für Wochen oder Monate zwischen den Ladevorgängen." },
-  { icon: ShieldCheck, title: "Robuste Gehäuse", description: "Wetter- und stoßfeste Gehäuse für Feld- und Außeneinsatz." },
+  { icon: Battery, title: "Akku-optimiertes Design", description: "Stromsparende Hardware und Firmware, ausgelegt auf ein Ziel von Wochen oder Monaten zwischen den Ladevorgängen." },
+  { icon: ShieldCheck, title: "Robuste Gehäuse", description: "Gehäuse, ausgelegt auf Wetter- und Stoßfestigkeit im Feld- und Außeneinsatz." },
   { icon: Cpu, title: "Individuelle Gerätegröße", description: "Halsband-, Ohrmarken- oder Geschirr-Bauformen, passend zur jeweiligen Tierart." },
 ];
 
 const faqs = [
   { question: "Können Tracking-Geräte ohne Mobilfunkabdeckung funktionieren?", answer: "Ja. Wir entwickeln Systeme rund um LoRa und andere stromsparende Weitverkehrsprotokolle für Standorte mit eingeschränktem oder fehlendem Mobilfunksignal und synchronisieren Daten, sobald ein Gateway oder eine Mobilfunkverbindung erreicht wird." },
   { question: "Wie lange hält die Akkulaufzeit typischerweise?", answer: "Das hängt von Aktualisierungsfrequenz, Konnektivitätsart und Gehäusegröße ab — wir gestalten das Energiebudget nach Ihrem erforderlichen Meldeintervall und Lastzyklus." },
-  { question: "Können Sie mehrere Tierarten mit einer Plattform tracken?", answer: "Ja. Dashboard und Backend können gemischte Flotten unterstützen — Haustiere, Nutztiere und Arbeitstiere — mit Gerätehardware, die je Tierart dimensioniert ist." },
+  { question: "Können Sie mehrere Tierarten mit einer Plattform tracken?", answer: "Ja. Dashboard und Backend können so entwickelt werden, dass sie gemischte Flotten unterstützen (Haustiere, Nutztiere und Arbeitstiere), mit Gerätehardware, die je Tierart dimensioniert ist." },
 ];
 
 const scope: ServiceScopeCopy = {
@@ -141,9 +141,9 @@ export default function AnimalTrackingPageDe() {
         <Eyebrow>Tier-Tracking</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Individuelle GPS- & GNSS-Tracker-Entwicklung</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Echtzeit- oder periodische Ortungssysteme, die Haustiere,
-          Nutztiere und andere Tiere auffindbar halten — auf dem Betrieb
-          oder weit darüber hinaus.
+          Wir entwickeln Echtzeit- oder periodische Ortungssysteme, die
+          Haustiere, Nutztiere und andere Tiere auffindbar halten — auf dem
+          Betrieb oder weit darüber hinaus.
         </p>
       </section>
 
@@ -156,7 +156,7 @@ export default function AnimalTrackingPageDe() {
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>Funktionen</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-              Entwickelt für zuverlässiges Feld-Tracking
+              Ausgelegt auf zuverlässiges Feld-Tracking
             </h2>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

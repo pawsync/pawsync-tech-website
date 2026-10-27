@@ -129,7 +129,7 @@ export default function BlogArticleGnssConnectivity() {
         </div>
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
-          Have a specific range, terrain, or fleet-size question? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and we&apos;ll help you scope the right connectivity approach.
+          Planning a full herd system? See our <Link href="/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">remote livestock monitoring</Link> engineering services. Have a specific range, terrain, or fleet-size question? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and we&apos;ll help you scope the right connectivity approach.
         </p>
       </article>
 

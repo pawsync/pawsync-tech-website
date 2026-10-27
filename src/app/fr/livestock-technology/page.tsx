@@ -95,18 +95,18 @@ const faqs: FAQItem[] = [
 
 const solutions = [
   { icon: Satellite, title: "Suivi GPS du bétail", description: "Localisation conçue pour les pâturages ouverts et les grandes étendues.", href: "/fr/animal-tracking" },
-  { icon: Radar, title: "Suivi des bovins", description: "Matériel de collier et de boucle d'oreille dimensionné pour les troupeaux bovins." },
+  { icon: Radar, title: "Suivi des bovins", description: "Matériel de collier ou de boucle d'oreille conçu selon votre troupeau et votre terrain." },
   { icon: Radar, title: "Suivi des ovins", description: "Dispositifs de suivi légers pour la gestion des troupeaux." },
   { icon: Radar, title: "Suivi des caprins", description: "Matériel de suivi robuste pour les troupeaux en pâturage." },
   { icon: Radar, title: "Suivi équin", description: "Suivi GPS et de l'activité conçu pour le bien-être équin." },
   { icon: Activity, title: "Suivi de l'activité animale", description: "Données de mouvement et de comportement sur l'ensemble du troupeau." },
-  { icon: HeartPulse, title: "Détection des chaleurs", description: "Analyse des schémas d'activité pour aider à repérer les fenêtres de reproduction." },
+  { icon: HeartPulse, title: "Détection des chaleurs", description: "Une analyse des schémas d'activité peut être prévue pour aider à repérer d'éventuelles périodes de chaleur." },
   { icon: MapPinned, title: "Suivi des déplacements", description: "Historique des déplacements pour un animal individuel ou des groupes." },
-  { icon: HeartPulse, title: "Indicateurs de santé", description: "Constantes vitales et tendances d'activité pour une intervention plus précoce." },
+  { icon: HeartPulse, title: "Indicateurs de santé", description: "Tendances d'activité et de comportement pouvant aider à repérer plus tôt les animaux à surveiller." },
   { icon: Activity, title: "Suivi du pâturage", description: "Données de temps passé par zone pour éclairer les décisions de pâturage tournant." },
   { icon: MapPinned, title: "Clôture virtuelle", description: "Des limites basées sur le GPS qui réduisent la dépendance à la clôture physique.", href: "/fr/virtual-fencing" },
   { icon: Hash, title: "Identification RFID", description: "Identification individuelle des animaux pour les registres et le contrôle d'accès." },
-  { icon: Hash, title: "Comptage des animaux", description: "Comptages automatisés aux portails, couloirs et points d'eau." },
+  { icon: Hash, title: "Comptage des animaux", description: "Comptage par RFID aux portails, couloirs ou points d'eau, conçu selon votre site." },
   { icon: Droplets, title: "Suivi de la consommation d'eau", description: "Capteurs de débit et de niveau signalant les schémas de consommation anormaux." },
   { icon: UtensilsCrossed, title: "Suivi de l'alimentation", description: "Suivi du niveau et de la consommation d'aliment sur les postes d'alimentation." },
 ];
@@ -131,9 +131,9 @@ export default function LivestockTechnologyPageFr() {
           Surveillance &amp; gestion connectées du bétail
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Du matériel de suivi, de surveillance de la santé et de clôture
-          virtuelle conçu pour les bovins, ovins, caprins et chevaux sur
-          l&apos;exploitation.
+          Nous concevons du matériel sur mesure de suivi, de suivi
+          d&apos;activité et de clôture virtuelle pour les bovins, ovins,
+          caprins et chevaux sur l&apos;exploitation.
         </p>
       </section>
 
@@ -150,6 +150,10 @@ export default function LivestockTechnologyPageFr() {
             </div>
           ))}
         </div>
+        <p className="mt-4 text-center text-sm text-[var(--ts-gray)]">
+          Exemples de types d&apos;alertes qu&apos;un système sur mesure peut
+          déclencher – à titre d&apos;illustration.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
@@ -165,6 +169,13 @@ export default function LivestockTechnologyPageFr() {
               <ServiceCard key={item.title} locale="fr" {...item} />
             ))}
           </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            Il s&apos;agit de services d&apos;ingénierie sur mesure : nous
+            concevons et développons le matériel selon vos exigences. Ce ne
+            sont pas des produits standard, et les exemples de notre page
+            Projets sont des designs de référence, et non des déploiements
+            testés sur le terrain.
+          </p>
         </div>
       </section>
 

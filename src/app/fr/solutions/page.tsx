@@ -56,7 +56,7 @@ const categories: Category[] = [
     icon: HeartPulse,
     title: "Suivi de la santé",
     description:
-      "Une électronique portable ou installée qui suit l'activité, la température et les cycles de repos pour aider à une détection plus précoce des changements de santé.",
+      "Une électronique portable ou installée, conçue pour suivre l'activité, la température et les cycles de repos afin d'aider à une détection plus précoce des changements de santé.",
     points: ["Suivi quotidien de l'activité et du repos", "Détection de température", "Alertes de schémas irréguliers", "Données de tendance historiques"],
   },
   {
@@ -72,7 +72,7 @@ const categories: Category[] = [
     icon: Activity,
     title: "Surveillance du bétail",
     description:
-      "Suivez le mouvement, le comportement, la localisation et les conditions environnementales sur un troupeau, avec des tableaux de bord conçus pour une gestion de groupe — pas individuelle.",
+      "Suivez le mouvement, le comportement, la localisation et les conditions environnementales sur un troupeau, avec des tableaux de bord pouvant être conçus pour une gestion de groupe — pas individuelle.",
     points: ["Localisation et mouvement au niveau du troupeau", "Comportement et schémas de pâturage", "Suivi de l'exposition environnementale", "Alertes de groupe configurables"],
   },
   {
@@ -104,7 +104,7 @@ const categories: Category[] = [
     icon: AlertTriangle,
     title: "Sécurité & détection des risques",
     description:
-      "Des systèmes d'alerte précoce pour la chaleur extrême, le froid, la fumée, le risque d'incendie, les inondations, les fuites d'eau et les pannes d'équipement — avant qu'ils ne deviennent des urgences.",
+      "Des systèmes d'alerte précoce conçus pour signaler tôt la chaleur extrême, le froid, la fumée, le risque d'incendie, les inondations, les fuites d'eau et les pannes d'équipement.",
     points: ["Statut Normal / Avertissement / Critique", "Alertes mobiles, SMS, e-mail et alarme locale", "Redondance des capteurs là où cela compte", "Détection des pannes d'alimentation et de pompe"],
   },
   {
@@ -138,8 +138,8 @@ export default function SolutionsPageFr() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Onze domaines de problèmes, une seule équipe d&apos;ingénierie.
           Chaque catégorie ci-dessous représente du matériel, du
-          micrologiciel et de la connectivité que nous concevons en interne
-          — accédez directement à celle dont vous avez besoin, ou
+          micrologiciel et de la connectivité que nous concevons selon vos
+          besoins — accédez directement à celle dont vous avez besoin, ou
           parlez-nous de quelque chose qui n&apos;y figure pas encore.
         </p>
       </section>
@@ -179,6 +179,14 @@ export default function SolutionsPageFr() {
             </article>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          Chaque catégorie est un service d&apos;ingénierie sur mesure. Les
+          fonctionnalités indiquées — y compris tableaux de bord, applications
+          mobiles et alertes — sont conçues et développées pour chaque projet ;
+          ce ne sont pas des produits standard. Les exemples de notre page
+          Projets sont des designs de référence, et non des déploiements testés
+          sur le terrain.
+        </p>
       </section>
 
       <CTABanner

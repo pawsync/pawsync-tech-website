@@ -49,7 +49,7 @@ export type Route = (typeof routes)[number];
 export const routeLastModified: Record<Route, string | Record<Locale, string>> = {
   "": "2026-10-02",
   about: "2026-10-10",
-  "animal-tracking": "2026-10-05",
+  "animal-tracking": "2026-10-27",
   blog: "2026-10-09",
   "blog/gnss-lora-vs-gnss-ltem": "2026-09-28",
   "blog/low-power-animal-tracker-design": "2026-09-28",
@@ -59,16 +59,16 @@ export const routeLastModified: Record<Route, string | Record<Locale, string>> =
   contact: "2026-10-02",
   "custom-electronics": "2026-10-04",
   "environmental-monitoring": { en: "2026-10-26", de: "2026-10-02", fr: "2026-10-02" },
-  "farm-automation": { en: "2026-09-16", de: "2026-09-18", fr: "2026-09-18" },
+  "farm-automation": "2026-10-27",
   "how-we-work": { en: "2026-09-16", de: "2026-09-18", fr: "2026-09-18" },
   industries: "2026-10-02",
-  "livestock-technology": { en: "2026-10-26", de: "2026-10-04", fr: "2026-10-04" },
+  "livestock-technology": "2026-10-27",
   "pet-technology": "2026-10-05",
   "poultry-farming": { en: "2026-10-26", de: "2026-10-04", fr: "2026-10-04" },
   privacy: "2026-09-28",
   projects: "2026-10-09",
   "smart-feeding": "2026-10-05",
-  solutions: "2026-10-02",
+  solutions: "2026-10-27",
   "virtual-fencing": { en: "2026-09-16", de: "2026-09-18", fr: "2026-10-02" },
 };
 
