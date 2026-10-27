@@ -18,9 +18,9 @@ import PoultryApplications from "@/components/terrasense/poultry/PoultryApplicat
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Wireless Poultry Monitoring System Development | PawSync",
+  title: "Wireless Poultry Technology & Remote Monitoring | PawSync",
   description:
-    "Custom wireless poultry monitoring development: house sensors, controllers, LoRa connectivity and prototyping for poultry operations.",
+    "Wireless poultry technology: temperature, humidity, and air-quality sensors with LoRa/Wi-Fi connectivity and remote monitoring, engineered by PawSync.",
   alternates: buildAlternates("en", "poultry-farming"),
   openGraph: buildOpenGraph("en", "poultry-farming"),
 };
@@ -98,9 +98,23 @@ const faqs = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function PoultryFarmingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <PoultryHero />
 
       <div className="bg-[var(--ts-bg)]">

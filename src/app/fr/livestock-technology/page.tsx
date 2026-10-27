@@ -94,7 +94,7 @@ const faqs: FAQItem[] = [
 ];
 
 const solutions = [
-  { icon: Satellite, title: "Suivi GPS du bétail", description: "Localisation conçue pour les pâturages ouverts et les grandes étendues." },
+  { icon: Satellite, title: "Suivi GPS du bétail", description: "Localisation conçue pour les pâturages ouverts et les grandes étendues.", href: "/fr/animal-tracking" },
   { icon: Radar, title: "Suivi des bovins", description: "Matériel de collier et de boucle d'oreille dimensionné pour les troupeaux bovins." },
   { icon: Radar, title: "Suivi des ovins", description: "Dispositifs de suivi légers pour la gestion des troupeaux." },
   { icon: Radar, title: "Suivi des caprins", description: "Matériel de suivi robuste pour les troupeaux en pâturage." },
@@ -104,7 +104,7 @@ const solutions = [
   { icon: MapPinned, title: "Suivi des déplacements", description: "Historique des déplacements pour un animal individuel ou des groupes." },
   { icon: HeartPulse, title: "Indicateurs de santé", description: "Constantes vitales et tendances d'activité pour une intervention plus précoce." },
   { icon: Activity, title: "Suivi du pâturage", description: "Données de temps passé par zone pour éclairer les décisions de pâturage tournant." },
-  { icon: MapPinned, title: "Clôture virtuelle", description: "Des limites basées sur le GPS qui réduisent la dépendance à la clôture physique." },
+  { icon: MapPinned, title: "Clôture virtuelle", description: "Des limites basées sur le GPS qui réduisent la dépendance à la clôture physique.", href: "/fr/virtual-fencing" },
   { icon: Hash, title: "Identification RFID", description: "Identification individuelle des animaux pour les registres et le contrôle d'accès." },
   { icon: Hash, title: "Comptage des animaux", description: "Comptages automatisés aux portails, couloirs et points d'eau." },
   { icon: Droplets, title: "Suivi de la consommation d'eau", description: "Capteurs de débit et de niveau signalant les schémas de consommation anormaux." },

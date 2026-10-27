@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Stromsparende Elektronik für Tier-Tracker im Außeneinsatz | PawSync",
@@ -13,9 +15,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("de", "blog/low-power-animal-tracker-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "de",
+  route: "blog/low-power-animal-tracker-design",
+  headline: "Stromsparende Elektronik für Tier-Tracker im Außeneinsatz",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleLowPowerDesignDe() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="de" items={[{ label: "Blog", href: "/de/blog" }, { label: "Stromsparendes Tracker-Design" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,6 +33,7 @@ export default function BlogArticleLowPowerDesignDe() {
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Stromsparende Elektronik für Tier-Tracker im Außeneinsatz
         </h1>
+        <ArticleDate route="blog/low-power-animal-tracker-design" locale="de" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Warum Akkulaufzeit im Kern ein Energiebudget-Problem ist, und die Techniken, die sie von Tagen auf Monate strecken.
         </p>

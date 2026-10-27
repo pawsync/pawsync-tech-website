@@ -54,7 +54,7 @@ export default function PoultryHero() {
           </span>
 
           <h1 className="mt-5 font-[family-name:var(--font-manrope)] text-4xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl sm:leading-[1.08] lg:text-[3.4rem]">
-            Intelligent Monitoring &amp; Automation for Modern Poultry Farms
+            Wireless IoT Monitoring &amp; Automation for Modern Poultry Farms
           </h1>
 
           <p className="mt-5 max-w-[600px] text-lg leading-relaxed text-white/70">

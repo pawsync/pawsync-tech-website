@@ -94,7 +94,7 @@ const faqs: FAQItem[] = [
 ];
 
 const solutions = [
-  { icon: Satellite, title: "GPS-Tracking für Nutztiere", description: "Standortverfolgung, entwickelt für offenes Weideland und große Flächen." },
+  { icon: Satellite, title: "GPS-Tracking für Nutztiere", description: "Standortverfolgung, entwickelt für offenes Weideland und große Flächen.", href: "/de/animal-tracking" },
   { icon: Radar, title: "Rinder-Tracking", description: "Halsband- und Ohrmarkenhardware, dimensioniert für Rinderherden." },
   { icon: Radar, title: "Schaf-Tracking", description: "Leichte Tracking-Geräte für das Herdenmanagement." },
   { icon: Radar, title: "Ziegen-Tracking", description: "Robuste Tracking-Hardware für weidende Herden." },
@@ -104,7 +104,7 @@ const solutions = [
   { icon: MapPinned, title: "Bewegungsüberwachung", description: "Historische Bewegungsspuren für einzelne Tiere oder Gruppen." },
   { icon: HeartPulse, title: "Gesundheitsindikatoren", description: "Vitalwerte und Aktivitätstrends, die frühere Eingriffe unterstützen." },
   { icon: Activity, title: "Weideüberwachung", description: "Aufenthaltszeit-in-Zone-Daten zur Information von Rotationsweideentscheidungen." },
-  { icon: MapPinned, title: "Virtuelle Einzäunung", description: "GPS-basierte Grenzen, die die Abhängigkeit von physischer Einzäunung verringern." },
+  { icon: MapPinned, title: "Virtuelle Einzäunung", description: "GPS-basierte Grenzen, die die Abhängigkeit von physischer Einzäunung verringern.", href: "/de/virtual-fencing" },
   { icon: Hash, title: "RFID-Identifikation", description: "Individuelle Tieridentifikation für Aufzeichnungen und Zutrittskontrolle." },
   { icon: Hash, title: "Tierzählung", description: "Automatisierte Kopfzahlerfassung an Toren, Triebgängen und Tränken." },
   { icon: Droplets, title: "Wasserverbrauchsüberwachung", description: "Durchfluss- und Standssensoren, die abnormale Trinkmuster erkennen." },

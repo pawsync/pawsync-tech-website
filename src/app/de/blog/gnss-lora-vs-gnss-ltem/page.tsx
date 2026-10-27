@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking | PawSync",
@@ -13,9 +15,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("de", "blog/gnss-lora-vs-gnss-ltem"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "de",
+  route: "blog/gnss-lora-vs-gnss-ltem",
+  headline: "GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleGnssConnectivityDe() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="de" items={[{ label: "Blog", href: "/de/blog" }, { label: "GNSS + LoRa vs. GNSS + LTE-M" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,6 +33,7 @@ export default function BlogArticleGnssConnectivityDe() {
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking
         </h1>
+        <ArticleDate route="blog/gnss-lora-vs-gnss-ltem" locale="de" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Eine Klarstellung zu zwei unterschiedlichen Problemen, die in der Marketingsprache für Tier-Tracking oft vermischt werden — und wie man wirklich zwischen ihnen wählt.
         </p>

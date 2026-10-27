@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Wireless Poultry Monitoring System Design | PawSync",
@@ -14,9 +16,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("en", "blog/wireless-poultry-monitoring-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "en",
+  route: "blog/wireless-poultry-monitoring-design",
+  headline: "Planning a Wireless Poultry House Monitoring Network",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleWirelessPoultryMonitoring() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb items={[{ label: "Blog", href: "/blog" }, { label: "Poultry Monitoring Design" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -24,6 +34,7 @@ export default function BlogArticleWirelessPoultryMonitoring() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Planning a Wireless Poultry House Monitoring Network
         </h1>
+        <ArticleDate route="blog/wireless-poultry-monitoring-design" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           A single sensor hanging in the middle of a poultry house tells you the average condition at that one point — not what&apos;s happening at floor level near the inlet fans, or up near the ridge where heat collects.
         </p>

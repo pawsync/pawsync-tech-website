@@ -31,9 +31,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Livestock GPS Tracking & Remote Monitoring Systems | PawSync",
+  title: "Remote Livestock & Cattle Monitoring Systems | PawSync",
   description:
-    "Custom-engineered GPS tracking, virtual fencing, RFID identification, and remote health/activity monitoring hardware for cattle, sheep, goats, and horses.",
+    "Custom wireless livestock monitoring hardware: GPS tracking, virtual fencing, RFID identification, and remote health/activity monitoring for cattle, sheep, goats, and horses.",
   alternates: buildAlternates("en", "livestock-technology"),
   openGraph: buildOpenGraph("en", "livestock-technology"),
 };
@@ -94,7 +94,7 @@ const faqs: FAQItem[] = [
 ];
 
 const solutions = [
-  { icon: Satellite, title: "Livestock GPS Tracking", description: "Location tracking built for open range and large pastures." },
+  { icon: Satellite, title: "Livestock GPS Tracking", description: "Location tracking built for open range and large pastures.", href: "/animal-tracking" },
   { icon: Radar, title: "Cattle Tracking", description: "Collar and ear-tag hardware sized for cattle herds." },
   { icon: Radar, title: "Sheep Tracking", description: "Lightweight tracking devices for flock management." },
   { icon: Radar, title: "Goat Tracking", description: "Rugged tracking hardware for browsing herds." },
@@ -104,7 +104,7 @@ const solutions = [
   { icon: MapPinned, title: "Movement Monitoring", description: "Historical movement trails for individual animals or groups." },
   { icon: HeartPulse, title: "Health Indicators", description: "Vitals and activity trends that support earlier intervention." },
   { icon: Activity, title: "Grazing Monitoring", description: "Time-in-zone data to inform rotational grazing decisions." },
-  { icon: MapPinned, title: "Virtual Fencing", description: "GPS-based boundaries that reduce dependency on physical fencing." },
+  { icon: MapPinned, title: "Virtual Fencing", description: "GPS-based boundaries that reduce dependency on physical fencing.", href: "/virtual-fencing" },
   { icon: Hash, title: "RFID Identification", description: "Individual animal identification for records and access control." },
   { icon: Hash, title: "Animal Counting", description: "Automated headcounts at gates, chutes, and water points." },
   { icon: Droplets, title: "Water Consumption Monitoring", description: "Flow and level sensors that flag abnormal drinking patterns." },
@@ -128,7 +128,7 @@ export default function LivestockTechnologyPage() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Livestock Technology</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Connected Livestock Monitoring &amp; Management
+          Remote Livestock Monitoring &amp; Management Systems
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Tracking, health monitoring, and virtual fencing hardware built

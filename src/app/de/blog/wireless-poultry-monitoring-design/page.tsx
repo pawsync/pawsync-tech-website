@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Planung drahtloser Geflügelüberwachung | PawSync",
@@ -14,9 +16,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("de", "blog/wireless-poultry-monitoring-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "de",
+  route: "blog/wireless-poultry-monitoring-design",
+  headline: "Ein drahtloses Überwachungsnetz für den Geflügelstall planen",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleWirelessPoultryMonitoringDe() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="de" items={[{ label: "Blog", href: "/de/blog" }, { label: "Geflügelüberwachung planen" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -24,6 +34,7 @@ export default function BlogArticleWirelessPoultryMonitoringDe() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Ein drahtloses Überwachungsnetz für den Geflügelstall planen
         </h1>
+        <ArticleDate route="blog/wireless-poultry-monitoring-design" locale="de" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Ein einzelner Sensor in der Stallmitte zeigt die durchschnittliche Bedingung an genau diesem einen Punkt — nicht, was am Boden nahe den Zuluftventilatoren passiert, oder oben am First, wo sich Wärme sammelt.
         </p>

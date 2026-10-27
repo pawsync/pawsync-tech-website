@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Conception de surveillance avicole sans fil | PawSync",
@@ -14,9 +16,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("fr", "blog/wireless-poultry-monitoring-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "fr",
+  route: "blog/wireless-poultry-monitoring-design",
+  headline: "Planifier un réseau de surveillance sans fil pour un bâtiment avicole",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleWirelessPoultryMonitoringFr() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="fr" items={[{ label: "Blog", href: "/fr/blog" }, { label: "Surveillance avicole" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -24,6 +34,7 @@ export default function BlogArticleWirelessPoultryMonitoringFr() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Planifier un réseau de surveillance sans fil pour un bâtiment avicole
         </h1>
+        <ArticleDate route="blog/wireless-poultry-monitoring-design" locale="fr" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Un seul capteur suspendu au milieu d&apos;un bâtiment avicole indique la condition moyenne à cet unique point — pas ce qui se passe au sol près des ventilateurs d&apos;entrée d&apos;air, ni près du faîte où la chaleur s&apos;accumule.
         </p>

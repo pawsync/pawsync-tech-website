@@ -6,7 +6,8 @@ import TerraSenseHeader from "@/components/terrasense/TerraSenseHeader";
 import TerraSenseFooter from "@/components/terrasense/TerraSenseFooter";
 import BackToTop from "@/components/terrasense/BackToTop";
 import PlausibleAnalytics from "@/components/analytics/PlausibleAnalytics";
-import { siteUrl, type Locale } from "@/i18n/config";
+import type { Locale } from "@/i18n/config";
+import { organizationJsonLd, serializeJsonLd, websiteJsonLd } from "@/lib/structuredData";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -51,13 +52,9 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const headersList = await headers();
   const locale = (headersList.get("x-locale") as Locale | null) ?? "en";
-  const websiteJsonLd = {
+  const siteJsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "PawSync",
-    url: siteUrl,
-    inLanguage: locale,
-    publisher: { "@type": "Person", name: "Tahir Nazeer" },
+    "@graph": [websiteJsonLd(locale), organizationJsonLd()],
   };
 
   return (
@@ -67,7 +64,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       className={`${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="terrasense-theme flex min-h-full flex-col bg-[var(--ts-bg)] text-[var(--ts-navy)]">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(siteJsonLd) }} />
         <PlausibleAnalytics />
         <a
           href="#terrasense-main-content"

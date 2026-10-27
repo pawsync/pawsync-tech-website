@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Concevoir une électronique basse consommation pour trackers d'animaux extérieurs | PawSync",
@@ -13,9 +15,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("fr", "blog/low-power-animal-tracker-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "fr",
+  route: "blog/low-power-animal-tracker-design",
+  headline: "Concevoir une électronique basse consommation pour trackers d'animaux extérieurs",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleLowPowerDesignFr() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="fr" items={[{ label: "Blog", href: "/fr/blog" }, { label: "Conception basse consommation" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,6 +33,7 @@ export default function BlogArticleLowPowerDesignFr() {
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Concevoir une électronique basse consommation pour trackers d&apos;animaux extérieurs
         </h1>
+        <ArticleDate route="blog/low-power-animal-tracker-design" locale="fr" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Pourquoi l&apos;autonomie est fondamentalement un problème de budget énergétique, et les techniques qui la font passer de quelques jours à plusieurs mois.
         </p>

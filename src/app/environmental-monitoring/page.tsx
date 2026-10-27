@@ -16,7 +16,7 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Environmental Monitoring | PawSync",
+  title: "Farm & Barn Environmental Monitoring Sensors | PawSync",
   description:
     "24/7 environmental sensing for barns, poultry houses, greenhouses, and shelters — temperature, humidity, air quality, and more.",
   alternates: buildAlternates("en", "environmental-monitoring"),
@@ -30,7 +30,7 @@ const sensors = [
 
 const applications = [
   { icon: Warehouse, title: "Barn Monitoring", description: "Continuous climate awareness for cattle and horse barns." },
-  { icon: PawPrint, title: "Poultry House Monitoring", description: "Tight environmental tolerances tracked around the clock." },
+  { icon: PawPrint, title: "Poultry House Monitoring", description: "Tight environmental tolerances tracked around the clock.", href: "/poultry-farming" },
   { icon: Flower2, title: "Greenhouse Monitoring", description: "Temperature, humidity, and light tracking for controlled growing." },
   { icon: Home, title: "Animal Shelter Monitoring", description: "Comfortable, safe conditions for sheltered and fostered animals." },
   { icon: Building2, title: "Feed Storage Monitoring", description: "Moisture and temperature sensing to protect stored feed." },
@@ -46,7 +46,7 @@ export default function EnvironmentalMonitoringPage() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Environmental Monitoring</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          24/7 Farm Environmental Awareness
+          24/7 Environmental Monitoring for Farms &amp; Barns
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Sensor networks that keep watch over the conditions animals and

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Hardware- & Firmware-Engineering Futterautomat | PawSync",
@@ -14,9 +16,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("de", "blog/smart-pet-feeder-engineering"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "de",
+  route: "blog/smart-pet-feeder-engineering",
+  headline: "Hardware- & Firmware-Engineering für intelligente Futterautomaten: Portionsgenauigkeit, Störungserkennung und Wägesensorik",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleSmartFeederEngineeringDe() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="de" items={[{ label: "Blog", href: "/de/blog" }, { label: "Futterautomaten-Engineering" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -24,6 +34,7 @@ export default function BlogArticleSmartFeederEngineeringDe() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Hardware- &amp; Firmware-Engineering für intelligente Futterautomaten: Portionsgenauigkeit, Störungserkennung und Wägesensorik
         </h1>
+        <ArticleDate route="blog/smart-pet-feeder-engineering" locale="de" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Ein intelligenter Futterautomat wirkt von außen einfach — Motor, Behälter, Zeitschaltung. Die Technik, die ihn zuverlässig macht, steckt in der Sensorik und der Firmware, nicht im Dosiermechanismus selbst.
         </p>

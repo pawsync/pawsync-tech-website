@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Leiterplattendesign für Tier-Tracker | PawSync",
@@ -13,9 +15,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("de", "blog/pet-tracker-pcb-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "de",
+  route: "blog/pet-tracker-pcb-design",
+  headline: "Leiterplattendesign für einen Haustier- oder Tier-Tracker: Was der Formfaktor wirklich vorgibt",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticlePetTrackerPCBDe() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="de" items={[{ label: "Blog", href: "/de/blog" }, { label: "Tracker-Leiterplattendesign" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,6 +33,7 @@ export default function BlogArticlePetTrackerPCBDe() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Leiterplattendesign für einen Haustier- oder Tier-Tracker: Was der Formfaktor wirklich vorgibt
         </h1>
+        <ArticleDate route="blog/pet-tracker-pcb-design" locale="de" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Ein Halsband- oder Anhänger-Tracker ist nicht einfach eine kleinere GPS-Platine — der Formfaktor selbst bestimmt die meisten der schwierigen Entscheidungen.
         </p>
