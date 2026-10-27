@@ -26,20 +26,20 @@ export const metadata: Metadata = {
 };
 
 const capabilities = [
-  { icon: Radar, title: "Individuelle, anpassbare Grenzen", description: "Zonen aus einer App heraus zeichnen und aktualisieren — keine Kabel, keine Pfosten zum Versetzen." },
-  { icon: Bell, title: "Echtzeit-Bewegungsalarme", description: "Benachrichtigungen in dem Moment, in dem sich ein Tier einer Grenze nähert oder sie überschreitet." },
+  { icon: Radar, title: "Individuelle, anpassbare Grenzen", description: "Zonen können so ausgelegt werden, dass sie in einer Web- oder mobilen Oberfläche gezeichnet und aktualisiert werden — keine Kabel, keine Pfosten zum Versetzen." },
+  { icon: Bell, title: "Bewegungsalarme", description: "Alarme können so ausgelegt werden, dass sie melden, wenn sich ein Tier einer Grenze nähert oder sie überschreitet." },
   { icon: MapPinned, title: "Unterstützung mehrerer Zonen", description: "Weideflächen rotieren oder separate Zonen für verschiedene Gruppen verwalten." },
-  { icon: Smartphone, title: "Fernkonfiguration", description: "Grenzen vom Feld oder Büro aus aktualisieren, kein Vor-Ort-Einsatz nötig." },
-  { icon: Vibrate, title: "Akustische & haptische Signale", description: "Progressive Halsbandsignale, die ein Tier warnen, bevor es die Grenze erreicht." },
-  { icon: ShieldAlert, title: "Ausbruchspräventionsalarme", description: "Frühwarnung, wenn sich ein Tier mit Geschwindigkeit auf eine Grenze zubewegt." },
+  { icon: Smartphone, title: "Fernkonfiguration", description: "Grenzen können so ausgelegt werden, dass sie sich vom Feld oder Büro aus aktualisieren lassen, ohne Vor-Ort-Einsatz." },
+  { icon: Vibrate, title: "Akustische & haptische Signale", description: "Progressive Halsbandsignale können so ausgelegt werden, dass sie ein Tier warnen, bevor es die Grenze erreicht." },
+  { icon: ShieldAlert, title: "Grenzannäherungsalarme", description: "Frühwarnalarme können für Tiere ausgelegt werden, die sich schnell auf eine Grenze zubewegen." },
   { icon: Users, title: "Mehrtier-Zonen", description: "Grenzen für einzelne Tiere oder ganze Herden gleichzeitig verwalten." },
-  { icon: Settings2, title: "Tracking-Integration", description: "Lässt sich mit unserer GPS-Tracking-Hardware kombinieren, für ein System aus Standort und Grenze." },
+  { icon: Settings2, title: "Tracking-Integration", description: "Lässt sich mit individuell entwickelter GPS-Tracking-Hardware zu einem System aus Standort und Grenze kombinieren." },
 ];
 
 const faqs = [
   { question: "Ersetzt die virtuelle Einzäunung physische Zäune vollständig?", answer: "Sie kann die Abhängigkeit von physischer Einzäunung in vielen Umgebungen verringern, aber der richtige Ansatz hängt von Gelände, Tierart und örtlichen Vorschriften ab — wir helfen Ihnen zu beurteilen, was passt." },
   { question: "Wie lernt ein Tier die Grenze kennen?", answer: "Halsbänder verwenden typischerweise ein progressives Audiosignal und in manchen Systemen zusätzlich einen kurzen, sanften Impuls, der dem Tier die Möglichkeit gibt, umzukehren, bevor es die Grenze erreicht." },
-  { question: "Können Zonen aus der Ferne geändert werden?", answer: "Ja — Grenzen sind in der Regel über eine mobile oder Web-App konfigurierbar, ohne dass Hardware physisch versetzt werden muss." },
+  { question: "Können Zonen aus der Ferne geändert werden?", answer: "Das ist möglich: Änderungen der Grenzen über eine Web- oder mobile Oberfläche können eingeplant werden, sodass keine Hardware versetzt werden muss." },
 ];
 
 export default function VirtualFencingPageDe() {
@@ -76,6 +76,13 @@ export default function VirtualFencingPageDe() {
               <ServiceCard key={item.title} locale="de" {...item} />
             ))}
           </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            Dies sind individuelle Engineering-Dienstleistungen: Wir
+            entwickeln Hardware und Grenzlogik nach Ihren Anforderungen. Es
+            handelt sich nicht um Standardprodukte, und das Beispiel auf
+            unserer Projektseite ist ein Referenzdesign, keine im Feld
+            erprobte Installation.
+          </p>
         </div>
       </section>
 

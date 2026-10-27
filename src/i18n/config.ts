@@ -63,13 +63,13 @@ export const routeLastModified: Record<Route, string | Record<Locale, string>> =
   "how-we-work": { en: "2026-09-16", de: "2026-09-18", fr: "2026-09-18" },
   industries: "2026-10-02",
   "livestock-technology": "2026-10-27",
-  "pet-technology": "2026-10-05",
+  "pet-technology": "2026-10-27",
   "poultry-farming": { en: "2026-10-26", de: "2026-10-04", fr: "2026-10-04" },
   privacy: "2026-09-28",
   projects: "2026-10-09",
-  "smart-feeding": "2026-10-05",
+  "smart-feeding": "2026-10-27",
   solutions: "2026-10-27",
-  "virtual-fencing": { en: "2026-09-16", de: "2026-09-18", fr: "2026-10-02" },
+  "virtual-fencing": "2026-10-27",
 };
 
 export function lastModifiedFor(locale: Locale, route: Route): string {

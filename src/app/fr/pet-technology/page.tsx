@@ -29,18 +29,18 @@ export const metadata: Metadata = {
 };
 
 const solutions = [
-  { icon: Satellite, title: "Trackers GPS pour animaux de compagnie", description: "Suivi de localisation monté sur collier pour retrouver un animal perdu et le suivi quotidien." },
+  { icon: Satellite, title: "Trackers GPS pour animaux de compagnie", description: "Suivi de localisation monté sur collier, conçu pour retrouver un animal perdu et pour le suivi quotidien." },
   { icon: Activity, title: "Trackers d'activité", description: "Suivi du mouvement et de l'exercice qui dresse un portrait du bien-être quotidien." },
-  { icon: HeartPulse, title: "Suivi de la santé des animaux de compagnie", description: "Capteurs portables pour le suivi de la température, de l'activité et des cycles de repos." },
-  { icon: Radar, title: "Colliers intelligents", description: "Matériel de collier multi-capteurs combinant GPS, BLE et suivi de santé en un seul dispositif." },
-  { icon: MapPinned, title: "Clôture virtuelle pour animaux de compagnie", description: "Des limites basées sur le GPS avec des alertes en temps réel lorsqu'un animal quitte une zone sûre." },
-  { icon: DoorOpen, title: "Accès RFID pour animaux de compagnie", description: "Identification par micropuce pour des systèmes d'entrée sécurisés et sélectifs." },
-  { icon: DoorClosed, title: "Chatières et portes intelligentes", description: "Des portes contrôlées par application qui ne s'ouvrent que pour les animaux reconnus et autorisés." },
+  { icon: HeartPulse, title: "Suivi de la santé des animaux de compagnie", description: "Capteurs portables pour le suivi de l'activité et des cycles de repos, avec mesure de température lorsque la conception le permet." },
+  { icon: Radar, title: "Colliers intelligents", description: "Un matériel de collier multi-capteurs peut être conçu pour combiner GPS, BLE et suivi d'activité en un seul dispositif." },
+  { icon: MapPinned, title: "Clôture virtuelle pour animaux de compagnie", description: "Des limites basées sur le GPS, avec des alertes conçues pour signaler qu'un animal quitte une zone sûre." },
+  { icon: DoorOpen, title: "Accès RFID pour animaux de compagnie", description: "Identification par micropuce pour des systèmes d'entrée sélectifs." },
+  { icon: DoorClosed, title: "Chatières et portes intelligentes", description: "Des portes conçues pour ne s'ouvrir que pour les animaux reconnus, avec un contrôle par application en option." },
   { icon: UtensilsCrossed, title: "Distributeurs intelligents", description: "Une alimentation programmée et dosée avec surveillance à distance." },
-  { icon: Droplets, title: "Suivi automatique de l'eau", description: "Des capteurs de niveau et de consommation d'eau qui signalent des schémas de consommation inhabituels." },
-  { icon: Thermometer, title: "Suivi de la température de l'animal", description: "Une détection continue de la température pour une identification précoce d'éventuels problèmes." },
+  { icon: Droplets, title: "Suivi automatique de l'eau", description: "Une mesure du niveau et de la consommation d'eau conçue pour signaler des schémas de consommation inhabituels." },
+  { icon: Thermometer, title: "Suivi de la température de l'animal", description: "Une mesure de température pouvant être intégrée aux dispositifs portables ; ce qu'elle peut mesurer de façon fiable est évalué lors de la conception." },
   { icon: Bluetooth, title: "Dispositifs BLE pour animaux de compagnie", description: "Du matériel Bluetooth basse consommation pour des accessoires connectés au smartphone." },
-  { icon: MapPin, title: "Systèmes de localisation d'animaux perdus", description: "Historique de localisation et alertes de dernière position connue pour accélérer la recherche." },
+  { icon: MapPin, title: "Systèmes de localisation d'animaux perdus", description: "Historique de localisation et alertes de dernière position connue, conçus pour aider à accélérer la recherche." },
 ];
 
 const deviceSpec = [
@@ -162,18 +162,26 @@ export default function PetTechnologyPageFr() {
             <ServiceCard key={item.title} locale="fr" {...item} />
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          Il s&apos;agit de services d&apos;ingénierie sur mesure : nous
+          concevons l&apos;électronique et le micrologiciel selon vos
+          exigences. Aucun des dispositifs ci-dessus n&apos;est un produit
+          standard PawSync, et les exemples de notre page Projets sont des
+          designs de référence.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <Eyebrow>Exemple de réalisation</Eyebrow>
+            <Eyebrow>Exemple de spécification</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
               Exemple de dispositif intelligent pour animal de compagnie
             </h2>
             <p className="mt-4 text-lg text-[var(--ts-gray)]">
               Une spécification représentative pour un tracker connecté
-              pour animal de compagnie.
+              pour animal de compagnie — une illustration de ce qui peut être
+              conçu, et non un produit existant.
             </p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] sm:p-8">

@@ -28,13 +28,13 @@ export const metadata: Metadata = {
 
 const capabilities = [
   { icon: Settings2, title: "Geplante Ausgabe", description: "Automatisierte Fütterung nach konfigurierbarem täglichem oder mehrfachem Zeitplan." },
-  { icon: Gauge, title: "Portionskontrolle", description: "Präzise Ausgabemengen, abgestimmt auf jedes Tier oder jede Gruppe." },
+  { icon: Gauge, title: "Portionskontrolle", description: "Ausgabemengen je Tier oder Gruppe, mit einer Genauigkeit, die während der Entwicklung kalibriert wird." },
   { icon: Hash, title: "RFID-Tieridentifikation", description: "Erkennung einzelner Tiere, um die richtige Diät an das richtige Tier zu geben." },
-  { icon: UtensilsCrossed, title: "Futterstandssensoren", description: "Wissen, wann ein Behälter oder Silo zur Neige geht, bevor er leer ist." },
-  { icon: ShieldAlert, title: "Stau- & Störungserkennung", description: "Alarme, wenn ein Motor, eine Förderschnecke oder eine Ausgabeleitung nicht korrekt funktioniert." },
-  { icon: MonitorSmartphone, title: "Fernüberwachung", description: "Fütterungsstatus und -verlauf per Telefon oder Web-Dashboard einsehen." },
+  { icon: UtensilsCrossed, title: "Futterstandssensoren", description: "Füllstandserfassung kann so ausgelegt werden, dass sie warnt, bevor ein Behälter oder Silo leer ist." },
+  { icon: ShieldAlert, title: "Stau- & Störungserkennung", description: "Die Störungserkennung kann so ausgelegt werden, dass sie alarmiert, wenn ein Motor, eine Förderschnecke oder eine Ausgabeleitung nicht korrekt funktioniert." },
+  { icon: MonitorSmartphone, title: "Fernüberwachung", description: "Fütterungsstatus und -verlauf können über ein Smartphone- oder Web-Dashboard einsehbar gemacht werden, das für Ihr Projekt entwickelt wird." },
   { icon: History, title: "Verbrauchsverlauf", description: "Futterverbrauch über die Zeit verfolgen, um Trends oder Auffälligkeiten frühzeitig zu erkennen." },
-  { icon: Cpu, title: "Individuelle Controller", description: "Speziell entwickelte Fütterungscontroller, abgestimmt auf Ihre Anlage und Tierart." },
+  { icon: Cpu, title: "Individuelle Controller", description: "Fütterungscontroller, ausgelegt auf Ihre Anlage und Tierart." },
 ];
 
 const flow = [
@@ -46,9 +46,9 @@ const flow = [
 ];
 
 const faqs = [
-  { question: "Kann das System einzelne Tiere identifizieren?", answer: "Ja — RFID-basierte Identifikation ermöglicht es dem System, unterschiedliche Diäten oder Portionen an verschiedene Tiere auszugeben, die dieselbe Fütterungsstation nutzen." },
+  { question: "Kann das System einzelne Tiere identifizieren?", answer: "Ja — RFID-Identifikation kann eingeplant werden, damit das System unterschiedliche Diäten oder Portionen an verschiedene Tiere ausgibt, die dieselbe Fütterungsstation nutzen." },
   { question: "Was passiert, wenn die Futterleitung sich staut?", answer: "Die Störungserkennung kann ein Motor- oder Ausgabeproblem melden und einen Alarm senden, statt stillschweigend nicht mehr zu füttern." },
-  { question: "Kann ich Futterstände aus der Ferne überwachen?", answer: "Ja — Füllstandssensoren an Behältern oder Silos melden den Status an das Dashboard, mit Alarmen bei niedrigem Futterstand, die nach Ihrem Zeitplan konfigurierbar sind." },
+  { question: "Kann ich Futterstände aus der Ferne überwachen?", answer: "Ja — Füllstandssensoren an Behältern oder Silos können so ausgelegt werden, dass sie an ein Dashboard melden, mit Alarmen bei niedrigem Futterstand nach Ihrem Zeitplan." },
 ];
 
 const scope: ServiceScopeCopy = {
@@ -145,9 +145,9 @@ export default function SmartFeedingPageDe() {
         <Eyebrow>Intelligente Fütterung</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Entwicklung intelligenter Futterautomaten & Fütterungssysteme</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Automatisierte Fütterungsgeräte mit Zeitplänen, Portionskontrolle,
-          Sensoren und Fernüberwachung für Haustiere, Nutztiere und
-          Mehrtieranlagen.
+          Wir entwickeln automatisierte Fütterungsgeräte mit Zeitplänen,
+          Portionskontrolle, Sensoren und Fernüberwachung für Haustiere,
+          Nutztiere und Mehrtieranlagen.
         </p>
       </section>
 
@@ -181,6 +181,12 @@ export default function SmartFeedingPageDe() {
               <ServiceCard key={item.title} locale="de" {...item} />
             ))}
           </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            Dies sind individuelle Engineering-Dienstleistungen, keine
+            Standardprodukte. Dashboards, Apps und Alarme werden pro Projekt
+            entwickelt, und der Fütterungscontroller auf unserer Projektseite
+            ist ein Referenzdesign, keine im Feld erprobte Installation.
+          </p>
         </div>
       </section>
 

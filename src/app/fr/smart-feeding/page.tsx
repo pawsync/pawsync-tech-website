@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 
 const capabilities = [
   { icon: Settings2, title: "Distribution programmée", description: "Une alimentation automatisée selon un horaire quotidien ou multi-horaires configurable." },
-  { icon: Gauge, title: "Contrôle des portions", description: "Des quantités de distribution précises, ajustées à chaque animal ou groupe." },
+  { icon: Gauge, title: "Contrôle des portions", description: "Des quantités de distribution définies par animal ou par groupe, avec une précision calibrée pendant le développement." },
   { icon: Hash, title: "Identification RFID des animaux", description: "Reconnaître chaque animal pour donner le bon régime au bon animal." },
-  { icon: UtensilsCrossed, title: "Capteurs de niveau d'aliment", description: "Savoir quand une trémie ou un silo s'épuise avant qu'il ne soit vide." },
-  { icon: ShieldAlert, title: "Détection de bourrage et de panne", description: "Des alertes lorsqu'un moteur, une vis ou une ligne de distribution ne fonctionne pas correctement." },
-  { icon: MonitorSmartphone, title: "Surveillance à distance", description: "Consulter l'état et l'historique de l'alimentation depuis un téléphone ou un tableau de bord web." },
+  { icon: UtensilsCrossed, title: "Capteurs de niveau d'aliment", description: "La mesure de niveau peut être conçue pour vous avertir avant qu'une trémie ou un silo ne soit vide." },
+  { icon: ShieldAlert, title: "Détection de bourrage et de panne", description: "La détection de panne peut être conçue pour vous alerter lorsqu'un moteur, une vis ou une ligne de distribution ne fonctionne pas correctement." },
+  { icon: MonitorSmartphone, title: "Surveillance à distance", description: "L'état et l'historique de l'alimentation peuvent être rendus consultables sur un téléphone ou un tableau de bord web développé pour votre projet." },
   { icon: History, title: "Historique de consommation", description: "Suivre la consommation d'aliment dans le temps pour repérer tôt les tendances ou anomalies." },
   { icon: Cpu, title: "Contrôleurs sur mesure", description: "Des contrôleurs d'alimentation conçus sur mesure pour vos équipements et vos espèces." },
 ];
@@ -46,9 +46,9 @@ const flow = [
 ];
 
 const faqs = [
-  { question: "Le système peut-il identifier chaque animal individuellement ?", answer: "Oui — l'identification par RFID permet au système de distribuer différents régimes ou portions à différents animaux partageant le même poste d'alimentation." },
+  { question: "Le système peut-il identifier chaque animal individuellement ?", answer: "Oui — l'identification par RFID peut être prévue pour que le système distribue différents régimes ou portions à différents animaux partageant le même poste d'alimentation." },
   { question: "Que se passe-t-il si la ligne d'alimentation se bloque ?", answer: "La détection de panne peut signaler un problème de moteur ou de distribution et envoyer une alerte, plutôt que d'échouer silencieusement à nourrir." },
-  { question: "Puis-je surveiller les niveaux d'aliment à distance ?", answer: "Oui — les capteurs de niveau sur les trémies ou silos remontent l'état au tableau de bord, avec des alertes de niveau bas configurables selon votre calendrier." },
+  { question: "Puis-je surveiller les niveaux d'aliment à distance ?", answer: "Oui — les capteurs de niveau sur les trémies ou silos peuvent être conçus pour remonter l'état à un tableau de bord, avec des alertes de niveau bas configurées selon votre calendrier." },
 ];
 
 const scope: ServiceScopeCopy = {
@@ -145,9 +145,9 @@ export default function SmartFeedingPageFr() {
         <Eyebrow>Alimentation intelligente</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Développement de distributeurs intelligents & systèmes d&apos;alimentation</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Des dispositifs d&apos;alimentation automatisés avec horaires,
-          contrôle des portions, capteurs et surveillance à distance pour
-          animaux de compagnie, bétail et sites multi-animaux.
+          Nous concevons des dispositifs d&apos;alimentation automatisés avec
+          horaires, contrôle des portions, capteurs et surveillance à
+          distance pour animaux de compagnie, bétail et sites multi-animaux.
         </p>
       </section>
 
@@ -181,6 +181,13 @@ export default function SmartFeedingPageFr() {
               <ServiceCard key={item.title} locale="fr" {...item} />
             ))}
           </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            Il s&apos;agit de services d&apos;ingénierie sur mesure, et non de
+            produits standard. Les tableaux de bord, applications et alertes
+            sont développés pour chaque projet, et le contrôleur
+            d&apos;alimentation de notre page Projets est un design de
+            référence, et non un déploiement testé sur le terrain.
+          </p>
         </div>
       </section>
 

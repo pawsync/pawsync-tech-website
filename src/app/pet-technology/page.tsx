@@ -29,18 +29,18 @@ export const metadata: Metadata = {
 };
 
 const solutions = [
-  { icon: Satellite, title: "GPS Pet Trackers", description: "Collar-mounted location tracking for lost-pet recovery and daily monitoring." },
+  { icon: Satellite, title: "GPS Pet Trackers", description: "Collar-mounted location tracking designed for lost-pet recovery and daily monitoring." },
   { icon: Activity, title: "Activity Trackers", description: "Motion and exercise tracking that builds a picture of daily wellbeing." },
-  { icon: HeartPulse, title: "Pet Health Monitoring", description: "Wearable sensors for temperature, activity, and rest pattern tracking." },
-  { icon: Radar, title: "Smart Collars", description: "Multi-sensor collar hardware combining GPS, BLE, and health monitoring in one device." },
-  { icon: MapPinned, title: "Virtual Pet Fencing", description: "GPS-based boundaries with real-time alerts when a pet leaves a safe zone." },
-  { icon: DoorOpen, title: "RFID Pet Access", description: "Microchip-based identification for secure, selective entry systems." },
-  { icon: DoorClosed, title: "Smart Pet Doors", description: "App-controlled doors that open only for recognized, authorized pets." },
+  { icon: HeartPulse, title: "Pet Health Monitoring", description: "Wearable sensing for activity and rest patterns, with temperature sensing where the design allows." },
+  { icon: Radar, title: "Smart Collars", description: "Multi-sensor collar hardware can be designed to combine GPS, BLE, and activity sensing in one device." },
+  { icon: MapPinned, title: "Virtual Pet Fencing", description: "GPS-based boundaries, with alerts designed to flag when a pet leaves a safe zone." },
+  { icon: DoorOpen, title: "RFID Pet Access", description: "Microchip-based identification for selective entry systems." },
+  { icon: DoorClosed, title: "Smart Pet Doors", description: "Doors designed to open only for recognized pets, with app control as an option." },
   { icon: UtensilsCrossed, title: "Smart Feeders", description: "Scheduled, portion-controlled feeding with remote monitoring." },
-  { icon: Droplets, title: "Automatic Water Monitoring", description: "Water level and consumption sensors that flag unusual drinking patterns." },
-  { icon: Thermometer, title: "Pet Temperature Monitoring", description: "Continuous temperature sensing for early awareness of potential issues." },
+  { icon: Droplets, title: "Automatic Water Monitoring", description: "Water level and consumption sensing designed to flag unusual drinking patterns." },
+  { icon: Thermometer, title: "Pet Temperature Monitoring", description: "Temperature sensing that can be designed into wearables, with what it can reliably measure assessed during design." },
   { icon: Bluetooth, title: "BLE Pet Devices", description: "Low-power Bluetooth hardware for smartphone-connected accessories." },
-  { icon: MapPin, title: "Lost-Pet Location Systems", description: "Location history and last-known-position alerts to speed up recovery." },
+  { icon: MapPin, title: "Lost-Pet Location Systems", description: "Location history and last-known-position alerts designed to help speed up recovery." },
 ];
 
 const deviceSpec = [
@@ -162,17 +162,24 @@ export default function PetTechnologyPage() {
             <ServiceCard key={item.title} {...item} />
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          These are custom engineering services: we design the electronics
+          and firmware to your requirements. None of the devices above is an
+          off-the-shelf PawSync product, and examples on our Projects page are
+          reference designs.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <Eyebrow>Example Build</Eyebrow>
+            <Eyebrow>Example Specification</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
               Example Smart Pet Device
             </h2>
             <p className="mt-4 text-lg text-[var(--ts-gray)]">
-              A representative specification for a connected pet tracker.
+              A representative specification for a connected pet tracker — an
+              illustration of what can be designed, not an existing product.
             </p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] sm:p-8">
