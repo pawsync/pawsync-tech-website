@@ -41,7 +41,7 @@ export default function PoultryWaterManagement() {
               Zuverlässige Wasserüberwachung &amp; -steuerung
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
-              Behalten Sie Tanks, Leitungen und Pumpen laufend im Blick —
+              Behalten Sie Tanks, Leitungen und Pumpen laufend im Blick –
               mit Alarmen, bevor aus einem Engpass ein Problem wird.
             </p>
             <ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2">

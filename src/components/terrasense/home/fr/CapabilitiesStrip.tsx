@@ -1,7 +1,7 @@
 const groups: { label: string; items: string[] }[] = [
   {
     label: "Électronique",
-    items: ["Systèmes embarqués", "Ingénierie PCB", "Gestion de l'alimentation", "Intégration de capteurs"],
+    items: ["Systèmes embarqués", "Ingénierie PCB", "Gestion de l'énergie", "Intégration de capteurs"],
   },
   {
     label: "Connectivité",

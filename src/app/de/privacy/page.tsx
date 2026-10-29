@@ -33,10 +33,10 @@ export default function PrivacyPageDe() {
               dieser Hinweis beschreibt sie nicht als solches.
             </p>
             <p className="mt-2">
-              Die Fußzeile dieser Website nennt <strong>Pak-EL LAB</strong> als Engineering-
-              Partner für PawSync.tech. Diese Nennung ist keine Aussage darüber, dass Pak-EL
+              Die Fußzeile dieser Website nennt <strong>Pak-EL LAB</strong> als Engineering-Partner
+              für PawSync.tech. Diese Nennung ist keine Aussage darüber, dass Pak-EL
               LAB PawSync.tech besitzt, betreibt oder für die Verarbeitung der über das
-              Kontaktformular übermittelten Daten verantwortlich ist — PawSync.tech wird, wie
+              Kontaktformular übermittelten Daten verantwortlich ist – PawSync.tech wird, wie
               oben beschrieben, persönlich betrieben, und die Rolle von Pak-EL LAB beschränkt
               sich auf das Engineering.
             </p>
@@ -69,9 +69,9 @@ export default function PrivacyPageDe() {
               </li>
             </ul>
             <p className="mt-2">
-              Diese Website verwendet keine eigenen Cookies, Analyse- oder Werbeskripte — dies
-              ist eine direkt im Quellcode der Website verifizierte Tatsache. Ob die Hosting-
-              Plattform auf Infrastrukturebene darüber hinaus etwas protokolliert, kann dieser
+              Diese Website verwendet keine eigenen Cookies, Analyse- oder Werbeskripte – dies
+              ist eine direkt im Quellcode der Website verifizierte Tatsache. Ob die Hosting-Plattform
+              auf Infrastrukturebene darüber hinaus etwas protokolliert, kann dieser
               Hinweis derzeit nicht bestätigen.
             </p>
           </section>
@@ -92,14 +92,14 @@ export default function PrivacyPageDe() {
               Tahir Nazeer prüft diese Benachrichtigungen persönlich. Das Postfach
               contact@pawsync.tech wurde überprüft und leitet nicht an eine andere Adresse
               weiter, und das Netlify-Konto wurde auf Integrationen über diese
-              E-Mail-Benachrichtigung hinaus geprüft — es wurden keine gefunden. Der oben
+              E-Mail-Benachrichtigung hinaus geprüft – es wurden keine gefunden. Der oben
               beschriebene Netlify-zu-E-Mail-Ablauf ist der vollständige Weg, den diese Daten
               nehmen.
             </p>
             <p className="mt-2">
               Wie Netlify die von ihm gespeicherten Daten selbst handhabt, unterliegt Netlifys
               eigener Datenschutzerklärung unter{" "}
-              <span className="italic">netlify.com/privacy</span> — dieser Hinweis gibt
+              <span className="italic">netlify.com/privacy</span> – dieser Hinweis gibt
               Netlifys Bedingungen nicht wieder; bitte prüfen Sie diese direkt, um zu erfahren,
               wie Netlify selbst gespeicherte Daten verarbeitet.
             </p>
@@ -125,7 +125,7 @@ export default function PrivacyPageDe() {
               Benachrichtigungs-E-Mails werden bis zu 12 Monate nach dem letzten Austausch mit
               Ihnen aufbewahrt und anschließend aus Netlify und dem E-Mail-Postfach gelöscht.
               Dies ist ein <strong>manueller</strong> Vorgang, der von Tahir Nazeer durchgeführt
-              wird, keine automatische oder systemseitig erzwungene Löschung — dieser Hinweis
+              wird, keine automatische oder systemseitig erzwungene Löschung – dieser Hinweis
               behauptet nichts anderes.
             </p>
           </section>

@@ -54,7 +54,7 @@ export default function PoultryHero() {
           </span>
 
           <h1 className="mt-5 font-[family-name:var(--font-manrope)] text-4xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl sm:leading-[1.08] lg:text-[3.4rem]">
-            Intelligente Überwachung &amp; Automatisierung für moderne Geflügelfarmen
+            Drahtlose IoT-Überwachung &amp; Automatisierung für moderne Geflügelbetriebe
           </h1>
 
           <p className="mt-5 max-w-[600px] text-lg leading-relaxed text-white/70">
@@ -109,7 +109,7 @@ export default function PoultryHero() {
 
             <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
               <Wind className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />
-              Sensor-Layout — Beispielansicht
+              Sensor-Layout – Beispielansicht
             </div>
           </div>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   Bell,
   MapPinned,
@@ -18,28 +19,28 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Virtual Fencing | PawSync",
+  title: "Custom GPS Virtual Fencing for Livestock | PawSync",
   description:
-    "GPS and wireless virtual fencing systems that give animals freedom to roam within defined zones, reducing dependency on traditional physical fencing.",
+    "Custom GPS virtual fencing for livestock: collar hardware, boundary logic and alerts designed to your requirements, not an off-the-shelf product.",
   alternates: buildAlternates("en", "virtual-fencing"),
   openGraph: buildOpenGraph("en", "virtual-fencing"),
 };
 
 const capabilities = [
-  { icon: Radar, title: "Custom Adjustable Boundaries", description: "Draw and update zones from an app — no wires, no posts to move." },
-  { icon: Bell, title: "Real-Time Movement Alerts", description: "Notifications the moment an animal approaches or crosses a boundary." },
+  { icon: Radar, title: "Custom Adjustable Boundaries", description: "Zones can be designed to be drawn and updated in a web or mobile interface — no wires, no posts to move." },
+  { icon: Bell, title: "Movement Alerts", description: "Alerts can be designed to notify you when an animal approaches or crosses a boundary." },
   { icon: MapPinned, title: "Multiple Zone Support", description: "Rotate grazing areas or manage separate zones for different groups." },
-  { icon: Smartphone, title: "Remote Configuration", description: "Update boundaries from the field or the office, no equipment visit needed." },
-  { icon: Vibrate, title: "Audio & Haptic Cues", description: "Progressive collar cues that warn an animal before it reaches the edge." },
-  { icon: ShieldAlert, title: "Escape Prevention Alerts", description: "Early warning when an animal is moving toward a boundary at speed." },
+  { icon: Smartphone, title: "Remote Configuration", description: "Boundaries can be designed to update remotely from the field or office, without an equipment visit." },
+  { icon: Vibrate, title: "Audio & Haptic Cues", description: "Progressive collar cues can be designed to warn an animal before it reaches the edge." },
+  { icon: ShieldAlert, title: "Boundary-Approach Alerts", description: "Early-warning alerts can be designed for animals moving toward a boundary at speed." },
   { icon: Users, title: "Multi-Animal Zones", description: "Manage boundaries for individual animals or entire herds at once." },
-  { icon: Settings2, title: "Tracking Integration", description: "Pairs with our GPS tracking hardware for a combined location + boundary system." },
+  { icon: Settings2, title: "Tracking Integration", description: "Can be combined with custom GPS tracking hardware into one location-and-boundary system." },
 ];
 
 const faqs = [
   { question: "Does virtual fencing replace physical fencing entirely?", answer: "It can reduce dependency on physical fencing in many settings, but the right approach depends on terrain, animal type, and local requirements — we'll help you assess what fits." },
   { question: "How does an animal learn the boundary?", answer: "Collars typically use a progressive audio cue, and in some systems a brief, gentle pulse, giving the animal a chance to turn back before reaching the edge." },
-  { question: "Can zones be changed remotely?", answer: "Yes — boundaries are typically configurable from a mobile or web app without needing to physically move any hardware." },
+  { question: "Can zones be changed remotely?", answer: "They can be. Remote boundary changes through a web or mobile interface can be designed in, so no hardware has to be moved." },
 ];
 
 export default function VirtualFencingPage() {
@@ -54,7 +55,12 @@ export default function VirtualFencingPage() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Give animals freedom to roam within defined zones, with location
-          awareness in place of — or alongside — traditional fencing.
+          awareness in place of — or alongside — traditional fencing. Part of
+          our{" "}
+          <Link href="/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            remote livestock monitoring
+          </Link>{" "}
+          work.
         </p>
       </section>
 
@@ -75,6 +81,12 @@ export default function VirtualFencingPage() {
               <ServiceCard key={item.title} {...item} />
             ))}
           </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            These are custom engineering services: we design hardware and
+            boundary logic to your requirements. They are not off-the-shelf
+            products, and the example on our Projects page is a reference
+            design, not a field-tested deployment.
+          </p>
         </div>
       </section>
 

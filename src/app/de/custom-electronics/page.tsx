@@ -24,9 +24,9 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Kundenspezifische Elektronik & IoT-Produktentwicklung | PawSync",
+  title: "Individuelle Elektronik & IoT-Produktentwicklung | PawSync",
   description:
-    "Kundenspezifisches Leiterplattendesign, Embedded-Firmware und GPS-/LoRa-IoT-Engineering — von der Prototypentwicklung bis zur Serienproduktion für Tier- und Hoftechnologie.",
+    "Individuelles Leiterplattendesign, Embedded-Firmware und GPS-/LoRa-IoT-Engineering – vom Prototyp bis zur Serienfertigung für Tier- und Hoftechnologie.",
   alternates: buildAlternates("de", "custom-electronics"),
   openGraph: buildOpenGraph("de", "custom-electronics"),
 };
@@ -50,7 +50,7 @@ const services: { icon: LucideIcon; title: string; description: string }[] = [
   {
     icon: Thermometer,
     title: "Sensorintegration",
-    description: "Integration von GPS- und Umweltsensoren — von einem einzelnen Sensor bis zu einem vollständigen Multisensor-Knoten.",
+    description: "Integration von GPS- und Umweltsensoren – von einem einzelnen Sensor bis zu einem vollständigen Multisensor-Knoten.",
   },
   {
     icon: Radio,
@@ -90,7 +90,7 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
   { icon: CircuitBoard, label: "Leiterplatte" },
   { icon: FileCode, label: "Firmware" },
   { icon: FlaskConical, label: "Prototyp" },
-  { icon: ClipboardCheck, label: "Testing" },
+  { icon: ClipboardCheck, label: "Test" },
   { icon: Factory, label: "Produktion" },
 ];
 
@@ -106,7 +106,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Können GPS-Tracker auf entlegenen Höfen funktionieren?",
-    answer: "Ja, mit der richtigen Technologiewahl. GPS liefert die Standortbestimmung, während LoRa- oder Mobilfunkkonnektivität diese Daten aus Bereichen ohne lokales Wi-Fi zurückträgt — wir helfen, die richtige Kombination für Ihren Betrieb auszuwählen.",
+    answer: "Ja, mit der richtigen Technologiewahl. GPS liefert die Standortbestimmung, während LoRa- oder Mobilfunkkonnektivität diese Daten aus Bereichen ohne lokales Wi-Fi zurückträgt – wir helfen, die richtige Kombination für Ihren Betrieb auszuwählen.",
   },
   {
     question: "Welche Funktechnologie eignet sich am besten für die Nutztierüberwachung?",
@@ -118,7 +118,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Können Tierüberwachungsgeräte batteriebetrieben sein?",
-    answer: "Ja — die meisten von uns entwickelten Geräte sind batteriebetrieben, mit Energiemanagement, das speziell für lange Betriebszeit im Feld ausgelegt ist.",
+    answer: "Ja – die meisten von uns entwickelten Geräte sind batteriebetrieben, mit Energiemanagement, das speziell für lange Betriebszeit im Feld ausgelegt ist.",
   },
   {
     question: "Können Sie App-verbundene Geräte entwickeln?",
@@ -126,7 +126,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Können Sie sowohl Hardware als auch Firmware entwickeln?",
-    answer: "Ja, beides sind zentrale hauseigene Kompetenzen — vom Schaltplan und Leiterplattendesign bis zur Embedded-Firmware, die darauf läuft.",
+    answer: "Ja, beides sind zentrale Kompetenzen – vom Schaltplan und Leiterplattendesign bis zur Embedded-Firmware, die darauf läuft.",
   },
   {
     question: "Können Sie helfen, einen Prototyp in die Serienproduktion zu überführen?",
@@ -134,7 +134,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Können Sie individuelle Hofcontroller entwickeln?",
-    answer: "Ja — Controller, die Temperatur, Luftfeuchtigkeit, Bewässerung, Fütterung, Ventilatoren, Pumpen und andere Hofanlagen steuern, sind ein regelmäßiger Teil unserer Arbeit.",
+    answer: "Ja – Controller, die Temperatur, Luftfeuchtigkeit, Bewässerung, Fütterung, Ventilatoren, Pumpen und andere Hofanlagen steuern, sind ein regelmäßiger Teil unserer Arbeit.",
   },
   {
     question: "Können Ihre Systeme mehrere Standorte überwachen?",
@@ -142,7 +142,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Welche Sensoren können in ein Hofüberwachungssystem integriert werden?",
-    answer: "Übliche Optionen sind Temperatur-, Feuchtigkeits-, Luftqualitäts-, Wasserstands-, Bodenfeuchte-, Bewegungs- und Wägezellensensoren — die richtige Kombination hängt davon ab, was Sie überwachen möchten.",
+    answer: "Übliche Optionen sind Temperatur-, Feuchtigkeits-, Luftqualitäts-, Wasserstands-, Bodenfeuchte-, Bewegungs- und Wägezellensensoren – die richtige Kombination hängt davon ab, was Sie überwachen möchten.",
   },
   {
     question: "Können Sie RFID-Geräte zur Nutztieridentifikation entwickeln?",
@@ -150,11 +150,11 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Funktioniert die Hardware auch ohne Internet- oder Cloud-Zugang?",
-    answer: "Lokale Steuerung und Datenprotokollierung können so ausgelegt werden, dass sie bei einem Ausfall vor Ort weiterlaufen und nach Wiederherstellung der Verbindung mit der Cloud synchronisieren — eine Designentscheidung, die wir danach treffen, wie wichtig durchgehende Sichtbarkeit für Ihren Anwendungsfall ist, nicht als Standardannahme.",
+    answer: "Lokale Steuerung und Datenprotokollierung können so ausgelegt werden, dass sie bei einem Ausfall vor Ort weiterlaufen und nach Wiederherstellung der Verbindung mit der Cloud synchronisieren – eine Designentscheidung, die wir danach treffen, wie wichtig durchgehende Sichtbarkeit für Ihren Anwendungsfall ist, nicht als Standardannahme.",
   },
   {
     question: "Welche Informationen benötigen Sie von uns zur Einschätzung eines individuellen Elektronikprojekts?",
-    answer: "In der Regel: das zu lösende Problem, die Einsatzumgebung des Geräts, gewünschte Akkulaufzeit oder Stromquelle, erforderliche Reichweite und Konnektivität, Ausrüstung, mit der es zusammenarbeiten soll, sowie eine grobe Stückzahlerwartung. Den Rest klären wir gemeinsam in der Discovery-Phase.",
+    answer: "In der Regel: das zu lösende Problem, die Einsatzumgebung des Geräts, gewünschte Akkulaufzeit oder Stromquelle, erforderliche Reichweite und Konnektivität, Ausrüstung, mit der es zusammenarbeiten soll, sowie eine grobe Stückzahlerwartung. Den Rest klären wir gemeinsam in der Anforderungsanalyse.",
   },
 ];
 
@@ -169,8 +169,8 @@ export default function CustomElectronicsPageDe() {
           Kundenspezifische Elektronik &amp; IoT-Produktentwicklung
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Wenn ein Standardgerät nicht ausreicht, entwickeln wir eines, das
-          es tut — Hardware, Firmware und die Konnektivität, die alles
+          Wenn ein Standardgerät nicht ausreicht, entwickeln wir ein
+          passendes – Hardware, Firmware und die Konnektivität, die alles
           verbindet. Das ist derselbe Entwicklungsprozess hinter unseren{" "}
           <Link href="/de/poultry-farming" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Geflügelfarm-Controllern
@@ -221,7 +221,7 @@ export default function CustomElectronicsPageDe() {
               Beispiel-Spezifikation eines Smart-Geräts
             </h3>
             <p className="mt-1 text-sm text-[var(--ts-gray)]">
-              Ein repräsentativer Aufbau für einen vernetzten Tier-Tracker —
+              Ein repräsentativer Aufbau für einen vernetzten Tier-Tracker –
               siehe unseren Beitrag zum{" "}
               <Link href="/de/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
                 Tracker-Leiterplattendesign
@@ -263,8 +263,8 @@ export default function CustomElectronicsPageDe() {
       </section>
 
       <CTABanner
-        heading="Haben Sie eine Animal-Tech-Produktidee?"
-        description="Von GPS-Trackern bis zu automatisierten Hofcontrollern — wir helfen, Ihre Elektronik vom Konzept bis zum Prototyp zu entwickeln."
+        heading="Haben Sie eine Produktidee im Bereich Tiertechnologie?"
+        description="Von GPS-Trackern bis zu automatisierten Hofcontrollern – wir helfen, Ihre Elektronik vom Konzept bis zum Prototyp zu entwickeln."
         primaryLabel="Ihr individuelles Engineering-Projekt starten"
         primaryHref="/de/contact"
         secondaryLabel="Alle Lösungen ansehen"

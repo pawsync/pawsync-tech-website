@@ -1,9 +1,7 @@
 import type { MetadataRoute } from "next";
-import { absoluteUrl, locales, routes } from "@/i18n/config";
+import { absoluteUrl, lastModifiedFor, locales, routes } from "@/i18n/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   const entries: MetadataRoute.Sitemap = [];
 
   for (const route of routes) {
@@ -16,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of locales) {
       entries.push({
         url: absoluteUrl(locale, route),
-        lastModified,
+        lastModified: lastModifiedFor(locale, route),
         alternates: { languages },
       });
     }

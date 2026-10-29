@@ -16,11 +16,12 @@ import PoultryConnectivity from "@/components/terrasense/poultry/de/PoultryConne
 import PoultryCustomElectronics from "@/components/terrasense/poultry/de/PoultryCustomElectronics";
 import PoultryApplications from "@/components/terrasense/poultry/de/PoultryApplications";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Entwicklung drahtloser Geflügelüberwachung | PawSync",
+  title: "Drahtlose Geflügeltechnik & Fernüberwachung | PawSync",
   description:
-    "Individuelle Entwicklung drahtloser Geflügelüberwachung: Stallsensoren, Controller, LoRa-Anbindung und Prototypen für Geflügelbetriebe.",
+    "Drahtlose Geflügeltechnik: Sensoren für Temperatur, Luftfeuchtigkeit und Luftqualität mit LoRa-/Wi-Fi-Anbindung und Fernüberwachung, von PawSync.",
   alternates: buildAlternates("de", "poultry-farming"),
   openGraph: buildOpenGraph("de", "poultry-farming"),
 };
@@ -29,7 +30,7 @@ const faqs = [
   {
     question: "Können Sie einen individuellen Geflügelfarm-Controller entwickeln?",
     answer:
-      "Ja. Wir entwickeln individuelle Controller-Hardware und -Firmware rund um Ihr spezifisches Stalllayout, Ihre Ausrüstung und Steuerungsanforderungen — von einer Einzelstall-Einheit bis zu einer Multi-Stall-Plattform.",
+      "Ja. Wir entwickeln individuelle Controller-Hardware und -Firmware rund um Ihr spezifisches Stalllayout, Ihre Ausrüstung und Steuerungsanforderungen – von einer Einzelstall-Einheit bis zu einer Multi-Stall-Plattform.",
   },
   {
     question: "Können Temperatur und Luftfeuchtigkeit aus der Ferne überwacht werden?",
@@ -69,12 +70,12 @@ const faqs = [
   {
     question: "Können Sie bestehende Ventilatoren, Pumpen, Motoren und Anlagen integrieren?",
     answer:
-      "In vielen Fällen ja. Wir bewerten Ihre bestehende Ausrüstung in der Discovery-Phase, um den richtigen Ansatz für Sensor-, Relais- oder Steuerungsintegration zu bestimmen.",
+      "In vielen Fällen ja. Wir bewerten Ihre bestehende Ausrüstung in der Anforderungsanalyse, um den richtigen Ansatz für Sensor-, Relais- oder Steuerungsintegration zu bestimmen.",
   },
   {
     question: "Welche Informationen benötigen Sie von uns zur Projektabschätzung?",
     answer:
-      "In der Regel: Anzahl und Größe der Ställe, vorhandene Ausrüstung, die integriert werden soll, Internet-/Netzwerkverfügbarkeit vor Ort, Ihre gewünschten Alarm- und Berichtsanforderungen sowie etwaige Budget- oder Zeitvorgaben. Den Rest klären wir gemeinsam in der Discovery-Phase.",
+      "In der Regel: Anzahl und Größe der Ställe, vorhandene Ausrüstung, die integriert werden soll, Internet-/Netzwerkverfügbarkeit vor Ort, Ihre gewünschten Alarm- und Berichtsanforderungen sowie etwaige Budget- oder Zeitvorgaben. Den Rest klären wir gemeinsam in der Anforderungsanalyse.",
   },
   {
     question: "Können Sie die Leiterplatte und die Firmware entwickeln?",
@@ -98,9 +99,23 @@ const faqs = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function PoultryFarmingPageDe() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd) }} />
       <PoultryHero />
 
       <div className="bg-[var(--ts-bg)]">

@@ -1,21 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Designing Low-Power Electronics for Outdoor Animal Trackers | PawSync",
+  title: "Low-Power Electronics for Outdoor Animal Trackers | PawSync",
   description:
     "Battery life in a wearable animal tracker is a power-budget problem. The engineering techniques that determine whether a device lasts days or months.",
   alternates: buildAlternates("en", "blog/low-power-animal-tracker-design"),
   openGraph: buildOpenGraph("en", "blog/low-power-animal-tracker-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "en",
+  route: "blog/low-power-animal-tracker-design",
+  headline: "Designing Low-Power Electronics for Outdoor Animal Trackers",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleLowPowerDesign() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb items={[{ label: "Blog", href: "/blog" }, { label: "Low-Power Tracker Design" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,6 +33,7 @@ export default function BlogArticleLowPowerDesign() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Designing Low-Power Electronics for Outdoor Animal Trackers
         </h1>
+        <ArticleDate route="blog/low-power-animal-tracker-design" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Why battery life is fundamentally a power-budget problem, and the techniques that stretch it from days to months.
         </p>
@@ -118,7 +129,7 @@ export default function BlogArticleLowPowerDesign() {
         </div>
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
-          Working through a battery-life target for your own device? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and we&apos;ll help you scope the power budget.
+          Designing trackers for a herd rather than a single animal? See our <Link href="/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">remote livestock monitoring</Link> engineering services. Working through a battery-life target for your own device? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and we&apos;ll help you scope the power budget.
         </p>
       </article>
 

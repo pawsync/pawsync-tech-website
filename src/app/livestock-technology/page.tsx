@@ -14,7 +14,10 @@ import {
   HeartPulse,
   Hash,
   MapPinned,
+  MonitorSmartphone,
   Radar,
+  Radio,
+  RadioTower,
   Satellite,
   ThermometerSun,
   UtensilsCrossed,
@@ -31,9 +34,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Livestock GPS Tracking & Remote Monitoring Systems | PawSync",
+  title: "Remote Livestock & Cattle Monitoring Systems | PawSync",
   description:
-    "Custom-engineered GPS tracking, virtual fencing, RFID identification, and remote health/activity monitoring hardware for cattle, sheep, goats, and horses.",
+    "Custom wireless livestock monitoring hardware for cattle, sheep, goats, and horses: GPS tracking, virtual fencing, RFID, and activity monitoring.",
   alternates: buildAlternates("en", "livestock-technology"),
   openGraph: buildOpenGraph("en", "livestock-technology"),
 };
@@ -56,6 +59,16 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
 ];
 
 const faqs: FAQItem[] = [
+  {
+    question: "What is a livestock monitoring system made of?",
+    answer:
+      "Four layers, each designed per project: a device on the animal (a collar or ear tag with GNSS and, where needed, motion sensing), a radio link (LoRa or cellular), a gateway that receives data on site and forwards it to the cloud, and a web or mobile dashboard with configurable alerts. We scope which layers you need — and how they connect to anything you already run — during discovery.",
+  },
+  {
+    question: "How does remote cattle monitoring work?",
+    answer:
+      "A collar or ear tag on each animal records its GNSS position, and a LoRa or cellular radio reports it back to a gateway or the cloud at an interval set against battery life. Alerts can be designed for events such as an animal leaving a designated area or showing unusual inactivity. The right combination depends on how far your cattle range and what coverage exists on your land.",
+  },
   {
     question: "GPS or LoRa — which one tracks my herd?",
     answer:
@@ -94,19 +107,19 @@ const faqs: FAQItem[] = [
 ];
 
 const solutions = [
-  { icon: Satellite, title: "Livestock GPS Tracking", description: "Location tracking built for open range and large pastures." },
-  { icon: Radar, title: "Cattle Tracking", description: "Collar and ear-tag hardware sized for cattle herds." },
+  { icon: Satellite, title: "Livestock GPS Tracking", description: "Location tracking built for open range and large pastures.", href: "/animal-tracking" },
+  { icon: Radar, title: "Cattle Tracking", description: "Collar or ear-tag hardware designed around your herd and range." },
   { icon: Radar, title: "Sheep Tracking", description: "Lightweight tracking devices for flock management." },
   { icon: Radar, title: "Goat Tracking", description: "Rugged tracking hardware for browsing herds." },
-  { icon: Radar, title: "Horse Tracking", description: "GPS and activity tracking built for equine welfare." },
+  { icon: Radar, title: "Horse Tracking", description: "GPS and activity tracking designed with equine welfare in mind." },
   { icon: Activity, title: "Animal Activity Monitoring", description: "Movement and behavior data across the whole herd." },
-  { icon: HeartPulse, title: "Heat / Estrus Detection", description: "Activity-pattern analysis to help flag breeding windows." },
+  { icon: HeartPulse, title: "Heat / Estrus Detection", description: "Activity-pattern analysis can be designed in to help flag possible breeding windows." },
   { icon: MapPinned, title: "Movement Monitoring", description: "Historical movement trails for individual animals or groups." },
-  { icon: HeartPulse, title: "Health Indicators", description: "Vitals and activity trends that support earlier intervention." },
+  { icon: HeartPulse, title: "Health Indicators", description: "Activity and behavior trends that can help flag animals needing attention." },
   { icon: Activity, title: "Grazing Monitoring", description: "Time-in-zone data to inform rotational grazing decisions." },
-  { icon: MapPinned, title: "Virtual Fencing", description: "GPS-based boundaries that reduce dependency on physical fencing." },
+  { icon: MapPinned, title: "Virtual Fencing", description: "GPS-based boundaries that reduce dependency on physical fencing.", href: "/virtual-fencing" },
   { icon: Hash, title: "RFID Identification", description: "Individual animal identification for records and access control." },
-  { icon: Hash, title: "Animal Counting", description: "Automated headcounts at gates, chutes, and water points." },
+  { icon: Hash, title: "Animal Counting", description: "RFID-based headcounts at gates, chutes, or water points, designed to your layout." },
   { icon: Droplets, title: "Water Consumption Monitoring", description: "Flow and level sensors that flag abnormal drinking patterns." },
   { icon: UtensilsCrossed, title: "Feeding Monitoring", description: "Feed-level and consumption tracking across feeding stations." },
 ];
@@ -120,6 +133,13 @@ const alerts = [
   { icon: Battery, label: "Potential device battery issue" },
 ];
 
+const systemLayers = [
+  { icon: Radar, title: "1. On the animal", description: "A collar or ear tag with GNSS and, where needed, motion sensing." },
+  { icon: Radio, title: "2. Radio link", description: "LoRa for long range at low power, or cellular (LTE-M) where coverage allows." },
+  { icon: RadioTower, title: "3. Gateway", description: "Receives data on site and forwards it to the cloud; local logic can keep logging during an outage." },
+  { icon: MonitorSmartphone, title: "4. Dashboard & alerts", description: "A web or mobile view with configurable alerts, designed to your requirements as part of the project." },
+];
+
 export default function LivestockTechnologyPage() {
   return (
     <>
@@ -128,11 +148,12 @@ export default function LivestockTechnologyPage() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Livestock Technology</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Connected Livestock Monitoring &amp; Management
+          Remote Livestock Monitoring &amp; Management Systems
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Tracking, health monitoring, and virtual fencing hardware built
-          for cattle, sheep, goats, and horses on working land.
+          We design and develop custom tracking, activity-monitoring, and
+          virtual fencing hardware for cattle, sheep, goats, and horses on
+          working land.
         </p>
       </section>
 
@@ -149,6 +170,10 @@ export default function LivestockTechnologyPage() {
             </div>
           ))}
         </div>
+        <p className="mt-4 text-center text-sm text-[var(--ts-gray)]">
+          Example alert types a custom system can be designed to raise —
+          illustrative only.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
@@ -156,11 +181,53 @@ export default function LivestockTechnologyPage() {
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>Solutions</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-              Built for the whole herd
+              Livestock Monitoring Solutions for Cattle, Sheep, Goats &amp; Horses
             </h2>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {solutions.map((item) => (
+              <ServiceCard key={item.title} {...item} />
+            ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            These are custom engineering services: we design and develop
+            hardware to your requirements. They are not off-the-shelf
+            products, and examples on our Projects page are reference
+            designs, not field-tested deployments.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="livestock-cattle-heading" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Cattle</Eyebrow>
+          <h2 id="livestock-cattle-heading" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+            Remote Cattle Monitoring
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
+            Remote cattle monitoring starts with two questions: how far your
+            cattle range, and how often you need to hear from them. We
+            design custom collar or ear-tag hardware around those answers —
+            pairing GNSS positioning with a LoRa or cellular link back to a
+            gateway or the cloud, and sizing the battery to your reporting
+            interval. Activity data can be added where it helps flag animals
+            that need attention. Each design is scoped to your herd, terrain,
+            and infrastructure, and validated as a prototype before
+            production.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="livestock-system-heading" className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <Eyebrow>System Overview</Eyebrow>
+            <h2 id="livestock-system-heading" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+              How a Remote Livestock Monitoring System Works
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {systemLayers.map((item) => (
               <ServiceCard key={item.title} {...item} />
             ))}
           </div>
@@ -170,7 +237,7 @@ export default function LivestockTechnologyPage() {
       <section aria-labelledby="livestock-connectivity-heading" className="bg-[var(--ts-navy)] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 id="livestock-connectivity-heading" className="text-center text-sm font-semibold uppercase tracking-widest text-white/50">
-            Connectivity Built Around the Herd
+            Wireless Connectivity for Remote Livestock Monitoring
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {connectivity.map(({ icon: Icon, label }) => (

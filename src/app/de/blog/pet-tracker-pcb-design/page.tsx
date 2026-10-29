@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Leiterplattendesign für Tier-Tracker | PawSync",
@@ -13,9 +15,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("de", "blog/pet-tracker-pcb-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "de",
+  route: "blog/pet-tracker-pcb-design",
+  headline: "Leiterplattendesign für einen Haustier- oder Tier-Tracker: Was der Formfaktor wirklich vorgibt",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticlePetTrackerPCBDe() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="de" items={[{ label: "Blog", href: "/de/blog" }, { label: "Tracker-Leiterplattendesign" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,8 +33,9 @@ export default function BlogArticlePetTrackerPCBDe() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Leiterplattendesign für einen Haustier- oder Tier-Tracker: Was der Formfaktor wirklich vorgibt
         </h1>
+        <ArticleDate route="blog/pet-tracker-pcb-design" locale="de" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
-          Ein Halsband- oder Anhänger-Tracker ist nicht einfach eine kleinere GPS-Platine — der Formfaktor selbst bestimmt die meisten der schwierigen Entscheidungen.
+          Ein Halsband- oder Anhänger-Tracker ist nicht einfach eine kleinere GPS-Platine – der Formfaktor selbst bestimmt die meisten der schwierigen Entscheidungen.
         </p>
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
@@ -43,7 +54,7 @@ export default function BlogArticlePetTrackerPCBDe() {
             Es liegt nahe, ein Tracker-Design mit der Auswahl eines GNSS-Moduls und eines Funkmoduls zu
             beginnen und die Platine darum herum zu entwerfen. In der Praxis stehen die Gehäusemaße, die
             Geometrie des Halsbands oder der Anhängerklemme und die angestrebte Akkugröße meist zuerst fest
-            — sie sind die Vorgaben, die sich später am schwersten ändern lassen, und die Platine muss in
+            – sie sind die Vorgaben, die sich später am schwersten ändern lassen, und die Platine muss in
             den Raum passen, den sie übrig lassen. Die Bauteilauswahl folgt aus diesem Rahmen, nicht
             umgekehrt.
           </p>
@@ -61,12 +72,12 @@ export default function BlogArticlePetTrackerPCBDe() {
               mit einer bekannten Freihaltezone auf der Massefläche, hat aber einen Mindest-Platzbedarf, der
               direkt mit allem anderen auf einer kleinen Platine konkurriert. Eine eingebettete
               Leiterbahn- oder Chip-Antenne kann kleiner und günstiger sein, reagiert aber empfindlicher
-              auf Layoutfehler und auf alles in ihrer Nähe — einschließlich des Akkus, metallischer
+              auf Layoutfehler und auf alles in ihrer Nähe – einschließlich des Akkus, metallischer
               Verschlüsse am Halsband oder eines leitfähigen Gehäuses.
             </li>
             <li>
-              <strong>Körperbelastung.</strong> Eine Antenne, die nah am Körper eines Tieres montiert ist —
-              besonders bei größeren Tieren —, erfährt eine HF-Belastung durch diesen Körper, die ein
+              <strong>Einfluss des Tierkörpers.</strong> Eine Antenne, die nah am Körper eines Tieres montiert ist –
+              besonders bei größeren Tieren –, wird durch diesen Körper elektromagnetisch beeinflusst – ein Effekt, den ein
               Antennen-Datenblatt für den freien Raum nicht berücksichtigt. Das kann die Antenne verstimmen
               und sowohl Empfindlichkeit als auch Abstrahlwirkungsgrad verringern. In der Praxis hilft nur,
               die Antennenleistung in einer Montageposition und Ausrichtung nahe am tatsächlichen
@@ -75,7 +86,7 @@ export default function BlogArticlePetTrackerPCBDe() {
             <li>
               <strong>Freihaltezonen und Empfindlichkeitsverlust (Desense).</strong> Die GNSS-Antenne
               braucht Abstand zu digitalem Schaltrauschen und zum Akku. Ist ein zweites Funkmodul auf
-              derselben Platine vorhanden — LoRa, LTE-M oder BLE —, braucht auch dieses eine eigene
+              derselben Platine vorhanden – LoRa, LTE-M oder BLE –, braucht auch dieses eine eigene
               Freihaltezone und idealerweise physischen Abstand zur GNSS-Antenne, damit die Sendeleistung
               des zweiten Funkmoduls den (deutlich empfindlicheren) GNSS-Empfangspfad nicht stört.
             </li>
@@ -88,7 +99,7 @@ export default function BlogArticlePetTrackerPCBDe() {
             Ein einfaches Design mit niedriger Datenrate kommt mitunter mit zwei Lagen aus. Sobald jedoch
             ein GNSS-Frontend, ein zweites Funkmodul, eine Ladeschaltung und Sensorschnittstellen auf
             derselben kleinen Platine laufen, ist ein vierlagiger Aufbau mit einer durchgehenden,
-            dedizierten Massefläche unter dem HF-Frontend meist die zuverlässigere Wahl — er gibt dem
+            dedizierten Massefläche unter dem HF-Frontend meist die zuverlässigere Wahl – er gibt dem
             GNSS-Bereich eine saubere Referenzebene und hält verrauschte digitale Leiterbahnen von
             empfindlicher HF fern.
           </p>
@@ -99,15 +110,15 @@ export default function BlogArticlePetTrackerPCBDe() {
           <p>
             Bei einer nicht wiederaufladbaren Primärzelle ist der Strompfad vergleichsweise einfach: ein
             Low-Dropout-Regler oder ein kleiner Buck-Boost-Wandler, dimensioniert auf den Strom, den GNSS
-            und Funkmodul während ihrer aktiven Phasen benötigen — nicht nur im Ruhezustand.
+            und Funkmodul während ihrer aktiven Phasen benötigen – nicht nur im Ruhezustand.
           </p>
           <p>
             Bei einer wiederaufladbaren Lithium-Ionen- oder LiPo-Zelle braucht die Platine einen
-            Batterieschutz-IC — Überstrom-, Überspannungs- und Unterspannungsabschaltung — als
+            Batterieschutz-IC – Überstrom-, Überspannungs- und Unterspannungsabschaltung – als
             nicht verhandelbares Sicherheitsbauteil, dazu einen Lade-IC, falls das Gerät über USB, eine
             Pogo-Pin-Dockingstation oder Solar geladen wird. Die Wahl der Reglertopologie (LDO oder
             Buck-Boost) ist selbst ein Kompromiss: Ein LDO ist einfacher und rauschärmer, verheizt aber die
-            Spannungsdifferenz als Wärme — das fällt bei den höheren Strömen, die ein GNSS-Fix oder eine
+            Spannungsdifferenz als Wärme – das fällt bei den höheren Strömen, die ein GNSS-Fix oder eine
             Funkübertragung kurzzeitig benötigen, stärker ins Gewicht.
           </p>
 
@@ -117,10 +128,10 @@ export default function BlogArticlePetTrackerPCBDe() {
           <p>
             Ein vorzertifiziertes GNSS-plus-Funk-Modul bringt ein Design schneller zu einem
             funktionsfähigen Prototyp, verfügt bereits über FCC-/CE-Funkzulassung und reduziert das
-            HF-Layout-Risiko — zu einem Aufpreis bei Größe und Stückkosten gegenüber diskreten Bauteilen.
+            HF-Layout-Risiko – zu einem Aufpreis bei Größe und Stückkosten gegenüber diskreten Bauteilen.
             Ein diskreter Chipsatz-Ansatz kann in Stückzahl kleiner und günstiger sein, verlagert aber die
             HF-Layout-Expertise und den Zulassungsprozess ins Projekt. Was sinnvoll ist, hängt von
-            Produktionsvolumen, Zeitplan und dem gewünschten HF-Design-Spielraum ab — eine allgemeingültig
+            Produktionsvolumen, Zeitplan und dem gewünschten HF-Design-Spielraum ab – eine allgemeingültig
             richtige Antwort gibt es nicht.
           </p>
 
@@ -130,7 +141,7 @@ export default function BlogArticlePetTrackerPCBDe() {
           <p>
             Platinenumriss, Position der Befestigungsbohrungen und Steckerplatzierung müssen zusammen mit
             dem Gehäuse festgelegt werden, nicht danach. Halsband- oder Anhänger-Gehäuse erfordern oft ein
-            Vergießen oder eine Schutzlackierung der Platine gegen Feuchtigkeit und Vibration — aber eine
+            Vergießen oder eine Schutzlackierung der Platine gegen Feuchtigkeit und Vibration – aber eine
             konkrete Schutzart gegen Wasser oder Staub (etwa eine IP-Schutzklasse) muss durch tatsächliche
             Prüfung am fertig montierten Gerät nachgewiesen werden. Das lässt sich nicht allein aus dem
             Platinendesign ableiten, unabhängig vom Gehäuse, in dem es am Ende steckt.
@@ -143,14 +154,14 @@ export default function BlogArticlePetTrackerPCBDe() {
             Eine Platine, die auf der Werkbank einwandfrei funktioniert, kann in der Fertigung trotzdem
             mühsam werden, wenn Paneelisierung, Testpunkte für In-Circuit- oder Funktionstests und die
             Bauteilplatzierung für die Bestückungsautomaten nicht schon beim Layout berücksichtigt wurden.
-            Eine Prüfung auf Fertigbarkeit vor Abschluss des Layouts — nicht erst nach dem ersten
-            Prototypenlauf — ist eine günstige Absicherung gegen spätere Nacharbeit.
+            Eine Prüfung auf Fertigbarkeit vor Abschluss des Layouts – nicht erst nach dem ersten
+            Prototypenlauf – ist eine günstige Absicherung gegen spätere Nacharbeit.
           </p>
 
           <p>
             Nichts davon ist für Embedded-Hardware ungewöhnlich. Ob ein Tracker-Leiterplattendesign im
             Feldeinsatz hält, hängt meist davon ab, wie früh Antennenplatzierung, Gehäuseintegration und
-            Fertigbarkeit als Vorgaben ins Layout eingeflossen sind — statt als Probleme, die erst nach der
+            Fertigbarkeit als Vorgaben ins Layout eingeflossen sind – statt als Probleme, die erst nach der
             ersten Platinencharge behoben werden.
           </p>
         </div>
@@ -168,7 +179,7 @@ export default function BlogArticlePetTrackerPCBDe() {
 
       <CTABanner
         heading="Haben Sie eine Tracker-Leiterplatte zu planen?"
-        description="Nennen Sie uns Ihren Formfaktor, die gewünschte Akkulaufzeit und Ihre Konnektivitätsanforderungen — wir helfen bei den Layout-Abwägungen."
+        description="Nennen Sie uns Ihren Formfaktor, die gewünschte Akkulaufzeit und Ihre Konnektivitätsanforderungen – wir helfen bei den Layout-Abwägungen."
         primaryLabel="Projekt starten"
         primaryHref="/de/contact"
         secondaryLabel="Tier-Tracking-Entwicklung"

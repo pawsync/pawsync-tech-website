@@ -173,10 +173,10 @@ const dict: Record<Locale, Record<string, string>> = {
     projects: "Projets",
     blog: "Blog",
     contact: "Contact",
-    privacy: "Avis de confidentialité",
+    privacy: "Politique de confidentialité",
     tagline:
       "Électronique intelligente pour les animaux, les exploitations agricoles et les environnements connectés. Matériel IoT sur mesure, micrologiciels embarqués et conception de cartes PCB — du concept à la production.",
-    location: "Ingénierie et développement produit, en télétravail",
+    location: "Ingénierie et développement produit, à distance",
     rights: "PawSync. Tous droits réservés.",
     engineeringCredit: "Engineering by Pak-EL LAB",
     instagramLabel: "PawSync sur Instagram",
@@ -204,19 +204,19 @@ export default function TerraSenseFooter() {
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
-                <a href={`mailto:${CONTACT_EMAIL}`} className="break-words hover:text-white">
+                <a href={`mailto:${CONTACT_EMAIL}`} className="-my-1 break-words py-1 hover:text-white">
                   {CONTACT_EMAIL}
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="break-words hover:text-white">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="-my-1 break-words py-1 hover:text-white">
                   {WHATSAPP_DISPLAY}
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <InstagramIcon className="mt-0.5 h-4 w-4 shrink-0 text-[var(--ts-green)]" />
-                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label={t.instagramLabel} className="break-words hover:text-white">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label={t.instagramLabel} className="-my-1 break-words py-1 hover:text-white">
                   {INSTAGRAM_HANDLE}
                 </a>
               </li>

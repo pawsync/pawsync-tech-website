@@ -1,21 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "GNSS + LoRa vs. GNSS + LTE-M pour le suivi des animaux | PawSync",
+  title: "GNSS + LoRa vs. GNSS + LTE-M pour le suivi animal | PawSync",
   description:
-    "Le GNSS détermine la position ; LoRa et LTE-M sont des couches de communication distinctes qui transmettent cette position. Une comparaison pratique pour le matériel de suivi animal.",
+    "Le GNSS fournit la position ; LoRa ou LTE-M la transmet depuis l'appareil. Une comparaison pratique des deux liaisons pour le matériel de suivi animal.",
   alternates: buildAlternates("fr", "blog/gnss-lora-vs-gnss-ltem"),
   openGraph: buildOpenGraph("fr", "blog/gnss-lora-vs-gnss-ltem"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "fr",
+  route: "blog/gnss-lora-vs-gnss-ltem",
+  headline: "GNSS + LoRa vs. GNSS + LTE-M pour le suivi des animaux",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleGnssConnectivityFr() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="fr" items={[{ label: "Blog", href: "/fr/blog" }, { label: "GNSS + LoRa vs. GNSS + LTE-M" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,6 +33,7 @@ export default function BlogArticleGnssConnectivityFr() {
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           GNSS + LoRa vs. GNSS + LTE-M pour le suivi des animaux
         </h1>
+        <ArticleDate route="blog/gnss-lora-vs-gnss-ltem" locale="fr" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Une clarification sur deux problèmes différents souvent confondus dans les textes marketing du suivi animal — et comment vraiment choisir entre les deux.
         </p>
@@ -67,8 +78,8 @@ export default function BlogArticleGnssConnectivityFr() {
             la couverture : un appareil n&apos;est joignable que s&apos;il se trouve à portée d&apos;une
             passerelle — souvent plusieurs kilomètres en terrain dégagé avec ligne de vue directe, mais
             nettement moins en présence de collines, d&apos;arbres ou de bâtiments. Les réglementations sur
-            les bandes sans licence imposent aussi, dans de nombreuses régions, des limites de cycle
-            d&apos;utilisation à la fréquence d&apos;émission, ce qui renforce l&apos;adéquation de LoRa avec
+            les bandes sans licence imposent aussi, dans de nombreuses régions, des limites de rapport
+            cyclique à la fréquence d&apos;émission, ce qui renforce l&apos;adéquation de LoRa avec
             des transmissions périodiques et peu fréquentes plutôt qu&apos;avec des mises à jour quasi
             continues.
           </p>
@@ -132,6 +143,9 @@ export default function BlogArticleGnssConnectivityFr() {
         </div>
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
+          Vous planifiez un système complet pour votre troupeau ? Découvrez nos{" "}
+          services d&apos;ingénierie en{" "}
+          <Link href="/fr/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">surveillance du bétail à distance</Link>.{" "}
           Une question précise sur la portée, le terrain ou la taille du parc ?{" "}
           <Link href="/fr/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Contactez-nous</Link> et nous vous aiderons à cadrer la bonne approche de connectivité.
         </p>

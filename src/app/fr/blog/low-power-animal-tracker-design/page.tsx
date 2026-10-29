@@ -1,21 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Concevoir une électronique basse consommation pour trackers d'animaux extérieurs | PawSync",
+  title: "Concevoir un tracker basse consommation | PawSync",
   description:
-    "L'autonomie d'un tracker animalier portable est un problème de budget énergétique. Les techniques qui déterminent si un appareil tient des jours ou des mois.",
+    "L'autonomie d'un tracker porté par un animal est un problème de budget énergétique. Les techniques qui déterminent si un appareil tient des jours ou des mois.",
   alternates: buildAlternates("fr", "blog/low-power-animal-tracker-design"),
   openGraph: buildOpenGraph("fr", "blog/low-power-animal-tracker-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "fr",
+  route: "blog/low-power-animal-tracker-design",
+  headline: "Concevoir une électronique basse consommation pour trackers d'animaux extérieurs",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleLowPowerDesignFr() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="fr" items={[{ label: "Blog", href: "/fr/blog" }, { label: "Conception basse consommation" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,6 +33,7 @@ export default function BlogArticleLowPowerDesignFr() {
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Concevoir une électronique basse consommation pour trackers d&apos;animaux extérieurs
         </h1>
+        <ArticleDate route="blog/low-power-animal-tracker-design" locale="fr" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Pourquoi l&apos;autonomie est fondamentalement un problème de budget énergétique, et les techniques qui la font passer de quelques jours à plusieurs mois.
         </p>
@@ -43,12 +54,12 @@ export default function BlogArticleLowPowerDesignFr() {
           </h2>
           <ul className="list-disc space-y-2 pl-6">
             <li>
-              <strong>Acquisition GNSS.</strong> Recevoir et verrouiller les signaux satellites est l&apos;une
+              <strong>Acquisition GNSS.</strong> Acquérir et suivre les signaux satellites est l&apos;une
               des opérations les plus gourmandes en énergie d&apos;un tracker, et sa durée compte autant que
               le courant consommé pendant son déroulement. Un <em>démarrage à froid</em> (sans almanach ni
               donnée de position récente) peut prendre plusieurs dizaines de secondes pour obtenir une
               position ; un démarrage <em>tiède</em> ou <em>à chaud</em>, utilisant des données
-              d&apos;éphémérides et d&apos;horloge récemment enregistrées, peut se verrouiller en quelques
+              d&apos;éphémérides et d&apos;horloge récemment enregistrées, peut obtenir une position en quelques
               secondes. Minimiser les démarrages à froid — en conservant intactes les données de sauvegarde
               du récepteur à travers les cycles de veille — est l&apos;une des décisions énergétiques les
               plus efficaces de toute la conception.
@@ -68,7 +79,7 @@ export default function BlogArticleLowPowerDesignFr() {
           </ul>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
-            La technique centrale : un cyclage rigoureux
+            La technique centrale : des cycles de veille rigoureux
           </h2>
           <p>
             Plutôt que de maintenir le microcontrôleur, le récepteur GNSS et le module radio alimentés en
@@ -131,6 +142,9 @@ export default function BlogArticleLowPowerDesignFr() {
         </div>
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
+          Vous concevez des trackers pour un troupeau plutôt que pour un seul animal ? Découvrez nos{" "}
+          services d&apos;ingénierie en{" "}
+          <Link href="/fr/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">surveillance du bétail à distance</Link>.{" "}
           Vous travaillez sur un objectif d&apos;autonomie pour votre propre appareil ?{" "}
           <Link href="/fr/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Contactez-nous</Link> et nous vous aiderons à cadrer le budget énergétique.
         </p>

@@ -7,9 +7,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Blog | PawSync",
+  title: "Engineering-Blog: Tier-Tracking & Agrar-IoT | PawSync",
   description:
-    "Engineering-Notizen zu Tier-Tracking, Hof-IoT, virtueller Einzäunung, Funkprotokollen und dem Bau von Elektronik für den Außeneinsatz.",
+    "Engineering-Notizen zu Tier-Tracking, Agrar-IoT, virtueller Einzäunung, Funkprotokollen und dem Bau von Elektronik für den Außeneinsatz.",
   alternates: buildAlternates("de", "blog"),
   openGraph: buildOpenGraph("de", "blog"),
 };
@@ -32,12 +32,12 @@ const articles = [
   },
   {
     title: "Hardware- & Firmware-Engineering für intelligente Futterautomaten",
-    excerpt: "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung — die Engineering-Entscheidungen hinter einem Futterautomaten.",
+    excerpt: "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung – die Engineering-Entscheidungen hinter einem Futterautomaten.",
     href: "/de/blog/smart-pet-feeder-engineering",
   },
   {
     title: "Ein drahtloses Überwachungsnetz für den Geflügelstall planen",
-    excerpt: "Sensorplatzierung, Protokollwahl und Gateway-Planung — und warum ein Sensor pro Stall meist nicht reicht.",
+    excerpt: "Sensorplatzierung, Protokollwahl und Gateway-Planung – und warum ein Sensor pro Stall meist nicht reicht.",
     href: "/de/blog/wireless-poultry-monitoring-design",
   },
 ];
@@ -84,7 +84,7 @@ export default function BlogPageDe() {
 
       <CTABanner
         heading="Möchten Sie, dass wir ein bestimmtes Thema behandeln?"
-        description="Wenn Sie eine Frage zu Animal-Tech oder Hof-IoT beantwortet haben möchten, lassen Sie es uns wissen."
+        description="Haben Sie eine Frage zu Tiertechnologie oder Agrar-IoT, die wir hier beantworten sollen? Lassen Sie es uns wissen."
         primaryLabel="Kontaktieren Sie uns"
         primaryHref="/de/contact"
       />

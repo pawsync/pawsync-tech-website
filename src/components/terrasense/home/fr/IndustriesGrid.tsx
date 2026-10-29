@@ -64,7 +64,7 @@ export default function IndustriesGrid() {
             Les secteurs que nous servons
           </h2>
           <p className="mt-4 text-lg text-[var(--ts-gray)]">
-            Partout où les animaux et l&apos;électronique se rencontrent, nous concevons pour cela.
+            Partout où les animaux et l&apos;électronique se rencontrent, nous concevons des solutions.
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export default function IndustriesGrid() {
         <div className="mt-10 text-center">
           <Link
             href="/fr/industries"
-            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]"
+            className="group -my-1 inline-flex items-center gap-1.5 py-1 text-sm font-semibold text-[var(--ts-dark-green)]"
           >
             Voir tous les secteurs
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />

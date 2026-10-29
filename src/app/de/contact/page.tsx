@@ -17,9 +17,9 @@ import {
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Kontakt | PawSync",
+  title: "Ihr Tiertechnologie- oder Agrar-IoT-Projekt | PawSync",
   description:
-    "Erzählen Sie PawSync von Ihrer Animal-Tech- oder Hof-IoT-Idee, und unser Engineering-Team hilft, das Konzept in ein praxistaugliches elektronisches Produkt zu verwandeln.",
+    "Erzählen Sie PawSync von Ihrer Idee für Tiertechnologie oder Agrar-IoT – wir helfen, daraus ein praxistaugliches elektronisches Produkt zu entwickeln.",
   alternates: buildAlternates("de", "contact"),
   openGraph: buildOpenGraph("de", "contact"),
 };
@@ -34,7 +34,7 @@ export default function ContactPageDe() {
           <div>
             <Eyebrow align="left">Kontakt</Eyebrow>
             <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-              Haben Sie eine Animal-Tech- oder Hof-IoT-Idee?
+              Haben Sie eine Idee für Tiertechnologie oder Agrar-IoT?
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-[var(--ts-gray)]">
               Erzählen Sie uns, was Sie bauen möchten, und wir helfen, das
@@ -92,7 +92,7 @@ export default function ContactPageDe() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[var(--ts-dark-green)] hover:underline"
+                  className="-my-1 inline-flex items-center gap-2 py-1 text-sm font-medium text-[var(--ts-dark-green)] hover:underline"
                 >
                   <InstagramIcon className="h-4 w-4" />
                   Folgen Sie PawSync auf Instagram

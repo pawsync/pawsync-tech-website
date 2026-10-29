@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Designing a PCB for a Pet or Animal Tracker | PawSync",
@@ -13,9 +15,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("en", "blog/pet-tracker-pcb-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "en",
+  route: "blog/pet-tracker-pcb-design",
+  headline: "Designing a PCB for a Pet or Animal Tracker: What the Form Factor Actually Constrains",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticlePetTrackerPCB() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb items={[{ label: "Blog", href: "/blog" }, { label: "Pet Tracker PCB Design" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,6 +33,7 @@ export default function BlogArticlePetTrackerPCB() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Designing a PCB for a Pet or Animal Tracker: What the Form Factor Actually Constrains
         </h1>
+        <ArticleDate route="blog/pet-tracker-pcb-design" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           A collar- or tag-mounted tracker isn&apos;t a smaller version of a normal GPS board — the form factor itself drives most of the hard decisions.
         </p>

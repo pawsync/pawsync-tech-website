@@ -61,7 +61,7 @@ export default function PoultryMultiHouseMonitoring() {
             ))}
             <div className="absolute bottom-2 left-1.5 flex items-center gap-1.5 rounded-full bg-black/40 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:bottom-4 sm:left-4 sm:gap-2 sm:px-3 sm:py-1.5 sm:text-xs">
               <MapPin className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />
-              Betriebslayout — Beispielansicht
+              Betriebslayout – Beispielansicht
             </div>
             <div className="absolute bottom-2 right-1.5 flex items-center gap-1.5 rounded-full bg-black/40 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:bottom-4 sm:right-4 sm:gap-2 sm:px-3 sm:py-1.5 sm:text-xs">
               <Radio className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />

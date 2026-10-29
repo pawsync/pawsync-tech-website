@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Fan } from "lucide-react";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 
@@ -28,7 +29,13 @@ export default function PoultryEnvironmentalMonitoring() {
           </h2>
           <p className="mt-4 text-lg text-[var(--ts-gray)]">
             Sensor nodes distributed throughout the facility feed a single,
-            continuously updated picture of house conditions.
+            continuously updated picture of house conditions. The same
+            sensing approach extends to barns, feed stores, and other farm
+            buildings through our{" "}
+            <Link href="/environmental-monitoring" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              environmental monitoring
+            </Link>{" "}
+            work.
           </p>
         </div>
 
@@ -36,7 +43,7 @@ export default function PoultryEnvironmentalMonitoring() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl">
             <Image
               src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?auto=format&fit=crop&w=800&q=75"
-              alt="A chicken in a poultry farm setting, representing a monitored flock environment"
+              alt="Close-up of a chicken in a poultry farm — the kind of flock environment wireless temperature, humidity, and air-quality sensors monitor"
               fill
               sizes="(min-width: 1024px) 45vw, 92vw"
               className="object-cover"

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Ingénierie de distributeur intelligent | PawSync",
@@ -14,9 +16,17 @@ export const metadata: Metadata = {
   openGraph: buildOpenGraph("fr", "blog/smart-pet-feeder-engineering"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "fr",
+  route: "blog/smart-pet-feeder-engineering",
+  headline: "Ingénierie matérielle & logicielle d'un distributeur intelligent : précision des portions, détection de blocage et mesure par cellule de charge",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleSmartFeederEngineeringFr() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="fr" items={[{ label: "Blog", href: "/fr/blog" }, { label: "Ingénierie du distributeur" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -24,6 +34,7 @@ export default function BlogArticleSmartFeederEngineeringFr() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Ingénierie matérielle &amp; logicielle d&apos;un distributeur intelligent : précision des portions, détection de blocage et mesure par cellule de charge
         </h1>
+        <ArticleDate route="blog/smart-pet-feeder-engineering" locale="fr" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Un distributeur intelligent paraît simple de l&apos;extérieur — moteur, trémie, minuterie. L&apos;ingénierie qui le rend fiable se trouve dans les capteurs et le micrologiciel, pas dans le mécanisme de distribution lui-même.
         </p>
@@ -55,7 +66,7 @@ export default function BlogArticleSmartFeederEngineeringFr() {
             attendue — une cellule largement surdimensionnée par rapport à ce qu&apos;elle mesurera donne
             une résolution médiocre en bas de plage, tandis qu&apos;une cellule trop proche de la charge
             maximale risque d&apos;être endommagée par surcharge. La méthode standard pour lire une cellule
-            de charge passe par un amplificateur analogique-numérique 24 bits dédié (le HX711 est le
+            de charge passe par un convertisseur analogique-numérique 24 bits dédié avec amplificateur intégré (le HX711 est le
             composant le plus couramment utilisé dans ce rôle pour les designs embarqués de petite taille),
             qui gère le conditionnement de signal analogique bas niveau qu&apos;un ADC de microcontrôleur
             généraliste n&apos;est pas conçu pour assurer.
@@ -132,7 +143,7 @@ export default function BlogArticleSmartFeederEngineeringFr() {
             moteur n&apos;est pas un enjeu d&apos;autonomie, seulement une question de câblage et de
             dimensionnement de l&apos;alimentation. Une conception sur batterie doit budgétiser
             spécifiquement ce pic de courant, pas seulement la consommation moyenne entre les distributions
-            — un calcul différent des techniques de cyclage utilisées dans une conception de tracker basse
+            — un calcul différent des techniques de mise en veille utilisées dans une conception de tracker basse
             consommation.
           </p>
 

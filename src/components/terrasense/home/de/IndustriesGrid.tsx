@@ -34,7 +34,7 @@ const industries: { image: string; alt: string; label: string; tagline: string; 
   {
     image: "https://images.unsplash.com/photo-1599635406076-0f40532a59fc?auto=format&fit=crop&w=500&q=75",
     alt: "Pferde stehen bei Sonnenaufgang auf einer nebligen Weide",
-    label: "Pferde- & Equine-Technologie",
+    label: "Pferdetechnologie",
     tagline: "Standort • Aktivitäts-Tracking",
   },
   {
@@ -121,7 +121,7 @@ export default function IndustriesGrid() {
         <div className="mt-10 text-center">
           <Link
             href="/de/industries"
-            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]"
+            className="group -my-1 inline-flex items-center gap-1.5 py-1 text-sm font-semibold text-[var(--ts-dark-green)]"
           >
             Alle Branchen ansehen
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />

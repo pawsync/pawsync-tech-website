@@ -24,9 +24,9 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Électronique sur mesure & développement de produits IoT | PawSync",
+  title: "Électronique sur mesure & produits IoT | PawSync",
   description:
-    "Conception de cartes PCB sur mesure, micrologiciels embarqués, ingénierie IoT GPS et LoRa, et accompagnement du prototype à la production pour la technologie animale et agricole.",
+    "Cartes PCB sur mesure, micrologiciel embarqué, ingénierie IoT GPS et LoRa, du prototype à la production, pour la technologie animale et agricole.",
   alternates: buildAlternates("fr", "custom-electronics"),
   openGraph: buildOpenGraph("fr", "custom-electronics"),
 };
@@ -60,7 +60,7 @@ const services: { icon: LucideIcon; title: string; description: string }[] = [
   {
     icon: ScanLine,
     title: "Systèmes RFID",
-    description: "Systèmes d'identification RFID pour le suivi des animaux, le contrôle d'accès et la reconnaissance à l'alimentation.",
+    description: "Systèmes d'identification RFID pour le suivi des animaux, le contrôle d'accès et l'alimentation sélective.",
   },
   {
     icon: BatteryCharging,
@@ -126,7 +126,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Pouvez-vous concevoir à la fois le matériel et le micrologiciel ?",
-    answer: "Oui, les deux sont des compétences internes essentielles — du schéma et de la conception PCB jusqu'au micrologiciel embarqué qui s'exécute dessus.",
+    answer: "Oui, les deux sont des compétences essentielles — du schéma et de la conception PCB jusqu'au micrologiciel embarqué qui s'exécute dessus.",
   },
   {
     question: "Pouvez-vous aider à faire passer un prototype en production ?",
@@ -142,11 +142,11 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Quels capteurs peuvent être intégrés à un système de surveillance agricole ?",
-    answer: "Les choix courants incluent les capteurs de température, d'humidité, de qualité de l'air, de niveau d'eau, d'humidité du sol, de mouvement et de charge — la bonne combinaison dépend de ce que vous devez surveiller.",
+    answer: "Les choix courants incluent les capteurs de température, d'humidité, de qualité de l'air, de niveau d'eau, d'humidité du sol, de mouvement et les cellules de charge — la bonne combinaison dépend de ce que vous devez surveiller.",
   },
   {
     question: "Pouvez-vous développer des dispositifs RFID d'identification du bétail ?",
-    answer: "Oui. L'identification RFID est l'un de nos éléments de base standard pour la reconnaissance à l'alimentation, le contrôle d'accès et le comptage des animaux.",
+    answer: "Oui. L'identification RFID est l'un de nos éléments de base standard pour l'alimentation sélective, le contrôle d'accès et le comptage des animaux.",
   },
   {
     question: "Le matériel continue-t-il de fonctionner sans accès Internet ou cloud ?",
@@ -264,7 +264,7 @@ export default function CustomElectronicsPageFr() {
       </section>
 
       <CTABanner
-        heading="Une idée de produit Animal-Tech ?"
+        heading="Une idée de produit de technologie animale ?"
         description="Des trackers GPS aux contrôleurs agricoles automatisés, nous pouvons vous aider à développer votre électronique du concept au prototype."
         primaryLabel="Démarrer votre projet d&apos;ingénierie sur mesure"
         primaryHref="/fr/contact"

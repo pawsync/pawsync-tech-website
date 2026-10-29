@@ -14,7 +14,10 @@ import {
   HeartPulse,
   Hash,
   MapPinned,
+  MonitorSmartphone,
   Radar,
+  Radio,
+  RadioTower,
   Satellite,
   ThermometerSun,
   UtensilsCrossed,
@@ -31,9 +34,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "GPS-Tracking & Fernüberwachung für Nutztiere | PawSync",
+  title: "Fernüberwachung von Rindern & Weidetieren | PawSync",
   description:
-    "Individuell entwickelte GPS-Tracking-, virtuelle Einzäunungs-, RFID-Identifikations- und Fernüberwachungs-Hardware für Rinder, Schafe, Ziegen und Pferde.",
+    "Individuelle drahtlose Nutztierüberwachung für Rinder, Schafe, Ziegen und Pferde: GPS-Tracking, virtuelle Einzäunung, RFID und Aktivitätsüberwachung.",
   alternates: buildAlternates("de", "livestock-technology"),
   openGraph: buildOpenGraph("de", "livestock-technology"),
 };
@@ -57,19 +60,29 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
 
 const faqs: FAQItem[] = [
   {
-    question: "GPS oder LoRa — was verfolgt meine Herde?",
+    question: "Woraus besteht ein System zur Nutztierüberwachung?",
     answer:
-      "GPS/GNSS bestimmt die Position eines Geräts; die Position wird dadurch allein nicht übertragen. Ein zweites Funkmodul — meist LoRa oder Mobilfunk — sendet die Standortdaten an ein Gateway oder die Cloud. Welche Lösung passt, hängt davon ab, wie weit sich Ihre Tiere im Verhältnis zu vorhandener Gateway-Infrastruktur bewegen.",
+      "Aus vier Ebenen, die jeweils projektbezogen ausgelegt werden: ein Gerät am Tier (Halsband oder Ohrmarke mit GNSS und bei Bedarf Bewegungssensorik), eine Funkverbindung (LoRa oder Mobilfunk), ein Gateway, das die Daten vor Ort empfängt und an die Cloud weiterleitet, sowie ein Web- oder Mobil-Dashboard mit konfigurierbaren Alarmen. Welche Ebenen Sie benötigen – und wie sie an bereits vorhandene Systeme anschließen –, klären wir in der Anforderungsanalyse.",
+  },
+  {
+    question: "Wie funktioniert die Fernüberwachung von Rindern?",
+    answer:
+      "Ein Halsband oder eine Ohrmarke an jedem Tier erfasst dessen GNSS-Position, und ein LoRa- oder Mobilfunkmodul meldet sie in einem auf die Akkulaufzeit abgestimmten Intervall an ein Gateway oder die Cloud. Alarme lassen sich für Ereignisse auslegen, etwa wenn ein Tier einen festgelegten Bereich verlässt oder ungewöhnlich inaktiv ist. Die passende Kombination hängt davon ab, wie weit sich Ihre Rinder bewegen und welche Netzabdeckung auf Ihren Flächen besteht.",
+  },
+  {
+    question: "GPS oder LoRa – was verfolgt meine Herde?",
+    answer:
+      "GPS/GNSS bestimmt die Position eines Geräts; die Position wird dadurch allein nicht übertragen. Ein zweites Funkmodul – meist LoRa oder Mobilfunk – sendet die Standortdaten an ein Gateway oder die Cloud. Welche Lösung passt, hängt davon ab, wie weit sich Ihre Tiere im Verhältnis zu vorhandener Gateway-Infrastruktur bewegen.",
   },
   {
     question: "Funktioniert das System weiter, wenn Internet oder Cloud-Verbindung ausfallen?",
     answer:
-      "Lokale Steuerungslogik kann so ausgelegt werden, dass sie vor Ort weiter protokolliert und Alarme auslöst, während Daten nach Wiederherstellung der Verbindung synchronisiert werden — diese Entscheidung treffen wir gemeinsam mit Ihnen danach, wie wichtig eine durchgehende Sichtbarkeit für Ihren Betrieb ist.",
+      "Lokale Steuerungslogik kann so ausgelegt werden, dass sie vor Ort weiter protokolliert und Alarme auslöst, während Daten nach Wiederherstellung der Verbindung synchronisiert werden – diese Entscheidung treffen wir gemeinsam mit Ihnen danach, wie wichtig eine durchgehende Sichtbarkeit für Ihren Betrieb ist.",
   },
   {
     question: "Was bestimmt Akkulaufzeit und Meldeintervall?",
     answer:
-      "Die Akkulaufzeit steht in einem Zielkonflikt zur Melderate — häufigere Updates verbrauchen mehr Energie. Wir dimensionieren Akku und Meldeintervall (sowie Techniken wie bewegungsgesteuertes Aufwachen) auf Ihre gewünschte Laufzeit zwischen Ladungen oder Wechseln, statt vorab eine feste Zahl zu versprechen.",
+      "Die Akkulaufzeit steht in einem Zielkonflikt zur Melderate – häufigere Updates verbrauchen mehr Energie. Wir dimensionieren Akku und Meldeintervall (sowie Techniken wie bewegungsgesteuertes Aufwachen) auf Ihre gewünschte Laufzeit zwischen Ladungen oder Wechseln, statt vorab eine feste Zahl zu versprechen.",
   },
   {
     question: "Welche Wartung benötigen Tracking-Geräte?",
@@ -79,35 +92,35 @@ const faqs: FAQItem[] = [
   {
     question: "Hält virtuelle Einzäunung Tiere physisch zurück?",
     answer:
-      "Nein — sie warnt das Tier, wenn es sich einer Grenze nähert, hält es aber nicht physisch zurück wie ein Zaun. Ob sie den Bedarf an physischer Einzäunung verringert, hängt von Gelände, Tierart und örtlichen Vorgaben ab, die wir gemeinsam mit Ihnen bewerten.",
+      "Nein – sie warnt das Tier, wenn es sich einer Grenze nähert, hält es aber nicht physisch zurück wie ein Zaun. Ob sie den Bedarf an physischer Einzäunung verringert, hängt von Gelände, Tierart und örtlichen Vorgaben ab, die wir gemeinsam mit Ihnen bewerten.",
   },
   {
     question: "Welche Informationen benötigen Sie von uns für den Projektstart?",
     answer:
-      "In der Regel: die Tiere und Herdengröße, das abzudeckende Gelände, vorhandene Konnektivität oder Gateway-Infrastruktur (falls vorhanden), Ihre Ziel-Akkulaufzeit und Melderate sowie jede Ausrüstung, mit der das System zusammenarbeiten soll. Den Rest klären wir gemeinsam in der Discovery-Phase.",
+      "In der Regel: die Tiere und Herdengröße, das abzudeckende Gelände, vorhandene Konnektivität oder Gateway-Infrastruktur (falls vorhanden), Ihre Ziel-Akkulaufzeit und Melderate sowie jede Ausrüstung, mit der das System zusammenarbeiten soll. Den Rest klären wir gemeinsam in der Anforderungsanalyse.",
   },
   {
     question: "Wie wird aus einer Idee ein funktionsfähiges Gerät?",
     answer:
-      "Zunächst Discovery und Architektur (Ihre Tiere, Umgebung und Anforderungen), dann Schaltplan- und Leiterplattenentwicklung, Firmware, ein Prototyp zum Testen unter echten Bedingungen und schließlich die Fertigungsvorbereitung nach erfolgreicher Validierung.",
+      "Zunächst Anforderungsanalyse und Architektur (Ihre Tiere, Umgebung und Anforderungen), dann Schaltplan- und Leiterplattenentwicklung, Firmware, ein Prototyp zum Testen unter echten Bedingungen und schließlich die Fertigungsvorbereitung nach erfolgreicher Validierung.",
   },
 ];
 
 const solutions = [
-  { icon: Satellite, title: "GPS-Tracking für Nutztiere", description: "Standortverfolgung, entwickelt für offenes Weideland und große Flächen." },
-  { icon: Radar, title: "Rinder-Tracking", description: "Halsband- und Ohrmarkenhardware, dimensioniert für Rinderherden." },
+  { icon: Satellite, title: "GPS-Tracking für Nutztiere", description: "Standortverfolgung, entwickelt für offenes Weideland und große Flächen.", href: "/de/animal-tracking" },
+  { icon: Radar, title: "Rinder-Tracking", description: "Halsband- oder Ohrmarken-Hardware, ausgelegt auf Ihre Herde und Ihr Gelände." },
   { icon: Radar, title: "Schaf-Tracking", description: "Leichte Tracking-Geräte für das Herdenmanagement." },
   { icon: Radar, title: "Ziegen-Tracking", description: "Robuste Tracking-Hardware für weidende Herden." },
-  { icon: Radar, title: "Pferde-Tracking", description: "GPS- und Aktivitäts-Tracking, entwickelt für das Wohlergehen von Pferden." },
+  { icon: Radar, title: "Pferde-Tracking", description: "GPS- und Aktivitäts-Tracking, ausgelegt auf das Wohlergehen von Pferden." },
   { icon: Activity, title: "Aktivitätsüberwachung", description: "Bewegungs- und Verhaltensdaten für die gesamte Herde." },
-  { icon: HeartPulse, title: "Brunsterkennung", description: "Analyse von Aktivitätsmustern zur Unterstützung bei der Erkennung von Deckzeitfenstern." },
+  { icon: HeartPulse, title: "Brunsterkennung", description: "Auf Wunsch einplanbare Analyse von Aktivitätsmustern, um mögliche Deckzeitfenster zu erkennen." },
   { icon: MapPinned, title: "Bewegungsüberwachung", description: "Historische Bewegungsspuren für einzelne Tiere oder Gruppen." },
-  { icon: HeartPulse, title: "Gesundheitsindikatoren", description: "Vitalwerte und Aktivitätstrends, die frühere Eingriffe unterstützen." },
-  { icon: Activity, title: "Weideüberwachung", description: "Aufenthaltszeit-in-Zone-Daten zur Information von Rotationsweideentscheidungen." },
-  { icon: MapPinned, title: "Virtuelle Einzäunung", description: "GPS-basierte Grenzen, die die Abhängigkeit von physischer Einzäunung verringern." },
+  { icon: HeartPulse, title: "Gesundheitsindikatoren", description: "Aktivitäts- und Verhaltenstrends, die helfen können, auffällige Tiere früher zu erkennen." },
+  { icon: Activity, title: "Weideüberwachung", description: "Aufenthaltsdauer je Zone als Grundlage für Entscheidungen zur Umtriebsweide." },
+  { icon: MapPinned, title: "Virtuelle Einzäunung", description: "GPS-basierte Grenzen, die die Abhängigkeit von physischer Einzäunung verringern.", href: "/de/virtual-fencing" },
   { icon: Hash, title: "RFID-Identifikation", description: "Individuelle Tieridentifikation für Aufzeichnungen und Zutrittskontrolle." },
-  { icon: Hash, title: "Tierzählung", description: "Automatisierte Kopfzahlerfassung an Toren, Triebgängen und Tränken." },
-  { icon: Droplets, title: "Wasserverbrauchsüberwachung", description: "Durchfluss- und Standssensoren, die abnormale Trinkmuster erkennen." },
+  { icon: Hash, title: "Tierzählung", description: "RFID-basierte Kopfzahlerfassung an Toren, Triebgängen oder Tränken, ausgelegt auf Ihren Betrieb." },
+  { icon: Droplets, title: "Wasserverbrauchsüberwachung", description: "Durchfluss- und Füllstandssensoren, die abnormale Trinkmuster erkennen." },
   { icon: UtensilsCrossed, title: "Fütterungsüberwachung", description: "Futterstands- und Verbrauchsverfolgung über Fütterungsstationen hinweg." },
 ];
 
@@ -120,6 +133,13 @@ const alerts = [
   { icon: Battery, label: "Mögliches Akkuproblem am Gerät" },
 ];
 
+const systemLayers = [
+  { icon: Radar, title: "1. Am Tier", description: "Halsband oder Ohrmarke mit GNSS und bei Bedarf Bewegungssensorik." },
+  { icon: Radio, title: "2. Funkverbindung", description: "LoRa für große Reichweite bei geringem Energiebedarf oder Mobilfunk (LTE-M), wo die Abdeckung es erlaubt." },
+  { icon: RadioTower, title: "3. Gateway", description: "Empfängt die Daten vor Ort und leitet sie an die Cloud weiter; lokale Logik kann bei einem Ausfall weiter protokollieren." },
+  { icon: MonitorSmartphone, title: "4. Dashboard & Alarme", description: "Eine Web- oder Mobilansicht mit konfigurierbaren Alarmen, im Rahmen des Projekts nach Ihren Anforderungen entwickelt." },
+];
+
 export default function LivestockTechnologyPageDe() {
   return (
     <>
@@ -128,12 +148,12 @@ export default function LivestockTechnologyPageDe() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Nutztiertechnologie</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Vernetzte Nutztierüberwachung &amp; -management
+          Systeme zur Fernüberwachung &amp; zum Management von Nutztieren
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Tracking-, Gesundheitsüberwachungs- und virtuelle
-          Einzäunungshardware, entwickelt für Rinder, Schafe, Ziegen und
-          Pferde auf dem Betrieb.
+          Wir entwickeln individuelle Hardware für Tracking,
+          Aktivitätsüberwachung und virtuelle Einzäunung – für Rinder,
+          Schafe, Ziegen und Pferde auf dem Betrieb.
         </p>
       </section>
 
@@ -150,6 +170,10 @@ export default function LivestockTechnologyPageDe() {
             </div>
           ))}
         </div>
+        <p className="mt-4 text-center text-sm text-[var(--ts-gray)]">
+          Beispiele für Alarmtypen, die ein individuelles System auslösen
+          kann – nur zur Veranschaulichung.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
@@ -157,11 +181,54 @@ export default function LivestockTechnologyPageDe() {
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>Lösungen</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-              Entwickelt für die gesamte Herde
+              Nutztierüberwachung für Rinder, Schafe, Ziegen &amp; Pferde
             </h2>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {solutions.map((item) => (
+              <ServiceCard key={item.title} locale="de" {...item} />
+            ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            Dies sind individuelle Engineering-Dienstleistungen: Wir
+            entwickeln Hardware nach Ihren Anforderungen. Es handelt sich
+            nicht um Standardprodukte, und die Beispiele auf unserer
+            Projektseite sind Referenzdesigns, keine im Feld erprobten
+            Installationen.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="livestock-cattle-heading-de" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Rinder</Eyebrow>
+          <h2 id="livestock-cattle-heading-de" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+            Fernüberwachung von Rindern
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
+            Die Fernüberwachung von Rindern beginnt mit zwei Fragen: Wie weit
+            bewegen sich Ihre Rinder, und wie oft müssen Sie von ihnen hören? Auf
+            diese Antworten hin entwickeln wir individuelle Halsband- oder
+            Ohrmarken-Hardware – wir kombinieren GNSS-Ortung mit einer LoRa- oder
+            Mobilfunkverbindung zu einem Gateway oder in die Cloud und
+            dimensionieren den Akku passend zu Ihrem Meldeintervall. Wo es hilft,
+            auffällige Tiere zu erkennen, können Aktivitätsdaten ergänzt werden.
+            Jedes Design wird auf Ihre Herde, Ihr Gelände und Ihre Infrastruktur
+            zugeschnitten und vor der Produktion als Prototyp validiert.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="livestock-system-heading-de" className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <Eyebrow>Systemüberblick</Eyebrow>
+            <h2 id="livestock-system-heading-de" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+              So funktioniert ein System zur Nutztier-Fernüberwachung
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {systemLayers.map((item) => (
               <ServiceCard key={item.title} locale="de" {...item} />
             ))}
           </div>
@@ -171,7 +238,7 @@ export default function LivestockTechnologyPageDe() {
       <section aria-labelledby="livestock-connectivity-heading-de" className="bg-[var(--ts-navy)] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 id="livestock-connectivity-heading-de" className="text-center text-sm font-semibold uppercase tracking-widest text-white/50">
-            Konnektivität, abgestimmt auf die Herde
+            Drahtlose Konnektivität für die Nutztier-Fernüberwachung
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {connectivity.map(({ icon: Icon, label }) => (
@@ -182,8 +249,8 @@ export default function LivestockTechnologyPageDe() {
             ))}
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-relaxed text-white/50">
-            GPS/GNSS bestimmt den Standort; ein separates Funkmodul — LoRa
-            oder Mobilfunk — meldet ihn an ein Gateway oder die Cloud. Reichweite,
+            GPS/GNSS bestimmt den Standort; ein separates Funkmodul – LoRa
+            oder Mobilfunk – meldet ihn an ein Gateway oder die Cloud. Reichweite,
             Energiebudget, Meldeintervall und vorhandene Gateway-Infrastruktur
             fließen alle in die passende Kombination ein. Siehe unseren
             Vergleich{" "}
@@ -202,7 +269,7 @@ export default function LivestockTechnologyPageDe() {
             Von der Idee zum funktionsfähigen Gerät
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
-            Zuerst Discovery und Architektur, dann Schaltplan- und
+            Zuerst Anforderungsanalyse und Architektur, dann Schaltplan- und
             Leiterplattenentwicklung, Firmware, ein Prototyp zum Testen unter
             echten Bedingungen und schließlich die Fertigungsvorbereitung nach
             erfolgreicher Validierung. Siehe auch unseren Beitrag zum{" "}

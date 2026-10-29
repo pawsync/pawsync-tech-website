@@ -113,7 +113,7 @@ export default function PoultryCentralController() {
       </div>
 
       <p className="mx-auto mt-8 max-w-2xl text-center text-xs text-[var(--ts-gray)]">
-        <strong className="font-semibold text-[var(--ts-navy)]">Beispielhafte Systemarchitektur</strong> — dies
+        <strong className="font-semibold text-[var(--ts-navy)]">Beispielhafte Systemarchitektur</strong> – dies
         veranschaulicht die Art von Plattform, die wir entwickeln und bauen
         können; es handelt sich um ein Produktkonzept, nicht um ein
         bestehendes, handelsübliches Produkt.

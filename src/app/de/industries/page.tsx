@@ -25,13 +25,13 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Branchen | PawSync",
   description:
-    "PawSync entwickelt Elektronik für Pet-Tech-Unternehmen, Nutztier-, Milchvieh- und Geflügelbetriebe, Veterinärtechnologie, Wildtierforschung und AgriTech-Start-ups.",
+    "PawSync entwickelt Elektronik für Haustiertechnologie, Nutztier-, Milchvieh- und Geflügelbetriebe, Veterinärtechnik, Wildtierforschung und AgriTech-Start-ups.",
   alternates: buildAlternates("de", "industries"),
   openGraph: buildOpenGraph("de", "industries"),
 };
 
 const industries: { icon: LucideIcon; label: string; href?: string }[] = [
-  { icon: Dog, label: "Pet-Tech-Unternehmen", href: "/de/pet-technology" },
+  { icon: Dog, label: "Hersteller von Haustiergeräten", href: "/de/pet-technology" },
   { icon: Tractor, label: "Nutztierbetriebe", href: "/de/livestock-technology" },
   { icon: Milk, label: "Milchviehbetriebe" },
   { icon: Bird, label: "Geflügelbetriebe", href: "/de/poultry-farming" },

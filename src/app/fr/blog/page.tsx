@@ -7,9 +7,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Blog | PawSync",
+  title: "Blog d'ingénierie : suivi animal & IoT agricole | PawSync",
   description:
-    "Notes d'ingénierie sur le suivi des animaux, l'IoT agricole, la clôture virtuelle, les protocoles sans fil et la conception d'électronique pour les environnements extérieurs.",
+    "Notes d'ingénierie : suivi des animaux, IoT agricole, clôture virtuelle, protocoles sans fil et électronique pour environnements extérieurs.",
   alternates: buildAlternates("fr", "blog"),
   openGraph: buildOpenGraph("fr", "blog"),
 };
@@ -26,7 +26,7 @@ const articles = [
     href: "/fr/blog/low-power-animal-tracker-design",
   },
   {
-    title: "Concevoir une carte PCB pour un tracker animalier",
+    title: "Concevoir la carte PCB d'un tracker pour animaux",
     excerpt: "Un tracker porté au collier n'est pas une carte GPS miniature. Placement d'antenne, empilage des couches et contraintes de boîtier.",
     href: "/fr/blog/pet-tracker-pcb-design",
   },
@@ -85,7 +85,7 @@ export default function BlogPageFr() {
 
       <CTABanner
         heading="Un sujet que vous aimeriez que nous abordions ?"
-        description="Si vous avez une question sur l'Animal-Tech ou l'IoT agricole à laquelle vous aimeriez une réponse, faites-le-nous savoir."
+        description="Si vous avez une question sur la technologie animale ou l'IoT agricole à laquelle vous aimeriez une réponse, faites-le-nous savoir."
         primaryLabel="Contactez-nous"
         primaryHref="/fr/contact"
       />

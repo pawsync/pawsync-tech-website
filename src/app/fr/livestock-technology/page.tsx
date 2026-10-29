@@ -14,7 +14,10 @@ import {
   HeartPulse,
   Hash,
   MapPinned,
+  MonitorSmartphone,
   Radar,
+  Radio,
+  RadioTower,
   Satellite,
   ThermometerSun,
   UtensilsCrossed,
@@ -31,9 +34,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Suivi GPS & surveillance à distance du bétail | PawSync",
+  title: "Surveillance à distance du bétail et des bovins | PawSync",
   description:
-    "Matériel sur mesure de suivi GPS, clôture virtuelle, identification RFID et surveillance à distance de la santé et de l'activité pour bovins, ovins, caprins et chevaux.",
+    "Matériel sans fil sur mesure pour surveiller bovins, ovins, caprins et chevaux : suivi GPS, clôture virtuelle, RFID et suivi d'activité.",
   alternates: buildAlternates("fr", "livestock-technology"),
   openGraph: buildOpenGraph("fr", "livestock-technology"),
 };
@@ -49,13 +52,23 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
   { icon: Compass, label: "Idée" },
   { icon: Workflow, label: "Architecture" },
   { icon: CircuitBoard, label: "Carte PCB" },
-  { icon: FileCode, label: "Firmware" },
+  { icon: FileCode, label: "Micrologiciel" },
   { icon: FlaskConical, label: "Prototype" },
   { icon: ClipboardCheck, label: "Test" },
   { icon: Factory, label: "Production" },
 ];
 
 const faqs: FAQItem[] = [
+  {
+    question: "De quoi se compose un système de surveillance du bétail ?",
+    answer:
+      "De quatre couches, chacune conçue selon le projet : un dispositif sur l'animal (collier ou boucle d'oreille avec GNSS et, si nécessaire, détection de mouvement), une liaison radio (LoRa ou cellulaire), une passerelle qui reçoit les données sur site et les transmet au cloud, et un tableau de bord web ou mobile avec des alertes configurables. Nous définissons en phase de découverte les couches dont vous avez besoin — et leur raccordement à vos équipements existants.",
+  },
+  {
+    question: "Comment fonctionne la surveillance des bovins à distance ?",
+    answer:
+      "Un collier ou une boucle d'oreille sur chaque animal enregistre sa position GNSS, et une radio LoRa ou cellulaire la transmet à une passerelle ou au cloud selon un intervalle ajusté à l'autonomie de la batterie. Des alertes peuvent être conçues pour des événements comme la sortie d'un animal d'une zone désignée ou une inactivité inhabituelle. La bonne combinaison dépend de la distance parcourue par vos bovins et de la couverture réseau disponible sur vos terres.",
+  },
   {
     question: "GPS ou LoRa — qu'est-ce qui suit réellement mon troupeau ?",
     answer:
@@ -89,24 +102,24 @@ const faqs: FAQItem[] = [
   {
     question: "Comment un projet passe-t-il de l'idée à un dispositif fonctionnel ?",
     answer:
-      "D'abord la découverte et l'architecture (vos animaux, votre environnement et vos exigences), puis la conception du schéma et du circuit imprimé, le firmware, un prototype à tester en conditions réelles, et enfin les fichiers de préparation à la fabrication une fois la conception validée.",
+      "D'abord la découverte et l'architecture (vos animaux, votre environnement et vos exigences), puis la conception du schéma et du circuit imprimé, le micrologiciel, un prototype à tester en conditions réelles, et enfin les fichiers de préparation à la fabrication une fois la conception validée.",
   },
 ];
 
 const solutions = [
-  { icon: Satellite, title: "Suivi GPS du bétail", description: "Localisation conçue pour les pâturages ouverts et les grandes étendues." },
-  { icon: Radar, title: "Suivi des bovins", description: "Matériel de collier et de boucle d'oreille dimensionné pour les troupeaux bovins." },
+  { icon: Satellite, title: "Suivi GPS du bétail", description: "Localisation conçue pour les pâturages ouverts et les grandes étendues.", href: "/fr/animal-tracking" },
+  { icon: Radar, title: "Suivi des bovins", description: "Matériel de collier ou de boucle d'oreille conçu selon votre troupeau et votre terrain." },
   { icon: Radar, title: "Suivi des ovins", description: "Dispositifs de suivi légers pour la gestion des troupeaux." },
   { icon: Radar, title: "Suivi des caprins", description: "Matériel de suivi robuste pour les troupeaux en pâturage." },
   { icon: Radar, title: "Suivi équin", description: "Suivi GPS et de l'activité conçu pour le bien-être équin." },
   { icon: Activity, title: "Suivi de l'activité animale", description: "Données de mouvement et de comportement sur l'ensemble du troupeau." },
-  { icon: HeartPulse, title: "Détection des chaleurs", description: "Analyse des schémas d'activité pour aider à repérer les fenêtres de reproduction." },
+  { icon: HeartPulse, title: "Détection des chaleurs", description: "Une analyse des schémas d'activité peut être prévue pour aider à repérer d'éventuelles périodes de chaleur." },
   { icon: MapPinned, title: "Suivi des déplacements", description: "Historique des déplacements pour un animal individuel ou des groupes." },
-  { icon: HeartPulse, title: "Indicateurs de santé", description: "Constantes vitales et tendances d'activité pour une intervention plus précoce." },
+  { icon: HeartPulse, title: "Indicateurs de santé", description: "Tendances d'activité et de comportement pouvant aider à repérer plus tôt les animaux à surveiller." },
   { icon: Activity, title: "Suivi du pâturage", description: "Données de temps passé par zone pour éclairer les décisions de pâturage tournant." },
-  { icon: MapPinned, title: "Clôture virtuelle", description: "Des limites basées sur le GPS qui réduisent la dépendance à la clôture physique." },
+  { icon: MapPinned, title: "Clôture virtuelle", description: "Des limites basées sur le GPS qui réduisent la dépendance à la clôture physique.", href: "/fr/virtual-fencing" },
   { icon: Hash, title: "Identification RFID", description: "Identification individuelle des animaux pour les registres et le contrôle d'accès." },
-  { icon: Hash, title: "Comptage des animaux", description: "Comptages automatisés aux portails, couloirs et points d'eau." },
+  { icon: Hash, title: "Comptage des animaux", description: "Comptage par RFID aux portails, couloirs ou points d'eau, conçu selon votre site." },
   { icon: Droplets, title: "Suivi de la consommation d'eau", description: "Capteurs de débit et de niveau signalant les schémas de consommation anormaux." },
   { icon: UtensilsCrossed, title: "Suivi de l'alimentation", description: "Suivi du niveau et de la consommation d'aliment sur les postes d'alimentation." },
 ];
@@ -120,6 +133,13 @@ const alerts = [
   { icon: Battery, label: "Problème de batterie potentiel du dispositif" },
 ];
 
+const systemLayers = [
+  { icon: Radar, title: "1. Sur l'animal", description: "Un collier ou une boucle d'oreille avec GNSS et, si nécessaire, détection de mouvement." },
+  { icon: Radio, title: "2. Liaison radio", description: "LoRa pour une longue portée à faible consommation, ou cellulaire (LTE-M) là où la couverture le permet." },
+  { icon: RadioTower, title: "3. Passerelle", description: "Reçoit les données sur site et les transmet au cloud ; une logique locale peut continuer l'enregistrement pendant une coupure." },
+  { icon: MonitorSmartphone, title: "4. Tableau de bord & alertes", description: "Une vue web ou mobile avec des alertes configurables, conçue selon vos exigences dans le cadre du projet." },
+];
+
 export default function LivestockTechnologyPageFr() {
   return (
     <>
@@ -128,12 +148,12 @@ export default function LivestockTechnologyPageFr() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Technologie pour le bétail</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Surveillance &amp; gestion connectées du bétail
+          Systèmes de surveillance &amp; de gestion du bétail à distance
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Du matériel de suivi, de surveillance de la santé et de clôture
-          virtuelle conçu pour les bovins, ovins, caprins et chevaux sur
-          l&apos;exploitation.
+          Nous concevons du matériel sur mesure de suivi, de suivi
+          d&apos;activité et de clôture virtuelle pour les bovins, ovins,
+          caprins et chevaux sur l&apos;exploitation.
         </p>
       </section>
 
@@ -150,6 +170,10 @@ export default function LivestockTechnologyPageFr() {
             </div>
           ))}
         </div>
+        <p className="mt-4 text-center text-sm text-[var(--ts-gray)]">
+          Exemples de types d&apos;alertes qu&apos;un système sur mesure peut
+          déclencher — à titre d&apos;illustration.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
@@ -157,11 +181,55 @@ export default function LivestockTechnologyPageFr() {
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>Solutions</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-              Conçu pour tout le troupeau
+              Solutions de surveillance pour bovins, ovins, caprins &amp; chevaux
             </h2>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {solutions.map((item) => (
+              <ServiceCard key={item.title} locale="fr" {...item} />
+            ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            Il s&apos;agit de services d&apos;ingénierie sur mesure : nous
+            concevons et développons le matériel selon vos exigences. Ce ne
+            sont pas des produits standard, et les exemples de notre page
+            Projets sont des modèles de référence, et non des déploiements
+            testés sur le terrain.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="livestock-cattle-heading-fr" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Bovins</Eyebrow>
+          <h2 id="livestock-cattle-heading-fr" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+            Surveillance des bovins à distance
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
+            La surveillance des bovins à distance commence par deux questions :
+            jusqu&apos;où vont vos bovins, et à quelle fréquence avez-vous besoin
+            d&apos;en avoir des nouvelles ? Nous concevons du matériel de collier
+            ou de boucle d&apos;oreille sur mesure à partir de ces réponses — en
+            associant la localisation GNSS à une liaison LoRa ou cellulaire vers
+            une passerelle ou le cloud, et en dimensionnant la batterie selon
+            votre intervalle de rapport. Des données d&apos;activité peuvent être
+            ajoutées lorsqu&apos;elles aident à repérer les animaux à surveiller.
+            Chaque conception est adaptée à votre troupeau, votre terrain et votre
+            infrastructure, et validée sous forme de prototype avant la production.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="livestock-system-heading-fr" className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <Eyebrow>Vue d&apos;ensemble</Eyebrow>
+            <h2 id="livestock-system-heading-fr" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+              Comment fonctionne un système de surveillance du bétail à distance
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {systemLayers.map((item) => (
               <ServiceCard key={item.title} locale="fr" {...item} />
             ))}
           </div>
@@ -171,7 +239,7 @@ export default function LivestockTechnologyPageFr() {
       <section aria-labelledby="livestock-connectivity-heading-fr" className="bg-[var(--ts-navy)] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 id="livestock-connectivity-heading-fr" className="text-center text-sm font-semibold uppercase tracking-widest text-white/50">
-            Une connectivité adaptée au troupeau
+            Connectivité sans fil pour la surveillance du bétail à distance
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {connectivity.map(({ icon: Icon, label }) => (
@@ -203,7 +271,7 @@ export default function LivestockTechnologyPageFr() {
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
             La découverte et l&apos;architecture viennent d&apos;abord, suivies
-            de la conception du schéma et du circuit imprimé, du firmware,
+            de la conception du schéma et du circuit imprimé, du micrologiciel,
             d&apos;un prototype testable en conditions réelles, puis des
             fichiers de préparation à la fabrication une fois la conception
             validée. Voir aussi notre article sur la{" "}
@@ -214,7 +282,7 @@ export default function LivestockTechnologyPageFr() {
             <Link href="/fr/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               conception électronique basse consommation pour trackers d&apos;animaux
             </Link>{" "}
-            ou nos services d&apos;{" "}
+            ou nos services d&apos;
             <Link href="/fr/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               électronique sur mesure
             </Link>

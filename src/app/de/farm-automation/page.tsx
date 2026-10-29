@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Hofautomatisierung | PawSync",
   description:
-    "Intelligente Steuerungssysteme für Klima, Wasser, Fütterung und Infrastruktur — mit Smartphone- und Dashboard-Steuerung für moderne Höfe.",
+    "Individuelle Steuerungssysteme für Klima, Wasser, Fütterung und Infrastruktur – mit Smartphone- und Web-Dashboard-Steuerung nach Ihren Anforderungen.",
   alternates: buildAlternates("de", "farm-automation"),
   openGraph: buildOpenGraph("de", "farm-automation"),
 };
@@ -22,7 +22,7 @@ const categories = [
   {
     icon: Droplets,
     title: "Wassermanagement",
-    items: ["Wassertanküberwachung", "Automatische Bewässerung", "Pumpensteuerung", "Durchflussüberwachung", "Leckerkennung", "Wasserverfügbarkeitsalarme"],
+    items: ["Wassertanküberwachung", "Automatische Tränkesteuerung", "Pumpensteuerung", "Durchflussüberwachung", "Leckerkennung", "Wasserverfügbarkeitsalarme"],
   },
   {
     icon: UtensilsCrossed,
@@ -52,8 +52,9 @@ export default function FarmAutomationPageDe() {
           Intelligente Steuerungssysteme für moderne Höfe
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Ein vernetztes System zur Steuerung von Klima, Wasser, Fütterung
-          und Infrastruktur — vom Smartphone oder einem Web-Dashboard aus.
+          Wir entwickeln vernetzte Steuerungssysteme für Klima, Wasser,
+          Fütterung und Infrastruktur – mit Steuerung per Smartphone oder
+          Web-Dashboard nach Ihren Anforderungen.
         </p>
       </section>
 
@@ -83,6 +84,11 @@ export default function FarmAutomationPageDe() {
             </div>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          Diese Funktionen entwickeln wir für individuelle Systeme – sie sind
+          kein Standardprodukt. Software wie Dashboards, Apps und Alarme wird
+          pro Projekt nach Ihren Anforderungen entwickelt.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-navy)] py-16 sm:py-20">
@@ -92,8 +98,9 @@ export default function FarmAutomationPageDe() {
             Einfache, konfigurierbare Logik
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            Jeder Controller läuft nach von Ihnen festgelegten Regeln — für
-            kritische Aktionen ist keine Cloud-Abhängigkeit erforderlich.
+            Controller können so ausgelegt werden, dass sie nach von Ihnen
+            festgelegten Regeln laufen – ohne Cloud-Abhängigkeit für
+            kritische Aktionen.
           </p>
           <div className="mx-auto mt-8 flex max-w-lg items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 text-left font-mono text-sm text-[var(--ts-accent)]">
             <Terminal className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
@@ -107,7 +114,7 @@ export default function FarmAutomationPageDe() {
       </section>
 
       <CTABanner
-        heading="Benötigen Sie ein individuelles Hof-IoT-System?"
+        heading="Benötigen Sie ein individuelles Agrar-IoT-System?"
         description="Lassen Sie uns Hardware rund um Ihre Umgebung, Tiere und betrieblichen Anforderungen entwickeln."
         primaryLabel="Projekt starten"
         primaryHref="/de/contact"

@@ -26,7 +26,7 @@ export default function PoultryApplications() {
           <div className="relative aspect-[21/9] w-full sm:aspect-[3/1]">
             <Image
               src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?auto=format&fit=crop&w=1400&q=75"
-              alt="A chicken in a poultry farm environment"
+              alt="A chicken in a poultry farm environment, the kind of operation PawSync builds monitoring and automation hardware for"
               fill
               sizes="100vw"
               className="object-cover"

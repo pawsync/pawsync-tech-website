@@ -1,23 +1,28 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Inter, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import TerraSenseHeader from "@/components/terrasense/TerraSenseHeader";
 import TerraSenseFooter from "@/components/terrasense/TerraSenseFooter";
 import BackToTop from "@/components/terrasense/BackToTop";
 import PlausibleAnalytics from "@/components/analytics/PlausibleAnalytics";
-import { siteUrl, type Locale } from "@/i18n/config";
+import type { Locale } from "@/i18n/config";
+import { organizationJsonLd, serializeJsonLd, websiteJsonLd } from "@/lib/structuredData";
 
-const inter = Inter({
+// Self-hosted Inter and Manrope variable fonts (latin subset, from
+// @fontsource-variable 5.3.0, SIL Open Font License 1.1 in ./fonts). Builds no
+// longer download fonts from Google, so a network hiccup can't fail a deploy.
+const inter = localFont({
+  src: "./fonts/inter-latin-wght-normal.woff2",
   variable: "--font-inter",
-  subsets: ["latin"],
+  weight: "100 900",
   display: "swap",
 });
 
-const manrope = Manrope({
+const manrope = localFont({
+  src: "./fonts/manrope-latin-wght-normal.woff2",
   variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: "200 800",
   display: "swap",
 });
 
@@ -51,13 +56,9 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const headersList = await headers();
   const locale = (headersList.get("x-locale") as Locale | null) ?? "en";
-  const websiteJsonLd = {
+  const siteJsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "PawSync",
-    url: siteUrl,
-    inLanguage: locale,
-    publisher: { "@type": "Person", name: "Tahir Nazeer" },
+    "@graph": [websiteJsonLd(locale), organizationJsonLd()],
   };
 
   return (
@@ -67,7 +68,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       className={`${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="terrasense-theme flex min-h-full flex-col bg-[var(--ts-bg)] text-[var(--ts-navy)]">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(siteJsonLd) }} />
         <PlausibleAnalytics />
         <a
           href="#terrasense-main-content"

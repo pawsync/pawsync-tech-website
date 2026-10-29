@@ -21,7 +21,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Intelligente Tier- & Hoftechnologielösungen | PawSync",
   description:
-    "GPS-Tiertracking, virtuelle Einzäunung, Gesundheitsüberwachung, intelligente Fütterung, Hofautomatisierung und Umweltüberwachung — kundenspezifische IoT-Lösungen für Tiere und Höfe.",
+    "GPS-Tiertracking, virtuelle Einzäunung, intelligente Fütterung, Hofautomatisierung und Umweltüberwachung: individuelle IoT-Lösungen für Tiere und Höfe.",
   alternates: buildAlternates("de", "solutions"),
   openGraph: buildOpenGraph("de", "solutions"),
 };
@@ -40,7 +40,7 @@ const categories: Category[] = [
     icon: Satellite,
     title: "Tracking & Standort",
     description:
-      "Echtzeit- oder periodische GPS/GNSS-Standortsysteme, die Haustiere, Nutztiere und andere Tiere auffindbar halten — auf dem Betrieb oder weit darüber hinaus.",
+      "Echtzeit- oder periodische GPS/GNSS-Standortsysteme, die Haustiere, Nutztiere und andere Tiere auffindbar halten – auf dem Betrieb oder weit darüber hinaus.",
     points: ["Echtzeit- & geplante GPS-Aktualisierungen", "Geofence- & Zonenalarme", "Vollständiger Standortverlauf", "Mehrtier-Flottenansicht"],
   },
   {
@@ -48,7 +48,7 @@ const categories: Category[] = [
     icon: Radar,
     title: "Virtuelle Einzäunung",
     description:
-      "GPS- und funkbasierte Grenzsysteme, die Tieren Freiraum innerhalb festgelegter Zonen geben, mit Standortbewusstsein anstelle traditioneller Zäune.",
+      "GPS- und funkbasierte Grenzsysteme, die Tieren Freiraum innerhalb festgelegter Zonen geben, mit GPS-Ortung anstelle traditioneller Zäune.",
     points: ["Individuelle, anpassbare Grenzen", "Echtzeit-Bewegungsalarme", "Unterstützung mehrerer Zonen", "Fernkonfiguration vom Feld oder Büro aus"],
   },
   {
@@ -56,7 +56,7 @@ const categories: Category[] = [
     icon: HeartPulse,
     title: "Gesundheitsüberwachung",
     description:
-      "Tragbare oder fest installierte Elektronik, die Aktivität, Temperatur und Ruhemuster erfasst, um frühere Wahrnehmung von Gesundheitsveränderungen zu unterstützen.",
+      "Tragbare oder fest installierte Elektronik, ausgelegt auf die Erfassung von Aktivität, Temperatur und Ruhemustern, um eine frühere Wahrnehmung von Gesundheitsveränderungen zu unterstützen.",
     points: ["Tägliches Aktivitäts- & Ruhe-Tracking", "Temperaturerfassung", "Alarme bei unregelmäßigen Mustern", "Historische Trenddaten"],
   },
   {
@@ -72,7 +72,7 @@ const categories: Category[] = [
     icon: Activity,
     title: "Nutztierüberwachung",
     description:
-      "Verfolgen Sie Bewegung, Verhalten, Standort und Umweltbedingungen über eine Herde hinweg, mit Dashboards für Gruppen- statt Einzeltiermanagement.",
+      "Verfolgen Sie Bewegung, Verhalten, Standort und Umweltbedingungen über eine Herde hinweg, mit Dashboards, die für Gruppen- statt Einzeltiermanagement ausgelegt werden können.",
     points: ["Herdenstandort & -bewegung", "Verhaltens- & Weidemuster", "Erfassung der Umweltexposition", "Konfigurierbare Gruppenalarme"],
   },
   {
@@ -80,7 +80,7 @@ const categories: Category[] = [
     icon: Settings2,
     title: "Hofautomatisierung",
     description:
-      "Steuern Sie Bewässerung, Fütterung, Belüftung, Pumpen, Ventilatoren, Heizungen und Kühlsysteme automatisch — mit jederzeit verfügbarer manueller Übersteuerung.",
+      "Steuern Sie Bewässerung, Fütterung, Belüftung, Pumpen, Ventilatoren, Heizungen und Kühlsysteme automatisch – mit jederzeit verfügbarer manueller Übersteuerung.",
     points: ["Regelbasierte Automatisierung (\"Wenn dies, dann das\")", "Fernsteuerung per Smartphone & Web", "Anlagenstatusüberwachung", "Manuelle Übersteuerung jederzeit"],
   },
   {
@@ -89,14 +89,14 @@ const categories: Category[] = [
     title: "Intelligente Bewässerung & Wassermanagement",
     description:
       "Vernetzte Bewässerungssysteme mit Bodenfeuchtemessung, Umweltdaten und Wasserstandsüberwachung, mit automatisierten Ventilen und Pumpen zur Optimierung von Wasserverbrauch und Anbaubedingungen.",
-    points: ["Bodenfeuchte- & Tankstandsüberwachung", "Automatisierte Ventil- & Pumpensteuerung", "Wetterbewusste Zeitplanung", "Leck- & Störungsalarme"],
+    points: ["Bodenfeuchte- & Tankstandsüberwachung", "Automatisierte Ventil- & Pumpensteuerung", "Wetterabhängige Zeitplanung", "Leck- & Störungsalarme"],
   },
   {
     id: "environmental-monitoring",
     icon: CloudRain,
     title: "Umweltüberwachung",
     description:
-      "Kontinuierliche Überwachung von Temperatur, Luftfeuchtigkeit, Luftqualität und Wasserbedingungen in Ställen, Verschlägen, Gewächshäusern und Lagerbereichen.",
+      "Kontinuierliche Überwachung von Temperatur, Luftfeuchtigkeit, Luftqualität und Wasserbedingungen in Ställen, Geflügelställen, Gewächshäusern und Lagerbereichen.",
     points: ["Multisensor-Abdeckung pro Standort", "Konfigurierbare Schwellenwertalarme", "Historische Umwelttrends", "Stall-, Gewächshaus- & unterkunftstaugliche Hardware"],
   },
   {
@@ -104,7 +104,7 @@ const categories: Category[] = [
     icon: AlertTriangle,
     title: "Sicherheit & Gefahrenerkennung",
     description:
-      "Frühwarnsysteme für extreme Hitze, Kälte, Rauch, Brandrisiko, Überflutung, Wasserlecks und Geräteausfälle — bevor sie zu Notfällen werden.",
+      "Frühwarnsysteme, ausgelegt darauf, extreme Hitze, Kälte, Rauch, Brandrisiko, Überflutung, Wasserlecks und Geräteausfälle frühzeitig zu melden.",
     points: ["Status Normal / Warnung / Kritisch", "Mobil-, SMS-, E-Mail- & Lokalalarme", "Redundante Sensorik, wo es zählt", "Strom- & Pumpenausfallerkennung"],
   },
   {
@@ -112,7 +112,7 @@ const categories: Category[] = [
     icon: RadioTower,
     title: "Drahtlose Sensornetzwerke",
     description:
-      "Netzwerke stromsparender Sensorknoten, die über LoRa, BLE, Wi-Fi oder Mobilfunk kommunizieren — entwickelt, um große Höfe ohne ein einziges Kabel abzudecken.",
+      "Netzwerke stromsparender Sensorknoten, die über LoRa, BLE, Wi-Fi oder Mobilfunk kommunizieren – ausgelegt, um große Höfe ohne Kabelverlegung abzudecken.",
     points: ["Weitreichende LoRa-Abdeckung", "Gateway- & Basisstationsarchitektur", "Stromoptimierte Knoten", "Skaliert von einem Stall bis zu einer ganzen Ranch"],
   },
   {
@@ -120,7 +120,7 @@ const categories: Category[] = [
     icon: CircuitBoard,
     title: "Kundenspezifische IoT-Systeme",
     description:
-      "Wenn ein Standardgerät nicht passt, entwickeln wir die Elektronik — Hardware, Firmware und Konnektivität — genau nach Ihren Anforderungen.",
+      "Wenn ein Standardgerät nicht passt, entwickeln wir die Elektronik – Hardware, Firmware und Konnektivität – genau nach Ihren Anforderungen.",
     points: ["Individuelles Hardware- & Leiterplattendesign", "Zugeschnittene Embedded-Firmware", "Mobile-App- & Cloud-API-Integration", "Unterstützung vom Prototyp bis zur Serienproduktion"],
   },
 ];
@@ -137,8 +137,8 @@ export default function SolutionsPageDe() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Elf Problemfelder, ein Engineering-Team. Jede Kategorie unten ist
-          Hardware, Firmware und Konnektivität, die wir hausintern
-          entwickeln — springen Sie zu der, die Sie benötigen, oder
+          Hardware, Firmware und Konnektivität, die wir nach Ihren
+          Anforderungen entwickeln – springen Sie zu der, die Sie benötigen, oder
           sprechen Sie mit uns über etwas, das noch nicht aufgeführt ist.
         </p>
       </section>
@@ -178,12 +178,19 @@ export default function SolutionsPageDe() {
             </article>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          Jede Kategorie ist eine individuelle Engineering-Dienstleistung.
+          Die aufgeführten Funktionen – einschließlich Dashboards, mobiler
+          Apps und Alarme – werden pro Projekt entwickelt; es handelt sich
+          nicht um Standardprodukte. Die Beispiele auf unserer Projektseite
+          sind Referenzdesigns, keine im Feld erprobten Installationen.
+        </p>
       </section>
 
       <CTABanner
-        eyebrow="Benötigen Sie ein individuelles Hof-IoT-System?"
+        eyebrow="Benötigen Sie ein individuelles Agrar-IoT-System?"
         heading="Lassen Sie uns Hardware rund um Ihre Umgebung, Tiere und betrieblichen Anforderungen entwickeln."
-        description="Ob eine der oben genannten Kategorien oder etwas völlig Neues — unser Engineering-Team kann es gemeinsam mit Ihnen planen."
+        description="Ob eine der oben genannten Kategorien oder etwas völlig Neues – unser Engineering-Team kann es gemeinsam mit Ihnen planen."
         primaryLabel="Projekt starten"
         primaryHref="/de/contact"
         secondaryLabel="Unseren Engineering-Prozess ansehen"

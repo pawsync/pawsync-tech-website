@@ -17,9 +17,9 @@ import {
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Contact | PawSync",
+  title: "Projet de technologie animale ou d'IoT agricole | PawSync",
   description:
-    "Parlez à PawSync de votre idée Animal-Tech ou d'IoT agricole, et notre équipe d'ingénierie vous aidera à transformer le concept en un produit électronique concret.",
+    "Parlez à PawSync de votre idée de technologie animale ou d'IoT agricole : nous vous aidons à en faire un produit électronique concret.",
   alternates: buildAlternates("fr", "contact"),
   openGraph: buildOpenGraph("fr", "contact"),
 };
@@ -34,7 +34,7 @@ export default function ContactPageFr() {
           <div>
             <Eyebrow align="left">Contact</Eyebrow>
             <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-              Une idée Animal-Tech ou d&apos;IoT agricole ?
+              Une idée de technologie animale ou d&apos;IoT agricole ?
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-[var(--ts-gray)]">
               Dites-nous ce que vous souhaitez créer, et nous vous aiderons à
@@ -91,7 +91,7 @@ export default function ContactPageFr() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[var(--ts-dark-green)] hover:underline"
+                  className="-my-1 inline-flex items-center gap-2 py-1 text-sm font-medium text-[var(--ts-dark-green)] hover:underline"
                 >
                   <InstagramIcon className="h-4 w-4" />
                   Suivez PawSync sur Instagram
@@ -101,7 +101,7 @@ export default function ContactPageFr() {
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
                 <dl className="min-w-0">
                   <dt className="text-sm font-semibold text-[var(--ts-navy)]">Où nous travaillons</dt>
-                  <dd className="text-sm text-[var(--ts-gray)]">Équipe d&apos;ingénierie en télétravail, projets dans le monde entier</dd>
+                  <dd className="text-sm text-[var(--ts-gray)]">Équipe d&apos;ingénierie à distance, projets dans le monde entier</dd>
                 </dl>
               </div>
               <div className="flex items-start gap-3">

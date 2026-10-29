@@ -5,7 +5,7 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 const services = [
   "Conception de cartes PCB sur mesure", "Micrologiciel embarqué", "Intégration de capteurs", "Connectivité IoT",
   "Systèmes LoRa", "Systèmes Wi-Fi", "Connectivité LTE", "Contrôleurs d'exploitation",
-  "Contrôle moteur et relais", "Gestion de l'alimentation", "Développement de passerelles",
+  "Contrôle moteur et relais", "Gestion de l'énergie", "Développement de passerelles",
   "Développement de prototypes", "Tests", "Préparation à la fabrication",
 ];
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Fan } from "lucide-react";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 
@@ -28,7 +29,11 @@ export default function PoultryEnvironmentalMonitoring() {
           </h2>
           <p className="mt-4 text-lg text-[var(--ts-gray)]">
             Im gesamten Betrieb verteilte Sensorknoten liefern ein
-            einheitliches, laufend aktualisiertes Bild der Stallbedingungen.
+            einheitliches, laufend aktualisiertes Bild der Stallbedingungen. Derselbe Sensoransatz lässt sich über unsere{" "}
+            <Link href="/de/environmental-monitoring" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              Umweltüberwachung
+            </Link>{" "}
+            auch auf Rinderställe, Futterlager und andere Hofgebäude übertragen.
           </p>
         </div>
 
@@ -36,14 +41,14 @@ export default function PoultryEnvironmentalMonitoring() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl">
             <Image
               src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?auto=format&fit=crop&w=800&q=75"
-              alt="Ein Huhn in einer Geflügelfarm-Umgebung, stellvertretend für eine überwachte Herdenumgebung"
+              alt="Nahaufnahme eines Huhns in einem Geflügelbetrieb – die Art von Herdenumgebung, die drahtlose Sensoren für Temperatur, Luftfeuchtigkeit und Luftqualität überwachen"
               fill
               sizes="(min-width: 1024px) 45vw, 92vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--ts-navy)]/40 via-transparent to-transparent" />
             <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
-              Sensorabdeckung — Beispiellayout
+              Sensorabdeckung – Beispiellayout
             </div>
           </div>
 
@@ -65,7 +70,7 @@ export default function PoultryEnvironmentalMonitoring() {
             </dl>
             <p className="mt-5 flex items-center gap-2 border-t border-white/10 pt-4 text-xs text-white/60">
               <Fan className="h-3.5 w-3.5" aria-hidden="true" />
-              Beispiel-Dashboard zur Veranschaulichung — Werte sind je Stall konfigurierbar.
+              Beispiel-Dashboard zur Veranschaulichung – Werte sind je Stall konfigurierbar.
             </p>
           </div>
         </div>

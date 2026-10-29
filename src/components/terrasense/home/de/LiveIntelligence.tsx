@@ -12,9 +12,9 @@ const stats = [
 ];
 
 const alerts = [
-  { title: "Rind #074 — Außerhalb der Zone", tone: "critical" as const },
-  { title: "Stall 2 — Temperatur hoch", tone: "warning" as const },
-  { title: "Wassertank 1 — Füllstand unter 25 %", tone: "warning" as const },
+  { title: "Rind #074 – Außerhalb der Zone", tone: "critical" as const },
+  { title: "Stall 2 – Temperatur hoch", tone: "warning" as const },
+  { title: "Wassertank 1 – Füllstand unter 25 %", tone: "warning" as const },
 ];
 
 export default function LiveIntelligence() {

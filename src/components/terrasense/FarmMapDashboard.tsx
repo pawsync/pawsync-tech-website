@@ -34,7 +34,7 @@ export default function FarmMapDashboard({ locale = "en" }: { locale?: Locale })
   const markers = markersByLocale[locale];
   const caption = captions[locale];
   return (
-    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-white/10 bg-[var(--ts-navy)] shadow-xl">
+    <div className="relative aspect-[4/3] w-full sm:aspect-[16/9] overflow-hidden rounded-3xl border border-white/10 bg-[var(--ts-navy)] shadow-xl">
       <div
         aria-hidden="true"
         className="absolute inset-0 opacity-[0.08]"
@@ -79,7 +79,7 @@ export default function FarmMapDashboard({ locale = "en" }: { locale?: Locale })
         <MapPin className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />
         {caption.mapLabel}
       </div>
-      <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
+      <div className="absolute bottom-4 right-4 hidden items-center sm:flex gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
         <Radio className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />
         {caption.connected}
       </div>

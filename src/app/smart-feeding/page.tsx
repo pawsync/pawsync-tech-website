@@ -28,13 +28,13 @@ export const metadata: Metadata = {
 
 const capabilities = [
   { icon: Settings2, title: "Scheduled Dispensing", description: "Automated feeding on a configurable daily or multi-time schedule." },
-  { icon: Gauge, title: "Portion Control", description: "Precise dispensing amounts tuned to each animal or group." },
+  { icon: Gauge, title: "Portion Control", description: "Dispensing amounts set per animal or group, with accuracy calibrated during development." },
   { icon: Hash, title: "RFID Animal Identification", description: "Recognize individual animals to feed the right diet to the right one." },
-  { icon: UtensilsCrossed, title: "Feed-Level Sensors", description: "Know when a hopper or silo is running low before it runs out." },
-  { icon: ShieldAlert, title: "Jam & Fault Detection", description: "Alerts when a motor, auger or dispensing line isn't working correctly." },
-  { icon: MonitorSmartphone, title: "Remote Monitoring", description: "Check feeding status and history from a phone or web dashboard." },
+  { icon: UtensilsCrossed, title: "Feed-Level Sensors", description: "Level sensing can be designed to warn you before a hopper or silo runs out." },
+  { icon: ShieldAlert, title: "Jam & Fault Detection", description: "Fault detection can be designed to alert you when a motor, auger or dispensing line isn't working correctly." },
+  { icon: MonitorSmartphone, title: "Remote Monitoring", description: "Feeding status and history can be made viewable on a phone or web dashboard developed for your project." },
   { icon: History, title: "Consumption History", description: "Track feed usage over time to spot trends or anomalies early." },
-  { icon: Cpu, title: "Custom Controllers", description: "Purpose-built feeding controllers sized to your equipment and species." },
+  { icon: Cpu, title: "Custom Controllers", description: "Feeding controllers designed around your equipment and species." },
 ];
 
 const flow = [
@@ -46,9 +46,9 @@ const flow = [
 ];
 
 const faqs = [
-  { question: "Can the system identify individual animals?", answer: "Yes — RFID-based identification lets the system dispense different diets or portions to different animals sharing the same feeding station." },
+  { question: "Can the system identify individual animals?", answer: "Yes — RFID identification can be designed in so the system dispenses different diets or portions to different animals sharing the same feeding station." },
   { question: "What happens if the feed line jams?", answer: "Fault detection can flag a motor or dispensing issue and send an alert, rather than silently failing to feed." },
-  { question: "Can I monitor feed levels remotely?", answer: "Yes — level sensors on hoppers or silos report status to the dashboard, with low-feed alerts configurable to your schedule." },
+  { question: "Can I monitor feed levels remotely?", answer: "Yes — level sensors on hoppers or silos can be designed to report to a dashboard, with low-feed alerts configured to your schedule." },
 ];
 
 const scope: ServiceScopeCopy = {
@@ -145,9 +145,9 @@ export default function SmartFeedingPage() {
         <Eyebrow>Smart Feeding</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Smart Pet Feeder & Feeding System Development</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Automated feeding devices with schedules, portion control, sensors
-          and remote monitoring for pets, livestock and multi-animal
-          facilities.
+          We design automated feeding devices with schedules, portion
+          control, sensors and remote monitoring for pets, livestock and
+          multi-animal facilities.
         </p>
       </section>
 
@@ -181,6 +181,12 @@ export default function SmartFeedingPage() {
               <ServiceCard key={item.title} {...item} />
             ))}
           </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+            These are custom engineering services, not off-the-shelf
+            products. Dashboards, apps and alerts are developed per project,
+            and the feeding controller on our Projects page is a reference
+            design, not a field-tested deployment.
+          </p>
         </div>
       </section>
 

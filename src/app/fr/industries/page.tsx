@@ -25,7 +25,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Secteurs | PawSync",
   description:
-    "PawSync conçoit de l'électronique pour les entreprises pet-tech, les exploitations d'élevage et avicoles, la technologie vétérinaire et les start-ups AgriTech.",
+    "PawSync conçoit de l'électronique pour les objets connectés pour animaux, l'élevage, l'aviculture, la technologie vétérinaire et les start-ups AgriTech.",
   alternates: buildAlternates("fr", "industries"),
   openGraph: buildOpenGraph("fr", "industries"),
 };
@@ -38,7 +38,7 @@ const industries: { icon: LucideIcon; label: string; href?: string }[] = [
   { icon: PawPrint, label: "Exploitations équestres" },
   { icon: HeartPulse, label: "Technologie vétérinaire" },
   { icon: Home, label: "Refuges pour animaux" },
-  { icon: Building2, label: "Chenils" },
+  { icon: Building2, label: "Pensions pour animaux" },
   { icon: TreePine, label: "Recherche sur la faune sauvage" },
   { icon: Sprout, label: "Agriculture intelligente" },
   { icon: Warehouse, label: "Fabricants d'équipements agricoles" },

@@ -18,7 +18,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "À propos | PawSync",
   description:
-    "PawSync associe ingénierie électronique, connectivité IoT, systèmes embarqués, capteurs et automatisation pour créer une technologie pratique au service des animaux et de l'agriculture.",
+    "PawSync associe électronique, systèmes embarqués, capteurs et connectivité IoT pour créer une technologie pratique au service des animaux et de l'agriculture.",
   alternates: buildAlternates("fr", "about"),
   openGraph: buildOpenGraph("fr", "about"),
 };

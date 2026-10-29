@@ -16,7 +16,7 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Surveillance environnementale | PawSync",
+  title: "Capteurs environnementaux pour fermes & bâtiments | PawSync",
   description:
     "Capteurs environnementaux 24 h/24 pour les bâtiments d'élevage, bâtiments avicoles, serres et refuges — température, humidité, qualité de l'air et plus encore.",
   alternates: buildAlternates("fr", "environmental-monitoring"),
@@ -30,7 +30,7 @@ const sensors = [
 
 const applications = [
   { icon: Warehouse, title: "Surveillance des bâtiments d'élevage", description: "Une surveillance climatique continue pour les bâtiments bovins et équins." },
-  { icon: PawPrint, title: "Surveillance des bâtiments avicoles", description: "Des tolérances environnementales étroites suivies en permanence." },
+  { icon: PawPrint, title: "Surveillance des bâtiments avicoles", description: "Des tolérances environnementales étroites suivies en permanence.", href: "/fr/poultry-farming" },
   { icon: Flower2, title: "Surveillance des serres", description: "Suivi de la température, de l'humidité et de la lumière pour une culture maîtrisée." },
   { icon: Home, title: "Surveillance des refuges pour animaux", description: "Des conditions confortables et sûres pour les animaux hébergés et en famille d'accueil." },
   { icon: Building2, title: "Surveillance du stockage d'aliments", description: "Détection d'humidité et de température pour protéger l'aliment stocké." },
@@ -46,7 +46,7 @@ export default function EnvironmentalMonitoringPageFr() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Surveillance environnementale</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Une surveillance environnementale agricole 24 h/24
+          Surveillance environnementale 24 h/24 pour exploitations &amp; bâtiments d&apos;élevage
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Des réseaux de capteurs qui veillent jour et nuit sur les

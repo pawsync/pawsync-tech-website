@@ -23,24 +23,24 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Entwicklung individueller Haustiergeräte | PawSync",
   description:
-    "Individuelle Entwicklung von Haustiergeräten für Pet-Tech-Teams: Wearables, Halsbänder und Tracker mit Leiterplatte, Firmware und Prototyp.",
+    "Individuelle Entwicklung von Haustiergeräten für Teams in der Haustiertechnologie: Wearables, Halsbänder und Tracker mit Leiterplatte, Firmware und Prototyp.",
   alternates: buildAlternates("de", "pet-technology"),
   openGraph: buildOpenGraph("de", "pet-technology"),
 };
 
 const solutions = [
-  { icon: Satellite, title: "GPS-Haustier-Tracker", description: "Am Halsband montierte Standortverfolgung zur Wiederauffindung entlaufener Tiere und täglichen Überwachung." },
-  { icon: Activity, title: "Aktivitäts-Tracker", description: "Bewegungs- und Bewegungserfassung, die ein Bild des täglichen Wohlbefindens ergibt." },
-  { icon: HeartPulse, title: "Gesundheitsüberwachung für Haustiere", description: "Tragbare Sensoren für Temperatur, Aktivität und Ruhemustererfassung." },
-  { icon: Radar, title: "Intelligente Halsbänder", description: "Multisensor-Halsbandhardware, die GPS, BLE und Gesundheitsüberwachung in einem Gerät vereint." },
-  { icon: MapPinned, title: "Virtuelle Haustier-Einzäunung", description: "GPS-basierte Grenzen mit Echtzeitalarmen, wenn ein Haustier eine sichere Zone verlässt." },
-  { icon: DoorOpen, title: "RFID-Haustierzugang", description: "Mikrochip-basierte Identifikation für sichere, selektive Zutrittssysteme." },
-  { icon: DoorClosed, title: "Intelligente Haustiertüren", description: "App-gesteuerte Türen, die sich nur für erkannte, autorisierte Haustiere öffnen." },
+  { icon: Satellite, title: "GPS-Haustier-Tracker", description: "Am Halsband montierte Standortverfolgung, ausgelegt auf die Wiederauffindung entlaufener Tiere und die tägliche Überwachung." },
+  { icon: Activity, title: "Aktivitäts-Tracker", description: "Erfassung von Bewegung und Auslauf, die ein Bild des täglichen Wohlbefindens ergibt." },
+  { icon: HeartPulse, title: "Gesundheitsüberwachung für Haustiere", description: "Tragbare Sensorik für Aktivitäts- und Ruhemuster, mit Temperaturerfassung, wo das Design es zulässt." },
+  { icon: Radar, title: "Intelligente Halsbänder", description: "Multisensor-Halsbandhardware kann so ausgelegt werden, dass sie GPS, BLE und Aktivitätserfassung in einem Gerät vereint." },
+  { icon: MapPinned, title: "Virtuelle Haustier-Einzäunung", description: "GPS-basierte Grenzen, mit Alarmen, die so ausgelegt werden können, dass sie melden, wenn ein Haustier eine sichere Zone verlässt." },
+  { icon: DoorOpen, title: "RFID-Haustierzugang", description: "Mikrochip-basierte Identifikation für selektive Zutrittssysteme." },
+  { icon: DoorClosed, title: "Intelligente Haustiertüren", description: "Türen, die so ausgelegt werden können, dass sie sich nur für erkannte Haustiere öffnen, mit App-Steuerung als Option." },
   { icon: UtensilsCrossed, title: "Intelligente Futterautomaten", description: "Geplante, portionsgesteuerte Fütterung mit Fernüberwachung." },
-  { icon: Droplets, title: "Automatische Wasserüberwachung", description: "Wasserstands- und Verbrauchssensoren, die ungewöhnliche Trinkmuster erkennen." },
-  { icon: Thermometer, title: "Temperaturüberwachung für Haustiere", description: "Kontinuierliche Temperaturerfassung zur frühzeitigen Erkennung möglicher Probleme." },
+  { icon: Droplets, title: "Automatische Wasserüberwachung", description: "Wasserstands- und Verbrauchserfassung, ausgelegt auf das Erkennen ungewöhnlicher Trinkmuster." },
+  { icon: Thermometer, title: "Temperaturüberwachung für Haustiere", description: "Temperaturerfassung, die in Wearables eingeplant werden kann; was sie zuverlässig messen kann, wird in der Entwicklung geprüft." },
   { icon: Bluetooth, title: "BLE-Haustiergeräte", description: "Stromsparende Bluetooth-Hardware für smartphone-verbundenes Zubehör." },
-  { icon: MapPin, title: "Systeme zur Standortbestimmung entlaufener Haustiere", description: "Standortverlauf und Alarme zur letzten bekannten Position, um die Wiederauffindung zu beschleunigen." },
+  { icon: MapPin, title: "Systeme zur Standortbestimmung entlaufener Haustiere", description: "Standortverlauf und Alarme zur letzten bekannten Position, ausgelegt darauf, die Wiederauffindung zu beschleunigen." },
 ];
 
 const deviceSpec = [
@@ -75,12 +75,12 @@ const scope: ServiceScopeCopy = {
     }
   ],
   "stages": [
-    "Discovery",
+    "Anforderungsanalyse",
     "Architektur",
     "Schaltplan & Leiterplatte",
     "Firmware",
     "Prototyp",
-    "Testing",
+    "Test",
     "Fertigungsvorbereitung"
   ],
   "tradeoffsHeading": "Technische Abwägungen",
@@ -151,8 +151,8 @@ export default function PetTechnologyPageDe() {
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Individuelle Entwicklung von Haustiergeräten</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Von GPS-Trackern bis zu intelligenten Futterautomaten entwickeln
-          wir die Hardware hinter modernen Pet-Tech-Produkten — für
-          Pet-Tech-Start-ups, Tierheime und Gerätehersteller gleichermaßen.
+          wir die Hardware hinter modernen Haustiertechnologie-Produkten – für
+          Start-ups der Haustiertechnologie, Tierheime und Gerätehersteller gleichermaßen.
         </p>
       </section>
 
@@ -162,18 +162,25 @@ export default function PetTechnologyPageDe() {
             <ServiceCard key={item.title} locale="de" {...item} />
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[var(--ts-gray)]">
+          Dies sind individuelle Engineering-Dienstleistungen: Wir entwickeln
+          Elektronik und Firmware nach Ihren Anforderungen. Keines der oben
+          genannten Geräte ist ein PawSync-Standardprodukt, und die Beispiele
+          auf unserer Projektseite sind Referenzdesigns.
+        </p>
       </section>
 
       <section className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <Eyebrow>Beispielaufbau</Eyebrow>
+            <Eyebrow>Beispielspezifikation</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
               Beispiel für ein smartes Haustiergerät
             </h2>
             <p className="mt-4 text-lg text-[var(--ts-gray)]">
               Eine repräsentative Spezifikation für einen vernetzten
-              Haustier-Tracker.
+              Haustier-Tracker – eine Veranschaulichung dessen, was entwickelt
+              werden kann, kein bestehendes Produkt.
             </p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] sm:p-8">
@@ -194,8 +201,8 @@ export default function PetTechnologyPageDe() {
       <ServiceScope id="pet-scope" copy={scope} />
 
       <CTABanner
-        heading="Ein Pet-Technology-Produkt entwickeln"
-        description="Vom Konzept bis zum Prototyp helfen wir Ihnen, die Elektronik hinter Ihrem nächsten Pet-Tech-Produkt zu entwickeln."
+        heading="Ein Produkt für Haustiere entwickeln"
+        description="Vom Konzept bis zum Prototyp helfen wir Ihnen, die Elektronik hinter Ihrem nächsten Haustiertechnologie-Produkt zu entwickeln."
         primaryLabel="Ihr Projekt besprechen"
         primaryHref="/de/contact"
         secondaryLabel="Alle Lösungen ansehen"

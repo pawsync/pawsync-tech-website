@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Fan } from "lucide-react";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 
@@ -29,7 +30,12 @@ export default function PoultryEnvironmentalMonitoring() {
           <p className="mt-4 text-lg text-[var(--ts-gray)]">
             Des capteurs répartis dans l&apos;ensemble du bâtiment alimentent
             une image unique et continuellement mise à jour des conditions
-            du bâtiment.
+            du bâtiment. La même approche s&apos;étend aux bâtiments d&apos;élevage, aux stocks
+            d&apos;aliments et aux autres bâtiments agricoles grâce à nos services de{" "}
+            <Link href="/fr/environmental-monitoring" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              surveillance environnementale
+            </Link>
+            .
           </p>
         </div>
 
@@ -37,7 +43,7 @@ export default function PoultryEnvironmentalMonitoring() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl">
             <Image
               src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?auto=format&fit=crop&w=800&q=75"
-              alt="Une poule dans un élevage avicole, représentant un environnement de troupeau surveillé"
+              alt="Gros plan sur une poule dans un élevage avicole — le type d'environnement que surveillent des capteurs sans fil de température, d'humidité et de qualité de l'air"
               fill
               sizes="(min-width: 1024px) 45vw, 92vw"
               className="object-cover"

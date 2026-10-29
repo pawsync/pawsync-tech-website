@@ -114,7 +114,7 @@ export default function SolutionsOverview() {
               Tier-Tracking
             </h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--ts-gray)]">
-              Echtzeit- oder periodische GPS-Ortungssysteme für Haustiere, Nutztiere und andere Tiere — ausgelegt auf Reichweite, Akkulaufzeit und Gelände.
+              Echtzeit- oder periodische GPS-Ortungssysteme für Haustiere, Nutztiere und andere Tiere – ausgelegt auf Reichweite, Akkulaufzeit und Gelände.
             </p>
             <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
               Mehr erfahren

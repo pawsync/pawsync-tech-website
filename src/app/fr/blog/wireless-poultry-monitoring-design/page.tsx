@@ -1,22 +1,32 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import ArticleServiceLink from "@/components/analytics/ArticleServiceLink";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Conception de surveillance avicole sans fil | PawSync",
   description:
-    "Placement des capteurs, choix du protocole et planification des passerelles pour un réseau de surveillance avicole sans fil — et pourquoi un capteur ne suffit pas.",
+    "Placement des capteurs, choix du protocole et planification des passerelles pour un réseau avicole sans fil — et pourquoi un capteur ne suffit pas.",
   alternates: buildAlternates("fr", "blog/wireless-poultry-monitoring-design"),
   openGraph: buildOpenGraph("fr", "blog/wireless-poultry-monitoring-design"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "fr",
+  route: "blog/wireless-poultry-monitoring-design",
+  headline: "Planifier un réseau de surveillance sans fil pour un bâtiment avicole",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleWirelessPoultryMonitoringFr() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb locale="fr" items={[{ label: "Blog", href: "/fr/blog" }, { label: "Surveillance avicole" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -24,6 +34,7 @@ export default function BlogArticleWirelessPoultryMonitoringFr() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           Planifier un réseau de surveillance sans fil pour un bâtiment avicole
         </h1>
+        <ArticleDate route="blog/wireless-poultry-monitoring-design" locale="fr" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Un seul capteur suspendu au milieu d&apos;un bâtiment avicole indique la condition moyenne à cet unique point — pas ce qui se passe au sol près des ventilateurs d&apos;entrée d&apos;air, ni près du faîte où la chaleur s&apos;accumule.
         </p>
@@ -86,7 +97,7 @@ export default function BlogArticleWirelessPoultryMonitoringFr() {
             relevés de capteurs périodiques (température et humidité n&apos;ont pas besoin d&apos;être
             mises à jour plusieurs fois par seconde) qu&apos;à une application gourmande en bande passante.
             Dans les situations de rénovation où un bâtiment dispose déjà d&apos;un bus de contrôle câblé,
-            un bus RS485/Modbus reste une solution de repli pratique et fiable, plutôt qu&apos;un système à
+            une communication RS-485/Modbus reste une solution de repli pratique et fiable, plutôt qu&apos;un système à
             remplacer pour le principe.
           </p>
           <p>
@@ -146,7 +157,7 @@ export default function BlogArticleWirelessPoultryMonitoringFr() {
             sur secteur, l&apos;infrastructure étant déjà en place. L&apos;alimentation par batterie ou
             batterie plus solaire devient pertinente pour les nœuds situés hors des circuits de câblage
             existants, ou pendant une phase de rénovation avant l&apos;installation d&apos;un câblage
-            permanent — auquel cas le budget énergétique du nœud suit la même logique générale de cyclage
+            permanent — auquel cas le budget énergétique du nœud suit la même logique générale de cycles de veille
             que tout design de capteur sur batterie, dimensionnée selon l&apos;intervalle de rapport
             réellement nécessaire à l&apos;application plutôt qu&apos;un fonctionnement continu par défaut.
           </p>

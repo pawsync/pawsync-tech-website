@@ -4,7 +4,7 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Avis de confidentialité | PawSync",
+  title: "Politique de confidentialité | PawSync",
   description: "Comment PawSync.tech traite les informations que vous transmettez via le formulaire de demande de projet.",
   alternates: buildAlternates("fr", "privacy"),
   openGraph: buildOpenGraph("fr", "privacy"),
@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 export default function PrivacyPageFr() {
   return (
     <>
-      <Breadcrumb locale="fr" items={[{ label: "Avis de confidentialité" }]} />
+      <Breadcrumb locale="fr" items={[{ label: "Politique de confidentialité" }]} />
 
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <Eyebrow>Avis de confidentialité</Eyebrow>
+        <Eyebrow>Politique de confidentialité</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-          Avis de confidentialité
+          Politique de confidentialité
         </h1>
         <p className="mt-3 text-sm text-[var(--ts-gray)]">Dernière mise à jour le 28 septembre 2026</p>
 
@@ -29,7 +29,7 @@ export default function PrivacyPageFr() {
             </h2>
             <p className="mt-2">
               PawSync.tech est un site indépendant exploité personnellement par Tahir Nazeer.
-              Il ne s&apos;agit pas d&apos;une société enregistrée, et cet avis ne le présente
+              Il ne s&apos;agit pas d&apos;une société enregistrée, et cette politique ne le présente
               pas comme telle.
             </p>
             <p className="mt-2">
@@ -44,11 +44,11 @@ export default function PrivacyPageFr() {
 
           <section>
             <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
-              Ce que couvre cet avis
+              Ce que couvre cette politique
             </h2>
             <p className="mt-2">
-              Cet avis décrit ce qu&apos;il advient des informations que vous transmettez via
-              le formulaire de demande de projet de ce site. Il ne couvre aucun autre canal de
+              Cette politique décrit ce qu&apos;il advient des informations que vous transmettez via
+              le formulaire de demande de projet de ce site. Elle ne couvre aucun autre canal de
               communication PawSync, sauf indication contraire.
             </p>
           </section>
@@ -72,7 +72,7 @@ export default function PrivacyPageFr() {
               Ce site n&apos;utilise pas de cookies, d&apos;analyse ni de scripts publicitaires
               qui lui soient propres — c&apos;est un fait vérifié directement dans le code du
               site. Ce que la plateforme d&apos;hébergement enregistre au niveau de
-              l&apos;infrastructure au-delà de cela ne peut pas être confirmé par cet avis pour
+              l&apos;infrastructure au-delà de cela ne peut pas être confirmé par cette politique pour
               l&apos;instant.
             </p>
           </section>
@@ -99,7 +99,7 @@ export default function PrivacyPageFr() {
             <p className="mt-2">
               La manière dont Netlify traite lui-même les données qu&apos;il stocke relève de
               la politique de confidentialité propre à Netlify, disponible sur{" "}
-              <span className="italic">netlify.com/privacy</span> — cet avis ne reformule pas
+              <span className="italic">netlify.com/privacy</span> — cette politique ne reformule pas
               les conditions de Netlify ; veuillez les consulter directement pour savoir
               comment Netlify traite lui-même les données stockées.
             </p>
@@ -125,7 +125,7 @@ export default function PrivacyPageFr() {
               correspondants sont conservés jusqu&apos;à 12 mois après le dernier échange avec
               vous, puis supprimés de Netlify et de la boîte e-mail. Il s&apos;agit d&apos;un
               processus <strong>manuel</strong> effectué par Tahir Nazeer, et non
-              d&apos;une suppression automatique ou imposée par un système — cet avis
+              d&apos;une suppression automatique ou imposée par un système — cette politique
               n&apos;affirme pas le contraire.
             </p>
           </section>
@@ -137,7 +137,7 @@ export default function PrivacyPageFr() {
             <p className="mt-2">
               Vous pouvez demander l&apos;accès à, la correction de, ou la suppression de vos
               informations transmises à tout moment en contactant contact@pawsync.tech ; ces
-              demandes sont traitées manuellement. Cet avis ne revendique aucune certification
+              demandes sont traitées manuellement. Cette politique ne revendique aucune certification
               ni conformité au RGPD ou à toute autre réglementation de confidentialité
               spécifique.
             </p>
@@ -148,7 +148,7 @@ export default function PrivacyPageFr() {
               Contact
             </h2>
             <p className="mt-2">
-              Les questions relatives à cet avis, ou les demandes concernant vos informations
+              Les questions relatives à cette politique, ou les demandes concernant vos informations
               transmises, peuvent être adressées à <strong>contact@pawsync.tech</strong>.
             </p>
           </section>

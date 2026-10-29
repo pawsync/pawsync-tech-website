@@ -36,6 +36,50 @@ export const routes = [
   "virtual-fencing",
 ] as const;
 
+export type Route = (typeof routes)[number];
+
+// Date each page's visible content last changed substantively, for the
+// sitemap's <lastmod> (PawSync local time, UTC+5). Google only trusts
+// lastmod when it tracks real content changes, so this replaces stamping
+// every URL with the build time. Each date was checked against the commit
+// diffs rather than taken from the latest commit: changes that only touched
+// styling, accessibility attributes, analytics, metadata titles, or added a
+// link are not counted, and neither are site-wide template changes that are
+// identical on every page (header, footer, the layout's WebSite/Organization
+// JSON-LD). Page-specific structured data, such as an article's BlogPosting,
+// does count. A per-locale object is used where translations changed on
+// different days. Update the entry when a page's content changes.
+export const routeLastModified: Record<Route, string | Record<Locale, string>> = {
+  "": "2026-10-02",
+  about: "2026-10-10",
+  "animal-tracking": "2026-10-27",
+  blog: "2026-10-09",
+  "blog/gnss-lora-vs-gnss-ltem": "2026-10-27",
+  "blog/low-power-animal-tracker-design": "2026-10-27",
+  "blog/pet-tracker-pcb-design": "2026-10-27",
+  "blog/smart-pet-feeder-engineering": "2026-10-27",
+  "blog/wireless-poultry-monitoring-design": "2026-10-27",
+  contact: "2026-10-02",
+  "custom-electronics": "2026-10-04",
+  "environmental-monitoring": { en: "2026-10-27", de: "2026-10-29", fr: "2026-10-29" },
+  "farm-automation": "2026-10-27",
+  "how-we-work": { en: "2026-09-16", de: "2026-09-18", fr: "2026-09-18" },
+  industries: "2026-10-02",
+  "livestock-technology": { en: "2026-10-27", de: "2026-10-29", fr: "2026-10-29" },
+  "pet-technology": "2026-10-27",
+  "poultry-farming": { en: "2026-10-27", de: "2026-10-29", fr: "2026-10-29" },
+  privacy: "2026-09-28",
+  projects: "2026-10-09",
+  "smart-feeding": "2026-10-27",
+  solutions: "2026-10-27",
+  "virtual-fencing": "2026-10-27",
+};
+
+export function lastModifiedFor(locale: Locale, route: Route): string {
+  const entry = routeLastModified[route];
+  return typeof entry === "string" ? entry : entry[locale];
+}
+
 export function localePrefix(locale: Locale): string {
   return locale === "en" ? "" : `/${locale}`;
 }

@@ -1,21 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import ArticleDate from "@/components/terrasense/ArticleDate";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking | PawSync",
   description:
-    "GNSS determines position; LoRa and LTE-M are separate communication layers that get that position off the device. A practical comparison for animal-tracking hardware.",
+    "GNSS finds the position; LoRa or LTE-M gets it off the device. A practical comparison of both links for animal-tracking hardware.",
   alternates: buildAlternates("en", "blog/gnss-lora-vs-gnss-ltem"),
   openGraph: buildOpenGraph("en", "blog/gnss-lora-vs-gnss-ltem"),
 };
 
+const articleJsonLd = blogPostingJsonLd({
+  locale: "en",
+  route: "blog/gnss-lora-vs-gnss-ltem",
+  headline: "GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking",
+  description: metadata.description ?? "",
+});
+
 export default function BlogArticleGnssConnectivity() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
       <Breadcrumb items={[{ label: "Blog", href: "/blog" }, { label: "GNSS + LoRa vs. GNSS + LTE-M" }]} />
 
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,6 +33,7 @@ export default function BlogArticleGnssConnectivity() {
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
           GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking
         </h1>
+        <ArticleDate route="blog/gnss-lora-vs-gnss-ltem" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           A note on two different problems that get conflated in animal-tracking marketing copy — and how to actually choose between them.
         </p>
@@ -118,7 +129,7 @@ export default function BlogArticleGnssConnectivity() {
         </div>
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
-          Have a specific range, terrain, or fleet-size question? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and we&apos;ll help you scope the right connectivity approach.
+          Planning a full herd system? See our <Link href="/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">remote livestock monitoring</Link> engineering services. Have a specific range, terrain, or fleet-size question? <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> and we&apos;ll help you scope the right connectivity approach.
         </p>
       </article>
 

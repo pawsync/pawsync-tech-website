@@ -38,7 +38,7 @@ const industries: { icon: LucideIcon; label: string; href?: string }[] = [
   { icon: PawPrint, label: "Horse Farms" },
   { icon: HeartPulse, label: "Veterinary Technology" },
   { icon: Home, label: "Animal Shelters" },
-  { icon: Building2, label: "Kennels" },
+  { icon: Building2, label: "Pet Boarding & Kennels" },
   { icon: TreePine, label: "Wildlife Research" },
   { icon: Sprout, label: "Smart Agriculture" },
   { icon: Warehouse, label: "Agricultural Equipment Companies" },
