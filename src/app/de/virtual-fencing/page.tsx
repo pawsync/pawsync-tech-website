@@ -32,7 +32,7 @@ const capabilities = [
   { icon: MapPinned, title: "Unterstützung mehrerer Zonen", description: "Weideflächen rotieren oder separate Zonen für verschiedene Gruppen verwalten." },
   { icon: Smartphone, title: "Fernkonfiguration", description: "Grenzen können so ausgelegt werden, dass sie sich vom Feld oder Büro aus aktualisieren lassen, ohne Vor-Ort-Einsatz." },
   { icon: Vibrate, title: "Akustische & haptische Signale", description: "Progressive Halsbandsignale können so ausgelegt werden, dass sie ein Tier warnen, bevor es die Grenze erreicht." },
-  { icon: ShieldAlert, title: "Grenzannäherungsalarme", description: "Frühwarnalarme können für Tiere ausgelegt werden, die sich schnell auf eine Grenze zubewegen." },
+  { icon: ShieldAlert, title: "Alarme bei Grenzannäherung", description: "Frühwarnalarme können für Tiere ausgelegt werden, die sich schnell auf eine Grenze zubewegen." },
   { icon: Users, title: "Mehrtier-Zonen", description: "Grenzen für einzelne Tiere oder ganze Herden gleichzeitig verwalten." },
   { icon: Settings2, title: "Tracking-Integration", description: "Lässt sich mit individuell entwickelter GPS-Tracking-Hardware zu einem System aus Standort und Grenze kombinieren." },
 ];
@@ -55,7 +55,7 @@ export default function VirtualFencingPageDe() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Geben Sie Tieren Freiraum innerhalb festgelegter Zonen, mit
-          Standortbewusstsein anstelle von — oder ergänzend zu —
+          GPS-Ortung anstelle von — oder ergänzend zu —
           traditioneller Einzäunung. Teil unserer Arbeit zur{" "}
           <Link href="/de/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Nutztier-Fernüberwachung

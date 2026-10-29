@@ -30,12 +30,12 @@ export const metadata: Metadata = {
 
 const solutions = [
   { icon: Satellite, title: "GPS-Haustier-Tracker", description: "Am Halsband montierte Standortverfolgung, ausgelegt auf die Wiederauffindung entlaufener Tiere und die tägliche Überwachung." },
-  { icon: Activity, title: "Aktivitäts-Tracker", description: "Bewegungs- und Bewegungserfassung, die ein Bild des täglichen Wohlbefindens ergibt." },
+  { icon: Activity, title: "Aktivitäts-Tracker", description: "Erfassung von Bewegung und Auslauf, die ein Bild des täglichen Wohlbefindens ergibt." },
   { icon: HeartPulse, title: "Gesundheitsüberwachung für Haustiere", description: "Tragbare Sensorik für Aktivitäts- und Ruhemuster, mit Temperaturerfassung, wo das Design es zulässt." },
   { icon: Radar, title: "Intelligente Halsbänder", description: "Multisensor-Halsbandhardware kann so ausgelegt werden, dass sie GPS, BLE und Aktivitätserfassung in einem Gerät vereint." },
-  { icon: MapPinned, title: "Virtuelle Haustier-Einzäunung", description: "GPS-basierte Grenzen, mit Alarmen, die melden sollen, wenn ein Haustier eine sichere Zone verlässt." },
+  { icon: MapPinned, title: "Virtuelle Haustier-Einzäunung", description: "GPS-basierte Grenzen, mit Alarmen, die so ausgelegt werden können, dass sie melden, wenn ein Haustier eine sichere Zone verlässt." },
   { icon: DoorOpen, title: "RFID-Haustierzugang", description: "Mikrochip-basierte Identifikation für selektive Zutrittssysteme." },
-  { icon: DoorClosed, title: "Intelligente Haustiertüren", description: "Türen, die sich nur für erkannte Haustiere öffnen sollen, mit App-Steuerung als Option." },
+  { icon: DoorClosed, title: "Intelligente Haustiertüren", description: "Türen, die so ausgelegt werden können, dass sie sich nur für erkannte Haustiere öffnen, mit App-Steuerung als Option." },
   { icon: UtensilsCrossed, title: "Intelligente Futterautomaten", description: "Geplante, portionsgesteuerte Fütterung mit Fernüberwachung." },
   { icon: Droplets, title: "Automatische Wasserüberwachung", description: "Wasserstands- und Verbrauchserfassung, ausgelegt auf das Erkennen ungewöhnlicher Trinkmuster." },
   { icon: Thermometer, title: "Temperaturüberwachung für Haustiere", description: "Temperaturerfassung, die in Wearables eingeplant werden kann; was sie zuverlässig messen kann, wird in der Entwicklung geprüft." },

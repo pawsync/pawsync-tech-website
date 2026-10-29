@@ -39,7 +39,7 @@ export default function PoultryConnectivity() {
             <strong className="text-white">LTE / Mobilfunk</strong> deckt abgelegene Standorte ohne vorhandene Netzinfrastruktur ab oder dient als Backhaul des Gateways in die Cloud, wo kein kabelgebundener Internetanschluss verfügbar ist.
           </p>
           <p>
-            <strong className="text-white">RS485 / Modbus</strong> (kabelgebunden) bleibt bei Nachrüstungen eine verlässliche Lösung, wenn ein Stall bereits ein Steuerungs-Backbone hat – kein Grund, es nur um seiner selbst willen zu ersetzen.
+            <strong className="text-white">RS485 / Modbus</strong> (kabelgebunden) bleibt bei Nachrüstungen eine verlässliche Lösung, wenn ein Stall bereits einen Feldbus für die Steuerung hat – kein Grund, es nur um seiner selbst willen zu ersetzen.
           </p>
         </div>
 

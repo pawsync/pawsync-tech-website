@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const capabilities = [
   { icon: Settings2, title: "Geplante Ausgabe", description: "Automatisierte Fütterung nach konfigurierbarem täglichem oder mehrfachem Zeitplan." },
   { icon: Gauge, title: "Portionskontrolle", description: "Ausgabemengen je Tier oder Gruppe, mit einer Genauigkeit, die während der Entwicklung kalibriert wird." },
-  { icon: Hash, title: "RFID-Tieridentifikation", description: "Erkennung einzelner Tiere, um die richtige Diät an das richtige Tier zu geben." },
+  { icon: Hash, title: "RFID-Tieridentifikation", description: "Erkennung einzelner Tiere, um die richtige Futterration an das richtige Tier auszugeben." },
   { icon: UtensilsCrossed, title: "Futterstandssensoren", description: "Füllstandserfassung kann so ausgelegt werden, dass sie warnt, bevor ein Behälter oder Silo leer ist." },
   { icon: ShieldAlert, title: "Stau- & Störungserkennung", description: "Die Störungserkennung kann so ausgelegt werden, dass sie alarmiert, wenn ein Motor, eine Förderschnecke oder eine Ausgabeleitung nicht korrekt funktioniert." },
   { icon: MonitorSmartphone, title: "Fernüberwachung", description: "Fütterungsstatus und -verlauf können über ein Smartphone- oder Web-Dashboard einsehbar gemacht werden, das für Ihr Projekt entwickelt wird." },
@@ -46,7 +46,7 @@ const flow = [
 ];
 
 const faqs = [
-  { question: "Kann das System einzelne Tiere identifizieren?", answer: "Ja — RFID-Identifikation kann eingeplant werden, damit das System unterschiedliche Diäten oder Portionen an verschiedene Tiere ausgibt, die dieselbe Fütterungsstation nutzen." },
+  { question: "Kann das System einzelne Tiere identifizieren?", answer: "Ja — RFID-Identifikation kann eingeplant werden, damit das System unterschiedliche Futterrationen oder Futtermengen an verschiedene Tiere ausgibt, die dieselbe Fütterungsstation nutzen." },
   { question: "Was passiert, wenn die Futterleitung sich staut?", answer: "Die Störungserkennung kann ein Motor- oder Ausgabeproblem melden und einen Alarm senden, statt stillschweigend nicht mehr zu füttern." },
   { question: "Kann ich Futterstände aus der Ferne überwachen?", answer: "Ja — Füllstandssensoren an Behältern oder Silos können so ausgelegt werden, dass sie an ein Dashboard melden, mit Alarmen bei niedrigem Futterstand nach Ihrem Zeitplan." },
 ];
