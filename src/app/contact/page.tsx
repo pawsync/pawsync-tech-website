@@ -91,7 +91,7 @@ export default function ContactPage() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[var(--ts-dark-green)] hover:underline"
+                  className="-my-1 inline-flex items-center gap-2 py-1 text-sm font-medium text-[var(--ts-dark-green)] hover:underline"
                 >
                   <InstagramIcon className="h-4 w-4" />
                   Follow PawSync on Instagram
