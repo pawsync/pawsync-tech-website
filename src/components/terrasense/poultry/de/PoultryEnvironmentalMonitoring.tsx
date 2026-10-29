@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Fan } from "lucide-react";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 
@@ -28,7 +29,11 @@ export default function PoultryEnvironmentalMonitoring() {
           </h2>
           <p className="mt-4 text-lg text-[var(--ts-gray)]">
             Im gesamten Betrieb verteilte Sensorknoten liefern ein
-            einheitliches, laufend aktualisiertes Bild der Stallbedingungen.
+            einheitliches, laufend aktualisiertes Bild der Stallbedingungen. Derselbe Sensoransatz lässt sich über unsere{" "}
+            <Link href="/de/environmental-monitoring" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              Umweltüberwachung
+            </Link>{" "}
+            auch auf Rinderställe, Futterlager und andere Hofgebäude übertragen.
           </p>
         </div>
 
@@ -36,7 +41,7 @@ export default function PoultryEnvironmentalMonitoring() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl">
             <Image
               src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?auto=format&fit=crop&w=800&q=75"
-              alt="Ein Huhn in einer Geflügelfarm-Umgebung, stellvertretend für eine überwachte Herdenumgebung"
+              alt="Nahaufnahme eines Huhns in einem Geflügelbetrieb – die Art von Herdenumgebung, die drahtlose Sensoren für Temperatur, Luftfeuchtigkeit und Luftqualität überwachen"
               fill
               sizes="(min-width: 1024px) 45vw, 92vw"
               className="object-cover"

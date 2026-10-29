@@ -10,7 +10,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking | PawSync",
   description:
-    "GNSS bestimmt die Position; LoRa und LTE-M sind separate Kommunikationsebenen, die diese Position vom Gerät übertragen. Ein praktischer Vergleich für Tier-Tracking-Hardware.",
+    "GNSS bestimmt die Position, LoRa oder LTE-M überträgt sie vom Gerät. Ein praktischer Vergleich beider Funkwege für Tier-Tracking-Hardware.",
   alternates: buildAlternates("de", "blog/gnss-lora-vs-gnss-ltem"),
   openGraph: buildOpenGraph("de", "blog/gnss-lora-vs-gnss-ltem"),
 };
@@ -136,6 +136,9 @@ export default function BlogArticleGnssConnectivityDe() {
         </div>
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
+          Planen Sie ein vollständiges Herdensystem? Sehen Sie sich unsere{" "}
+          Engineering-Leistungen zur{" "}
+          <Link href="/de/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Nutztier-Fernüberwachung</Link> an.{" "}
           Haben Sie eine konkrete Frage zu Reichweite, Gelände oder Flottengröße?{" "}
           <Link href="/de/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Kontaktieren Sie uns</Link>, und wir helfen Ihnen, den passenden Konnektivitätsansatz zu skizzieren.
         </p>

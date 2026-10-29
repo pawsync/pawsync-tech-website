@@ -14,7 +14,10 @@ import {
   HeartPulse,
   Hash,
   MapPinned,
+  MonitorSmartphone,
   Radar,
+  Radio,
+  RadioTower,
   Satellite,
   ThermometerSun,
   UtensilsCrossed,
@@ -31,9 +34,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "GPS-Tracking & Fernüberwachung für Nutztiere | PawSync",
+  title: "Fernüberwachung für Nutztiere & Rinder | PawSync",
   description:
-    "Individuell entwickelte GPS-Tracking-, virtuelle Einzäunungs-, RFID-Identifikations- und Fernüberwachungs-Hardware für Rinder, Schafe, Ziegen und Pferde.",
+    "Individuelle drahtlose Nutztierüberwachung für Rinder, Schafe, Ziegen und Pferde: GPS-Tracking, virtuelle Einzäunung, RFID und Aktivitätsüberwachung.",
   alternates: buildAlternates("de", "livestock-technology"),
   openGraph: buildOpenGraph("de", "livestock-technology"),
 };
@@ -56,6 +59,16 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
 ];
 
 const faqs: FAQItem[] = [
+  {
+    question: "Woraus besteht ein System zur Nutztierüberwachung?",
+    answer:
+      "Aus vier Ebenen, die jeweils projektbezogen ausgelegt werden: ein Gerät am Tier (Halsband oder Ohrmarke mit GNSS und bei Bedarf Bewegungssensorik), eine Funkverbindung (LoRa oder Mobilfunk), ein Gateway, das die Daten vor Ort empfängt und an die Cloud weiterleitet, sowie ein Web- oder Mobil-Dashboard mit konfigurierbaren Alarmen. Welche Ebenen Sie benötigen – und wie sie an bereits vorhandene Systeme anschließen –, klären wir in der Discovery-Phase.",
+  },
+  {
+    question: "Wie funktioniert die Fernüberwachung von Rindern?",
+    answer:
+      "Ein Halsband oder eine Ohrmarke an jedem Tier erfasst dessen GNSS-Position, und ein LoRa- oder Mobilfunkmodul meldet sie in einem auf die Akkulaufzeit abgestimmten Intervall an ein Gateway oder die Cloud. Alarme lassen sich für Ereignisse auslegen, etwa wenn ein Tier einen festgelegten Bereich verlässt oder ungewöhnlich inaktiv ist. Die passende Kombination hängt davon ab, wie weit sich Ihre Rinder bewegen und welche Netzabdeckung auf Ihren Flächen besteht.",
+  },
   {
     question: "GPS oder LoRa — was verfolgt meine Herde?",
     answer:
@@ -120,6 +133,13 @@ const alerts = [
   { icon: Battery, label: "Mögliches Akkuproblem am Gerät" },
 ];
 
+const systemLayers = [
+  { icon: Radar, title: "1. Am Tier", description: "Halsband oder Ohrmarke mit GNSS und bei Bedarf Bewegungssensorik." },
+  { icon: Radio, title: "2. Funkverbindung", description: "LoRa für große Reichweite bei geringem Energiebedarf oder Mobilfunk (LTE-M), wo die Abdeckung es erlaubt." },
+  { icon: RadioTower, title: "3. Gateway", description: "Empfängt die Daten vor Ort und leitet sie an die Cloud weiter; lokale Logik kann bei einem Ausfall weiter protokollieren." },
+  { icon: MonitorSmartphone, title: "4. Dashboard & Alarme", description: "Eine Web- oder Mobilansicht mit konfigurierbaren Alarmen, im Rahmen des Projekts nach Ihren Anforderungen entwickelt." },
+];
+
 export default function LivestockTechnologyPageDe() {
   return (
     <>
@@ -128,7 +148,7 @@ export default function LivestockTechnologyPageDe() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Nutztiertechnologie</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Vernetzte Nutztierüberwachung &amp; -management
+          Systeme zur Fernüberwachung &amp; zum Management von Nutztieren
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Wir entwickeln individuelle Hardware für Tracking,
@@ -161,7 +181,7 @@ export default function LivestockTechnologyPageDe() {
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>Lösungen</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-              Entwickelt für die gesamte Herde
+              Nutztierüberwachung für Rinder, Schafe, Ziegen &amp; Pferde
             </h2>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -179,10 +199,46 @@ export default function LivestockTechnologyPageDe() {
         </div>
       </section>
 
+      <section aria-labelledby="livestock-cattle-heading-de" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Rinder</Eyebrow>
+          <h2 id="livestock-cattle-heading-de" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+            Fernüberwachung von Rindern
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
+            Die Fernüberwachung von Rindern beginnt mit zwei Fragen: Wie weit
+            bewegen sich Ihre Rinder, und wie oft müssen Sie von ihnen hören? Auf
+            diese Antworten hin entwickeln wir individuelle Halsband- oder
+            Ohrmarken-Hardware – wir kombinieren GNSS-Ortung mit einer LoRa- oder
+            Mobilfunkverbindung zu einem Gateway oder in die Cloud und
+            dimensionieren den Akku passend zu Ihrem Meldeintervall. Wo es hilft,
+            auffällige Tiere zu erkennen, können Aktivitätsdaten ergänzt werden.
+            Jedes Design wird auf Ihre Herde, Ihr Gelände und Ihre Infrastruktur
+            zugeschnitten und vor der Produktion als Prototyp validiert.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="livestock-system-heading-de" className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <Eyebrow>Systemüberblick</Eyebrow>
+            <h2 id="livestock-system-heading-de" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+              So funktioniert ein System zur Nutztier-Fernüberwachung
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {systemLayers.map((item) => (
+              <ServiceCard key={item.title} locale="de" {...item} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="livestock-connectivity-heading-de" className="bg-[var(--ts-navy)] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 id="livestock-connectivity-heading-de" className="text-center text-sm font-semibold uppercase tracking-widest text-white/50">
-            Konnektivität, abgestimmt auf die Herde
+            Drahtlose Konnektivität für die Nutztier-Fernüberwachung
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {connectivity.map(({ icon: Icon, label }) => (

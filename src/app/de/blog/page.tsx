@@ -7,7 +7,7 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Blog | PawSync",
+  title: "Engineering-Blog: Tier-Tracking & Hof-IoT | PawSync",
   description:
     "Engineering-Notizen zu Tier-Tracking, Hof-IoT, virtueller Einzäunung, Funkprotokollen und dem Bau von Elektronik für den Außeneinsatz.",
   alternates: buildAlternates("de", "blog"),

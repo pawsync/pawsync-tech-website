@@ -16,11 +16,12 @@ import PoultryConnectivity from "@/components/terrasense/poultry/de/PoultryConne
 import PoultryCustomElectronics from "@/components/terrasense/poultry/de/PoultryCustomElectronics";
 import PoultryApplications from "@/components/terrasense/poultry/de/PoultryApplications";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Entwicklung drahtloser Geflügelüberwachung | PawSync",
+  title: "Drahtlose Geflügeltechnik & Fernüberwachung | PawSync",
   description:
-    "Individuelle Entwicklung drahtloser Geflügelüberwachung: Stallsensoren, Controller, LoRa-Anbindung und Prototypen für Geflügelbetriebe.",
+    "Drahtlose Geflügeltechnik: Sensoren für Temperatur, Luftfeuchtigkeit und Luftqualität mit LoRa-/WLAN-Anbindung und Fernüberwachung, von PawSync.",
   alternates: buildAlternates("de", "poultry-farming"),
   openGraph: buildOpenGraph("de", "poultry-farming"),
 };
@@ -98,9 +99,23 @@ const faqs = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function PoultryFarmingPageDe() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd) }} />
       <PoultryHero />
 
       <div className="bg-[var(--ts-bg)]">

@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Stromsparende Elektronik für Tier-Tracker im Außeneinsatz | PawSync",
+  title: "Stromsparende Elektronik für Outdoor-Tier-Tracker | PawSync",
   description:
     "Die Akkulaufzeit eines tragbaren Tier-Trackers ist ein Energiebudget-Problem. Die Techniken, die entscheiden, ob ein Gerät Tage oder Monate durchhält.",
   alternates: buildAlternates("de", "blog/low-power-animal-tracker-design"),
@@ -137,6 +137,9 @@ export default function BlogArticleLowPowerDesignDe() {
         </div>
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
+          Entwickeln Sie Tracker für eine ganze Herde statt für ein einzelnes Tier? Sehen Sie sich unsere{" "}
+          Engineering-Leistungen zur{" "}
+          <Link href="/de/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Nutztier-Fernüberwachung</Link> an.{" "}
           Arbeiten Sie an einem Akkulaufzeit-Ziel für Ihr eigenes Gerät?{" "}
           <Link href="/de/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Kontaktieren Sie uns</Link>, und wir helfen Ihnen, das Energiebudget zu skizzieren.
         </p>

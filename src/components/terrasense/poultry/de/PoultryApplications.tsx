@@ -26,7 +26,7 @@ export default function PoultryApplications() {
           <div className="relative aspect-[21/9] w-full sm:aspect-[3/1]">
             <Image
               src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?auto=format&fit=crop&w=1400&q=75"
-              alt="Ein Huhn in einer Geflügelfarm-Umgebung"
+              alt="Ein Huhn in einem Geflügelbetrieb – die Art von Betrieb, für den PawSync Überwachungs- und Automatisierungshardware entwickelt"
               fill
               sizes="100vw"
               className="object-cover"

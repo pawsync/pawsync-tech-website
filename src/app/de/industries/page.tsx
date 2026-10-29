@@ -25,7 +25,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Branchen | PawSync",
   description:
-    "PawSync entwickelt Elektronik für Pet-Tech-Unternehmen, Nutztier-, Milchvieh- und Geflügelbetriebe, Veterinärtechnologie, Wildtierforschung und AgriTech-Start-ups.",
+    "PawSync entwickelt Elektronik für Pet-Tech-Firmen, Nutztier-, Milchvieh- und Geflügelbetriebe, Veterinärtechnik, Wildtierforschung und AgriTech-Start-ups.",
   alternates: buildAlternates("de", "industries"),
   openGraph: buildOpenGraph("de", "industries"),
 };

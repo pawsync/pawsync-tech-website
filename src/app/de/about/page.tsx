@@ -18,7 +18,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Über uns | PawSync",
   description:
-    "PawSync verbindet Elektronik-Engineering, IoT-Konnektivität, Embedded-Systeme, Sensorik und Automatisierung zu praxisnaher Technologie für Tierhaltung und Landwirtschaft.",
+    "PawSync verbindet Elektronik, Embedded-Systeme, Sensorik und IoT-Konnektivität zu praxisnaher Technologie für Tierhaltung und Landwirtschaft.",
   alternates: buildAlternates("de", "about"),
   openGraph: buildOpenGraph("de", "about"),
 };

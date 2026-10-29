@@ -16,7 +16,7 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Umweltüberwachung | PawSync",
+  title: "Umweltsensoren für Hof & Stall | PawSync",
   description:
     "24/7-Umweltsensorik für Ställe, Geflügelhäuser, Gewächshäuser und Unterkünfte — Temperatur, Luftfeuchtigkeit, Luftqualität und mehr.",
   alternates: buildAlternates("de", "environmental-monitoring"),
@@ -30,7 +30,7 @@ const sensors = [
 
 const applications = [
   { icon: Warehouse, title: "Stallüberwachung", description: "Kontinuierliches Klimabewusstsein für Rinder- und Pferdeställe." },
-  { icon: PawPrint, title: "Geflügelstallüberwachung", description: "Enge Umwelttoleranzen, rund um die Uhr erfasst." },
+  { icon: PawPrint, title: "Geflügelstallüberwachung", description: "Enge Umwelttoleranzen, rund um die Uhr erfasst.", href: "/de/poultry-farming" },
   { icon: Flower2, title: "Gewächshausüberwachung", description: "Temperatur-, Feuchtigkeits- und Lichterfassung für kontrolliertes Wachstum." },
   { icon: Home, title: "Tierheimüberwachung", description: "Komfortable, sichere Bedingungen für untergebrachte und Pflegetiere." },
   { icon: Building2, title: "Futterlagerüberwachung", description: "Feuchtigkeits- und Temperaturerfassung zum Schutz gelagerten Futters." },
@@ -46,7 +46,7 @@ export default function EnvironmentalMonitoringPageDe() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Umweltüberwachung</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          24/7-Umweltüberwachung für den Hof
+          24/7-Umweltüberwachung für Höfe &amp; Ställe
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Sensornetzwerke, die Tag und Nacht über die Bedingungen wachen,

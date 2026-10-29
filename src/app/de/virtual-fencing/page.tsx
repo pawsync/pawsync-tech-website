@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   Bell,
   MapPinned,
@@ -20,7 +21,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Virtuelle Einzäunung | PawSync",
   description:
-    "GPS- und funkbasierte Systeme zur virtuellen Einzäunung, die Tieren Freiraum innerhalb festgelegter Zonen geben und die Abhängigkeit von traditioneller physischer Einzäunung verringern.",
+    "GPS- und funkbasierte virtuelle Einzäunung: Tiere bewegen sich frei in festgelegten Zonen, mit weniger Abhängigkeit von physischen Zäunen.",
   alternates: buildAlternates("de", "virtual-fencing"),
   openGraph: buildOpenGraph("de", "virtual-fencing"),
 };
@@ -55,7 +56,11 @@ export default function VirtualFencingPageDe() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Geben Sie Tieren Freiraum innerhalb festgelegter Zonen, mit
           Standortbewusstsein anstelle von — oder ergänzend zu —
-          traditioneller Einzäunung.
+          traditioneller Einzäunung. Teil unserer Arbeit zur{" "}
+          <Link href="/de/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            Nutztier-Fernüberwachung
+          </Link>
+          .
         </p>
       </section>
 

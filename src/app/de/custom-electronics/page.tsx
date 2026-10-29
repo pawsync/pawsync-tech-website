@@ -24,9 +24,9 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Kundenspezifische Elektronik & IoT-Produktentwicklung | PawSync",
+  title: "Individuelle Elektronik & IoT-Produktentwicklung | PawSync",
   description:
-    "Kundenspezifisches Leiterplattendesign, Embedded-Firmware und GPS-/LoRa-IoT-Engineering — von der Prototypentwicklung bis zur Serienproduktion für Tier- und Hoftechnologie.",
+    "Individuelles Leiterplattendesign, Embedded-Firmware und GPS-/LoRa-IoT-Engineering – vom Prototyp bis zur Serienfertigung für Tier- und Hoftechnologie.",
   alternates: buildAlternates("de", "custom-electronics"),
   openGraph: buildOpenGraph("de", "custom-electronics"),
 };
