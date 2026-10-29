@@ -30,10 +30,10 @@ export default function PoultryConnectivity() {
 
         <div className="mx-auto mt-10 grid max-w-4xl gap-4 text-sm leading-relaxed text-white/70 sm:grid-cols-2">
           <p>
-            <strong className="text-white">LoRa / LoRaWAN</strong> eignet sich in der Regel am besten für große Standorte oder mehrere Ställe: geringer Energiebedarf und große Reichweite, mit besserer Durchdringung von Metallverkleidungen als WLAN – gut geeignet für periodische Messwerte wie Temperatur und Luftfeuchtigkeit, weniger für Daten mit hoher Bandbreite.
+            <strong className="text-white">LoRa / LoRaWAN</strong> eignet sich in der Regel am besten für große Standorte oder mehrere Ställe: geringer Energiebedarf und große Reichweite, mit besserer Durchdringung von Metallverkleidungen als Wi-Fi – gut geeignet für periodische Messwerte wie Temperatur und Luftfeuchtigkeit, weniger für Daten mit hoher Bandbreite.
           </p>
           <p>
-            <strong className="text-white">WLAN (Wi-Fi)</strong> ist eine praktikable Wahl, wo ein Standort bereits Netzabdeckung hat und die Abstände zwischen Knoten und Gateway kurz sind – besonders wenn die Einbindung in vorhandene IT wichtiger ist als maximale Reichweite.
+            <strong className="text-white">Wi-Fi</strong> ist eine praktikable Wahl, wo ein Standort bereits Netzabdeckung hat und die Abstände zwischen Knoten und Gateway kurz sind – besonders wenn die Einbindung in vorhandene IT wichtiger ist als maximale Reichweite.
           </p>
           <p>
             <strong className="text-white">LTE / Mobilfunk</strong> deckt abgelegene Standorte ohne vorhandene Netzinfrastruktur ab oder dient als Backhaul des Gateways in die Cloud, wo kein kabelgebundener Internetanschluss verfügbar ist.

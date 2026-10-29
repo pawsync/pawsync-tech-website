@@ -21,7 +21,7 @@ import { serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Drahtlose Geflügeltechnik & Fernüberwachung | PawSync",
   description:
-    "Drahtlose Geflügeltechnik: Sensoren für Temperatur, Luftfeuchtigkeit und Luftqualität mit LoRa-/WLAN-Anbindung und Fernüberwachung, von PawSync.",
+    "Drahtlose Geflügeltechnik: Sensoren für Temperatur, Luftfeuchtigkeit und Luftqualität mit LoRa-/Wi-Fi-Anbindung und Fernüberwachung, von PawSync.",
   alternates: buildAlternates("de", "poultry-farming"),
   openGraph: buildOpenGraph("de", "poultry-farming"),
 };

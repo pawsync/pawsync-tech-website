@@ -96,7 +96,7 @@ const categories: Category[] = [
     icon: CloudRain,
     title: "Umweltüberwachung",
     description:
-      "Kontinuierliche Überwachung von Temperatur, Luftfeuchtigkeit, Luftqualität und Wasserbedingungen in Ställen, Verschlägen, Gewächshäusern und Lagerbereichen.",
+      "Kontinuierliche Überwachung von Temperatur, Luftfeuchtigkeit, Luftqualität und Wasserbedingungen in Ställen, Geflügelställen, Gewächshäusern und Lagerbereichen.",
     points: ["Multisensor-Abdeckung pro Standort", "Konfigurierbare Schwellenwertalarme", "Historische Umwelttrends", "Stall-, Gewächshaus- & unterkunftstaugliche Hardware"],
   },
   {

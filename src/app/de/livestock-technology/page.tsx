@@ -34,7 +34,7 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Fernüberwachung für Nutztiere & Rinder | PawSync",
+  title: "Fernüberwachung von Rindern & Weidetieren | PawSync",
   description:
     "Individuelle drahtlose Nutztierüberwachung für Rinder, Schafe, Ziegen und Pferde: GPS-Tracking, virtuelle Einzäunung, RFID und Aktivitätsüberwachung.",
   alternates: buildAlternates("de", "livestock-technology"),

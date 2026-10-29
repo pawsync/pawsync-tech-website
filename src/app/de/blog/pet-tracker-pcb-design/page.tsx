@@ -76,8 +76,8 @@ export default function BlogArticlePetTrackerPCBDe() {
               Verschlüsse am Halsband oder eines leitfähigen Gehäuses.
             </li>
             <li>
-              <strong>Körperbelastung.</strong> Eine Antenne, die nah am Körper eines Tieres montiert ist —
-              besonders bei größeren Tieren —, erfährt eine HF-Belastung durch diesen Körper, die ein
+              <strong>Einfluss des Tierkörpers.</strong> Eine Antenne, die nah am Körper eines Tieres montiert ist —
+              besonders bei größeren Tieren —, wird durch diesen Körper elektromagnetisch beeinflusst – ein Effekt, den ein
               Antennen-Datenblatt für den freien Raum nicht berücksichtigt. Das kann die Antenne verstimmen
               und sowohl Empfindlichkeit als auch Abstrahlwirkungsgrad verringern. In der Praxis hilft nur,
               die Antennenleistung in einer Montageposition und Ausrichtung nahe am tatsächlichen
