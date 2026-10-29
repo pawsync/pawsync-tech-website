@@ -21,7 +21,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Smart Animal & Farm Technology Solutions | PawSync",
   description:
-    "GPS animal tracking, virtual fencing, health monitoring, smart feeding, farm automation and environmental monitoring — custom IoT solutions for animals and farms.",
+    "GPS animal tracking, virtual fencing, smart feeding, farm automation and environmental monitoring: custom IoT solutions for animals and farms.",
   alternates: buildAlternates("en", "solutions"),
   openGraph: buildOpenGraph("en", "solutions"),
 };

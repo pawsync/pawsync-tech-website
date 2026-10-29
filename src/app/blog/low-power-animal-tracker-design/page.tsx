@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Designing Low-Power Electronics for Outdoor Animal Trackers | PawSync",
+  title: "Low-Power Electronics for Outdoor Animal Trackers | PawSync",
   description:
     "Battery life in a wearable animal tracker is a power-budget problem. The engineering techniques that determine whether a device lasts days or months.",
   alternates: buildAlternates("en", "blog/low-power-animal-tracker-design"),

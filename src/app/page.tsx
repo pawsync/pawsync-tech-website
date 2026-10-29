@@ -12,9 +12,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "PawSync | Smart Electronics for Animals, Farms & Connected Environments",
+  title: "Custom Electronics for Animals, Farms & IoT | PawSync",
   description:
-    "PawSync designs custom IoT hardware, GPS animal tracking, virtual fencing, smart feeding, livestock monitoring, farm automation and environmental sensors — from concept to production.",
+    "PawSync designs custom IoT hardware for animals and farms: GPS tracking, virtual fencing, smart feeding, livestock and environmental monitoring.",
   alternates: buildAlternates("en", ""),
   openGraph: buildOpenGraph("en", ""),
 };

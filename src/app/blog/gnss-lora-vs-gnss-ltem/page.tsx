@@ -10,7 +10,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking | PawSync",
   description:
-    "GNSS determines position; LoRa and LTE-M are separate communication layers that get that position off the device. A practical comparison for animal-tracking hardware.",
+    "GNSS finds the position; LoRa or LTE-M gets it off the device. A practical comparison of both links for animal-tracking hardware.",
   alternates: buildAlternates("en", "blog/gnss-lora-vs-gnss-ltem"),
   openGraph: buildOpenGraph("en", "blog/gnss-lora-vs-gnss-ltem"),
 };
