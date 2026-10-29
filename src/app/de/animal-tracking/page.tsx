@@ -39,7 +39,7 @@ const capabilities = [
 
 const faqs = [
   { question: "Können Tracking-Geräte ohne Mobilfunkabdeckung funktionieren?", answer: "Ja. Wir entwickeln Systeme rund um LoRa und andere stromsparende Weitverkehrsprotokolle für Standorte mit eingeschränktem oder fehlendem Mobilfunksignal und synchronisieren Daten, sobald ein Gateway oder eine Mobilfunkverbindung erreicht wird." },
-  { question: "Wie lange hält der Akku typischerweise?", answer: "Das hängt von Aktualisierungsfrequenz, Konnektivitätsart und Gehäusegröße ab — wir gestalten das Energiebudget nach Ihrem erforderlichen Meldeintervall und Duty-Cycle." },
+  { question: "Wie lange hält der Akku typischerweise?", answer: "Das hängt von Aktualisierungsfrequenz, Konnektivitätsart und Gehäusegröße ab – wir gestalten das Energiebudget nach Ihrem erforderlichen Meldeintervall und Duty-Cycle." },
   { question: "Können Sie mehrere Tierarten mit einer Plattform tracken?", answer: "Ja. Dashboard und Backend können so entwickelt werden, dass sie gemischte Flotten unterstützen (Haustiere, Nutztiere und Arbeitstiere), mit Gerätehardware, die je Tierart dimensioniert ist." },
 ];
 
@@ -70,7 +70,7 @@ const scope: ServiceScopeCopy = {
     }
   ],
   "stages": [
-    "Discovery",
+    "Anforderungsanalyse",
     "Energie- & Funkbudget",
     "Schaltplan & Leiterplatte",
     "Firmware",
@@ -142,7 +142,7 @@ export default function AnimalTrackingPageDe() {
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Individuelle GPS- & GNSS-Tracker-Entwicklung</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Wir entwickeln Echtzeit- oder periodische Ortungssysteme, die
-          Haustiere, Nutztiere und andere Tiere auffindbar halten — auf dem
+          Haustiere, Nutztiere und andere Tiere auffindbar halten – auf dem
           Betrieb oder weit darüber hinaus.
         </p>
       </section>

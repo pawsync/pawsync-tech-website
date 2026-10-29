@@ -47,7 +47,7 @@ export default function PoultrySolutionsOverview() {
           Vernetzte Technologie für den gesamten Geflügelbetrieb
         </h2>
         <p className="mt-4 text-lg text-[var(--ts-gray)]">
-          Fünfzehn Problemfelder, ein Engineering-Team — Hardware, Firmware
+          Fünfzehn Problemfelder, ein Engineering-Team – Hardware, Firmware
           und Konnektivität, zugeschnitten auf Ihren Betrieb.
         </p>
       </div>

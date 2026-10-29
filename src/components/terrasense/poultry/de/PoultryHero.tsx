@@ -109,7 +109,7 @@ export default function PoultryHero() {
 
             <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
               <Wind className="h-3.5 w-3.5 text-[var(--ts-accent)]" aria-hidden="true" />
-              Sensor-Layout — Beispielansicht
+              Sensor-Layout – Beispielansicht
             </div>
           </div>
 

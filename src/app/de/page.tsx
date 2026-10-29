@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "PawSync — Individuelle Elektronik- und IoT-Entwicklung für Tiere & Höfe",
+        alt: "PawSync – Individuelle Elektronik- und IoT-Entwicklung für Tiere & Höfe",
       },
     ],
   },
@@ -48,8 +48,8 @@ export default function TerraSenseHomePageDe() {
       <CapabilitiesStrip />
       <CTABanner
         eyebrow="Lassen Sie uns etwas Zuverlässiges bauen"
-        heading="Bereit, Ihr Animal-Tech- oder AgriTech-Produkt zu entwickeln?"
-        description="Von vernetzten Trackern und intelligenten Futterautomaten bis zu Umweltüberwachung, Bewässerung und vollständiger Hofautomatisierung — PawSync hilft dabei, Produktideen in zuverlässige vernetzte Hardware zu verwandeln."
+        heading="Bereit, Ihr Tiertechnologie- oder AgriTech-Produkt zu entwickeln?"
+        description="Von vernetzten Trackern und intelligenten Futterautomaten bis zu Umweltüberwachung, Bewässerung und vollständiger Hofautomatisierung – PawSync hilft dabei, Produktideen in zuverlässige vernetzte Hardware zu verwandeln."
         primaryLabel="Projekt starten"
         primaryHref="/de/contact"
         secondaryLabel="Unsere Kompetenzen entdecken"

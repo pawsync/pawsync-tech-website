@@ -62,7 +62,7 @@ const faqs: FAQItem[] = [
   {
     question: "Woraus besteht ein System zur Nutztierüberwachung?",
     answer:
-      "Aus vier Ebenen, die jeweils projektbezogen ausgelegt werden: ein Gerät am Tier (Halsband oder Ohrmarke mit GNSS und bei Bedarf Bewegungssensorik), eine Funkverbindung (LoRa oder Mobilfunk), ein Gateway, das die Daten vor Ort empfängt und an die Cloud weiterleitet, sowie ein Web- oder Mobil-Dashboard mit konfigurierbaren Alarmen. Welche Ebenen Sie benötigen – und wie sie an bereits vorhandene Systeme anschließen –, klären wir in der Discovery-Phase.",
+      "Aus vier Ebenen, die jeweils projektbezogen ausgelegt werden: ein Gerät am Tier (Halsband oder Ohrmarke mit GNSS und bei Bedarf Bewegungssensorik), eine Funkverbindung (LoRa oder Mobilfunk), ein Gateway, das die Daten vor Ort empfängt und an die Cloud weiterleitet, sowie ein Web- oder Mobil-Dashboard mit konfigurierbaren Alarmen. Welche Ebenen Sie benötigen – und wie sie an bereits vorhandene Systeme anschließen –, klären wir in der Anforderungsanalyse.",
   },
   {
     question: "Wie funktioniert die Fernüberwachung von Rindern?",
@@ -70,19 +70,19 @@ const faqs: FAQItem[] = [
       "Ein Halsband oder eine Ohrmarke an jedem Tier erfasst dessen GNSS-Position, und ein LoRa- oder Mobilfunkmodul meldet sie in einem auf die Akkulaufzeit abgestimmten Intervall an ein Gateway oder die Cloud. Alarme lassen sich für Ereignisse auslegen, etwa wenn ein Tier einen festgelegten Bereich verlässt oder ungewöhnlich inaktiv ist. Die passende Kombination hängt davon ab, wie weit sich Ihre Rinder bewegen und welche Netzabdeckung auf Ihren Flächen besteht.",
   },
   {
-    question: "GPS oder LoRa — was verfolgt meine Herde?",
+    question: "GPS oder LoRa – was verfolgt meine Herde?",
     answer:
-      "GPS/GNSS bestimmt die Position eines Geräts; die Position wird dadurch allein nicht übertragen. Ein zweites Funkmodul — meist LoRa oder Mobilfunk — sendet die Standortdaten an ein Gateway oder die Cloud. Welche Lösung passt, hängt davon ab, wie weit sich Ihre Tiere im Verhältnis zu vorhandener Gateway-Infrastruktur bewegen.",
+      "GPS/GNSS bestimmt die Position eines Geräts; die Position wird dadurch allein nicht übertragen. Ein zweites Funkmodul – meist LoRa oder Mobilfunk – sendet die Standortdaten an ein Gateway oder die Cloud. Welche Lösung passt, hängt davon ab, wie weit sich Ihre Tiere im Verhältnis zu vorhandener Gateway-Infrastruktur bewegen.",
   },
   {
     question: "Funktioniert das System weiter, wenn Internet oder Cloud-Verbindung ausfallen?",
     answer:
-      "Lokale Steuerungslogik kann so ausgelegt werden, dass sie vor Ort weiter protokolliert und Alarme auslöst, während Daten nach Wiederherstellung der Verbindung synchronisiert werden — diese Entscheidung treffen wir gemeinsam mit Ihnen danach, wie wichtig eine durchgehende Sichtbarkeit für Ihren Betrieb ist.",
+      "Lokale Steuerungslogik kann so ausgelegt werden, dass sie vor Ort weiter protokolliert und Alarme auslöst, während Daten nach Wiederherstellung der Verbindung synchronisiert werden – diese Entscheidung treffen wir gemeinsam mit Ihnen danach, wie wichtig eine durchgehende Sichtbarkeit für Ihren Betrieb ist.",
   },
   {
     question: "Was bestimmt Akkulaufzeit und Meldeintervall?",
     answer:
-      "Die Akkulaufzeit steht in einem Zielkonflikt zur Melderate — häufigere Updates verbrauchen mehr Energie. Wir dimensionieren Akku und Meldeintervall (sowie Techniken wie bewegungsgesteuertes Aufwachen) auf Ihre gewünschte Laufzeit zwischen Ladungen oder Wechseln, statt vorab eine feste Zahl zu versprechen.",
+      "Die Akkulaufzeit steht in einem Zielkonflikt zur Melderate – häufigere Updates verbrauchen mehr Energie. Wir dimensionieren Akku und Meldeintervall (sowie Techniken wie bewegungsgesteuertes Aufwachen) auf Ihre gewünschte Laufzeit zwischen Ladungen oder Wechseln, statt vorab eine feste Zahl zu versprechen.",
   },
   {
     question: "Welche Wartung benötigen Tracking-Geräte?",
@@ -92,17 +92,17 @@ const faqs: FAQItem[] = [
   {
     question: "Hält virtuelle Einzäunung Tiere physisch zurück?",
     answer:
-      "Nein — sie warnt das Tier, wenn es sich einer Grenze nähert, hält es aber nicht physisch zurück wie ein Zaun. Ob sie den Bedarf an physischer Einzäunung verringert, hängt von Gelände, Tierart und örtlichen Vorgaben ab, die wir gemeinsam mit Ihnen bewerten.",
+      "Nein – sie warnt das Tier, wenn es sich einer Grenze nähert, hält es aber nicht physisch zurück wie ein Zaun. Ob sie den Bedarf an physischer Einzäunung verringert, hängt von Gelände, Tierart und örtlichen Vorgaben ab, die wir gemeinsam mit Ihnen bewerten.",
   },
   {
     question: "Welche Informationen benötigen Sie von uns für den Projektstart?",
     answer:
-      "In der Regel: die Tiere und Herdengröße, das abzudeckende Gelände, vorhandene Konnektivität oder Gateway-Infrastruktur (falls vorhanden), Ihre Ziel-Akkulaufzeit und Melderate sowie jede Ausrüstung, mit der das System zusammenarbeiten soll. Den Rest klären wir gemeinsam in der Discovery-Phase.",
+      "In der Regel: die Tiere und Herdengröße, das abzudeckende Gelände, vorhandene Konnektivität oder Gateway-Infrastruktur (falls vorhanden), Ihre Ziel-Akkulaufzeit und Melderate sowie jede Ausrüstung, mit der das System zusammenarbeiten soll. Den Rest klären wir gemeinsam in der Anforderungsanalyse.",
   },
   {
     question: "Wie wird aus einer Idee ein funktionsfähiges Gerät?",
     answer:
-      "Zunächst Discovery und Architektur (Ihre Tiere, Umgebung und Anforderungen), dann Schaltplan- und Leiterplattenentwicklung, Firmware, ein Prototyp zum Testen unter echten Bedingungen und schließlich die Fertigungsvorbereitung nach erfolgreicher Validierung.",
+      "Zunächst Anforderungsanalyse und Architektur (Ihre Tiere, Umgebung und Anforderungen), dann Schaltplan- und Leiterplattenentwicklung, Firmware, ein Prototyp zum Testen unter echten Bedingungen und schließlich die Fertigungsvorbereitung nach erfolgreicher Validierung.",
   },
 ];
 
@@ -249,8 +249,8 @@ export default function LivestockTechnologyPageDe() {
             ))}
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-relaxed text-white/50">
-            GPS/GNSS bestimmt den Standort; ein separates Funkmodul — LoRa
-            oder Mobilfunk — meldet ihn an ein Gateway oder die Cloud. Reichweite,
+            GPS/GNSS bestimmt den Standort; ein separates Funkmodul – LoRa
+            oder Mobilfunk – meldet ihn an ein Gateway oder die Cloud. Reichweite,
             Energiebudget, Meldeintervall und vorhandene Gateway-Infrastruktur
             fließen alle in die passende Kombination ein. Siehe unseren
             Vergleich{" "}
@@ -269,7 +269,7 @@ export default function LivestockTechnologyPageDe() {
             Von der Idee zum funktionsfähigen Gerät
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
-            Zuerst Discovery und Architektur, dann Schaltplan- und
+            Zuerst Anforderungsanalyse und Architektur, dann Schaltplan- und
             Leiterplattenentwicklung, Firmware, ein Prototyp zum Testen unter
             echten Bedingungen und schließlich die Fertigungsvorbereitung nach
             erfolgreicher Validierung. Siehe auch unseren Beitrag zum{" "}

@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Projekte | PawSync",
   description:
-    "Referenzdesigns und Konzeptarbeiten von PawSync — GPS-Tracker, virtuelle Einzäunung, Hofsensoren und IoT-Gateways.",
+    "Referenzdesigns und Konzeptarbeiten von PawSync – GPS-Tracker, virtuelle Einzäunung, Hofsensoren und IoT-Gateways.",
   alternates: buildAlternates("de", "projects"),
   openGraph: buildOpenGraph("de", "projects"),
 };
@@ -136,7 +136,7 @@ export default function ProjectsPageDe() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Diese Karten veranschaulichen die Art von Hardware- und
-          Firmware-Problemen, für die wir entwickeln — Haustiertechnologie,
+          Firmware-Problemen, für die wir entwickeln – Haustiertechnologie,
           Nutztierhaltung und Hofautomatisierung. Es handelt sich um
           technische Referenzdesigns und Konzeptarbeiten, nicht um
           abgeschlossene Kundenprojekte, ausgelieferte Produkte oder
@@ -155,7 +155,7 @@ export default function ProjectsPageDe() {
 
       <CTABanner
         heading="Haben Sie ein ähnliches Problem zu lösen?"
-        description="Erzählen Sie uns von Ihren Tieren, Ihrer Umgebung und Ihren Anforderungen — wir skizzieren gemeinsam, was zur Umsetzung nötig ist."
+        description="Erzählen Sie uns von Ihren Tieren, Ihrer Umgebung und Ihren Anforderungen – wir skizzieren gemeinsam, was zur Umsetzung nötig ist."
         primaryLabel="Projekt starten"
         primaryHref="/de/contact"
       />

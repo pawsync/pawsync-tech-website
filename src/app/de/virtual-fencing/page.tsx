@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 };
 
 const capabilities = [
-  { icon: Radar, title: "Individuelle, anpassbare Grenzen", description: "Zonen können so ausgelegt werden, dass sie in einer Web- oder mobilen Oberfläche gezeichnet und aktualisiert werden — keine Kabel, keine Pfosten zum Versetzen." },
+  { icon: Radar, title: "Individuelle, anpassbare Grenzen", description: "Zonen können so ausgelegt werden, dass sie in einer Web- oder mobilen Oberfläche gezeichnet und aktualisiert werden – keine Kabel, keine Pfosten zum Versetzen." },
   { icon: Bell, title: "Bewegungsalarme", description: "Alarme können so ausgelegt werden, dass sie melden, wenn sich ein Tier einer Grenze nähert oder sie überschreitet." },
   { icon: MapPinned, title: "Unterstützung mehrerer Zonen", description: "Weideflächen rotieren oder separate Zonen für verschiedene Gruppen verwalten." },
   { icon: Smartphone, title: "Fernkonfiguration", description: "Grenzen können so ausgelegt werden, dass sie sich vom Feld oder Büro aus aktualisieren lassen, ohne Vor-Ort-Einsatz." },
@@ -38,7 +38,7 @@ const capabilities = [
 ];
 
 const faqs = [
-  { question: "Ersetzt die virtuelle Einzäunung physische Zäune vollständig?", answer: "Sie kann die Abhängigkeit von physischer Einzäunung in vielen Umgebungen verringern, aber der richtige Ansatz hängt von Gelände, Tierart und örtlichen Vorschriften ab — wir helfen Ihnen zu beurteilen, was passt." },
+  { question: "Ersetzt die virtuelle Einzäunung physische Zäune vollständig?", answer: "Sie kann die Abhängigkeit von physischer Einzäunung in vielen Umgebungen verringern, aber der richtige Ansatz hängt von Gelände, Tierart und örtlichen Vorschriften ab – wir helfen Ihnen zu beurteilen, was passt." },
   { question: "Wie lernt ein Tier die Grenze kennen?", answer: "Halsbänder verwenden typischerweise ein progressives Audiosignal und in manchen Systemen zusätzlich einen kurzen, sanften Impuls, der dem Tier die Möglichkeit gibt, umzukehren, bevor es die Grenze erreicht." },
   { question: "Können Zonen aus der Ferne geändert werden?", answer: "Das ist möglich: Änderungen der Grenzen über eine Web- oder mobile Oberfläche können eingeplant werden, sodass keine Hardware versetzt werden muss." },
 ];
@@ -55,7 +55,7 @@ export default function VirtualFencingPageDe() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Geben Sie Tieren Freiraum innerhalb festgelegter Zonen, mit
-          GPS-Ortung anstelle von — oder ergänzend zu —
+          GPS-Ortung anstelle von – oder ergänzend zu –
           traditioneller Einzäunung. Teil unserer Arbeit zur{" "}
           <Link href="/de/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Nutztier-Fernüberwachung

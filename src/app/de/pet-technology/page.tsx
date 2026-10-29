@@ -23,7 +23,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Entwicklung individueller Haustiergeräte | PawSync",
   description:
-    "Individuelle Entwicklung von Haustiergeräten für Pet-Tech-Teams: Wearables, Halsbänder und Tracker mit Leiterplatte, Firmware und Prototyp.",
+    "Individuelle Entwicklung von Haustiergeräten für Teams in der Haustiertechnologie: Wearables, Halsbänder und Tracker mit Leiterplatte, Firmware und Prototyp.",
   alternates: buildAlternates("de", "pet-technology"),
   openGraph: buildOpenGraph("de", "pet-technology"),
 };
@@ -75,7 +75,7 @@ const scope: ServiceScopeCopy = {
     }
   ],
   "stages": [
-    "Discovery",
+    "Anforderungsanalyse",
     "Architektur",
     "Schaltplan & Leiterplatte",
     "Firmware",
@@ -151,8 +151,8 @@ export default function PetTechnologyPageDe() {
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Individuelle Entwicklung von Haustiergeräten</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Von GPS-Trackern bis zu intelligenten Futterautomaten entwickeln
-          wir die Hardware hinter modernen Pet-Tech-Produkten — für
-          Pet-Tech-Start-ups, Tierheime und Gerätehersteller gleichermaßen.
+          wir die Hardware hinter modernen Haustiertechnologie-Produkten – für
+          Start-ups der Haustiertechnologie, Tierheime und Gerätehersteller gleichermaßen.
         </p>
       </section>
 
@@ -179,7 +179,7 @@ export default function PetTechnologyPageDe() {
             </h2>
             <p className="mt-4 text-lg text-[var(--ts-gray)]">
               Eine repräsentative Spezifikation für einen vernetzten
-              Haustier-Tracker — eine Veranschaulichung dessen, was entwickelt
+              Haustier-Tracker – eine Veranschaulichung dessen, was entwickelt
               werden kann, kein bestehendes Produkt.
             </p>
           </div>
@@ -202,7 +202,7 @@ export default function PetTechnologyPageDe() {
 
       <CTABanner
         heading="Ein Produkt für Haustiere entwickeln"
-        description="Vom Konzept bis zum Prototyp helfen wir Ihnen, die Elektronik hinter Ihrem nächsten Pet-Tech-Produkt zu entwickeln."
+        description="Vom Konzept bis zum Prototyp helfen wir Ihnen, die Elektronik hinter Ihrem nächsten Haustiertechnologie-Produkt zu entwickeln."
         primaryLabel="Ihr Projekt besprechen"
         primaryHref="/de/contact"
         secondaryLabel="Alle Lösungen ansehen"

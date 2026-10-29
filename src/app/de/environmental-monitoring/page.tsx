@@ -18,7 +18,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Umweltsensoren für Hof & Stall | PawSync",
   description:
-    "24/7-Umweltsensorik für Ställe, Geflügelhäuser, Gewächshäuser und Unterkünfte — Temperatur, Luftfeuchtigkeit, Luftqualität und mehr.",
+    "24/7-Umweltsensorik für Ställe, Geflügelhäuser, Gewächshäuser und Unterkünfte – Temperatur, Luftfeuchtigkeit, Luftqualität und mehr.",
   alternates: buildAlternates("de", "environmental-monitoring"),
   openGraph: buildOpenGraph("de", "environmental-monitoring"),
 };

@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Hofautomatisierung | PawSync",
   description:
-    "Individuelle Steuerungssysteme für Klima, Wasser, Fütterung und Infrastruktur — mit Smartphone- und Web-Dashboard-Steuerung nach Ihren Anforderungen.",
+    "Individuelle Steuerungssysteme für Klima, Wasser, Fütterung und Infrastruktur – mit Smartphone- und Web-Dashboard-Steuerung nach Ihren Anforderungen.",
   alternates: buildAlternates("de", "farm-automation"),
   openGraph: buildOpenGraph("de", "farm-automation"),
 };
@@ -53,7 +53,7 @@ export default function FarmAutomationPageDe() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Wir entwickeln vernetzte Steuerungssysteme für Klima, Wasser,
-          Fütterung und Infrastruktur — mit Steuerung per Smartphone oder
+          Fütterung und Infrastruktur – mit Steuerung per Smartphone oder
           Web-Dashboard nach Ihren Anforderungen.
         </p>
       </section>
@@ -99,7 +99,7 @@ export default function FarmAutomationPageDe() {
           </h2>
           <p className="mt-4 text-lg text-white/70">
             Controller können so ausgelegt werden, dass sie nach von Ihnen
-            festgelegten Regeln laufen — ohne Cloud-Abhängigkeit für
+            festgelegten Regeln laufen – ohne Cloud-Abhängigkeit für
             kritische Aktionen.
           </p>
           <div className="mx-auto mt-8 flex max-w-lg items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 text-left font-mono text-sm text-[var(--ts-accent)]">
@@ -114,7 +114,7 @@ export default function FarmAutomationPageDe() {
       </section>
 
       <CTABanner
-        heading="Benötigen Sie ein individuelles Hof-IoT-System?"
+        heading="Benötigen Sie ein individuelles Agrar-IoT-System?"
         description="Lassen Sie uns Hardware rund um Ihre Umgebung, Tiere und betrieblichen Anforderungen entwickeln."
         primaryLabel="Projekt starten"
         primaryHref="/de/contact"

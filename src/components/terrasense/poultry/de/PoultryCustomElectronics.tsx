@@ -22,7 +22,7 @@ export default function PoultryCustomElectronics() {
         <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
           PawSync kann individuelle Elektronik und IoT-Hardware rund um
           Ihren Geflügelbetrieb oder Ihre kommerzielle Produktidee
-          entwickeln — mit demselben Entwicklungsprozess, den wir auch für{" "}
+          entwickeln – mit demselben Entwicklungsprozess, den wir auch für{" "}
           <Link href="/de/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Nutztier-Tracking-Hardware
           </Link>{" "}

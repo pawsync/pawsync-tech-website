@@ -46,7 +46,7 @@ export default function PoultryConnectivity() {
         <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-white/50">
           Die Konnektivität wird nach Betriebsgröße, Gebäudelayout,
           Internetverfügbarkeit, benötigter Reichweite, Stromverfügbarkeit
-          und Datenanforderungen ausgewählt — nicht als pauschale
+          und Datenanforderungen ausgewählt – nicht als pauschale
           Standardlösung angewendet.
           Eine ausführlichere technische Darstellung zu Protokollwahl,
           Sensorplatzierung und Gateway-Planung finden Sie in unserem Beitrag

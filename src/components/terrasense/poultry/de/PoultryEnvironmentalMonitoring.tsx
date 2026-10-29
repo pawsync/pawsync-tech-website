@@ -48,7 +48,7 @@ export default function PoultryEnvironmentalMonitoring() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--ts-navy)]/40 via-transparent to-transparent" />
             <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/40 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
-              Sensorabdeckung — Beispiellayout
+              Sensorabdeckung – Beispiellayout
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export default function PoultryEnvironmentalMonitoring() {
             </dl>
             <p className="mt-5 flex items-center gap-2 border-t border-white/10 pt-4 text-xs text-white/60">
               <Fan className="h-3.5 w-3.5" aria-hidden="true" />
-              Beispiel-Dashboard zur Veranschaulichung — Werte sind je Stall konfigurierbar.
+              Beispiel-Dashboard zur Veranschaulichung – Werte sind je Stall konfigurierbar.
             </p>
           </div>
         </div>

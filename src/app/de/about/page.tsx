@@ -35,7 +35,7 @@ const focusAreas = [
 ];
 
 const approach = [
-  "Praxisnahes Engineering — Lösungen im Maßstab des Problems, nicht überkonstruiert",
+  "Praxisnahes Engineering – Lösungen im Maßstab des Problems, nicht überkonstruiert",
   "Individuelle Lösungen, zugeschnitten auf Ihre Tiere und Umgebung",
   "Prototypvalidierung vor jeder Produktionsentscheidung",
   "Produktionsorientiertes Design ab dem ersten Schaltplan",
@@ -55,7 +55,7 @@ export default function AboutPageDe() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           PawSync verbindet Elektronik-Engineering, IoT-Konnektivität,
           Embedded-Systeme, Sensorik und Automatisierung zu praxisnaher
-          Technologie für Tierhaltung und Landwirtschaft — von einem
+          Technologie für Tierhaltung und Landwirtschaft – von einem
           einzelnen Tracking-Halsband bis zu einem vollständigen
           Hofüberwachungsnetzwerk.
         </p>
@@ -88,7 +88,7 @@ export default function AboutPageDe() {
           </h2>
           <p className="mt-2 text-[var(--ts-gray)]">
             PawSync.tech wird unabhängig und persönlich von Tahir Nazeer
-            betrieben — es handelt sich nicht um ein eingetragenes
+            betrieben – es handelt sich nicht um ein eingetragenes
             Unternehmen. Die Engineering-Arbeit an Hardware und Firmware von
             PawSync wird Pak-EL LAB zugeschrieben, separat in der Fußzeile
             der Website genannt. Diese Nennung spiegelt eine

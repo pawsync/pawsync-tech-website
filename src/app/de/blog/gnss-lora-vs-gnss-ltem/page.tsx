@@ -35,7 +35,7 @@ export default function BlogArticleGnssConnectivityDe() {
         </h1>
         <ArticleDate route="blog/gnss-lora-vs-gnss-ltem" locale="de" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
-          Eine Klarstellung zu zwei unterschiedlichen Problemen, die in der Marketingsprache für Tier-Tracking oft vermischt werden — und wie man wirklich zwischen ihnen wählt.
+          Eine Klarstellung zu zwei unterschiedlichen Problemen, die in der Marketingsprache für Tier-Tracking oft vermischt werden – und wie man wirklich zwischen ihnen wählt.
         </p>
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
@@ -44,11 +44,11 @@ export default function BlogArticleGnssConnectivityDe() {
             vergleicht zwei Dinge, die völlig unterschiedliche Probleme lösen. GNSS (GPS, Galileo, GLONASS
             und BeiDou sind alle GNSS-Konstellationen) bestimmt, <em>wo</em> sich ein Gerät befindet, indem es
             Zeitsignale von Satelliten empfängt und daraus eine Positionsbestimmung berechnet. Dabei wird
-            nichts an irgendjemanden gesendet — es ist ein reiner Empfangsvorgang, der vollständig auf dem
+            nichts an irgendjemanden gesendet – es ist ein reiner Empfangsvorgang, der vollständig auf dem
             Gerät stattfindet. LoRa hingegen ist ein Funkmodul für die Kommunikation: seine Aufgabe ist es,
             diese Positionsbestimmung (oder andere Daten) vom Gerät weg an einen nützlichen Ort zu bringen,
-            etwa eine App oder ein Cloud-Dashboard. Ein Tracker benötigt beides — eine Möglichkeit, den
-            eigenen Standort zu kennen, und eine Möglichkeit, ihn zu melden — und das sind zwei unabhängige
+            etwa eine App oder ein Cloud-Dashboard. Ein Tracker benötigt beides – eine Möglichkeit, den
+            eigenen Standort zu kennen, und eine Möglichkeit, ihn zu melden – und das sind zwei unabhängige
             Designentscheidungen.
           </p>
 
@@ -60,7 +60,7 @@ export default function BlogArticleGnssConnectivityDe() {
             übertragen. Für Tier-Tracker sind die zwei gängigsten Optionen LoRa (meist als LoRaWAN, das von
             der LoRa Alliance gepflegte Netzwerkprotokoll) und LTE-M (LTE Cat-M1, ein stromsparender
             Mobilfunk-IoT-Standard, definiert von 3GPP ab Release 13). Beide sind für seltene Übertragungen
-            mit kleinem Datenvolumen ausgelegt — eine GPS-Position umfasst nur wenige Byte — statt für
+            mit kleinem Datenvolumen ausgelegt – eine GPS-Position umfasst nur wenige Byte – statt für
             kontinuierliches Streaming, was den Energieverbrauch für ein batteriebetriebenes Halsband oder
             Tag überschaubar hält.
           </p>
@@ -74,7 +74,7 @@ export default function BlogArticleGnssConnectivityDe() {
             eingesetzt, bei der Geräte Daten an ein selbst betriebenes oder ein öffentlich geteiltes
             Gateway senden. Praktische Vorteile sind ein geringer Sendeenergiebedarf und keine laufenden
             Gebühren für einen Mobilfunkanbieter. Die Einschränkung ist die Reichweite: Ein Gerät ist nur
-            erreichbar, wenn ein Gateway in Reichweite ist — bei offenem Gelände mit Sichtlinie oft mit
+            erreichbar, wenn ein Gateway in Reichweite ist – bei offenem Gelände mit Sichtlinie oft mit
             mehreren Kilometern angegeben, aber deutlich geringer bei Hügeln, Bäumen oder Gebäuden im Weg.
             Vorschriften für lizenzfreie Bänder schreiben in vielen Regionen zudem Duty-Cycle-Grenzen für die
             Sendehäufigkeit vor, was LoRas Eignung für periodische, selten aktualisierte Meldungen statt
@@ -86,13 +86,13 @@ export default function BlogArticleGnssConnectivityDe() {
           </h3>
           <p>
             LTE-M nutzt die bestehende Mobilfunkinfrastruktur, sodass die Abdeckung überall dort reicht, wo
-            der Anbieter Empfang hat — ohne ein eigenes Gateway aufzubauen oder zu warten. Diese Bequemlichkeit
+            der Anbieter Empfang hat – ohne ein eigenes Gateway aufzubauen oder zu warten. Diese Bequemlichkeit
             hat laufende Kosten zur Folge: eine SIM-Karte und einen Datentarif pro Gerät, sowie eine
             Abhängigkeit von der Mobilfunkabdeckung in dem konkreten Gebiet, in dem sich die Tiere bewegen
             (in abgelegenen Weiden oder Weideflächen bestehen weiterhin Abdeckungslücken). Der
             Energieverbrauch pro Übertragung ist generell höher als bei LoRa, wobei moderne LTE-M-Module
             diesen Unterschied durch Power Saving Mode (PSM) und erweiterten Discontinuous Reception (eDRX)
-            — beide im 3GPP-Standard definiert — deutlich verringern, indem sie das Modem zwischen
+            – beide im 3GPP-Standard definiert – deutlich verringern, indem sie das Modem zwischen
             geplanten Netzwerk-Check-ins tief schlafen lassen.
           </p>
 
@@ -102,14 +102,14 @@ export default function BlogArticleGnssConnectivityDe() {
           <ul className="list-disc space-y-2 pl-6">
             <li>
               <strong>Reichweite im Verhältnis zur Infrastruktur.</strong> Bleiben die Tiere in Reichweite
-              von Gateways, die Sie selbst platzieren können — ein Hof, eine feste Weidefläche —, vermeidet
+              von Gateways, die Sie selbst platzieren können – ein Hof, eine feste Weidefläche –, vermeidet
               LoRa laufende Kosten. Bewegen sie sich über jede von Ihnen kontrollierte Infrastruktur hinaus,
               ist die Mobilfunkabdeckung von LTE-M meist die einzige Option, die zuverlässig funktioniert.
             </li>
             <li>
               <strong>Kostenstruktur.</strong> LoRa tauscht Investitions- und Wartungskosten für Gateways
               gegen nahezu kostenlose Einzelmeldungen. LTE-M tauscht diese Vorabinfrastruktur gegen einen
-              laufenden Datentarif pro Gerät — die richtige Wahl hängt von der Flottengröße und der
+              laufenden Datentarif pro Gerät – die richtige Wahl hängt von der Flottengröße und der
               Budgetierung ab.
             </li>
             <li>
@@ -128,8 +128,8 @@ export default function BlogArticleGnssConnectivityDe() {
 
           <p>
             Keine der beiden Technologien ersetzt GNSS, und keine ist grundsätzlich &quot;besser&quot; als die
-            andere — sie beantworten eine andere Frage (wie bekomme ich Daten heraus?) als GNSS (wo bin
-            ich?). Die richtige Kombination — GNSS + LoRa oder GNSS + LTE-M — hängt davon ab, wohin sich die
+            andere – sie beantworten eine andere Frage (wie bekomme ich Daten heraus?) als GNSS (wo bin
+            ich?). Die richtige Kombination – GNSS + LoRa oder GNSS + LTE-M – hängt davon ab, wohin sich die
             Tiere tatsächlich bewegen im Verhältnis zur dort verfügbaren Infrastruktur und Abdeckung, und
             davon, wie die Kosten für die jeweilige Flotte am sinnvollsten strukturiert werden.
           </p>
@@ -137,7 +137,7 @@ export default function BlogArticleGnssConnectivityDe() {
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
           Planen Sie ein vollständiges Herdensystem? Sehen Sie sich unsere{" "}
-          Engineering-Leistungen zur{" "}
+          Engineering-Dienstleistungen zur{" "}
           <Link href="/de/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Nutztier-Fernüberwachung</Link> an.{" "}
           Haben Sie eine konkrete Frage zu Reichweite, Gelände oder Flottengröße?{" "}
           <Link href="/de/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Kontaktieren Sie uns</Link>, und wir helfen Ihnen, den passenden Konnektivitätsansatz zu skizzieren.
@@ -146,7 +146,7 @@ export default function BlogArticleGnssConnectivityDe() {
 
       <CTABanner
         heading="Planen Sie ein Tracking-Gerät?"
-        description="Erzählen Sie uns von den Tieren, dem Gelände und der Infrastruktur, mit denen Sie arbeiten — wir helfen Ihnen, die Konnektivitäts-Abwägungen zu bewerten."
+        description="Erzählen Sie uns von den Tieren, dem Gelände und der Infrastruktur, mit denen Sie arbeiten – wir helfen Ihnen, die Konnektivitäts-Abwägungen zu bewerten."
         primaryLabel="Projekt starten"
         primaryHref="/de/contact"
         secondaryLabel="Zurück zum Blog"

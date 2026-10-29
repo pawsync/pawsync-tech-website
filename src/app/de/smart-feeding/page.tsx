@@ -46,9 +46,9 @@ const flow = [
 ];
 
 const faqs = [
-  { question: "Kann das System einzelne Tiere identifizieren?", answer: "Ja — RFID-Identifikation kann eingeplant werden, damit das System unterschiedliche Futterrationen oder Futtermengen an verschiedene Tiere ausgibt, die dieselbe Fütterungsstation nutzen." },
+  { question: "Kann das System einzelne Tiere identifizieren?", answer: "Ja – RFID-Identifikation kann eingeplant werden, damit das System unterschiedliche Futterrationen oder Futtermengen an verschiedene Tiere ausgibt, die dieselbe Fütterungsstation nutzen." },
   { question: "Was passiert, wenn die Futterleitung sich staut?", answer: "Die Störungserkennung kann ein Motor- oder Ausgabeproblem melden und einen Alarm senden, statt stillschweigend nicht mehr zu füttern." },
-  { question: "Kann ich Futterstände aus der Ferne überwachen?", answer: "Ja — Füllstandssensoren an Behältern oder Silos können so ausgelegt werden, dass sie an ein Dashboard melden, mit Alarmen bei niedrigem Futterstand nach Ihrem Zeitplan." },
+  { question: "Kann ich Futterstände aus der Ferne überwachen?", answer: "Ja – Füllstandssensoren an Behältern oder Silos können so ausgelegt werden, dass sie an ein Dashboard melden, mit Alarmen bei niedrigem Futterstand nach Ihrem Zeitplan." },
 ];
 
 const scope: ServiceScopeCopy = {
@@ -78,7 +78,7 @@ const scope: ServiceScopeCopy = {
     }
   ],
   "stages": [
-    "Discovery",
+    "Anforderungsanalyse",
     "Architektur",
     "Schaltplan & Leiterplatte",
     "Firmware",

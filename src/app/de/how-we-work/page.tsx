@@ -8,21 +8,21 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "So arbeiten wir | PawSync",
   description:
-    "Unser Engineering-Prozess von der Anforderungsanalyse bis zur Produktionsunterstützung — die Phasen, die jedes PawSync-Projekt durchläuft.",
+    "Unser Engineering-Prozess von der Anforderungsanalyse bis zur Produktionsunterstützung – die Phasen, die jedes PawSync-Projekt durchläuft.",
   alternates: buildAlternates("de", "how-we-work"),
   openGraph: buildOpenGraph("de", "how-we-work"),
 };
 
 const stages = [
   { title: "Anforderungsanalyse", description: "Verständnis der Tiere, der Umgebung und der Rahmenbedingungen, innerhalb derer das Produkt funktionieren muss." },
-  { title: "Produktarchitektur", description: "Definition des Gesamtsystems — was das Gerät erfasst, wie es sich verbindet und wie es versorgt wird." },
+  { title: "Produktarchitektur", description: "Definition des Gesamtsystems – was das Gerät erfasst, wie es sich verbindet und wie es versorgt wird." },
   { title: "Technologieauswahl", description: "Auswahl der Sensoren, des Funkprotokolls und der Mikrocontroller-Plattform, die zu den Anforderungen passen." },
-  { title: "Schaltplanentwicklung", description: "Entwurf der Schaltung — Bauteilauswahl, Spannungsregelung und Signalpfade." },
+  { title: "Schaltplanentwicklung", description: "Entwurf der Schaltung – Bauteilauswahl, Spannungsregelung und Signalpfade." },
   { title: "Leiterplattendesign", description: "Layout der Platine für Fertigbarkeit, Größe und Zuverlässigkeit im Feld." },
   { title: "Firmware-Entwicklung", description: "Schreiben der Embedded-Software, die das Gerät und sein Kommunikationsprotokoll steuert." },
   { title: "Prototypenmontage", description: "Bau einer funktionsfähigen Einheit zur Validierung des Designs unter realen Bedingungen." },
   { title: "Funktionstests", description: "Überprüfung, ob Sensoren, Konnektivität und Energiemanagement wie geplant funktionieren." },
-  { title: "Feldtests", description: "Test in der tatsächlichen Umgebung — am Tier, im Stall oder im Gelände." },
+  { title: "Feldtests", description: "Test in der tatsächlichen Umgebung – am Tier, im Stall oder im Gelände." },
   { title: "Designverbesserungen", description: "Verfeinerung auf Basis der Felddaten, bevor das Design für die Produktion festgelegt wird." },
   { title: "Fertigungsunterlagen", description: "Erstellung von Gerber-Dateien, Stückliste und Bestückungsdaten für einen Auftragsfertiger." },
   { title: "Produktionsunterstützung", description: "Unterstützung beim Übergang von der Prototypserie zur laufenden Fertigung." },
@@ -45,7 +45,7 @@ export default function HowWeWorkPageDe() {
           Engineering vom Konzept bis zur Serienproduktion
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Zwölf Phasen, ein verantwortliches Team — von der ersten Skizze
+          Zwölf Phasen, ein verantwortliches Team – von der ersten Skizze
           bis zu einem fertigungsreifen Produkt.
         </p>
       </section>

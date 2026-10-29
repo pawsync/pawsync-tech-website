@@ -14,7 +14,7 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 const steps: { icon: LucideIcon; title: string; description: string }[] = [
   {
     icon: Compass,
-    title: "Discovery",
+    title: "Anforderungsanalyse",
     description: "Verständnis des Problems, der Tiere, der Hofumgebung und der Produktanforderungen.",
   },
   {

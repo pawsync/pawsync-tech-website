@@ -40,7 +40,7 @@ const categories: Category[] = [
     icon: Satellite,
     title: "Tracking & Standort",
     description:
-      "Echtzeit- oder periodische GPS/GNSS-Standortsysteme, die Haustiere, Nutztiere und andere Tiere auffindbar halten — auf dem Betrieb oder weit darüber hinaus.",
+      "Echtzeit- oder periodische GPS/GNSS-Standortsysteme, die Haustiere, Nutztiere und andere Tiere auffindbar halten – auf dem Betrieb oder weit darüber hinaus.",
     points: ["Echtzeit- & geplante GPS-Aktualisierungen", "Geofence- & Zonenalarme", "Vollständiger Standortverlauf", "Mehrtier-Flottenansicht"],
   },
   {
@@ -80,7 +80,7 @@ const categories: Category[] = [
     icon: Settings2,
     title: "Hofautomatisierung",
     description:
-      "Steuern Sie Bewässerung, Fütterung, Belüftung, Pumpen, Ventilatoren, Heizungen und Kühlsysteme automatisch — mit jederzeit verfügbarer manueller Übersteuerung.",
+      "Steuern Sie Bewässerung, Fütterung, Belüftung, Pumpen, Ventilatoren, Heizungen und Kühlsysteme automatisch – mit jederzeit verfügbarer manueller Übersteuerung.",
     points: ["Regelbasierte Automatisierung (\"Wenn dies, dann das\")", "Fernsteuerung per Smartphone & Web", "Anlagenstatusüberwachung", "Manuelle Übersteuerung jederzeit"],
   },
   {
@@ -112,7 +112,7 @@ const categories: Category[] = [
     icon: RadioTower,
     title: "Drahtlose Sensornetzwerke",
     description:
-      "Netzwerke stromsparender Sensorknoten, die über LoRa, BLE, Wi-Fi oder Mobilfunk kommunizieren — ausgelegt, um große Höfe ohne Kabelverlegung abzudecken.",
+      "Netzwerke stromsparender Sensorknoten, die über LoRa, BLE, Wi-Fi oder Mobilfunk kommunizieren – ausgelegt, um große Höfe ohne Kabelverlegung abzudecken.",
     points: ["Weitreichende LoRa-Abdeckung", "Gateway- & Basisstationsarchitektur", "Stromoptimierte Knoten", "Skaliert von einem Stall bis zu einer ganzen Ranch"],
   },
   {
@@ -120,7 +120,7 @@ const categories: Category[] = [
     icon: CircuitBoard,
     title: "Kundenspezifische IoT-Systeme",
     description:
-      "Wenn ein Standardgerät nicht passt, entwickeln wir die Elektronik — Hardware, Firmware und Konnektivität — genau nach Ihren Anforderungen.",
+      "Wenn ein Standardgerät nicht passt, entwickeln wir die Elektronik – Hardware, Firmware und Konnektivität – genau nach Ihren Anforderungen.",
     points: ["Individuelles Hardware- & Leiterplattendesign", "Zugeschnittene Embedded-Firmware", "Mobile-App- & Cloud-API-Integration", "Unterstützung vom Prototyp bis zur Serienproduktion"],
   },
 ];
@@ -138,7 +138,7 @@ export default function SolutionsPageDe() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Elf Problemfelder, ein Engineering-Team. Jede Kategorie unten ist
           Hardware, Firmware und Konnektivität, die wir nach Ihren
-          Anforderungen entwickeln — springen Sie zu der, die Sie benötigen, oder
+          Anforderungen entwickeln – springen Sie zu der, die Sie benötigen, oder
           sprechen Sie mit uns über etwas, das noch nicht aufgeführt ist.
         </p>
       </section>
@@ -188,9 +188,9 @@ export default function SolutionsPageDe() {
       </section>
 
       <CTABanner
-        eyebrow="Benötigen Sie ein individuelles Hof-IoT-System?"
+        eyebrow="Benötigen Sie ein individuelles Agrar-IoT-System?"
         heading="Lassen Sie uns Hardware rund um Ihre Umgebung, Tiere und betrieblichen Anforderungen entwickeln."
-        description="Ob eine der oben genannten Kategorien oder etwas völlig Neues — unser Engineering-Team kann es gemeinsam mit Ihnen planen."
+        description="Ob eine der oben genannten Kategorien oder etwas völlig Neues – unser Engineering-Team kann es gemeinsam mit Ihnen planen."
         primaryLabel="Projekt starten"
         primaryHref="/de/contact"
         secondaryLabel="Unseren Engineering-Prozess ansehen"
