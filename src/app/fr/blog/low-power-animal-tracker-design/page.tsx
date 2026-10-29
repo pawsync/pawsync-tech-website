@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Concevoir une électronique basse consommation pour trackers d'animaux extérieurs | PawSync",
+  title: "Concevoir un tracker animalier basse consommation | PawSync",
   description:
     "L'autonomie d'un tracker animalier portable est un problème de budget énergétique. Les techniques qui déterminent si un appareil tient des jours ou des mois.",
   alternates: buildAlternates("fr", "blog/low-power-animal-tracker-design"),
@@ -142,6 +142,9 @@ export default function BlogArticleLowPowerDesignFr() {
         </div>
 
         <p className="mt-10 border-t border-[var(--ts-navy)]/10 pt-6 text-sm text-[var(--ts-gray)]">
+          Vous concevez des trackers pour un troupeau plutôt que pour un seul animal ? Découvrez nos{" "}
+          services d&apos;ingénierie en{" "}
+          <Link href="/fr/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">surveillance du bétail à distance</Link>.{" "}
           Vous travaillez sur un objectif d&apos;autonomie pour votre propre appareil ?{" "}
           <Link href="/fr/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Contactez-nous</Link> et nous vous aiderons à cadrer le budget énergétique.
         </p>

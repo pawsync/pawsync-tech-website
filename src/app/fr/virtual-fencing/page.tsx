@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   Bell,
   MapPinned,
@@ -20,7 +21,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Clôture virtuelle | PawSync",
   description:
-    "Des systèmes de clôture virtuelle GPS et sans fil qui donnent aux animaux la liberté de se déplacer dans des zones définies, réduisant la dépendance à la clôture physique traditionnelle.",
+    "Clôture virtuelle GPS et sans fil : les animaux se déplacent librement dans des zones définies, avec moins de dépendance aux clôtures physiques.",
   alternates: buildAlternates("fr", "virtual-fencing"),
   openGraph: buildOpenGraph("fr", "virtual-fencing"),
 };
@@ -55,7 +56,11 @@ export default function VirtualFencingPageFr() {
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Donnez aux animaux la liberté de se déplacer dans des zones
           définies, grâce à un suivi de localisation à la place — ou
-          en complément — de la clôture traditionnelle.
+          en complément — de la clôture traditionnelle. Ce service fait partie de nos travaux de{" "}
+          <Link href="/fr/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            surveillance du bétail à distance
+          </Link>
+          .
         </p>
       </section>
 

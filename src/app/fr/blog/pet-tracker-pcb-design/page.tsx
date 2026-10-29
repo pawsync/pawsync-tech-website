@@ -10,7 +10,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Conception de carte PCB pour tracker animalier | PawSync",
   description:
-    "Un tracker porté au collier n'est pas une carte GPS miniature. Placement d'antenne, empilage des couches et contraintes de boîtier qui déterminent la conception.",
+    "Un tracker de collier n'est pas une carte GPS miniature : placement d'antenne, empilage des couches et contraintes de boîtier guident la conception.",
   alternates: buildAlternates("fr", "blog/pet-tracker-pcb-design"),
   openGraph: buildOpenGraph("fr", "blog/pet-tracker-pcb-design"),
 };

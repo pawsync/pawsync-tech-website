@@ -12,17 +12,17 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { absoluteUrl, buildAlternates } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "PawSync | Électronique intelligente pour animaux, exploitations agricoles et environnements connectés",
+  title: "Électronique sur mesure pour animaux, fermes & IoT | PawSync",
   description:
-    "PawSync conçoit du matériel IoT sur mesure : suivi GPS, clôtures virtuelles, alimentation intelligente, automatisation agricole et capteurs environnementaux — du concept à la production.",
+    "PawSync conçoit du matériel IoT sur mesure pour animaux et fermes : suivi GPS, clôture virtuelle, alimentation intelligente, surveillance du bétail.",
   alternates: buildAlternates("fr", ""),
   openGraph: {
     siteName: "PawSync",
     url: absoluteUrl("fr", ""),
     type: "website",
-    title: "PawSync | Électronique intelligente pour animaux, exploitations agricoles et environnements connectés",
+    title: "Électronique sur mesure pour animaux, fermes & IoT | PawSync",
     description:
-      "PawSync conçoit du matériel IoT sur mesure : suivi GPS, clôtures virtuelles, alimentation intelligente, automatisation agricole et capteurs environnementaux — du concept à la production.",
+      "PawSync conçoit du matériel IoT sur mesure pour animaux et fermes : suivi GPS, clôture virtuelle, alimentation intelligente, surveillance du bétail.",
     images: [
       {
         url: "/og-image.png",

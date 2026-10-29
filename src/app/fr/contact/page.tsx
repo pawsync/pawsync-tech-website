@@ -17,9 +17,9 @@ import {
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Contact | PawSync",
+  title: "Lancez votre projet Animal-Tech ou IoT agricole | PawSync",
   description:
-    "Parlez à PawSync de votre idée Animal-Tech ou d'IoT agricole, et notre équipe d'ingénierie vous aidera à transformer le concept en un produit électronique concret.",
+    "Parlez à PawSync de votre idée Animal-Tech ou d'IoT agricole : nous vous aidons à en faire un produit électronique concret.",
   alternates: buildAlternates("fr", "contact"),
   openGraph: buildOpenGraph("fr", "contact"),
 };

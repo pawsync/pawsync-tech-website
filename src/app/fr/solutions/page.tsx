@@ -19,9 +19,9 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Solutions technologiques intelligentes pour animaux & exploitations agricoles | PawSync",
+  title: "Solutions pour animaux & exploitations agricoles | PawSync",
   description:
-    "Suivi GPS des animaux, clôture virtuelle, santé, alimentation intelligente, automatisation agricole et surveillance environnementale — IoT sur mesure pour animaux et exploitations.",
+    "Suivi GPS, clôture virtuelle, alimentation intelligente, automatisation agricole et surveillance environnementale : l'IoT sur mesure pour animaux et fermes.",
   alternates: buildAlternates("fr", "solutions"),
   openGraph: buildOpenGraph("fr", "solutions"),
 };

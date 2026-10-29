@@ -11,7 +11,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Conception de surveillance avicole sans fil | PawSync",
   description:
-    "Placement des capteurs, choix du protocole et planification des passerelles pour un réseau de surveillance avicole sans fil — et pourquoi un capteur ne suffit pas.",
+    "Placement des capteurs, choix du protocole et planification des passerelles pour un réseau avicole sans fil — et pourquoi un capteur ne suffit pas.",
   alternates: buildAlternates("fr", "blog/wireless-poultry-monitoring-design"),
   openGraph: buildOpenGraph("fr", "blog/wireless-poultry-monitoring-design"),
 };

@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Automatisation agricole | PawSync",
   description:
-    "Systèmes de contrôle sur mesure pour le climat, l'eau, l'alimentation et les infrastructures — avec contrôle par smartphone et tableau de bord web selon vos besoins.",
+    "Systèmes de contrôle sur mesure pour le climat, l'eau, l'alimentation et les infrastructures, pilotables par smartphone ou tableau de bord web.",
   alternates: buildAlternates("fr", "farm-automation"),
   openGraph: buildOpenGraph("fr", "farm-automation"),
 };

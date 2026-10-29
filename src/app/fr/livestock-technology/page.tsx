@@ -14,7 +14,10 @@ import {
   HeartPulse,
   Hash,
   MapPinned,
+  MonitorSmartphone,
   Radar,
+  Radio,
+  RadioTower,
   Satellite,
   ThermometerSun,
   UtensilsCrossed,
@@ -31,9 +34,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Suivi GPS & surveillance à distance du bétail | PawSync",
+  title: "Surveillance à distance du bétail et des bovins | PawSync",
   description:
-    "Matériel sur mesure de suivi GPS, clôture virtuelle, identification RFID et surveillance à distance de la santé et de l'activité pour bovins, ovins, caprins et chevaux.",
+    "Matériel sans fil sur mesure pour surveiller bovins, ovins, caprins et chevaux : suivi GPS, clôture virtuelle, RFID et suivi d'activité.",
   alternates: buildAlternates("fr", "livestock-technology"),
   openGraph: buildOpenGraph("fr", "livestock-technology"),
 };
@@ -56,6 +59,16 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
 ];
 
 const faqs: FAQItem[] = [
+  {
+    question: "De quoi se compose un système de surveillance du bétail ?",
+    answer:
+      "De quatre couches, chacune conçue selon le projet : un dispositif sur l'animal (collier ou boucle d'oreille avec GNSS et, si nécessaire, détection de mouvement), une liaison radio (LoRa ou cellulaire), une passerelle qui reçoit les données sur site et les transmet au cloud, et un tableau de bord web ou mobile avec des alertes configurables. Nous définissons en phase de découverte les couches dont vous avez besoin — et leur raccordement à vos équipements existants.",
+  },
+  {
+    question: "Comment fonctionne la surveillance des bovins à distance ?",
+    answer:
+      "Un collier ou une boucle d'oreille sur chaque animal enregistre sa position GNSS, et une radio LoRa ou cellulaire la transmet à une passerelle ou au cloud selon un intervalle ajusté à l'autonomie de la batterie. Des alertes peuvent être conçues pour des événements comme la sortie d'un animal d'une zone désignée ou une inactivité inhabituelle. La bonne combinaison dépend de la distance parcourue par vos bovins et de la couverture réseau disponible sur vos terres.",
+  },
   {
     question: "GPS ou LoRa — qu'est-ce qui suit réellement mon troupeau ?",
     answer:
@@ -120,6 +133,13 @@ const alerts = [
   { icon: Battery, label: "Problème de batterie potentiel du dispositif" },
 ];
 
+const systemLayers = [
+  { icon: Radar, title: "1. Sur l'animal", description: "Un collier ou une boucle d'oreille avec GNSS et, si nécessaire, détection de mouvement." },
+  { icon: Radio, title: "2. Liaison radio", description: "LoRa pour une longue portée à faible consommation, ou cellulaire (LTE-M) là où la couverture le permet." },
+  { icon: RadioTower, title: "3. Passerelle", description: "Reçoit les données sur site et les transmet au cloud ; une logique locale peut continuer l'enregistrement pendant une coupure." },
+  { icon: MonitorSmartphone, title: "4. Tableau de bord & alertes", description: "Une vue web ou mobile avec des alertes configurables, conçue selon vos exigences dans le cadre du projet." },
+];
+
 export default function LivestockTechnologyPageFr() {
   return (
     <>
@@ -128,7 +148,7 @@ export default function LivestockTechnologyPageFr() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Technologie pour le bétail</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Surveillance &amp; gestion connectées du bétail
+          Systèmes de surveillance &amp; de gestion du bétail à distance
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Nous concevons du matériel sur mesure de suivi, de suivi
@@ -161,7 +181,7 @@ export default function LivestockTechnologyPageFr() {
           <div className="mx-auto max-w-2xl text-center">
             <Eyebrow>Solutions</Eyebrow>
             <h2 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-              Conçu pour tout le troupeau
+              Solutions de surveillance pour bovins, ovins, caprins &amp; chevaux
             </h2>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -179,10 +199,47 @@ export default function LivestockTechnologyPageFr() {
         </div>
       </section>
 
+      <section aria-labelledby="livestock-cattle-heading-fr" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Bovins</Eyebrow>
+          <h2 id="livestock-cattle-heading-fr" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+            Surveillance des bovins à distance
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
+            La surveillance des bovins à distance commence par deux questions :
+            jusqu&apos;où vont vos bovins, et à quelle fréquence avez-vous besoin
+            d&apos;en avoir des nouvelles ? Nous concevons du matériel de collier
+            ou de boucle d&apos;oreille sur mesure à partir de ces réponses — en
+            associant la localisation GNSS à une liaison LoRa ou cellulaire vers
+            une passerelle ou le cloud, et en dimensionnant la batterie selon
+            votre intervalle de rapport. Des données d&apos;activité peuvent être
+            ajoutées lorsqu&apos;elles aident à repérer les animaux à surveiller.
+            Chaque conception est adaptée à votre troupeau, votre terrain et votre
+            infrastructure, et validée sous forme de prototype avant la production.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="livestock-system-heading-fr" className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <Eyebrow>Vue d&apos;ensemble</Eyebrow>
+            <h2 id="livestock-system-heading-fr" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+              Comment fonctionne un système de surveillance du bétail à distance
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {systemLayers.map((item) => (
+              <ServiceCard key={item.title} locale="fr" {...item} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="livestock-connectivity-heading-fr" className="bg-[var(--ts-navy)] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 id="livestock-connectivity-heading-fr" className="text-center text-sm font-semibold uppercase tracking-widest text-white/50">
-            Une connectivité adaptée au troupeau
+            Connectivité sans fil pour la surveillance du bétail à distance
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {connectivity.map(({ icon: Icon, label }) => (
