@@ -7,6 +7,13 @@ import path from "node:path";
 // else is limited to this origin plus Plausible (analytics) and Unsplash
 // (remote images). upgrade-insecure-requests is left out: browsers ignore it
 // in a Report-Only policy, and HSTS already forces HTTPS.
+//
+// Netlify adds its Deploy Preview toolbar (the Netlify Drawer) as a frame from
+// app.netlify.com on deploy previews only. Netlify sets CONTEXT at build time,
+// so only deploy-preview builds allow that frame; production keeps the
+// default-src fallback and gains no framing permission.
+const isDeployPreview = process.env.CONTEXT === "deploy-preview";
+
 const contentSecurityPolicy = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://plausible.io",
@@ -18,6 +25,7 @@ const contentSecurityPolicy = [
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'none'",
+  ...(isDeployPreview ? ["frame-src 'self' https://app.netlify.com"] : []),
 ].join("; ");
 
 const securityHeaders = [
