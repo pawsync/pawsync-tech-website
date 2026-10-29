@@ -19,9 +19,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Virtuelle Einzäunung | PawSync",
+  title: "Virtuelle Einzäunung mit GPS für Nutztiere | PawSync",
   description:
-    "GPS- und funkbasierte virtuelle Einzäunung: Tiere bewegen sich frei in festgelegten Zonen, mit weniger Abhängigkeit von physischen Zäunen.",
+    "Individuelle Entwicklung virtueller Einzäunung mit GPS für Nutztiere: Halsband-Hardware, Grenzlogik und Alarme, ausgelegt nach Ihren Anforderungen.",
   alternates: buildAlternates("de", "virtual-fencing"),
   openGraph: buildOpenGraph("de", "virtual-fencing"),
 };

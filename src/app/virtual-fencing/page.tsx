@@ -19,9 +19,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Virtual Fencing | PawSync",
+  title: "Custom GPS Virtual Fencing for Livestock | PawSync",
   description:
-    "GPS and wireless virtual fencing systems that give animals freedom to roam within defined zones, reducing dependency on traditional physical fencing.",
+    "Custom GPS virtual fencing for livestock: collar hardware, boundary logic and alerts designed to your requirements, not an off-the-shelf product.",
   alternates: buildAlternates("en", "virtual-fencing"),
   openGraph: buildOpenGraph("en", "virtual-fencing"),
 };

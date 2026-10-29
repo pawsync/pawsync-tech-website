@@ -19,9 +19,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Clôture virtuelle | PawSync",
+  title: "Clôture virtuelle GPS pour le bétail | PawSync",
   description:
-    "Clôture virtuelle GPS et sans fil : les animaux se déplacent librement dans des zones définies, avec moins de dépendance aux clôtures physiques.",
+    "Conception sur mesure de clôtures virtuelles GPS pour le bétail : matériel de collier, logique de limites et alertes selon vos exigences.",
   alternates: buildAlternates("fr", "virtual-fencing"),
   openGraph: buildOpenGraph("fr", "virtual-fencing"),
 };
