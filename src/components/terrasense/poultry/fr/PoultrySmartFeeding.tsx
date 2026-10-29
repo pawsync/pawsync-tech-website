@@ -5,7 +5,7 @@ const capabilities = [
   "Surveillance du niveau des silos", "Surveillance des trémies d'alimentation", "Programmation automatique de l'alimentation",
   "Contrôle des moteurs", "Surveillance des lignes d'alimentation", "Alertes de niveau d'aliment bas",
   "Détection de panne moteur", "État à distance du système d'alimentation", "Données de consommation d'aliment",
-  "Contrôleurs de fourrage sur mesure",
+  "Contrôleurs d'alimentation sur mesure",
 ];
 
 const flow = [

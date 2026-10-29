@@ -52,7 +52,7 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
   { icon: Compass, label: "Idée" },
   { icon: Workflow, label: "Architecture" },
   { icon: CircuitBoard, label: "Carte PCB" },
-  { icon: FileCode, label: "Firmware" },
+  { icon: FileCode, label: "Micrologiciel" },
   { icon: FlaskConical, label: "Prototype" },
   { icon: ClipboardCheck, label: "Test" },
   { icon: Factory, label: "Production" },
@@ -102,7 +102,7 @@ const faqs: FAQItem[] = [
   {
     question: "Comment un projet passe-t-il de l'idée à un dispositif fonctionnel ?",
     answer:
-      "D'abord la découverte et l'architecture (vos animaux, votre environnement et vos exigences), puis la conception du schéma et du circuit imprimé, le firmware, un prototype à tester en conditions réelles, et enfin les fichiers de préparation à la fabrication une fois la conception validée.",
+      "D'abord la découverte et l'architecture (vos animaux, votre environnement et vos exigences), puis la conception du schéma et du circuit imprimé, le micrologiciel, un prototype à tester en conditions réelles, et enfin les fichiers de préparation à la fabrication une fois la conception validée.",
   },
 ];
 
@@ -271,7 +271,7 @@ export default function LivestockTechnologyPageFr() {
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
             La découverte et l&apos;architecture viennent d&apos;abord, suivies
-            de la conception du schéma et du circuit imprimé, du firmware,
+            de la conception du schéma et du circuit imprimé, du micrologiciel,
             d&apos;un prototype testable en conditions réelles, puis des
             fichiers de préparation à la fabrication une fois la conception
             validée. Voir aussi notre article sur la{" "}
@@ -282,7 +282,7 @@ export default function LivestockTechnologyPageFr() {
             <Link href="/fr/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               conception électronique basse consommation pour trackers d&apos;animaux
             </Link>{" "}
-            ou nos services d&apos;{" "}
+            ou nos services d&apos;
             <Link href="/fr/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               électronique sur mesure
             </Link>

@@ -157,7 +157,7 @@ export default function BlogArticleWirelessPoultryMonitoringFr() {
             sur secteur, l&apos;infrastructure étant déjà en place. L&apos;alimentation par batterie ou
             batterie plus solaire devient pertinente pour les nœuds situés hors des circuits de câblage
             existants, ou pendant une phase de rénovation avant l&apos;installation d&apos;un câblage
-            permanent — auquel cas le budget énergétique du nœud suit la même logique générale de cyclage
+            permanent — auquel cas le budget énergétique du nœud suit la même logique générale de cycles de veille
             que tout design de capteur sur batterie, dimensionnée selon l&apos;intervalle de rapport
             réellement nécessaire à l&apos;application plutôt qu&apos;un fonctionnement continu par défaut.
           </p>

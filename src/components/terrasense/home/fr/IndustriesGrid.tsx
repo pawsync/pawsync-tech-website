@@ -64,7 +64,7 @@ export default function IndustriesGrid() {
             Les secteurs que nous servons
           </h2>
           <p className="mt-4 text-lg text-[var(--ts-gray)]">
-            Partout où les animaux et l&apos;électronique se rencontrent, nous concevons pour cela.
+            Partout où les animaux et l&apos;électronique se rencontrent, nous concevons des solutions.
           </p>
         </div>
 

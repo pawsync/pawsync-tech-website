@@ -19,8 +19,8 @@ const projects = [
     industry: "Technologie pour animaux de compagnie",
     stage: "Modèle de référence",
     technology: ["GPS/GNSS", "BLE", "LTE-M"],
-    challenge: "Nécessitait un suivi de localisation haute précision dans un format monté sur collier avec une autonomie de plusieurs jours.",
-    solution: "Combinaison d'un module GNSS basse consommation avec un rapport cellulaire à cycle de service et un réveil déclenché par le mouvement.",
+    challenge: "Obtenir un suivi de localisation haute précision dans un format monté sur collier, avec une autonomie de plusieurs jours.",
+    solution: "Combinaison d'un module GNSS basse consommation avec des rapports cellulaires cadencés et un réveil déclenché par le mouvement.",
     features: ["Alertes de zone virtuelle", "Historique d'activité", "Application mobile"],
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     stage: "Modèle de référence",
     technology: ["BLE", "IMU", "Capteur de temp."],
     challenge: "Combiner suivi de santé et suivi de localisation sans dispositif encombrant ni inconfortable.",
-    solution: "Intégration d'un IMU et d'un capteur de température sur une carte compacte avec un boîtier de collier flexible.",
+    solution: "Intégration d'une centrale inertielle (IMU) et d'un capteur de température sur une carte compacte avec un boîtier de collier flexible.",
     features: ["Suivi d'activité", "Alertes de température", "Rechargeable"],
   },
   {
@@ -63,9 +63,9 @@ const projects = [
     title: "Contrôleur d'alimentation intelligent",
     industry: "Automatisation agricole",
     stage: "Modèle de référence",
-    technology: ["Capteur de charge", "RFID", "Wi-Fi"],
+    technology: ["Cellule de charge", "RFID", "Wi-Fi"],
     challenge: "Distribuer des portions d'aliment précises et suivies individuellement pour plusieurs animaux.",
-    solution: "Distribution par capteur de charge avec reconnaissance RFID, enregistrée et consultable via un tableau de bord mobile.",
+    solution: "Distribution pilotée par cellule de charge avec reconnaissance RFID, enregistrée et consultable via un tableau de bord mobile.",
     features: ["Contrôle des portions", "Détection de bourrage", "Historique d'alimentation"],
   },
   {
@@ -101,7 +101,7 @@ const projects = [
     stage: "Modèle de référence",
     technology: ["Capteur de fumée", "Capteur de temp.", "IoT cellulaire"],
     challenge: "Détecter les risques d'incendie et de température extrême dans des logements pour animaux sans surveillance.",
-    solution: "Détection redondante de fumée et de température avec alertes soutenues par le cellulaire, indépendantes du Wi-Fi.",
+    solution: "Détection redondante de fumée et de température avec alertes via le réseau cellulaire, indépendantes du Wi-Fi.",
     features: ["Alarme locale", "Alertes SMS + application", "Batterie de secours"],
   },
   {
@@ -117,9 +117,9 @@ const projects = [
     title: "Dispositif IoT alimenté par batterie",
     industry: "Électronique sur mesure",
     stage: "Modèle de référence",
-    technology: ["Gestion de l'alimentation", "BLE", "MCU basse consommation"],
+    technology: ["Gestion de l'énergie", "BLE", "MCU basse consommation"],
     challenge: "Faire passer l'autonomie de la batterie de quelques jours à plusieurs mois sans sacrifier la précision des capteurs.",
-    solution: "Cyclage agressif et capteurs à alimentation contrôlée, gérés par un microcontrôleur basse consommation.",
+    solution: "Rapport cyclique très faible et capteurs à alimentation commutée, gérés par un microcontrôleur basse consommation.",
     features: ["Autonomie de plusieurs mois visée", "Conception en mode veille", "Rapport BLE"],
   },
 ];
@@ -136,7 +136,7 @@ export default function ProjectsPageFr() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Ces fiches illustrent le type de problèmes matériels et
-          firmware que nous concevons — technologie pour animaux de
+          micrologiciels que nous concevons — technologie pour animaux de
           compagnie, bétail et automatisation agricole. Il s&apos;agit de
           modèles de référence et de travaux conceptuels, et non de
           livrables clients achevés, de produits commercialisés ou de

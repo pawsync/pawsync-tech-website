@@ -24,7 +24,7 @@ const technologies = [
   "Capteurs d'humidité",
   "Capteurs de mouvement",
   "Centrales inertielles (IMU)",
-  "Capteurs de charge",
+  "Cellules de charge",
   "Capteurs de niveau d'eau",
   "Capteurs de qualité de l'air",
   "Caméras",

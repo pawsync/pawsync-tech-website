@@ -79,7 +79,7 @@ export default function BlogArticleLowPowerDesignFr() {
           </ul>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
-            La technique centrale : un cyclage rigoureux
+            La technique centrale : des cycles de veille rigoureux
           </h2>
           <p>
             Plutôt que de maintenir le microcontrôleur, le récepteur GNSS et le module radio alimentés en

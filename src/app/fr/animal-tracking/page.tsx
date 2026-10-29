@@ -39,7 +39,7 @@ const capabilities = [
 
 const faqs = [
   { question: "Les dispositifs de suivi peuvent-ils fonctionner sans couverture cellulaire ?", answer: "Oui. Nous concevons des systèmes autour du LoRa et d'autres protocoles basse consommation longue portée pour les sites à couverture cellulaire limitée ou inexistante, avec synchronisation des données dès qu'une passerelle ou une connexion cellulaire est atteinte." },
-  { question: "Quelle est généralement la durée de vie de la batterie ?", answer: "Cela dépend de la fréquence des mises à jour, du type de connectivité et de la taille du boîtier — nous concevons le budget énergétique selon votre intervalle de rapport requis et votre cycle d'utilisation." },
+  { question: "Quelle est généralement la durée de vie de la batterie ?", answer: "Cela dépend de la fréquence des mises à jour, du type de connectivité et de la taille du boîtier — nous concevons le budget énergétique selon votre intervalle de rapport requis et votre rapport cyclique." },
   { question: "Pouvez-vous suivre plusieurs espèces avec une seule plateforme ?", answer: "Oui. Un tableau de bord et un backend peuvent être conçus pour prendre en charge des flottes mixtes (animaux de compagnie, bétail et animaux de travail), avec un matériel dimensionné par espèce." },
 ];
 

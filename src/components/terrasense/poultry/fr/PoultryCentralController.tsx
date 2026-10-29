@@ -31,7 +31,7 @@ const connectedSystems: { icon: LucideIcon; label: string }[] = [
   { icon: Fan, label: "Ventilateurs" },
   { icon: Cpu, label: "Moteurs" },
   { icon: DoorOpen, label: "Portes" },
-  { icon: PlugZap, label: "Suivi de l'alimentation" },
+  { icon: PlugZap, label: "Suivi de l'alimentation électrique" },
   { icon: Siren, label: "Alarmes" },
 ];
 

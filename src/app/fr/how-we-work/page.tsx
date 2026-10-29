@@ -42,7 +42,7 @@ export default function HowWeWorkPageFr() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Notre méthode</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          De l&apos;ingénierie du concept à la production
+          L&apos;ingénierie, du concept à la production
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Douze étapes, une équipe responsable, du premier croquis à un

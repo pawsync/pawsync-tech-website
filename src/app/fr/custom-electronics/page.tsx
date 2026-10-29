@@ -60,7 +60,7 @@ const services: { icon: LucideIcon; title: string; description: string }[] = [
   {
     icon: ScanLine,
     title: "Systèmes RFID",
-    description: "Systèmes d'identification RFID pour le suivi des animaux, le contrôle d'accès et la reconnaissance à l'alimentation.",
+    description: "Systèmes d'identification RFID pour le suivi des animaux, le contrôle d'accès et l'alimentation sélective.",
   },
   {
     icon: BatteryCharging,
@@ -142,11 +142,11 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Quels capteurs peuvent être intégrés à un système de surveillance agricole ?",
-    answer: "Les choix courants incluent les capteurs de température, d'humidité, de qualité de l'air, de niveau d'eau, d'humidité du sol, de mouvement et de charge — la bonne combinaison dépend de ce que vous devez surveiller.",
+    answer: "Les choix courants incluent les capteurs de température, d'humidité, de qualité de l'air, de niveau d'eau, d'humidité du sol, de mouvement et les cellules de charge — la bonne combinaison dépend de ce que vous devez surveiller.",
   },
   {
     question: "Pouvez-vous développer des dispositifs RFID d'identification du bétail ?",
-    answer: "Oui. L'identification RFID est l'un de nos éléments de base standard pour la reconnaissance à l'alimentation, le contrôle d'accès et le comptage des animaux.",
+    answer: "Oui. L'identification RFID est l'un de nos éléments de base standard pour l'alimentation sélective, le contrôle d'accès et le comptage des animaux.",
   },
   {
     question: "Le matériel continue-t-il de fonctionner sans accès Internet ou cloud ?",

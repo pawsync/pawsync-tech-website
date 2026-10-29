@@ -63,7 +63,7 @@ const scope: ServiceScopeCopy = {
     },
     {
       "title": "Micrologiciel embarqué",
-      "description": "Firmware pour l'acquisition des capteurs, le fonctionnement basse consommation, la connectivité sans fil et les échanges avec l'application."
+      "description": "Micrologiciel pour l'acquisition des capteurs, le fonctionnement basse consommation, la connectivité sans fil et les échanges avec l'application."
     },
     {
       "title": "Prototype & tests",

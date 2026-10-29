@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const capabilities = [
   { icon: Settings2, title: "Distribution programmée", description: "Une alimentation automatisée selon un horaire quotidien ou multi-horaires configurable." },
   { icon: Gauge, title: "Contrôle des portions", description: "Des quantités de distribution définies par animal ou par groupe, avec une précision calibrée pendant le développement." },
-  { icon: Hash, title: "Identification RFID des animaux", description: "Reconnaître chaque animal pour donner le bon régime au bon animal." },
+  { icon: Hash, title: "Identification RFID des animaux", description: "Reconnaître chaque animal pour distribuer la bonne ration au bon animal." },
   { icon: UtensilsCrossed, title: "Capteurs de niveau d'aliment", description: "La mesure de niveau peut être conçue pour vous avertir avant qu'une trémie ou un silo ne soit vide." },
   { icon: ShieldAlert, title: "Détection de bourrage et de panne", description: "La détection de panne peut être conçue pour vous alerter lorsqu'un moteur, une vis ou une ligne de distribution ne fonctionne pas correctement." },
   { icon: MonitorSmartphone, title: "Surveillance à distance", description: "L'état et l'historique de l'alimentation peuvent être rendus consultables sur un téléphone ou un tableau de bord web développé pour votre projet." },
@@ -46,7 +46,7 @@ const flow = [
 ];
 
 const faqs = [
-  { question: "Le système peut-il identifier chaque animal individuellement ?", answer: "Oui — l'identification par RFID peut être prévue pour que le système distribue différents régimes ou portions à différents animaux partageant le même poste d'alimentation." },
+  { question: "Le système peut-il identifier chaque animal individuellement ?", answer: "Oui — l'identification par RFID peut être prévue pour que le système distribue différentes rations ou quantités à différents animaux partageant le même poste d'alimentation." },
   { question: "Que se passe-t-il si la ligne d'alimentation se bloque ?", answer: "La détection de panne peut signaler un problème de moteur ou de distribution et envoyer une alerte, plutôt que d'échouer silencieusement à nourrir." },
   { question: "Puis-je surveiller les niveaux d'aliment à distance ?", answer: "Oui — les capteurs de niveau sur les trémies ou silos peuvent être conçus pour remonter l'état à un tableau de bord, avec des alertes de niveau bas configurées selon votre calendrier." },
 ];
@@ -58,7 +58,7 @@ const scope: ServiceScopeCopy = {
   "options": [
     {
       "title": "Carte de commande du distributeur",
-      "description": "Pilotage moteur, interfaces capteurs et gestion de l'alimentation adaptés au matériel de distribution."
+      "description": "Pilotage moteur, interfaces capteurs et gestion de l'énergie adaptés au matériel de distribution."
     },
     {
       "title": "Micrologiciel de portions & distribution",
@@ -185,7 +185,7 @@ export default function SmartFeedingPageFr() {
             Il s&apos;agit de services d&apos;ingénierie sur mesure, et non de
             produits standard. Les tableaux de bord, applications et alertes
             sont développés pour chaque projet, et le contrôleur
-            d&apos;alimentation de notre page Projets est un design de
+            d&apos;alimentation de notre page Projets est un modèle de
             référence, et non un déploiement testé sur le terrain.
           </p>
         </div>

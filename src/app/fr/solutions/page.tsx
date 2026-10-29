@@ -105,7 +105,7 @@ const categories: Category[] = [
     title: "Sécurité & détection des risques",
     description:
       "Des systèmes d'alerte précoce conçus pour signaler tôt la chaleur extrême, le froid, la fumée, le risque d'incendie, les inondations, les fuites d'eau et les pannes d'équipement.",
-    points: ["Statut Normal / Avertissement / Critique", "Alertes mobiles, SMS, e-mail et alarme locale", "Redondance des capteurs là où cela compte", "Détection des pannes d'alimentation et de pompe"],
+    points: ["Statut Normal / Avertissement / Critique", "Alertes mobiles, SMS, e-mail et alarme locale", "Redondance des capteurs là où cela compte", "Détection des coupures de courant et des pannes de pompe"],
   },
   {
     id: "wireless-sensor-networks",

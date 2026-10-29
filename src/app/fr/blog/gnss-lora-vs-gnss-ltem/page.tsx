@@ -78,8 +78,8 @@ export default function BlogArticleGnssConnectivityFr() {
             la couverture : un appareil n&apos;est joignable que s&apos;il se trouve à portée d&apos;une
             passerelle — souvent plusieurs kilomètres en terrain dégagé avec ligne de vue directe, mais
             nettement moins en présence de collines, d&apos;arbres ou de bâtiments. Les réglementations sur
-            les bandes sans licence imposent aussi, dans de nombreuses régions, des limites de cycle
-            d&apos;utilisation à la fréquence d&apos;émission, ce qui renforce l&apos;adéquation de LoRa avec
+            les bandes sans licence imposent aussi, dans de nombreuses régions, des limites de rapport
+            cyclique à la fréquence d&apos;émission, ce qui renforce l&apos;adéquation de LoRa avec
             des transmissions périodiques et peu fréquentes plutôt qu&apos;avec des mises à jour quasi
             continues.
           </p>

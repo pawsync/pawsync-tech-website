@@ -66,7 +66,7 @@ export default function BlogArticleSmartFeederEngineeringFr() {
             attendue — une cellule largement surdimensionnée par rapport à ce qu&apos;elle mesurera donne
             une résolution médiocre en bas de plage, tandis qu&apos;une cellule trop proche de la charge
             maximale risque d&apos;être endommagée par surcharge. La méthode standard pour lire une cellule
-            de charge passe par un amplificateur analogique-numérique 24 bits dédié (le HX711 est le
+            de charge passe par un convertisseur analogique-numérique 24 bits dédié avec amplificateur intégré (le HX711 est le
             composant le plus couramment utilisé dans ce rôle pour les designs embarqués de petite taille),
             qui gère le conditionnement de signal analogique bas niveau qu&apos;un ADC de microcontrôleur
             généraliste n&apos;est pas conçu pour assurer.
@@ -143,7 +143,7 @@ export default function BlogArticleSmartFeederEngineeringFr() {
             moteur n&apos;est pas un enjeu d&apos;autonomie, seulement une question de câblage et de
             dimensionnement de l&apos;alimentation. Une conception sur batterie doit budgétiser
             spécifiquement ce pic de courant, pas seulement la consommation moyenne entre les distributions
-            — un calcul différent des techniques de cyclage utilisées dans une conception de tracker basse
+            — un calcul différent des techniques de mise en veille utilisées dans une conception de tracker basse
             consommation.
           </p>
 
