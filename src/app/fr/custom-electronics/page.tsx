@@ -264,7 +264,7 @@ export default function CustomElectronicsPageFr() {
       </section>
 
       <CTABanner
-        heading="Une idée de produit Animal-Tech ?"
+        heading="Une idée de produit de technologie animale ?"
         description="Des trackers GPS aux contrôleurs agricoles automatisés, nous pouvons vous aider à développer votre électronique du concept au prototype."
         primaryLabel="Démarrer votre projet d&apos;ingénierie sur mesure"
         primaryHref="/fr/contact"

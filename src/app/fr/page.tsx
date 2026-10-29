@@ -48,7 +48,7 @@ export default function TerraSenseHomePageFr() {
       <CapabilitiesStrip />
       <CTABanner
         eyebrow="Construisons quelque chose de fiable"
-        heading="Prêt à développer votre produit Animal-Tech ou AgriTech ?"
+        heading="Prêt à développer votre produit de technologie animale ou AgriTech ?"
         description="Des trackers connectés et distributeurs de nourriture intelligents à la surveillance environnementale, l'irrigation et l'automatisation agricole complète, PawSync aide à transformer les idées de produits en matériel connecté fiable."
         primaryLabel="Démarrer votre projet"
         primaryHref="/fr/contact"

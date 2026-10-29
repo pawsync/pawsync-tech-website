@@ -26,7 +26,7 @@ const articles = [
     href: "/fr/blog/low-power-animal-tracker-design",
   },
   {
-    title: "Concevoir une carte PCB pour un tracker animalier",
+    title: "Concevoir la carte PCB d'un tracker pour animaux",
     excerpt: "Un tracker porté au collier n'est pas une carte GPS miniature. Placement d'antenne, empilage des couches et contraintes de boîtier.",
     href: "/fr/blog/pet-tracker-pcb-design",
   },
@@ -85,7 +85,7 @@ export default function BlogPageFr() {
 
       <CTABanner
         heading="Un sujet que vous aimeriez que nous abordions ?"
-        description="Si vous avez une question sur l'Animal-Tech ou l'IoT agricole à laquelle vous aimeriez une réponse, faites-le-nous savoir."
+        description="Si vous avez une question sur la technologie animale ou l'IoT agricole à laquelle vous aimeriez une réponse, faites-le-nous savoir."
         primaryLabel="Contactez-nous"
         primaryHref="/fr/contact"
       />

@@ -8,7 +8,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Conception de carte PCB pour tracker animalier | PawSync",
+  title: "Concevoir le PCB d'un tracker pour animaux | PawSync",
   description:
     "Un tracker de collier n'est pas une carte GPS miniature : placement d'antenne, empilage des couches et contraintes de boîtier guident la conception.",
   alternates: buildAlternates("fr", "blog/pet-tracker-pcb-design"),
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const articleJsonLd = blogPostingJsonLd({
   locale: "fr",
   route: "blog/pet-tracker-pcb-design",
-  headline: "Concevoir une carte PCB pour un tracker animalier : ce que le format impose réellement",
+  headline: "Concevoir la carte PCB d'un tracker pour animaux : ce que le format impose réellement",
   description: metadata.description ?? "",
 });
 
@@ -31,7 +31,7 @@ export default function BlogArticlePetTrackerPCBFr() {
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <Eyebrow>Notes d&apos;ingénierie</Eyebrow>
         <h1 className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-          Concevoir une carte PCB pour un tracker animalier : ce que le format impose réellement
+          Concevoir la carte PCB d&apos;un tracker pour animaux : ce que le format impose réellement
         </h1>
         <ArticleDate route="blog/pet-tracker-pcb-design" locale="fr" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">

@@ -172,7 +172,7 @@ export default function LivestockTechnologyPageFr() {
         </div>
         <p className="mt-4 text-center text-sm text-[var(--ts-gray)]">
           Exemples de types d&apos;alertes qu&apos;un système sur mesure peut
-          déclencher – à titre d&apos;illustration.
+          déclencher — à titre d&apos;illustration.
         </p>
       </section>
 

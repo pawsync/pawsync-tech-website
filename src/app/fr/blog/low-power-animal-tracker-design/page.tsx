@@ -8,9 +8,9 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Concevoir un tracker animalier basse consommation | PawSync",
+  title: "Concevoir un tracker basse consommation | PawSync",
   description:
-    "L'autonomie d'un tracker animalier portable est un problème de budget énergétique. Les techniques qui déterminent si un appareil tient des jours ou des mois.",
+    "L'autonomie d'un tracker porté par un animal est un problème de budget énergétique. Les techniques qui déterminent si un appareil tient des jours ou des mois.",
   alternates: buildAlternates("fr", "blog/low-power-animal-tracker-design"),
   openGraph: buildOpenGraph("fr", "blog/low-power-animal-tracker-design"),
 };

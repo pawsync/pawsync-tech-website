@@ -17,9 +17,9 @@ import {
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Lancez votre projet Animal-Tech ou IoT agricole | PawSync",
+  title: "Projet de technologie animale ou d'IoT agricole | PawSync",
   description:
-    "Parlez à PawSync de votre idée Animal-Tech ou d'IoT agricole : nous vous aidons à en faire un produit électronique concret.",
+    "Parlez à PawSync de votre idée de technologie animale ou d'IoT agricole : nous vous aidons à en faire un produit électronique concret.",
   alternates: buildAlternates("fr", "contact"),
   openGraph: buildOpenGraph("fr", "contact"),
 };
@@ -34,7 +34,7 @@ export default function ContactPageFr() {
           <div>
             <Eyebrow align="left">Contact</Eyebrow>
             <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-              Une idée Animal-Tech ou d&apos;IoT agricole ?
+              Une idée de technologie animale ou d&apos;IoT agricole ?
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-[var(--ts-gray)]">
               Dites-nous ce que vous souhaitez créer, et nous vous aiderons à
