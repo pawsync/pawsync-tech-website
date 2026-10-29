@@ -184,7 +184,7 @@ export default function SolutionsPageFr() {
           fonctionnalités indiquées — y compris tableaux de bord, applications
           mobiles et alertes — sont conçues et développées pour chaque projet ;
           ce ne sont pas des produits standard. Les exemples de notre page
-          Projets sont des designs de référence, et non des déploiements testés
+          Projets sont des modèles de référence, et non des déploiements testés
           sur le terrain.
         </p>
       </section>

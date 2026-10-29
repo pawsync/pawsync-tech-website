@@ -23,7 +23,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Développement de dispositifs pour animaux | PawSync",
   description:
-    "Développement sur mesure de dispositifs pour animaux : wearables, colliers et trackers avec carte PCB, micrologiciel et prototype.",
+    "Développement sur mesure de dispositifs pour animaux : objets connectés portables, colliers et trackers avec carte PCB, micrologiciel et prototype.",
   alternates: buildAlternates("fr", "pet-technology"),
   openGraph: buildOpenGraph("fr", "pet-technology"),
 };
@@ -138,7 +138,7 @@ const scope: ServiceScopeCopy = {
       "href": "/fr/blog/pet-tracker-pcb-design"
     }
   ],
-  "note": "Cette section décrit des services d'ingénierie sur mesure. Les designs de référence présentés sur notre page Projets sont des concepts et des prototypes, et non des produits à acheter."
+  "note": "Cette section décrit des services d'ingénierie sur mesure. Les modèles de référence présentés sur notre page Projets sont des concepts et des prototypes, et non des produits à acheter."
 };
 
 export default function PetTechnologyPageFr() {
@@ -151,8 +151,8 @@ export default function PetTechnologyPageFr() {
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Développement sur mesure de dispositifs pour animaux</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           Des trackers GPS aux distributeurs intelligents, nous concevons le
-          matériel derrière les produits pet-tech modernes — pour les
-          start-ups pet-tech, les refuges et les marques de dispositifs.
+          matériel derrière les produits modernes pour animaux de compagnie —
+          pour les start-ups du secteur, les refuges et les marques de dispositifs.
         </p>
       </section>
 
@@ -167,7 +167,7 @@ export default function PetTechnologyPageFr() {
           concevons l&apos;électronique et le micrologiciel selon vos
           exigences. Aucun des dispositifs ci-dessus n&apos;est un produit
           standard PawSync, et les exemples de notre page Projets sont des
-          designs de référence.
+          modèles de référence.
         </p>
       </section>
 
@@ -203,7 +203,7 @@ export default function PetTechnologyPageFr() {
 
       <CTABanner
         heading="Développer un produit de technologie pour animaux de compagnie"
-        description="Du concept au prototype, nous pouvons vous aider à concevoir l'électronique de votre prochain produit pet-tech."
+        description="Du concept au prototype, nous pouvons vous aider à concevoir l'électronique de votre prochain produit pour animaux de compagnie."
         primaryLabel="Discuter de votre projet"
         primaryHref="/fr/contact"
         secondaryLabel="Voir toutes les solutions"

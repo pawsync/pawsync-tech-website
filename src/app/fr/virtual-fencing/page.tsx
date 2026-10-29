@@ -85,7 +85,7 @@ export default function VirtualFencingPageFr() {
             Il s&apos;agit de services d&apos;ingénierie sur mesure : nous
             concevons le matériel et la logique de délimitation selon vos
             exigences. Ce ne sont pas des produits standard, et l&apos;exemple
-            de notre page Projets est un design de référence, et non un
+            de notre page Projets est un modèle de référence, et non un
             déploiement testé sur le terrain.
           </p>
         </div>

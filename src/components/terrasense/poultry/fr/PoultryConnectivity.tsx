@@ -40,7 +40,7 @@ export default function PoultryConnectivity() {
             <strong className="text-white">LTE / Cellulaire</strong> couvre les sites isolés sans infrastructure réseau, ou sert de liaison de la passerelle vers le cloud lorsqu&apos;aucune connexion internet filaire n&apos;est disponible.
           </p>
           <p>
-            <strong className="text-white">RS485 / Modbus</strong> (filaire) reste une solution fiable en rénovation lorsqu&apos;un bâtiment dispose déjà d&apos;un réseau de commande — inutile de le remplacer pour le principe.
+            <strong className="text-white">RS485 / Modbus</strong> (filaire) reste une solution fiable en rénovation lorsqu&apos;un bâtiment dispose déjà d&apos;un bus de terrain pour la régulation — inutile de le remplacer pour le principe.
           </p>
         </div>
 

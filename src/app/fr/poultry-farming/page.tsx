@@ -19,9 +19,9 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 import { serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Technologie avicole sans fil & télésurveillance | PawSync",
+  title: "Technologie avicole sans fil & suivi à distance | PawSync",
   description:
-    "Technologie avicole sans fil : capteurs de température, d'humidité et de qualité de l'air, liaison LoRa/Wi-Fi et télésurveillance, par PawSync.",
+    "Technologie avicole sans fil : capteurs de température, d'humidité et de qualité de l'air, liaison LoRa/Wi-Fi et surveillance à distance, par PawSync.",
   alternates: buildAlternates("fr", "poultry-farming"),
   openGraph: buildOpenGraph("fr", "poultry-farming"),
 };

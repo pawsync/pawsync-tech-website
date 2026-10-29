@@ -129,7 +129,7 @@ const scope: ServiceScopeCopy = {
       "href": "/fr/blog/pet-tracker-pcb-design"
     }
   ],
-  "note": "Cette section décrit des services d'ingénierie sur mesure. Les designs de référence présentés sur notre page Projets sont des concepts et des prototypes, et non des produits à acheter."
+  "note": "Cette section décrit des services d'ingénierie sur mesure. Les modèles de référence présentés sur notre page Projets sont des concepts et des prototypes, et non des produits à acheter."
 };
 
 export default function AnimalTrackingPageFr() {

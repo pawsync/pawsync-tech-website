@@ -193,7 +193,7 @@ export default function LivestockTechnologyPageFr() {
             Il s&apos;agit de services d&apos;ingénierie sur mesure : nous
             concevons et développons le matériel selon vos exigences. Ce ne
             sont pas des produits standard, et les exemples de notre page
-            Projets sont des designs de référence, et non des déploiements
+            Projets sont des modèles de référence, et non des déploiements
             testés sur le terrain.
           </p>
         </div>
