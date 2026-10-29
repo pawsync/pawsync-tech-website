@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Inter, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import TerraSenseHeader from "@/components/terrasense/TerraSenseHeader";
 import TerraSenseFooter from "@/components/terrasense/TerraSenseFooter";
@@ -9,16 +9,20 @@ import PlausibleAnalytics from "@/components/analytics/PlausibleAnalytics";
 import type { Locale } from "@/i18n/config";
 import { organizationJsonLd, serializeJsonLd, websiteJsonLd } from "@/lib/structuredData";
 
-const inter = Inter({
+// Self-hosted Inter and Manrope variable fonts (latin subset, from
+// @fontsource-variable 5.3.0, SIL Open Font License 1.1 in ./fonts). Builds no
+// longer download fonts from Google, so a network hiccup can't fail a deploy.
+const inter = localFont({
+  src: "./fonts/inter-latin-wght-normal.woff2",
   variable: "--font-inter",
-  subsets: ["latin"],
+  weight: "100 900",
   display: "swap",
 });
 
-const manrope = Manrope({
+const manrope = localFont({
+  src: "./fonts/manrope-latin-wght-normal.woff2",
   variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: "200 800",
   display: "swap",
 });
 
