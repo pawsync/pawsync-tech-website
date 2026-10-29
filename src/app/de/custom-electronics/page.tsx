@@ -126,7 +126,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Können Sie sowohl Hardware als auch Firmware entwickeln?",
-    answer: "Ja, beides sind zentrale hauseigene Kompetenzen — vom Schaltplan und Leiterplattendesign bis zur Embedded-Firmware, die darauf läuft.",
+    answer: "Ja, beides sind zentrale Kompetenzen — vom Schaltplan und Leiterplattendesign bis zur Embedded-Firmware, die darauf läuft.",
   },
   {
     question: "Können Sie helfen, einen Prototyp in die Serienproduktion zu überführen?",

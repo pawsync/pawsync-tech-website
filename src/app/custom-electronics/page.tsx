@@ -126,7 +126,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Can you design both hardware and firmware?",
-    answer: "Yes, both are core in-house capabilities — from schematic and PCB design through to the embedded firmware that runs on it.",
+    answer: "Yes, both are core capabilities — from schematic and PCB design through to the embedded firmware that runs on it.",
   },
   {
     question: "Can you help move a prototype into production?",

@@ -126,7 +126,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Pouvez-vous concevoir à la fois le matériel et le micrologiciel ?",
-    answer: "Oui, les deux sont des compétences internes essentielles — du schéma et de la conception PCB jusqu'au micrologiciel embarqué qui s'exécute dessus.",
+    answer: "Oui, les deux sont des compétences essentielles — du schéma et de la conception PCB jusqu'au micrologiciel embarqué qui s'exécute dessus.",
   },
   {
     question: "Pouvez-vous aider à faire passer un prototype en production ?",
