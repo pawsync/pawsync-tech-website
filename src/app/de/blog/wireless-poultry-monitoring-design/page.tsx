@@ -65,13 +65,13 @@ export default function BlogArticleWirelessPoultryMonitoringDe() {
             </li>
             <li>
               <strong>Ammoniak (NH₃)</strong> ist besonders relevant, weil es schon bei moderaten
-              Konzentrationen die Atemwege reizt und meist mit Einstreufeuchtigkeit und
-              Lüftungsangemessenheit korreliert — oft einer der aussagekräftigsten Messwerte, um ein sich
+              Konzentrationen die Atemwege reizt und meist mit feuchter Einstreu und
+              unzureichender Lüftung einhergeht — oft einer der aussagekräftigsten Messwerte, um ein sich
               entwickelndes Problem zu erkennen, bevor es sich im Verhalten der Herde zeigt.
             </li>
             <li>
-              <strong>CO₂</strong> ist ein sekundärer, aber nützlicher Indikator für die allgemeine
-              Lüftungsangemessenheit, da er widerspiegelt, wie viel Frischluft tatsächlich an einem
+              <strong>CO₂</strong> ist ein sekundärer, aber nützlicher Indikator dafür, ob die Lüftung
+              insgesamt ausreicht, da er widerspiegelt, wie viel Frischluft tatsächlich an einem
               gegebenen Punkt im Stall ankommt.
             </li>
             <li>

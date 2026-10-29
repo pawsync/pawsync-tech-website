@@ -25,7 +25,7 @@ const solutions: { icon: LucideIcon; title: string; description: string }[] = [
   { icon: Flame, title: "Heiz- & Kühlsteuerung", description: "Automatisierung von Heizungen, Kühlgeräten, Ventilatoren und verwandten Klimasystemen." },
   { icon: UtensilsCrossed, title: "Intelligente Fütterung", description: "Überwachung der Futterstände und Automatisierung von Fütterungsplänen oder Ausgabegeräten." },
   { icon: Droplets, title: "Wasserüberwachung", description: "Überwachung von Tankständen, Wasserverfügbarkeit, Durchfluss und Störungen." },
-  { icon: Waves, title: "Automatische Bewässerung", description: "Steuerung von Pumpen, Ventilen und Bewässerungsanlagen." },
+  { icon: Waves, title: "Automatische Tränkesteuerung", description: "Steuerung von Pumpen, Ventilen und Tränkeanlagen." },
   { icon: Lightbulb, title: "Beleuchtungsautomatisierung", description: "Steuerung der Stallbeleuchtung nach Zeitplänen oder konfigurierbaren Regeln." },
   { icon: AlertTriangle, title: "Umweltalarme", description: "Alarme, wenn überwachte Werte konfigurierte Grenzwerte überschreiten." },
   { icon: Wrench, title: "Geräteüberwachung", description: "Überwachung von Ventilatoren, Pumpen, Motoren, Futterautomaten und anderer wichtiger Hofausrüstung." },

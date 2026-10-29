@@ -33,8 +33,8 @@ export default function PrivacyPageDe() {
               dieser Hinweis beschreibt sie nicht als solches.
             </p>
             <p className="mt-2">
-              Die Fußzeile dieser Website nennt <strong>Pak-EL LAB</strong> als Engineering-
-              Partner für PawSync.tech. Diese Nennung ist keine Aussage darüber, dass Pak-EL
+              Die Fußzeile dieser Website nennt <strong>Pak-EL LAB</strong> als Engineering-Partner
+              für PawSync.tech. Diese Nennung ist keine Aussage darüber, dass Pak-EL
               LAB PawSync.tech besitzt, betreibt oder für die Verarbeitung der über das
               Kontaktformular übermittelten Daten verantwortlich ist — PawSync.tech wird, wie
               oben beschrieben, persönlich betrieben, und die Rolle von Pak-EL LAB beschränkt
@@ -70,8 +70,8 @@ export default function PrivacyPageDe() {
             </ul>
             <p className="mt-2">
               Diese Website verwendet keine eigenen Cookies, Analyse- oder Werbeskripte — dies
-              ist eine direkt im Quellcode der Website verifizierte Tatsache. Ob die Hosting-
-              Plattform auf Infrastrukturebene darüber hinaus etwas protokolliert, kann dieser
+              ist eine direkt im Quellcode der Website verifizierte Tatsache. Ob die Hosting-Plattform
+              auf Infrastrukturebene darüber hinaus etwas protokolliert, kann dieser
               Hinweis derzeit nicht bestätigen.
             </p>
           </section>

@@ -39,7 +39,7 @@ const capabilities = [
 
 const faqs = [
   { question: "Können Tracking-Geräte ohne Mobilfunkabdeckung funktionieren?", answer: "Ja. Wir entwickeln Systeme rund um LoRa und andere stromsparende Weitverkehrsprotokolle für Standorte mit eingeschränktem oder fehlendem Mobilfunksignal und synchronisieren Daten, sobald ein Gateway oder eine Mobilfunkverbindung erreicht wird." },
-  { question: "Wie lange hält die Akkulaufzeit typischerweise?", answer: "Das hängt von Aktualisierungsfrequenz, Konnektivitätsart und Gehäusegröße ab — wir gestalten das Energiebudget nach Ihrem erforderlichen Meldeintervall und Lastzyklus." },
+  { question: "Wie lange hält der Akku typischerweise?", answer: "Das hängt von Aktualisierungsfrequenz, Konnektivitätsart und Gehäusegröße ab — wir gestalten das Energiebudget nach Ihrem erforderlichen Meldeintervall und Duty-Cycle." },
   { question: "Können Sie mehrere Tierarten mit einer Plattform tracken?", answer: "Ja. Dashboard und Backend können so entwickelt werden, dass sie gemischte Flotten unterstützen (Haustiere, Nutztiere und Arbeitstiere), mit Gerätehardware, die je Tierart dimensioniert ist." },
 ];
 

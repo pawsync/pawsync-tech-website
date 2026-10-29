@@ -9,7 +9,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Hardware- & Firmware-Engineering Futterautomat | PawSync",
+  title: "Futterautomaten: Hardware- & Firmware-Engineering | PawSync",
   description:
     "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung — die Engineering-Entscheidungen hinter einem intelligenten Futterautomaten.",
   alternates: buildAlternates("de", "blog/smart-pet-feeder-engineering"),
@@ -44,7 +44,7 @@ export default function BlogArticleSmartFeederEngineeringDe() {
             Das eigentliche Sensorproblem: eine Portion messen, nicht nur ausgeben
           </h2>
           <p>
-            Der einfachste Weg, einen automatischen Futterautomaten zu bauen, ist offene Steuerung: eine
+            Der einfachste Weg, einen Futterautomaten zu bauen, ist offene Steuerung: eine
             Förderschnecke oder eine Klappe für eine feste Zeit betätigen und annehmen, dass dabei eine
             feste Portion entsteht. Das funktioniert, bis der Füllstand im Behälter die Durchflussrate
             ändert, sich die Futterart in der Dichte unterscheidet oder der Mechanismus sich leicht
@@ -67,7 +67,7 @@ export default function BlogArticleSmartFeederEngineeringDe() {
             sein — eine Zelle, die weit über das hinaus ausgelegt ist, was sie je messen wird, liefert im
             unteren Bereich eine schlechte Auflösung, während eine zu nah an der Maximallast dimensionierte
             Zelle Überlastschäden riskiert. Der Standardweg, eine Wägezelle auszulesen, führt über einen
-            dedizierten 24-Bit-Analog-Digital-Verstärker (der HX711 ist das in dieser Rolle für kleine
+            dedizierten 24-Bit-A/D-Wandler mit integriertem Verstärker (der HX711 ist das in dieser Rolle für kleine
             Embedded-Designs am häufigsten eingesetzte Bauteil), der die analoge Signalaufbereitung
             übernimmt, für die ein allgemeiner Mikrocontroller-ADC nicht ausgelegt ist.
           </p>

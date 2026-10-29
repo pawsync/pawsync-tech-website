@@ -90,7 +90,7 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
   { icon: CircuitBoard, label: "Leiterplatte" },
   { icon: FileCode, label: "Firmware" },
   { icon: FlaskConical, label: "Prototyp" },
-  { icon: ClipboardCheck, label: "Testing" },
+  { icon: ClipboardCheck, label: "Test" },
   { icon: Factory, label: "Produktion" },
 ];
 
@@ -169,8 +169,8 @@ export default function CustomElectronicsPageDe() {
           Kundenspezifische Elektronik &amp; IoT-Produktentwicklung
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
-          Wenn ein Standardgerät nicht ausreicht, entwickeln wir eines, das
-          es tut — Hardware, Firmware und die Konnektivität, die alles
+          Wenn ein Standardgerät nicht ausreicht, entwickeln wir ein
+          passendes — Hardware, Firmware und die Konnektivität, die alles
           verbindet. Das ist derselbe Entwicklungsprozess hinter unseren{" "}
           <Link href="/de/poultry-farming" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Geflügelfarm-Controllern

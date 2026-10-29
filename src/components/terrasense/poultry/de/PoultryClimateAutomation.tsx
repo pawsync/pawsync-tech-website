@@ -112,8 +112,8 @@ export default function PoultryClimateAutomation() {
 
         <p className="mx-auto mt-6 flex max-w-2xl items-center justify-center gap-2 text-center text-xs text-white/60">
           <Bell className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-          Schwellenwerte und Steuerlogik sind an die Anforderungen des
-          Betriebs konfigurierbar.
+          Schwellenwerte und Steuerlogik lassen sich an die Anforderungen des
+          Betriebs anpassen.
         </p>
       </div>
     </section>

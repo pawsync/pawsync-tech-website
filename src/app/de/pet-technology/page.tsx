@@ -80,7 +80,7 @@ const scope: ServiceScopeCopy = {
     "Schaltplan & Leiterplatte",
     "Firmware",
     "Prototyp",
-    "Testing",
+    "Test",
     "Fertigungsvorbereitung"
   ],
   "tradeoffsHeading": "Technische Abwägungen",
@@ -201,7 +201,7 @@ export default function PetTechnologyPageDe() {
       <ServiceScope id="pet-scope" copy={scope} />
 
       <CTABanner
-        heading="Ein Pet-Technology-Produkt entwickeln"
+        heading="Ein Produkt für Haustiere entwickeln"
         description="Vom Konzept bis zum Prototyp helfen wir Ihnen, die Elektronik hinter Ihrem nächsten Pet-Tech-Produkt zu entwickeln."
         primaryLabel="Ihr Projekt besprechen"
         primaryHref="/de/contact"

@@ -29,12 +29,12 @@ const sensors = [
 ];
 
 const applications = [
-  { icon: Warehouse, title: "Stallüberwachung", description: "Kontinuierliches Klimabewusstsein für Rinder- und Pferdeställe." },
+  { icon: Warehouse, title: "Stallüberwachung", description: "Kontinuierliche Klimaüberwachung für Rinder- und Pferdeställe." },
   { icon: PawPrint, title: "Geflügelstallüberwachung", description: "Enge Umwelttoleranzen, rund um die Uhr erfasst.", href: "/de/poultry-farming" },
   { icon: Flower2, title: "Gewächshausüberwachung", description: "Temperatur-, Feuchtigkeits- und Lichterfassung für kontrolliertes Wachstum." },
   { icon: Home, title: "Tierheimüberwachung", description: "Komfortable, sichere Bedingungen für untergebrachte und Pflegetiere." },
   { icon: Building2, title: "Futterlagerüberwachung", description: "Feuchtigkeits- und Temperaturerfassung zum Schutz gelagerten Futters." },
-  { icon: Droplets, title: "Wassertanküberwachung", description: "Stands- und Qualitätserfassung für eine zuverlässige Wasserversorgung." },
+  { icon: Droplets, title: "Wassertanküberwachung", description: "Füllstands- und Qualitätserfassung für eine zuverlässige Wasserversorgung." },
   { icon: Sprout, title: "Überwachung im Freiland", description: "Wetterfeste Sensoren für Bedingungen im offenen Feld." },
 ];
 

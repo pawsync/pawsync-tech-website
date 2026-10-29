@@ -83,7 +83,7 @@ const scope: ServiceScopeCopy = {
     "Schaltplan & Leiterplatte",
     "Firmware",
     "Prototyp",
-    "Testing",
+    "Test",
     "Fertigungsvorbereitung"
   ],
   "tradeoffsHeading": "Technische Abwägungen",

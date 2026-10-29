@@ -116,11 +116,11 @@ const solutions = [
   { icon: HeartPulse, title: "Brunsterkennung", description: "Auf Wunsch einplanbare Analyse von Aktivitätsmustern, um mögliche Deckzeitfenster zu erkennen." },
   { icon: MapPinned, title: "Bewegungsüberwachung", description: "Historische Bewegungsspuren für einzelne Tiere oder Gruppen." },
   { icon: HeartPulse, title: "Gesundheitsindikatoren", description: "Aktivitäts- und Verhaltenstrends, die helfen können, auffällige Tiere früher zu erkennen." },
-  { icon: Activity, title: "Weideüberwachung", description: "Aufenthaltszeit-in-Zone-Daten zur Information von Rotationsweideentscheidungen." },
+  { icon: Activity, title: "Weideüberwachung", description: "Aufenthaltsdauer je Zone als Grundlage für Entscheidungen zur Umtriebsweide." },
   { icon: MapPinned, title: "Virtuelle Einzäunung", description: "GPS-basierte Grenzen, die die Abhängigkeit von physischer Einzäunung verringern.", href: "/de/virtual-fencing" },
   { icon: Hash, title: "RFID-Identifikation", description: "Individuelle Tieridentifikation für Aufzeichnungen und Zutrittskontrolle." },
   { icon: Hash, title: "Tierzählung", description: "RFID-basierte Kopfzahlerfassung an Toren, Triebgängen oder Tränken, ausgelegt auf Ihren Betrieb." },
-  { icon: Droplets, title: "Wasserverbrauchsüberwachung", description: "Durchfluss- und Standssensoren, die abnormale Trinkmuster erkennen." },
+  { icon: Droplets, title: "Wasserverbrauchsüberwachung", description: "Durchfluss- und Füllstandssensoren, die abnormale Trinkmuster erkennen." },
   { icon: UtensilsCrossed, title: "Fütterungsüberwachung", description: "Futterstands- und Verbrauchsverfolgung über Fütterungsstationen hinweg." },
 ];
 

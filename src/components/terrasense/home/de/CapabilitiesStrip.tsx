@@ -1,7 +1,7 @@
 const groups: { label: string; items: string[] }[] = [
   {
     label: "Elektronik",
-    items: ["Embedded Systems", "Leiterplattenentwicklung", "Power Management", "Sensorintegration"],
+    items: ["Embedded-Systeme", "Leiterplattenentwicklung", "Energiemanagement", "Sensorintegration"],
   },
   {
     label: "Konnektivität",
@@ -9,7 +9,7 @@ const groups: { label: string; items: string[] }[] = [
   },
   {
     label: "Produktentwicklung",
-    items: ["Prototypenentwicklung", "Firmware", "Testing", "Produktionsvorbereitung"],
+    items: ["Prototypenentwicklung", "Firmware", "Tests", "Produktionsvorbereitung"],
   },
 ];
 

@@ -34,7 +34,7 @@ const industries: { image: string; alt: string; label: string; tagline: string; 
   {
     image: "https://images.unsplash.com/photo-1599635406076-0f40532a59fc?auto=format&fit=crop&w=500&q=75",
     alt: "Pferde stehen bei Sonnenaufgang auf einer nebligen Weide",
-    label: "Pferde- & Equine-Technologie",
+    label: "Pferdetechnologie",
     tagline: "Standort • Aktivitäts-Tracking",
   },
   {

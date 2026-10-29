@@ -22,7 +22,7 @@ const categories = [
   {
     icon: Droplets,
     title: "Wassermanagement",
-    items: ["Wassertanküberwachung", "Automatische Bewässerung", "Pumpensteuerung", "Durchflussüberwachung", "Leckerkennung", "Wasserverfügbarkeitsalarme"],
+    items: ["Wassertanküberwachung", "Automatische Tränkesteuerung", "Pumpensteuerung", "Durchflussüberwachung", "Leckerkennung", "Wasserverfügbarkeitsalarme"],
   },
   {
     icon: UtensilsCrossed,

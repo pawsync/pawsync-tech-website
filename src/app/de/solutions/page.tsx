@@ -48,7 +48,7 @@ const categories: Category[] = [
     icon: Radar,
     title: "Virtuelle Einzäunung",
     description:
-      "GPS- und funkbasierte Grenzsysteme, die Tieren Freiraum innerhalb festgelegter Zonen geben, mit Standortbewusstsein anstelle traditioneller Zäune.",
+      "GPS- und funkbasierte Grenzsysteme, die Tieren Freiraum innerhalb festgelegter Zonen geben, mit GPS-Ortung anstelle traditioneller Zäune.",
     points: ["Individuelle, anpassbare Grenzen", "Echtzeit-Bewegungsalarme", "Unterstützung mehrerer Zonen", "Fernkonfiguration vom Feld oder Büro aus"],
   },
   {
@@ -89,7 +89,7 @@ const categories: Category[] = [
     title: "Intelligente Bewässerung & Wassermanagement",
     description:
       "Vernetzte Bewässerungssysteme mit Bodenfeuchtemessung, Umweltdaten und Wasserstandsüberwachung, mit automatisierten Ventilen und Pumpen zur Optimierung von Wasserverbrauch und Anbaubedingungen.",
-    points: ["Bodenfeuchte- & Tankstandsüberwachung", "Automatisierte Ventil- & Pumpensteuerung", "Wetterbewusste Zeitplanung", "Leck- & Störungsalarme"],
+    points: ["Bodenfeuchte- & Tankstandsüberwachung", "Automatisierte Ventil- & Pumpensteuerung", "Wetterabhängige Zeitplanung", "Leck- & Störungsalarme"],
   },
   {
     id: "environmental-monitoring",
@@ -104,7 +104,7 @@ const categories: Category[] = [
     icon: AlertTriangle,
     title: "Sicherheit & Gefahrenerkennung",
     description:
-      "Frühwarnsysteme, die extreme Hitze, Kälte, Rauch, Brandrisiko, Überflutung, Wasserlecks und Geräteausfälle frühzeitig melden sollen.",
+      "Frühwarnsysteme, ausgelegt darauf, extreme Hitze, Kälte, Rauch, Brandrisiko, Überflutung, Wasserlecks und Geräteausfälle frühzeitig zu melden.",
     points: ["Status Normal / Warnung / Kritisch", "Mobil-, SMS-, E-Mail- & Lokalalarme", "Redundante Sensorik, wo es zählt", "Strom- & Pumpenausfallerkennung"],
   },
   {

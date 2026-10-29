@@ -54,12 +54,12 @@ export default function BlogArticleLowPowerDesignDe() {
           </h2>
           <ul className="list-disc space-y-2 pl-6">
             <li>
-              <strong>GNSS-Erfassung.</strong> Der Empfang und die Verriegelung auf Satellitensignale gehört
-              zu den energieintensivsten Vorgängen eines Trackers, und wie lange er dauert, ist ebenso
+              <strong>GNSS-Erfassung.</strong> Das Erfassen der Satellitensignale und die Synchronisation darauf gehören
+              zu den energieintensivsten Vorgängen eines Trackers, und wie lange das dauert, ist ebenso
               wichtig wie die Stromaufnahme während des Vorgangs. Ein <em>Kaltstart</em> (ohne aktuelle
               Almanach- oder Positionsdaten) kann zehn bis mehrere zehn Sekunden bis zur Positionsbestimmung
               dauern; ein <em>Warm-</em> oder <em>Hot-Start</em>, der kürzlich gespeicherte Ephemeriden- und
-              Zeitdaten nutzt, kann in wenigen Sekunden verriegeln. Kaltstarts zu minimieren — indem die
+              Zeitdaten nutzt, liefert oft schon nach wenigen Sekunden eine Position. Kaltstarts zu minimieren — indem die
               Sicherungsdaten des Empfängers über Schlafzyklen hinweg erhalten bleiben — ist eine der
               wirkungsvollsten Energieentscheidungen im gesamten Design.
             </li>
@@ -69,7 +69,7 @@ export default function BlogArticleLowPowerDesignDe() {
               Funkwahl und Meldehäufigkeit stehen alle in direktem Zielkonflikt mit der Akkulaufzeit.
             </li>
             <li>
-              <strong>Sensoren und der Mikrocontroller.</strong> Ein IMU (Beschleunigungssensor/Gyroskop),
+              <strong>Sensoren und der Mikrocontroller.</strong> Eine IMU (Beschleunigungssensor/Gyroskop),
               ein Temperatursensor und der Mikrocontroller selbst ziehen auch im Stromsparmodus etwas Strom;
               die kumulierte Wirkung vieler kleiner Dauerverbraucher kann mit den größeren, intermittierenden
               Verbrauchern konkurrieren.

@@ -5,11 +5,11 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 const services = [
   "Kundenspezifisches Leiterplattendesign", "Embedded-Firmware", "Sensorintegration", "IoT-Konnektivität",
   "LoRa-Systeme", "Wi-Fi-Systeme", "LTE-Konnektivität", "Hof-Controller",
-  "Motor- & Relaissteuerung", "Power Management", "Gateway-Entwicklung",
-  "Prototypenentwicklung", "Testing", "Fertigungsvorbereitung",
+  "Motor- & Relaissteuerung", "Energiemanagement", "Gateway-Entwicklung",
+  "Prototypenentwicklung", "Test", "Fertigungsvorbereitung",
 ];
 
-const flow = ["Idee", "Architektur", "Schaltplan", "Leiterplatte", "Firmware", "Prototyp", "Testing", "Produktion"];
+const flow = ["Idee", "Architektur", "Schaltplan", "Leiterplatte", "Firmware", "Prototyp", "Test", "Produktion"];
 
 export default function PoultryCustomElectronics() {
   return (
@@ -22,7 +22,7 @@ export default function PoultryCustomElectronics() {
         <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
           PawSync kann individuelle Elektronik und IoT-Hardware rund um
           Ihren Geflügelbetrieb oder Ihre kommerzielle Produktidee
-          entwickeln — denselben Entwicklungsprozess, den wir auch für{" "}
+          entwickeln — mit demselben Entwicklungsprozess, den wir auch für{" "}
           <Link href="/de/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Nutztier-Tracking-Hardware
           </Link>{" "}
