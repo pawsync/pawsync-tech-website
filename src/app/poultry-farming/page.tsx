@@ -16,6 +16,7 @@ import PoultryConnectivity from "@/components/terrasense/poultry/PoultryConnecti
 import PoultryCustomElectronics from "@/components/terrasense/poultry/PoultryCustomElectronics";
 import PoultryApplications from "@/components/terrasense/poultry/PoultryApplications";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
+import { serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Wireless Poultry Technology & Remote Monitoring | PawSync",
@@ -114,7 +115,7 @@ const faqJsonLd = {
 export default function PoultryFarmingPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd) }} />
       <PoultryHero />
 
       <div className="bg-[var(--ts-bg)]">

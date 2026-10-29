@@ -16,6 +16,7 @@ import {
   MapPinned,
   MonitorSmartphone,
   Radar,
+  Radio,
   RadioTower,
   Satellite,
   ThermometerSun,
@@ -35,7 +36,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Remote Livestock & Cattle Monitoring Systems | PawSync",
   description:
-    "Custom wireless livestock monitoring hardware: GPS tracking, virtual fencing, RFID identification, and remote health/activity monitoring for cattle, sheep, goats, and horses.",
+    "Custom wireless livestock monitoring hardware for cattle, sheep, goats, and horses: GPS tracking, virtual fencing, RFID, and activity monitoring.",
   alternates: buildAlternates("en", "livestock-technology"),
   openGraph: buildOpenGraph("en", "livestock-technology"),
 };
@@ -134,7 +135,7 @@ const alerts = [
 
 const systemLayers = [
   { icon: Radar, title: "1. On the animal", description: "A collar or ear tag with GNSS and, where needed, motion sensing." },
-  { icon: Activity, title: "2. Radio link", description: "LoRa for long range at low power, or cellular (LTE-M) where coverage allows." },
+  { icon: Radio, title: "2. Radio link", description: "LoRa for long range at low power, or cellular (LTE-M) where coverage allows." },
   { icon: RadioTower, title: "3. Gateway", description: "Receives data on site and forwards it to the cloud; local logic can keep logging during an outage." },
   { icon: MonitorSmartphone, title: "4. Dashboard & alerts", description: "A web or mobile view with configurable alerts, designed to your requirements as part of the project." },
 ];
