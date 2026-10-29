@@ -38,7 +38,7 @@ const industries: { icon: LucideIcon; label: string; href?: string }[] = [
   { icon: PawPrint, label: "Exploitations équestres" },
   { icon: HeartPulse, label: "Technologie vétérinaire" },
   { icon: Home, label: "Refuges pour animaux" },
-  { icon: Building2, label: "Chenils" },
+  { icon: Building2, label: "Pensions pour animaux" },
   { icon: TreePine, label: "Recherche sur la faune sauvage" },
   { icon: Sprout, label: "Agriculture intelligente" },
   { icon: Warehouse, label: "Fabricants d'équipements agricoles" },
