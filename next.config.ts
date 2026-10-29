@@ -5,7 +5,8 @@ import path from "node:path";
 // the browser console without blocking anything. Inline scripts are allowed
 // because Next.js hydration and the JSON-LD blocks are inline; everything
 // else is limited to this origin plus Plausible (analytics) and Unsplash
-// (remote images).
+// (remote images). upgrade-insecure-requests is left out: browsers ignore it
+// in a Report-Only policy, and HSTS already forces HTTPS.
 const contentSecurityPolicy = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://plausible.io",
@@ -17,7 +18,6 @@ const contentSecurityPolicy = [
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'none'",
-  "upgrade-insecure-requests",
 ].join("; ");
 
 const securityHeaders = [
