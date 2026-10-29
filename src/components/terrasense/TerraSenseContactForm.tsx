@@ -161,7 +161,7 @@ const dict: Record<Locale, {
     uploadHint: "Un seul fichier, format de document ou d'image courant, jusqu'à 8 Mo au total pour l'ensemble de l'envoi.",
     dataUsageNote:
       "Les informations et le fichier éventuellement joints ici ne servent qu'à examiner et répondre à votre demande de projet.",
-    privacyLinkText: "Lire notre avis de confidentialité",
+    privacyLinkText: "Lire notre politique de confidentialité",
     submit: "Envoyer la demande de projet",
     submitting: "Envoi en cours…",
   },

@@ -14,7 +14,7 @@ import { absoluteUrl, buildAlternates } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Électronique sur mesure pour animaux, fermes & IoT | PawSync",
   description:
-    "PawSync conçoit du matériel IoT sur mesure pour animaux et fermes : suivi GPS, clôture virtuelle, alimentation intelligente, surveillance du bétail.",
+    "PawSync conçoit du matériel IoT sur mesure pour animaux et exploitations : suivi GPS, clôture virtuelle, alimentation intelligente, surveillance du bétail.",
   alternates: buildAlternates("fr", ""),
   openGraph: {
     siteName: "PawSync",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Électronique sur mesure pour animaux, fermes & IoT | PawSync",
     description:
-      "PawSync conçoit du matériel IoT sur mesure pour animaux et fermes : suivi GPS, clôture virtuelle, alimentation intelligente, surveillance du bétail.",
+      "PawSync conçoit du matériel IoT sur mesure pour animaux et exploitations : suivi GPS, clôture virtuelle, alimentation intelligente, surveillance du bétail.",
     images: [
       {
         url: "/og-image.png",

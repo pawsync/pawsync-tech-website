@@ -54,12 +54,12 @@ export default function BlogArticleLowPowerDesignFr() {
           </h2>
           <ul className="list-disc space-y-2 pl-6">
             <li>
-              <strong>Acquisition GNSS.</strong> Recevoir et verrouiller les signaux satellites est l&apos;une
+              <strong>Acquisition GNSS.</strong> Acquérir et suivre les signaux satellites est l&apos;une
               des opérations les plus gourmandes en énergie d&apos;un tracker, et sa durée compte autant que
               le courant consommé pendant son déroulement. Un <em>démarrage à froid</em> (sans almanach ni
               donnée de position récente) peut prendre plusieurs dizaines de secondes pour obtenir une
               position ; un démarrage <em>tiède</em> ou <em>à chaud</em>, utilisant des données
-              d&apos;éphémérides et d&apos;horloge récemment enregistrées, peut se verrouiller en quelques
+              d&apos;éphémérides et d&apos;horloge récemment enregistrées, peut obtenir une position en quelques
               secondes. Minimiser les démarrages à froid — en conservant intactes les données de sauvegarde
               du récepteur à travers les cycles de veille — est l&apos;une des décisions énergétiques les
               plus efficaces de toute la conception.

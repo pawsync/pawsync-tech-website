@@ -173,10 +173,10 @@ const dict: Record<Locale, Record<string, string>> = {
     projects: "Projets",
     blog: "Blog",
     contact: "Contact",
-    privacy: "Avis de confidentialité",
+    privacy: "Politique de confidentialité",
     tagline:
       "Électronique intelligente pour les animaux, les exploitations agricoles et les environnements connectés. Matériel IoT sur mesure, micrologiciels embarqués et conception de cartes PCB — du concept à la production.",
-    location: "Ingénierie et développement produit, en télétravail",
+    location: "Ingénierie et développement produit, à distance",
     rights: "PawSync. Tous droits réservés.",
     engineeringCredit: "Engineering by Pak-EL LAB",
     instagramLabel: "PawSync sur Instagram",

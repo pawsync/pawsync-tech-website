@@ -38,7 +38,7 @@ const connectedSystems: { icon: LucideIcon; label: string }[] = [
 const ioLabels = [
   { label: "Entrées capteurs", pos: "top-4 left-4" },
   { label: "Sorties relais / contrôle", pos: "top-4 right-4" },
-  { label: "RS485", pos: "bottom-16 left-4" },
+  { label: "RS-485", pos: "bottom-16 left-4" },
   { label: "Wi-Fi", pos: "bottom-16 right-4" },
   { label: "LoRa", pos: "bottom-4 left-4" },
   { label: "Ethernet", pos: "bottom-4 right-4" },

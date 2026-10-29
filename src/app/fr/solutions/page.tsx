@@ -21,7 +21,7 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Solutions pour animaux & exploitations agricoles | PawSync",
   description:
-    "Suivi GPS, clôture virtuelle, alimentation intelligente, automatisation agricole et surveillance environnementale : l'IoT sur mesure pour animaux et fermes.",
+    "Suivi GPS, clôture virtuelle, alimentation intelligente, automatisation agricole, surveillance environnementale : IoT sur mesure pour animaux et exploitations.",
   alternates: buildAlternates("fr", "solutions"),
   openGraph: buildOpenGraph("fr", "solutions"),
 };

@@ -101,7 +101,7 @@ export default function ContactPageFr() {
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ts-green)]" aria-hidden="true" />
                 <dl className="min-w-0">
                   <dt className="text-sm font-semibold text-[var(--ts-navy)]">Où nous travaillons</dt>
-                  <dd className="text-sm text-[var(--ts-gray)]">Équipe d&apos;ingénierie en télétravail, projets dans le monde entier</dd>
+                  <dd className="text-sm text-[var(--ts-gray)]">Équipe d&apos;ingénierie à distance, projets dans le monde entier</dd>
                 </dl>
               </div>
               <div className="flex items-start gap-3">

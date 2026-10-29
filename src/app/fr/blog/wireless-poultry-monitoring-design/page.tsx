@@ -97,7 +97,7 @@ export default function BlogArticleWirelessPoultryMonitoringFr() {
             relevés de capteurs périodiques (température et humidité n&apos;ont pas besoin d&apos;être
             mises à jour plusieurs fois par seconde) qu&apos;à une application gourmande en bande passante.
             Dans les situations de rénovation où un bâtiment dispose déjà d&apos;un bus de contrôle câblé,
-            un bus RS485/Modbus reste une solution de repli pratique et fiable, plutôt qu&apos;un système à
+            une communication RS-485/Modbus reste une solution de repli pratique et fiable, plutôt qu&apos;un système à
             remplacer pour le principe.
           </p>
           <p>

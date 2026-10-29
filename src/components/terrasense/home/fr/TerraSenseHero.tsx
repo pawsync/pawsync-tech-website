@@ -36,7 +36,7 @@ export default function TerraSenseHero() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-[var(--ts-accent)] ring-1 ring-inset ring-white/10">
             <CircuitBoard className="h-4 w-4" aria-hidden="true" />
-            Électronique intelligente pour animaux et fermes
+            Électronique intelligente pour animaux et exploitations
           </span>
 
           <h1 className="mt-5 font-[family-name:var(--font-manrope)] text-4xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl sm:leading-[1.08] lg:text-[3.75rem]">
