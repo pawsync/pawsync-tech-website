@@ -26,19 +26,13 @@ export default function PoultryCustomElectronics() {
           <Link href="/de/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Nutztier-Tracking-Hardware
           </Link>{" "}
-          und andere vernetzte Hofgeräte nutzen. Siehe unseren Beitrag zur{" "}
-          <Link href="/de/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-            stromsparenden Sensorknoten-Entwicklung
-          </Link>{" "}
-          für unseren Ansatz bei batteriebetriebener Hardware, oder unseren
-          Leitfaden zur{" "}
-          <Link href="/de/blog/wireless-poultry-monitoring-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-            Planung drahtloser Geflügelüberwachung
-          </Link>{" "}
-          für Sensorplatzierung und Konnektivität. Zu Kalibrierung und Drift
-          siehe unseren Beitrag über{" "}
+          und andere vernetzte Hofgeräte nutzen. Zu Sensorplatzierung, Kalibrierung und Drift siehe unseren Beitrag über{" "}
           <Link href="/de/blog/poultry-house-air-quality-sensors" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Ammoniak-, CO₂- und Feuchtesensoren
+          </Link>{" "}
+          und zur Konnektivität unseren{" "}
+          <Link href="/de/blog/lorawan-farm-network-planning" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            Leitfaden zur LoRaWAN-Planung
           </Link>
           .
         </p>

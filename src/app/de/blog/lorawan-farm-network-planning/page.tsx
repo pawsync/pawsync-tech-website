@@ -154,11 +154,7 @@ export default function BlogArticleLorawanFarmNetworkDe() {
           </ul>
           <p>
             Für langlebige Knoten sind Lithium-Primärzellen (etwa Li-SOCl₂) wegen ihrer geringen Selbstentladung
-            verbreitet. Energiebudgets und Tastgrad erklären wir in{" "}
-            <Link href="/de/blog/low-power-animal-tracker-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Stromsparende Elektronik für Tier-Tracker im Außeneinsatz
-            </Link>
-            .
+            verbreitet.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -184,13 +180,6 @@ export default function BlogArticleLorawanFarmNetworkDe() {
             <li>Frequenzplan aller Geräte und Gateways prüfen (EU868 in Europa).</li>
             <li>Batterien nach gemessenem Verbrauch auslegen, nicht nach Datenblatt-Bestwerten.</li>
           </ol>
-          <p>
-            Speziell für Tracker siehe{" "}
-            <Link href="/de/blog/gnss-lora-vs-gnss-ltem" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking
-            </Link>
-            .
-          </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Häufige Fragen

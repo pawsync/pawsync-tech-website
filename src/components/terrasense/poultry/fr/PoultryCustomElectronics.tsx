@@ -27,20 +27,13 @@ export default function PoultryCustomElectronics() {
           <Link href="/fr/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             matériel de suivi du bétail
           </Link>{" "}
-          et d&apos;autres dispositifs agricoles connectés. Voir notre
-          article sur la{" "}
-          <Link href="/fr/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-            conception de nœuds capteurs basse consommation
-          </Link>{" "}
-          pour notre approche du matériel alimenté par batterie, ou notre
-          guide sur la{" "}
-          <Link href="/fr/blog/wireless-poultry-monitoring-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-            planification de la surveillance avicole sans fil
-          </Link>{" "}
-          pour le placement des capteurs et la connectivité. Pour l&apos;étalonnage
-          et la dérive, voir notre article sur les{" "}
+          et d&apos;autres dispositifs agricoles connectés. Pour le placement des capteurs, l&apos;étalonnage et la dérive, voir notre article sur les{" "}
           <Link href="/fr/blog/poultry-house-air-quality-sensors" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             capteurs d&apos;ammoniac, de CO₂ et d&apos;humidité
+          </Link>{" "}
+          et, pour la connectivité, notre{" "}
+          <Link href="/fr/blog/lorawan-farm-network-planning" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            guide de planification LoRaWAN
           </Link>
           .
         </p>

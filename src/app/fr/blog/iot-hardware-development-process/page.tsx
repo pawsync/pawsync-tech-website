@@ -119,12 +119,7 @@ export default function BlogArticleIotHardwareDevelopmentFr() {
             La première carte réunit composants, alimentation, antenne et firmware dans un format proche du final.
             C&apos;est là qu&apos;apparaissent les problèmes que masquent les cartes de développement : performances
             de l&apos;antenne dans le boîtier, courant de veille dix fois supérieur au prévu à cause d&apos;un seul
-            circuit qui fuit, connecteur qui ne rentre pas. Prévoyez au moins une révision de carte. Notre article
-            sur la{" "}
-            <Link href="/fr/blog/pet-tracker-pcb-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              conception d&apos;un circuit imprimé pour tracker animalier
-            </Link>{" "}
-            montre à quel point le boîtier et l&apos;antenne dictent le routage.
+            circuit qui fuit, connecteur qui ne rentre pas. Prévoyez au moins une révision de carte.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -217,12 +212,7 @@ export default function BlogArticleIotHardwareDevelopmentFr() {
             Les appareils pour les exploitations et les animaux ajoutent leurs propres contraintes : fortes
             variations de température, boue, eau et ammoniac, animaux qui mordent, frottent et donnent des coups,
             longues distances jusqu&apos;à la passerelle, et utilisateurs qui attendent une saison entière sans
-            intervention. Ces points doivent figurer dans le cahier des charges dès le premier jour. Pour la partie
-            énergie, voir nos{" "}
-            <Link href="/fr/blog/low-power-animal-tracker-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              notes sur l&apos;électronique basse consommation pour trackers
-            </Link>
-            .
+            intervention. Ces points doivent figurer dans le cahier des charges dès le premier jour.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">

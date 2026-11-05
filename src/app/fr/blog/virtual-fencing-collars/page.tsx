@@ -153,13 +153,6 @@ export default function BlogArticleVirtualFencingCollarsFr() {
             <li><strong>Signaux :</strong> une limite mal placée qui déclenche des signaux toute la journée peut dominer la consommation.</li>
             <li><strong>Solaire :</strong> utile en été, beaucoup moins en hiver ou si le collier a tourné. On dimensionne pour le mois le plus défavorable.</li>
           </ul>
-          <p>
-            Nous détaillons cycles de veille et budget énergétique dans{" "}
-            <Link href="/fr/blog/low-power-animal-tracker-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Électronique basse consommation pour trackers animaliers d&apos;extérieur
-            </Link>
-            .
-          </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Liaison radio et conception mécanique
@@ -168,10 +161,10 @@ export default function BlogArticleVirtualFencingCollarsFr() {
             La limite étant stockée dans le collier, la liaison radio sert à la gestion, pas au contrôle en temps
             réel. LTE-M ou NB-IoT ne demande aucune infrastructure sur l&apos;exploitation mais suppose une
             couverture ; LoRaWAN nécessite une passerelle mais consomme moins par message. Notre{" "}
-            <Link href="/fr/blog/gnss-lora-vs-gnss-ltem" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              comparatif GNSS + LoRa vs GNSS + LTE-M
+            <Link href="/fr/blog/lorawan-farm-network-planning" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
+              guide pour planifier un réseau LoRaWAN
             </Link>{" "}
-            approfondit ces options. Mécaniquement, le collier doit résister à la pluie, à la boue, au gel, au
+            approfondit le volet LoRaWAN. Mécaniquement, le collier doit résister à la pluie, à la boue, au gel, au
             soleil et aux frottements : indice de protection adapté, serre-câbles, boucle qui ne blesse pas
             l&apos;animal, et électrodes qui assurent le contact à travers le pelage sans abîmer la peau.
           </p>

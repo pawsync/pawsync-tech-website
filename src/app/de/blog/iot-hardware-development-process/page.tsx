@@ -118,12 +118,7 @@ export default function BlogArticleIotHardwareDevelopmentDe() {
             Die erste eigene Platine bringt Bauteile, Stromversorgung, Antenne und Firmware in annähernd finaler
             Größe zusammen. Jetzt zeigen sich Probleme, die Entwicklungsboards verdecken: Antennenleistung im
             Gehäuse, ein Ruhestrom, der wegen einer einzigen Leckstelle zehnmal höher ist als erwartet, oder ein
-            Steckverbinder, der nicht passt. Mindestens eine Platinenrevision sollte eingeplant sein. Unser Beitrag
-            zum{" "}
-            <Link href="/de/blog/pet-tracker-pcb-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Leiterplattendesign für einen Tier-Tracker
-            </Link>{" "}
-            zeigt, wie stark Gehäuse und Antenne das Layout bestimmen.
+            Steckverbinder, der nicht passt. Mindestens eine Platinenrevision sollte eingeplant sein.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -213,11 +208,7 @@ export default function BlogArticleIotHardwareDevelopmentDe() {
             Geräte für Höfe und Tiere bringen eigene Randbedingungen mit: große Temperaturschwankungen, Schlamm,
             Wasser und Ammoniak, Tiere, die beißen, scheuern und treten, weite Wege zum nächsten Gateway – und
             Nutzer, die eine ganze Saison ohne Wartung erwarten. Diese Punkte gehören vom ersten Tag an in die
-            Anforderungen, denn sie bestimmen Gehäuse, Akku und Funkwahl. Mehr zur Energieseite in unseren{" "}
-            <Link href="/de/blog/low-power-animal-tracker-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Notizen zu stromsparender Elektronik für Tier-Tracker
-            </Link>
-            .
+            Anforderungen, denn sie bestimmen Gehäuse, Akku und Funkwahl.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">

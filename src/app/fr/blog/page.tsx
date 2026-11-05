@@ -46,36 +46,6 @@ const articles = [
     href: "/fr/blog/lorawan-farm-network-planning",
     image: "/blog/lorawan-farm-network-planning/hero-fr.webp",
   },
-  {
-    title: "GNSS + LoRa vs. GNSS + LTE-M pour le suivi des animaux",
-    excerpt: "Le GNSS détermine la position ; LoRa et LTE-M sont des couches de communication distinctes qui transmettent cette position. Une comparaison pratique.",
-    href: "/fr/blog/gnss-lora-vs-gnss-ltem",
-    image: "/blog/gnss-lora-vs-gnss-ltem/hero-fr.webp",
-  },
-  {
-    title: "Concevoir une électronique basse consommation pour trackers d'animaux extérieurs",
-    excerpt: "L'autonomie d'un tracker portable est un problème de budget énergétique. Les techniques qui déterminent si un appareil tient des jours ou des mois.",
-    href: "/fr/blog/low-power-animal-tracker-design",
-    image: "/blog/low-power-animal-tracker-design/hero-fr.webp",
-  },
-  {
-    title: "Concevoir la carte PCB d'un tracker pour animaux",
-    excerpt: "Un tracker porté au collier n'est pas une carte GPS miniature. Placement d'antenne, empilage des couches et contraintes de boîtier.",
-    href: "/fr/blog/pet-tracker-pcb-design",
-    image: "/blog/pet-tracker-pcb-design/hero-fr.webp",
-  },
-  {
-    title: "Ingénierie matérielle & logicielle d'un distributeur intelligent",
-    excerpt: "Précision des portions, calibration de cellule de charge, détection de blocage et reconnaissance RFID — les choix d'ingénierie d'un distributeur.",
-    href: "/fr/blog/smart-pet-feeder-engineering",
-    image: "/blog/smart-pet-feeder-engineering/hero-fr.webp",
-  },
-  {
-    title: "Planifier un réseau de surveillance avicole sans fil",
-    excerpt: "Placement des capteurs, choix du protocole et planification des passerelles — et pourquoi un capteur ne suffit pas.",
-    href: "/fr/blog/wireless-poultry-monitoring-design",
-    image: "/blog/wireless-poultry-monitoring-design/hero-fr.webp",
-  },
 ];
 
 export default function BlogPageFr() {

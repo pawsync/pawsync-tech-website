@@ -129,8 +129,8 @@ const scope: ServiceScopeCopy = {
       "href": "/fr/livestock-technology"
     },
     {
-      "label": "Ingénierie du distributeur (article)",
-      "href": "/fr/blog/smart-pet-feeder-engineering"
+      "label": "Du prototype à la production (article)",
+      "href": "/fr/blog/iot-hardware-development-process"
     }
   ],
   "note": "Cette section décrit des services d'ingénierie sur mesure. Les modèles de référence présentés sur notre page Projets sont des concepts et des prototypes, et non des produits à acheter."

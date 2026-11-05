@@ -145,13 +145,6 @@ export default function BlogArticlePoultryAirQualitySensorsDe() {
             <li><strong>Schutz:</strong> Geflügel pickt an allem Neuen – Sensoren brauchen einen Schutzkorb, Kabel gehören außer Reichweite.</li>
             <li><strong>Zugänglichkeit:</strong> Wer prüfen, reinigen und kalibrieren muss, braucht einfachen Zugang. Ein Sensor, für den man Leiter und Werkzeug braucht, wird nicht gewartet.</li>
           </ul>
-          <p>
-            Mehrpunkt-Layouts, Funkprotokolle und Gateway-Planung behandeln wir in{" "}
-            <Link href="/de/blog/wireless-poultry-monitoring-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Ein drahtloses Überwachungsnetz für den Geflügelstall planen
-            </Link>
-            .
-          </p>
 
           <figure>
             <Image

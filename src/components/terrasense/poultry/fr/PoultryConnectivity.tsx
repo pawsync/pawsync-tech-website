@@ -50,11 +50,9 @@ export default function PoultryConnectivity() {
           portée requise, la disponibilité de l&apos;alimentation et les
           besoins en données — et non appliquée comme solution unique par
           défaut.
-          Pour une présentation technique plus détaillée du choix des
-          protocoles, du placement des capteurs et de la planification des
-          passerelles, consultez notre article sur la{" "}
-          <Link href="/fr/blog/wireless-poultry-monitoring-design" className="font-semibold text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">
-            planification d&apos;un réseau de surveillance sans fil pour bâtiment avicole
+          Pour les types de capteurs, leur placement et leur étalonnage dans le bâtiment, consultez notre article sur les{" "}
+          <Link href="/fr/blog/poultry-house-air-quality-sensors" className="font-semibold text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">
+            capteurs d&apos;ammoniac, de CO₂ et d&apos;humidité en bâtiment avicole
           </Link>
           .
         </p>

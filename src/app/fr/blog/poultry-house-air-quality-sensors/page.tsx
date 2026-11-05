@@ -149,13 +149,6 @@ export default function BlogArticlePoultryAirQualitySensorsFr() {
             <li><strong>Protection :</strong> les volailles picorent tout ce qui est nouveau ; les capteurs ont besoin d&apos;une grille, les câbles doivent être hors de portée.</li>
             <li><strong>Accès :</strong> un capteur qu&apos;on ne peut atteindre qu&apos;avec une échelle et des outils ne sera pas entretenu.</li>
           </ul>
-          <p>
-            Nous traitons les implantations multipoints, les protocoles radio et les passerelles dans{" "}
-            <Link href="/fr/blog/wireless-poultry-monitoring-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Planifier un réseau de surveillance sans fil en bâtiment avicole
-            </Link>
-            .
-          </p>
 
           <figure>
             <Image

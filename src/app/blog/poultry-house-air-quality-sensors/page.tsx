@@ -158,13 +158,6 @@ export default function BlogArticlePoultryAirQualitySensors() {
               ladder and tools to reach will not be maintained.
             </li>
           </ul>
-          <p>
-            We cover multi-point layouts, wireless protocols and gateway planning in{" "}
-            <Link href="/blog/wireless-poultry-monitoring-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Planning a Wireless Poultry House Monitoring Network
-            </Link>
-            .
-          </p>
 
           <figure>
             <Image

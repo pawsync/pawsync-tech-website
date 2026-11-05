@@ -117,16 +117,8 @@ const scope: ServiceScopeCopy = {
       "href": "/fr/livestock-technology"
     },
     {
-      "label": "Conception basse consommation (article)",
-      "href": "/fr/blog/low-power-animal-tracker-design"
-    },
-    {
-      "label": "GNSS + LoRa vs. GNSS + LTE-M (article)",
-      "href": "/fr/blog/gnss-lora-vs-gnss-ltem"
-    },
-    {
-      "label": "Conception de carte PCB pour tracker (article)",
-      "href": "/fr/blog/pet-tracker-pcb-design"
+      "label": "Du prototype à la production (article)",
+      "href": "/fr/blog/iot-hardware-development-process"
     },
     {
       "label": "Fonctionnement des colliers de clôture virtuelle (article)",

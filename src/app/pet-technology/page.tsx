@@ -126,16 +126,8 @@ const scope: ServiceScopeCopy = {
       "href": "/custom-electronics"
     },
     {
-      "label": "Low-power tracker design (article)",
-      "href": "/blog/low-power-animal-tracker-design"
-    },
-    {
-      "label": "GNSS + LoRa vs. GNSS + LTE-M (article)",
-      "href": "/blog/gnss-lora-vs-gnss-ltem"
-    },
-    {
-      "label": "Pet tracker PCB design (article)",
-      "href": "/blog/pet-tracker-pcb-design"
+      "label": "From prototype to production (article)",
+      "href": "/blog/iot-hardware-development-process"
     }
   ],
   "note": "This section describes custom engineering services. Reference designs on our Projects page are concepts and prototypes, not products available to purchase."

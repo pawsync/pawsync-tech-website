@@ -252,12 +252,11 @@ export default function LivestockTechnologyPageDe() {
             GPS/GNSS bestimmt den Standort; ein separates Funkmodul – LoRa
             oder Mobilfunk – meldet ihn an ein Gateway oder die Cloud. Reichweite,
             Energiebudget, Meldeintervall und vorhandene Gateway-Infrastruktur
-            fließen alle in die passende Kombination ein. Siehe unseren
-            Vergleich{" "}
-            <Link href="/de/blog/gnss-lora-vs-gnss-ltem" className="underline decoration-white/30 underline-offset-2 hover:text-white hover:decoration-white">
-              GNSS + LoRa vs. GNSS + LTE-M
+            fließen alle in die passende Kombination ein. Siehe unseren{" "}
+            <Link href="/de/blog/lorawan-farm-network-planning" className="underline decoration-white/30 underline-offset-2 hover:text-white hover:decoration-white">
+              Leitfaden zur LoRaWAN-Planung
             </Link>{" "}
-            für die Abwägungen.
+            für die Abwägungen bei Reichweite und Gateways.
           </p>
         </div>
       </section>
@@ -272,13 +271,9 @@ export default function LivestockTechnologyPageDe() {
             Zuerst Anforderungsanalyse und Architektur, dann Schaltplan- und
             Leiterplattenentwicklung, Firmware, ein Prototyp zum Testen unter
             echten Bedingungen und schließlich die Fertigungsvorbereitung nach
-            erfolgreicher Validierung. Siehe auch unseren Beitrag zum{" "}
-            <Link href="/de/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-              Tracker-Leiterplattendesign
-            </Link>{" "}
-            und zur{" "}
-            <Link href="/de/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-              stromsparenden Elektronik für Tier-Tracker
+            erfolgreicher Validierung. Siehe auch unseren Beitrag{" "}
+            <Link href="/de/blog/iot-hardware-development-process" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              vom Prototyp zur Serie
             </Link>{" "}
             oder unsere{" "}
             <Link href="/de/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">

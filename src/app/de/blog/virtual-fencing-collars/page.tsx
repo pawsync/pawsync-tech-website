@@ -169,13 +169,6 @@ export default function BlogArticleVirtualFencingCollarsDe() {
             <li><strong>Signale:</strong> Eine ungünstig gesetzte Grenze, die ständig Signale auslöst, kann den Verbrauch dominieren.</li>
             <li><strong>Solar:</strong> Im Sommer hilfreich, im Winter und bei verdrehtem Halsband kaum. Ausgelegt wird auf den ungünstigsten Monat.</li>
           </ul>
-          <p>
-            Mehr zu Tastgrad und Ruhestrom-Budget lesen Sie in{" "}
-            <Link href="/de/blog/low-power-animal-tracker-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Stromsparende Elektronik für Tier-Tracker im Außeneinsatz
-            </Link>
-            .
-          </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Funkanbindung und Mechanik
@@ -184,10 +177,10 @@ export default function BlogArticleVirtualFencingCollarsDe() {
             Weil die Grenze im Halsband liegt, dient die Funkverbindung der Verwaltung, nicht der Echtzeitsteuerung.
             LTE-M oder NB-IoT braucht keine Infrastruktur auf dem Hof, aber Netzabdeckung; LoRaWAN braucht ein
             eigenes Gateway, benötigt aber weniger Energie pro Nachricht. Unser{" "}
-            <Link href="/de/blog/gnss-lora-vs-gnss-ltem" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Vergleich GNSS + LoRa vs. GNSS + LTE-M
+            <Link href="/de/blog/lorawan-farm-network-planning" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
+              Leitfaden zur LoRaWAN-Planung auf dem Hof
             </Link>{" "}
-            geht darauf genauer ein. Mechanisch muss das Halsband Regen, Schlamm, Frost, Sonne und Scheuern an
+            geht auf die LoRaWAN-Seite genauer ein. Mechanisch muss das Halsband Regen, Schlamm, Frost, Sonne und Scheuern an
             Pfählen aushalten: passende Schutzart, Zugentlastung, ein Verschluss, der das Tier nicht verletzt,
             und Elektroden, die durch das Fell zuverlässig Kontakt geben, ohne die Haut zu schädigen.
           </p>

@@ -251,11 +251,11 @@ export default function LivestockTechnologyPage() {
             GPS/GNSS determines location; a separate radio — LoRa or cellular —
             reports it back to a gateway or the cloud. Range, power budget,
             reporting interval, and existing gateway infrastructure all factor
-            into which combination fits your operation. See our comparison of{" "}
-            <Link href="/blog/gnss-lora-vs-gnss-ltem" className="underline decoration-white/30 underline-offset-2 hover:text-white hover:decoration-white">
-              GNSS + LoRa vs. GNSS + LTE-M
+            into which combination fits your operation. See our{" "}
+            <Link href="/blog/lorawan-farm-network-planning" className="underline decoration-white/30 underline-offset-2 hover:text-white hover:decoration-white">
+              LoRaWAN farm network guide
             </Link>{" "}
-            for the trade-offs.
+            for the range and gateway trade-offs.
           </p>
         </div>
       </section>
@@ -270,15 +270,11 @@ export default function LivestockTechnologyPage() {
             Discovery and architecture come first, followed by schematic and
             PCB design, firmware, a prototype you can test under real
             conditions, and manufacturing-preparation files once the design
-            is validated. See our related{" "}
-            <Link href="/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-              tracker PCB design
+            is validated. See our{" "}
+            <Link href="/blog/iot-hardware-development-process" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              prototype-to-production
             </Link>{" "}
-            and{" "}
-            <Link href="/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-              low-power animal tracker design
-            </Link>{" "}
-            write-ups, or our{" "}
+            write-up, or our{" "}
             <Link href="/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               custom electronics engineering
             </Link>{" "}

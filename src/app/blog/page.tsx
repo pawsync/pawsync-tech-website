@@ -46,36 +46,6 @@ const articles = [
     href: "/blog/lorawan-farm-network-planning",
     image: "/blog/lorawan-farm-network-planning/hero.webp",
   },
-  {
-    title: "GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking",
-    excerpt: "GNSS determines position; LoRa and LTE-M are separate communication layers that get that position off the device. A practical comparison.",
-    href: "/blog/gnss-lora-vs-gnss-ltem",
-    image: "/blog/gnss-lora-vs-gnss-ltem/hero.webp",
-  },
-  {
-    title: "Designing Low-Power Electronics for Outdoor Animal Trackers",
-    excerpt: "Battery life in a wearable tracker is a power-budget problem. The engineering techniques that determine whether a device lasts days or months.",
-    href: "/blog/low-power-animal-tracker-design",
-    image: "/blog/low-power-animal-tracker-design/hero.webp",
-  },
-  {
-    title: "Designing a PCB for a Pet or Animal Tracker",
-    excerpt: "A collar- or tag-mounted tracker isn't a smaller GPS board. Antenna placement, stack-up, and enclosure constraints that drive the design.",
-    href: "/blog/pet-tracker-pcb-design",
-    image: "/blog/pet-tracker-pcb-design/hero.webp",
-  },
-  {
-    title: "Smart Pet Feeder Hardware & Firmware Engineering",
-    excerpt: "Portion accuracy, load-cell calibration, jam detection, and RFID recognition — the engineering decisions behind a smart pet feeder.",
-    href: "/blog/smart-pet-feeder-engineering",
-    image: "/blog/smart-pet-feeder-engineering/hero.webp",
-  },
-  {
-    title: "Planning a Wireless Poultry House Monitoring Network",
-    excerpt: "Sensor placement, protocol choice, and gateway planning — and why one sensor per house usually isn't enough.",
-    href: "/blog/wireless-poultry-monitoring-design",
-    image: "/blog/wireless-poultry-monitoring-design/hero.webp",
-  },
 ];
 
 export default function BlogPage() {

@@ -62,10 +62,9 @@ export default function PoultryConnectivity() {
           Connectivity is selected according to farm size, building layout,
           internet availability, required range, power availability, and
           data requirements — not applied as a one-size-fits-all default.
-          For a deeper technical walkthrough of protocol selection, sensor
-          placement, and gateway planning, see our engineering note on{" "}
-          <Link href="/blog/wireless-poultry-monitoring-design" className="font-semibold text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">
-            planning a wireless poultry house monitoring network
+          For sensor types, placement and calibration inside the house, see our engineering note on{" "}
+          <Link href="/blog/poultry-house-air-quality-sensors" className="font-semibold text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">
+            ammonia, CO₂ and humidity sensors in poultry houses
           </Link>
           .
         </p>

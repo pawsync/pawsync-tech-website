@@ -254,11 +254,11 @@ export default function LivestockTechnologyPageFr() {
             LoRa ou cellulaire — la transmet à une passerelle ou au cloud. La
             portée, le budget énergétique, l&apos;intervalle de rapport et
             l&apos;infrastructure de passerelle existante déterminent la
-            combinaison adaptée à votre exploitation. Voir notre comparaison{" "}
-            <Link href="/fr/blog/gnss-lora-vs-gnss-ltem" className="underline decoration-white/30 underline-offset-2 hover:text-white hover:decoration-white">
-              GNSS + LoRa vs. GNSS + LTE-M
+            combinaison adaptée à votre exploitation. Voir notre{" "}
+            <Link href="/fr/blog/lorawan-farm-network-planning" className="underline decoration-white/30 underline-offset-2 hover:text-white hover:decoration-white">
+              guide de planification LoRaWAN
             </Link>{" "}
-            pour les compromis.
+            pour les compromis de portée et de passerelles.
           </p>
         </div>
       </section>
@@ -274,13 +274,9 @@ export default function LivestockTechnologyPageFr() {
             de la conception du schéma et du circuit imprimé, du micrologiciel,
             d&apos;un prototype testable en conditions réelles, puis des
             fichiers de préparation à la fabrication une fois la conception
-            validée. Voir aussi notre article sur la{" "}
-            <Link href="/fr/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-              conception de carte PCB pour tracker
-            </Link>
-            , notre article sur la{" "}
-            <Link href="/fr/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-              conception électronique basse consommation pour trackers d&apos;animaux
+            validée. Voir aussi notre article{" "}
+            <Link href="/fr/blog/iot-hardware-development-process" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              du prototype à la production
             </Link>{" "}
             ou nos services d&apos;
             <Link href="/fr/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">

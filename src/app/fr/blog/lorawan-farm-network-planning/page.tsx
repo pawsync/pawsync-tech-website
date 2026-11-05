@@ -157,11 +157,7 @@ export default function BlogArticleLorawanFarmNetworkFr() {
           </ul>
           <p>
             Les piles lithium primaires (de type Li-SOCl₂) sont courantes pour les nœuds longue durée grâce à leur
-            faible autodécharge. Nous détaillons budgets énergétiques et cycles de veille dans{" "}
-            <Link href="/fr/blog/low-power-animal-tracker-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Électronique basse consommation pour trackers animaliers d&apos;extérieur
-            </Link>
-            .
+            faible autodécharge.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -187,13 +183,6 @@ export default function BlogArticleLorawanFarmNetworkFr() {
             <li>Vérifier le plan de fréquences de chaque objet et passerelle (EU868 en Europe).</li>
             <li>Dimensionner les batteries sur la consommation mesurée, pas sur le meilleur cas de la fiche technique.</li>
           </ol>
-          <p>
-            Pour les trackers en particulier, voir{" "}
-            <Link href="/fr/blog/gnss-lora-vs-gnss-ltem" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              GNSS + LoRa vs GNSS + LTE-M pour le suivi des animaux
-            </Link>
-            .
-          </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Questions fréquentes

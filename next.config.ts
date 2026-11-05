@@ -37,6 +37,27 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Five older posts were removed on 2026-11-06; their URLs point to the closest
+  // remaining article (or the blog index) so links and search results still work.
+  async redirects() {
+    return [
+      { source: "/blog/gnss-lora-vs-gnss-ltem", destination: "/blog/lorawan-farm-network-planning", permanent: true },
+      { source: "/blog/low-power-animal-tracker-design", destination: "/blog/iot-hardware-development-process", permanent: true },
+      { source: "/blog/pet-tracker-pcb-design", destination: "/blog/iot-hardware-development-process", permanent: true },
+      { source: "/blog/wireless-poultry-monitoring-design", destination: "/blog/poultry-house-air-quality-sensors", permanent: true },
+      { source: "/blog/smart-pet-feeder-engineering", destination: "/blog", permanent: true },
+      { source: "/de/blog/gnss-lora-vs-gnss-ltem", destination: "/de/blog/lorawan-farm-network-planning", permanent: true },
+      { source: "/de/blog/low-power-animal-tracker-design", destination: "/de/blog/iot-hardware-development-process", permanent: true },
+      { source: "/de/blog/pet-tracker-pcb-design", destination: "/de/blog/iot-hardware-development-process", permanent: true },
+      { source: "/de/blog/wireless-poultry-monitoring-design", destination: "/de/blog/poultry-house-air-quality-sensors", permanent: true },
+      { source: "/de/blog/smart-pet-feeder-engineering", destination: "/de/blog", permanent: true },
+      { source: "/fr/blog/gnss-lora-vs-gnss-ltem", destination: "/fr/blog/lorawan-farm-network-planning", permanent: true },
+      { source: "/fr/blog/low-power-animal-tracker-design", destination: "/fr/blog/iot-hardware-development-process", permanent: true },
+      { source: "/fr/blog/pet-tracker-pcb-design", destination: "/fr/blog/iot-hardware-development-process", permanent: true },
+      { source: "/fr/blog/wireless-poultry-monitoring-design", destination: "/fr/blog/poultry-house-air-quality-sensors", permanent: true },
+      { source: "/fr/blog/smart-pet-feeder-engineering", destination: "/fr/blog", permanent: true },
+    ];
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

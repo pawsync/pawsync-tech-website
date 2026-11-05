@@ -199,13 +199,6 @@ export default function BlogArticleVirtualFencingCollars() {
               average one.
             </li>
           </ul>
-          <p>
-            We cover duty cycling and sleep-current budgets in more detail in{" "}
-            <Link href="/blog/low-power-animal-tracker-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Designing Low-Power Electronics for Outdoor Animal Trackers
-            </Link>
-            .
-          </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Choosing the communication link
@@ -216,10 +209,10 @@ export default function BlogArticleVirtualFencingCollars() {
             changes the trade-off. Cellular LTE-M or NB-IoT works wherever there is coverage and needs no
             farm infrastructure. LoRaWAN needs a gateway on the farm but costs less energy per message and
             works where there is no cellular signal. Some systems use their own base station. Our{" "}
-            <Link href="/blog/gnss-lora-vs-gnss-ltem" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              GNSS + LoRa vs. GNSS + LTE-M comparison
+            <Link href="/blog/lorawan-farm-network-planning" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
+              guide to planning a LoRaWAN farm network
             </Link>{" "}
-            goes through those options for tracking devices in general.
+            covers the LoRaWAN side in more detail.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">

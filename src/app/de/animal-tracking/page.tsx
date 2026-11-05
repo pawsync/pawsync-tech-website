@@ -117,16 +117,8 @@ const scope: ServiceScopeCopy = {
       "href": "/de/livestock-technology"
     },
     {
-      "label": "Stromsparendes Tracker-Design (Artikel)",
-      "href": "/de/blog/low-power-animal-tracker-design"
-    },
-    {
-      "label": "GNSS + LoRa vs. GNSS + LTE-M (Artikel)",
-      "href": "/de/blog/gnss-lora-vs-gnss-ltem"
-    },
-    {
-      "label": "Leiterplattendesign für Tracker (Artikel)",
-      "href": "/de/blog/pet-tracker-pcb-design"
+      "label": "Vom Prototyp zur Serie (Artikel)",
+      "href": "/de/blog/iot-hardware-development-process"
     },
     {
       "label": "So funktionieren virtuelle Weidezäune (Artikel)",

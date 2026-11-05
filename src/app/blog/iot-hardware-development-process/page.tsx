@@ -119,11 +119,6 @@ export default function BlogArticleIotHardwareDevelopment() {
             close to the final size. This is where problems that development kits hide appear: antenna
             performance inside an enclosure, sleep current that is ten times higher than expected because of
             one leaking circuit, or a connector that doesn&apos;t fit. Plan for at least one board revision.
-            Our article on{" "}
-            <Link href="/blog/pet-tracker-pcb-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              designing a PCB for an animal tracker
-            </Link>{" "}
-            shows how much the enclosure and antenna drive layout decisions.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -218,11 +213,7 @@ export default function BlogArticleIotHardwareDevelopment() {
             Devices for farms and animals add their own constraints: wide temperature swings, mud, water and
             ammonia; animals that chew, rub and kick; long distances to the nearest gateway; and users who need
             devices to work for a full season without attention. These belong in the requirements on day one —
-            they shape the enclosure, the battery and the radio choice. Our{" "}
-            <Link href="/blog/low-power-animal-tracker-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              notes on low-power design for outdoor trackers
-            </Link>{" "}
-            go into the power side in more detail.
+            they shape the enclosure, the battery and the radio choice.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">

@@ -196,11 +196,7 @@ export default function BlogArticleLorawanFarmNetwork() {
           </ul>
           <p>
             Primary lithium cells (such as Li-SOCl₂) are common for long-life nodes because of their low
-            self-discharge. We explain power budgets and duty cycling in{" "}
-            <Link href="/blog/low-power-animal-tracker-design" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              Designing Low-Power Electronics for Outdoor Animal Trackers
-            </Link>
-            .
+            self-discharge.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -226,13 +222,6 @@ export default function BlogArticleLorawanFarmNetwork() {
             <li>Check the regional plan (EU868 or US915) for every device and gateway.</li>
             <li>Size batteries from measured consumption, not datasheet best cases.</li>
           </ol>
-          <p>
-            For tracking devices specifically, see{" "}
-            <Link href="/blog/gnss-lora-vs-gnss-ltem" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking
-            </Link>
-            .
-          </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Frequently asked questions

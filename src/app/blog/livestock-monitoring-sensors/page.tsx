@@ -178,11 +178,7 @@ export default function BlogArticleLivestockMonitoringSensors() {
             <Link href="/blog/lorawan-farm-network-planning" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
               guide to planning a LoRaWAN network for a farm
             </Link>{" "}
-            covers gateway placement and coverage, and{" "}
-            <Link href="/blog/gnss-lora-vs-gnss-ltem" className="font-semibold text-[var(--ts-dark-green)] hover:underline">
-              GNSS + LoRa vs. GNSS + LTE-M
-            </Link>{" "}
-            compares the options for tracking devices specifically.
+            covers gateway placement and coverage.
           </p>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">

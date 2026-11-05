@@ -46,36 +46,6 @@ const articles = [
     href: "/de/blog/lorawan-farm-network-planning",
     image: "/blog/lorawan-farm-network-planning/hero-de.webp",
   },
-  {
-    title: "GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking",
-    excerpt: "GNSS bestimmt die Position; LoRa und LTE-M sind separate Kommunikationsebenen, die diese Position vom Gerät übertragen. Ein praktischer Vergleich.",
-    href: "/de/blog/gnss-lora-vs-gnss-ltem",
-    image: "/blog/gnss-lora-vs-gnss-ltem/hero-de.webp",
-  },
-  {
-    title: "Stromsparende Elektronik für Tier-Tracker im Außeneinsatz",
-    excerpt: "Die Akkulaufzeit eines tragbaren Trackers ist ein Energiebudget-Problem. Die Techniken, die entscheiden, ob ein Gerät Tage oder Monate durchhält.",
-    href: "/de/blog/low-power-animal-tracker-design",
-    image: "/blog/low-power-animal-tracker-design/hero-de.webp",
-  },
-  {
-    title: "Leiterplattendesign für einen Tier-Tracker",
-    excerpt: "Ein Halsband- oder Anhänger-Tracker ist keine kleinere GPS-Platine. Antennenplatzierung, Lagenaufbau und Gehäusevorgaben, die das Design bestimmen.",
-    href: "/de/blog/pet-tracker-pcb-design",
-    image: "/blog/pet-tracker-pcb-design/hero-de.webp",
-  },
-  {
-    title: "Hardware- & Firmware-Engineering für intelligente Futterautomaten",
-    excerpt: "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung – die Engineering-Entscheidungen hinter einem Futterautomaten.",
-    href: "/de/blog/smart-pet-feeder-engineering",
-    image: "/blog/smart-pet-feeder-engineering/hero-de.webp",
-  },
-  {
-    title: "Ein drahtloses Überwachungsnetz für den Geflügelstall planen",
-    excerpt: "Sensorplatzierung, Protokollwahl und Gateway-Planung – und warum ein Sensor pro Stall meist nicht reicht.",
-    href: "/de/blog/wireless-poultry-monitoring-design",
-    image: "/blog/wireless-poultry-monitoring-design/hero-de.webp",
-  },
 ];
 
 export default function BlogPageDe() {
