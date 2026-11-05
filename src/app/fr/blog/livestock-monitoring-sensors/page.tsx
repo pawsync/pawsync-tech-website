@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Quels capteurs pour le suivi à distance du bétail ? GPS, activité, RFID, abreuvoirs, barrières et clôtures électriques : ce qu'ils mesurent, comment les alimenter et les connecter.",
   alternates: buildAlternates("fr", "blog/livestock-monitoring-sensors"),
   openGraph: buildOpenGraph("fr", "blog/livestock-monitoring-sensors", {
-    url: "/blog/livestock-monitoring-sensors/og.jpg",
+    url: "/blog/livestock-monitoring-sensors/og-fr.jpg",
     alt: "Pâturage avec une vache équipée d'un collier, un capteur de clôture, un capteur d'abreuvoir et une station météo solaire reliés à un mât radio : capteurs sur l'animal et sur les équipements",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/livestock-monitoring-sensors/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/livestock-monitoring-sensors/og-fr.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/livestock-monitoring-sensors",
   headline: "Capteurs pour le suivi du bétail : ce que mesure chaque capteur et comment le connecter",
   description: metadata.description ?? "",
-  image: "/blog/livestock-monitoring-sensors/og.jpg",
+  image: "/blog/livestock-monitoring-sensors/og-fr.jpg",
 });
 
 export default function BlogArticleLivestockMonitoringSensorsFr() {
@@ -47,7 +47,7 @@ export default function BlogArticleLivestockMonitoringSensorsFr() {
           peut pas – vous apprendre, et ce qu&apos;il coûte en énergie et en entretien.
         </p>
         <Image
-          src="/blog/livestock-monitoring-sensors/hero.webp"
+          src="/blog/livestock-monitoring-sensors/hero-fr.webp"
           alt="Pâturage avec une vache équipée d'un collier, un capteur de clôture, un capteur d'abreuvoir et une station météo solaire reliés à un mât radio : capteurs sur l'animal et sur les équipements"
           width={1752}
           height={897}
@@ -72,7 +72,7 @@ export default function BlogArticleLivestockMonitoringSensorsFr() {
 
           <figure>
             <Image
-              src="/blog/livestock-monitoring-sensors/diagram.webp"
+              src="/blog/livestock-monitoring-sensors/diagram-fr.webp"
               alt="Schéma : les capteurs sur l'animal (position GNSS, activité, RFID) et sur les équipements (niveau d'eau, barrières et clôtures, météo) transmettent leurs données via une passerelle ou un réseau vers un tableau de bord avec alertes"
               width={1754}
               height={897}

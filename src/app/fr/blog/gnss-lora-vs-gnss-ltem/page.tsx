@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     "Le GNSS fournit la position ; LoRa ou LTE-M la transmet depuis l'appareil. Une comparaison pratique des deux liaisons pour le matériel de suivi animal.",
   alternates: buildAlternates("fr", "blog/gnss-lora-vs-gnss-ltem"),
   openGraph: buildOpenGraph("fr", "blog/gnss-lora-vs-gnss-ltem", {
-    url: "/blog/gnss-lora-vs-gnss-ltem/og.jpg",
+    url: "/blog/gnss-lora-vs-gnss-ltem/og-fr.jpg",
     alt: "Vache équipée d'un collier de suivi à côté d'une comparaison GNSS + LoRa et GNSS + LTE-M, avec un satellite et une application de suivi sur smartphone",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/gnss-lora-vs-gnss-ltem/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/gnss-lora-vs-gnss-ltem/og-fr.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -25,7 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/gnss-lora-vs-gnss-ltem",
   headline: "GNSS + LoRa vs. GNSS + LTE-M pour le suivi des animaux",
   description: metadata.description ?? "",
-  image: "/blog/gnss-lora-vs-gnss-ltem/og.jpg",
+  image: "/blog/gnss-lora-vs-gnss-ltem/og-fr.jpg",
 });
 
 export default function BlogArticleGnssConnectivityFr() {
@@ -44,7 +44,7 @@ export default function BlogArticleGnssConnectivityFr() {
           Une clarification sur deux problèmes différents souvent confondus dans les textes marketing du suivi animal — et comment vraiment choisir entre les deux.
         </p>
         <Image
-          src="/blog/gnss-lora-vs-gnss-ltem/hero.webp"
+          src="/blog/gnss-lora-vs-gnss-ltem/hero-fr.webp"
           alt="Vache équipée d'un collier de suivi à côté d'une comparaison GNSS + LoRa et GNSS + LTE-M, avec un satellite et une application de suivi sur smartphone"
           width={1752}
           height={897}

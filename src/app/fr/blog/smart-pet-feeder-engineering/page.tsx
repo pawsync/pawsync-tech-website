@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Précision des portions, calibration de cellule de charge, détection de blocage et reconnaissance RFID — les choix d'ingénierie d'un distributeur intelligent.",
   alternates: buildAlternates("fr", "blog/smart-pet-feeder-engineering"),
   openGraph: buildOpenGraph("fr", "blog/smart-pet-feeder-engineering", {
-    url: "/blog/smart-pet-feeder-engineering/og.jpg",
+    url: "/blog/smart-pet-feeder-engineering/og-fr.jpg",
     alt: "Un chien et un chat à côté d'un distributeur connecté, avec vue en coupe du réservoir, de la vis sans fin, du capteur de pesée et de la carte de commande",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/smart-pet-feeder-engineering/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/smart-pet-feeder-engineering/og-fr.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/smart-pet-feeder-engineering",
   headline: "Ingénierie matérielle & logicielle d'un distributeur intelligent : précision des portions, détection de blocage et mesure par cellule de charge",
   description: metadata.description ?? "",
-  image: "/blog/smart-pet-feeder-engineering/og.jpg",
+  image: "/blog/smart-pet-feeder-engineering/og-fr.jpg",
 });
 
 export default function BlogArticleSmartFeederEngineeringFr() {
@@ -45,7 +45,7 @@ export default function BlogArticleSmartFeederEngineeringFr() {
           Un distributeur intelligent paraît simple de l&apos;extérieur — moteur, trémie, minuterie. L&apos;ingénierie qui le rend fiable se trouve dans les capteurs et le micrologiciel, pas dans le mécanisme de distribution lui-même.
         </p>
         <Image
-          src="/blog/smart-pet-feeder-engineering/hero.webp"
+          src="/blog/smart-pet-feeder-engineering/hero-fr.webp"
           alt="Un chien et un chat à côté d'un distributeur connecté, avec vue en coupe du réservoir, de la vis sans fin, du capteur de pesée et de la carte de commande"
           width={1752}
           height={897}

@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Placement des capteurs, choix du protocole et planification des passerelles pour un réseau avicole sans fil — et pourquoi un capteur ne suffit pas.",
   alternates: buildAlternates("fr", "blog/wireless-poultry-monitoring-design"),
   openGraph: buildOpenGraph("fr", "blog/wireless-poultry-monitoring-design", {
-    url: "/blog/wireless-poultry-monitoring-design/og.jpg",
+    url: "/blog/wireless-poultry-monitoring-design/og-fr.jpg",
     alt: "Nœud de capteurs sans fil fixé à un poteau dans un bâtiment avicole, relié à une passerelle LoRa et à un serveur cloud, avec un tableau de bord de suivi sur un ordinateur portable",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/wireless-poultry-monitoring-design/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/wireless-poultry-monitoring-design/og-fr.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/wireless-poultry-monitoring-design",
   headline: "Planifier un réseau de surveillance sans fil pour un bâtiment avicole",
   description: metadata.description ?? "",
-  image: "/blog/wireless-poultry-monitoring-design/og.jpg",
+  image: "/blog/wireless-poultry-monitoring-design/og-fr.jpg",
 });
 
 export default function BlogArticleWirelessPoultryMonitoringFr() {
@@ -45,7 +45,7 @@ export default function BlogArticleWirelessPoultryMonitoringFr() {
           Un seul capteur suspendu au milieu d&apos;un bâtiment avicole indique la condition moyenne à cet unique point — pas ce qui se passe au sol près des ventilateurs d&apos;entrée d&apos;air, ni près du faîte où la chaleur s&apos;accumule.
         </p>
         <Image
-          src="/blog/wireless-poultry-monitoring-design/hero.webp"
+          src="/blog/wireless-poultry-monitoring-design/hero-fr.webp"
           alt="Nœud de capteurs sans fil fixé à un poteau dans un bâtiment avicole, relié à une passerelle LoRa et à un serveur cloud, avec un tableau de bord de suivi sur un ordinateur portable"
           width={1752}
           height={897}

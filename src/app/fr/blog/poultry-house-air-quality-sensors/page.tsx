@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Mesurer l'ambiance d'un bâtiment avicole : types de capteurs d'ammoniac, de CO₂ et d'humidité, installation à hauteur des animaux, étalonnage, dérive, poussière et lavage.",
   alternates: buildAlternates("fr", "blog/poultry-house-air-quality-sensors"),
   openGraph: buildOpenGraph("fr", "blog/poultry-house-air-quality-sensors", {
-    url: "/blog/poultry-house-air-quality-sensors/og.jpg",
+    url: "/blog/poultry-house-air-quality-sensors/og-fr.jpg",
     alt: "Intérieur d'un bâtiment avicole avec capteurs d'ammoniac (NH₃), de CO₂ et d'humidité relative au-dessus des volailles, entrée d'air et ventilateur d'extraction",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og-fr.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/poultry-house-air-quality-sensors",
   headline: "Capteurs d'ammoniac, de CO₂ et d'humidité en bâtiment avicole : installation, étalonnage et dérive",
   description: metadata.description ?? "",
-  image: "/blog/poultry-house-air-quality-sensors/og.jpg",
+  image: "/blog/poultry-house-air-quality-sensors/og-fr.jpg",
 });
 
 export default function BlogArticlePoultryAirQualitySensorsFr() {
@@ -48,7 +48,7 @@ export default function BlogArticlePoultryAirQualitySensorsFr() {
           sache est pire que pas de capteur du tout.
         </p>
         <Image
-          src="/blog/poultry-house-air-quality-sensors/hero.webp"
+          src="/blog/poultry-house-air-quality-sensors/hero-fr.webp"
           alt="Intérieur d'un bâtiment avicole avec capteurs d'ammoniac (NH₃), de CO₂ et d'humidité relative au-dessus des volailles, entrée d'air et ventilateur d'extraction"
           width={1754}
           height={897}
@@ -159,7 +159,7 @@ export default function BlogArticlePoultryAirQualitySensorsFr() {
 
           <figure>
             <Image
-              src="/blog/poultry-house-air-quality-sensors/diagram.webp"
+              src="/blog/poultry-house-air-quality-sensors/diagram-fr.webp"
               alt="Schéma d'installation des capteurs en bâtiment avicole : à hauteur des animaux côté entrées, au milieu et côté ventilateurs, les mesures sont représentatives ; près du plafond ou devant une entrée d'air, elles sont trompeuses"
               width={1755}
               height={896}

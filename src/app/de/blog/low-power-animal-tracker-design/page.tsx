@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     "Die Akkulaufzeit eines tragbaren Tier-Trackers ist ein Energiebudget-Problem. Die Techniken, die entscheiden, ob ein Gerät Tage oder Monate durchhält.",
   alternates: buildAlternates("de", "blog/low-power-animal-tracker-design"),
   openGraph: buildOpenGraph("de", "blog/low-power-animal-tracker-design", {
-    url: "/blog/low-power-animal-tracker-design/og.jpg",
+    url: "/blog/low-power-animal-tracker-design/og-de.jpg",
     alt: "Kuh mit GNSS-Tracking-Halsband, Nahaufnahme der Tracker-Leiterplatte und die wichtigsten Designbereiche: Energie, Ortung, Konnektivität und Robustheit",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/low-power-animal-tracker-design/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/low-power-animal-tracker-design/og-de.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -25,7 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/low-power-animal-tracker-design",
   headline: "Stromsparende Elektronik für Tier-Tracker im Außeneinsatz",
   description: metadata.description ?? "",
-  image: "/blog/low-power-animal-tracker-design/og.jpg",
+  image: "/blog/low-power-animal-tracker-design/og-de.jpg",
 });
 
 export default function BlogArticleLowPowerDesignDe() {
@@ -44,7 +44,7 @@ export default function BlogArticleLowPowerDesignDe() {
           Warum Akkulaufzeit im Kern ein Energiebudget-Problem ist, und die Techniken, die sie von Tagen auf Monate strecken.
         </p>
         <Image
-          src="/blog/low-power-animal-tracker-design/hero.webp"
+          src="/blog/low-power-animal-tracker-design/hero-de.webp"
           alt="Kuh mit GNSS-Tracking-Halsband, Nahaufnahme der Tracker-Leiterplatte und die wichtigsten Designbereiche: Energie, Ortung, Konnektivität und Robustheit"
           width={1756}
           height={896}

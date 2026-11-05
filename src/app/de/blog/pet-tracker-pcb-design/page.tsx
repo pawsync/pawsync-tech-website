@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     "Ein Halsband- oder Anhänger-Tracker ist keine kleinere GPS-Platine. Antennenplatzierung, Lagenaufbau und Gehäusevorgaben, die das Design wirklich bestimmen.",
   alternates: buildAlternates("de", "blog/pet-tracker-pcb-design"),
   openGraph: buildOpenGraph("de", "blog/pet-tracker-pcb-design", {
-    url: "/blog/pet-tracker-pcb-design/og.jpg",
+    url: "/blog/pet-tracker-pcb-design/og-de.jpg",
     alt: "Hund und Kuh mit Tracking-Halsbändern neben einer Explosionsansicht eines Trackers: Gehäusedeckel, Leiterplatte, Akku und Gehäuseboden",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/pet-tracker-pcb-design/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/pet-tracker-pcb-design/og-de.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -25,7 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/pet-tracker-pcb-design",
   headline: "Leiterplattendesign für einen Haustier- oder Tier-Tracker: Was der Formfaktor wirklich vorgibt",
   description: metadata.description ?? "",
-  image: "/blog/pet-tracker-pcb-design/og.jpg",
+  image: "/blog/pet-tracker-pcb-design/og-de.jpg",
 });
 
 export default function BlogArticlePetTrackerPCBDe() {
@@ -44,7 +44,7 @@ export default function BlogArticlePetTrackerPCBDe() {
           Ein Halsband- oder Anhänger-Tracker ist nicht einfach eine kleinere GPS-Platine – der Formfaktor selbst bestimmt die meisten der schwierigen Entscheidungen.
         </p>
         <Image
-          src="/blog/pet-tracker-pcb-design/hero.webp"
+          src="/blog/pet-tracker-pcb-design/hero-de.webp"
           alt="Hund und Kuh mit Tracking-Halsbändern neben einer Explosionsansicht eines Trackers: Gehäusedeckel, Leiterplatte, Akku und Gehäuseboden"
           width={1752}
           height={897}

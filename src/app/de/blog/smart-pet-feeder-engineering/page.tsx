@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung – die Engineering-Entscheidungen hinter einem intelligenten Futterautomaten.",
   alternates: buildAlternates("de", "blog/smart-pet-feeder-engineering"),
   openGraph: buildOpenGraph("de", "blog/smart-pet-feeder-engineering", {
-    url: "/blog/smart-pet-feeder-engineering/og.jpg",
+    url: "/blog/smart-pet-feeder-engineering/og-de.jpg",
     alt: "Hund und Katze neben einem smarten Futterautomaten, mit Schnittansicht von Vorratsbehälter, Förderschnecke, Wägezelle und Steuerplatine",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/smart-pet-feeder-engineering/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/smart-pet-feeder-engineering/og-de.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/smart-pet-feeder-engineering",
   headline: "Hardware- & Firmware-Engineering für intelligente Futterautomaten: Portionsgenauigkeit, Störungserkennung und Wägesensorik",
   description: metadata.description ?? "",
-  image: "/blog/smart-pet-feeder-engineering/og.jpg",
+  image: "/blog/smart-pet-feeder-engineering/og-de.jpg",
 });
 
 export default function BlogArticleSmartFeederEngineeringDe() {
@@ -45,7 +45,7 @@ export default function BlogArticleSmartFeederEngineeringDe() {
           Ein intelligenter Futterautomat wirkt von außen einfach – Motor, Behälter, Zeitschaltung. Die Technik, die ihn zuverlässig macht, steckt in der Sensorik und der Firmware, nicht im Dosiermechanismus selbst.
         </p>
         <Image
-          src="/blog/smart-pet-feeder-engineering/hero.webp"
+          src="/blog/smart-pet-feeder-engineering/hero-de.webp"
           alt="Hund und Katze neben einem smarten Futterautomaten, mit Schnittansicht von Vorratsbehälter, Förderschnecke, Wägezelle und Steuerplatine"
           width={1752}
           height={897}

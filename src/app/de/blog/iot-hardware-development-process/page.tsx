@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Der Ablauf der IoT-Hardwareentwicklung Schritt für Schritt: Anforderungen, Machbarkeitsnachweis, EVT, DVT und PVT sowie CE-Kennzeichnung, RED und Cyber Resilience Act.",
   alternates: buildAlternates("de", "blog/iot-hardware-development-process"),
   openGraph: buildOpenGraph("de", "blog/iot-hardware-development-process", {
-    url: "/blog/iot-hardware-development-process/og.jpg",
+    url: "/blog/iot-hardware-development-process/og-de.jpg",
     alt: "Phasen der Produktentwicklung: Machbarkeitsaufbau auf dem Steckbrett, eigene Leiterplatte für EVT und DVT, fertiges Gehäuse für PVT",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/iot-hardware-development-process/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/iot-hardware-development-process/og-de.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/iot-hardware-development-process",
   headline: "Vom Prototyp zur Serie: Der Ablauf der IoT-Elektronikentwicklung",
   description: metadata.description ?? "",
-  image: "/blog/iot-hardware-development-process/og.jpg",
+  image: "/blog/iot-hardware-development-process/og-de.jpg",
 });
 
 export default function BlogArticleIotHardwareDevelopmentDe() {
@@ -47,7 +47,7 @@ export default function BlogArticleIotHardwareDevelopmentDe() {
           kann. Dafür sind die folgenden Phasen da, und deshalb kostet es meist mehr, sie zu überspringen.
         </p>
         <Image
-          src="/blog/iot-hardware-development-process/hero.webp"
+          src="/blog/iot-hardware-development-process/hero-de.webp"
           alt="Phasen der Produktentwicklung: Machbarkeitsaufbau auf dem Steckbrett, eigene Leiterplatte für EVT und DVT, fertiges Gehäuse für PVT"
           width={1755}
           height={896}
@@ -77,7 +77,7 @@ export default function BlogArticleIotHardwareDevelopmentDe() {
 
           <figure>
             <Image
-              src="/blog/iot-hardware-development-process/diagram.webp"
+              src="/blog/iot-hardware-development-process/diagram-de.webp"
               alt="Diagramm der sechs Phasen: 1 Anforderungen, 2 Machbarkeitsnachweis, 3 Prototyp, 4 EVT, 5 DVT mit CE-, UKCA- und FCC-Zulassung, 6 PVT; die Firmware entsteht parallel"
               width={1755}
               height={896}

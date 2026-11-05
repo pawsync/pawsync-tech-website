@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "La clôture virtuelle pour le bétail expliquée côté ingénierie : géorepérage GNSS dans le collier, séquence signal sonore puis impulsion, autonomie de la batterie et cadre réglementaire.",
   alternates: buildAlternates("fr", "blog/virtual-fencing-collars"),
   openGraph: buildOpenGraph("fr", "blog/virtual-fencing-collars", {
-    url: "/blog/virtual-fencing-collars/og.jpg",
+    url: "/blog/virtual-fencing-collars/og-fr.jpg",
     alt: "Vaches Holstein équipées de colliers GNSS pâturant près d'une clôture virtuelle, avec un satellite au-dessus",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og-fr.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/virtual-fencing-collars",
   headline: "Clôture virtuelle : comment fonctionnent les colliers GNSS – positionnement, signaux et énergie",
   description: metadata.description ?? "",
-  image: "/blog/virtual-fencing-collars/og.jpg",
+  image: "/blog/virtual-fencing-collars/og-fr.jpg",
 });
 
 export default function BlogArticleVirtualFencingCollarsFr() {
@@ -47,7 +47,7 @@ export default function BlogArticleVirtualFencingCollarsFr() {
           sur une batterie – doit se passer dans un collier porté dehors par un animal en mouvement.
         </p>
         <Image
-          src="/blog/virtual-fencing-collars/hero.webp"
+          src="/blog/virtual-fencing-collars/hero-fr.webp"
           alt="Vaches Holstein équipées de colliers GNSS pâturant près d'une clôture virtuelle, avec un satellite au-dessus"
           width={1752}
           height={897}
@@ -128,7 +128,7 @@ export default function BlogArticleVirtualFencingCollarsFr() {
 
           <figure>
             <Image
-              src="/blog/virtual-fencing-collars/diagram.webp"
+              src="/blog/virtual-fencing-collars/diagram-fr.webp"
               alt="Schéma d'une parcelle avec limite virtuelle et zone d'alerte : 1 signal sonore à l'entrée de la zone d'alerte, 2 brève impulsion seulement si l'animal continue, 3 les signaux cessent s'il fait demi-tour"
               width={1536}
               height={1024}

@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Virtuelle Zäune für Weidetiere technisch erklärt: GNSS-Geofencing im Halsband, Abfolge von Ton- und Stromsignal, Energiebedarf – und die Rechtslage in Deutschland und Österreich.",
   alternates: buildAlternates("de", "blog/virtual-fencing-collars"),
   openGraph: buildOpenGraph("de", "blog/virtual-fencing-collars", {
-    url: "/blog/virtual-fencing-collars/og.jpg",
+    url: "/blog/virtual-fencing-collars/og-de.jpg",
     alt: "Holstein-Kühe mit GNSS-Halsbändern grasen nahe einer virtuellen Zaunlinie, darüber ein Satellit",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og-de.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/virtual-fencing-collars",
   headline: "Virtueller Weidezaun: Wie GNSS-Halsbänder funktionieren – Technik, Signale und Energie",
   description: metadata.description ?? "",
-  image: "/blog/virtual-fencing-collars/og.jpg",
+  image: "/blog/virtual-fencing-collars/og-de.jpg",
 });
 
 export default function BlogArticleVirtualFencingCollarsDe() {
@@ -47,7 +47,7 @@ export default function BlogArticleVirtualFencingCollarsDe() {
           einem Halsband passieren, das draußen an einem Tier in Bewegung hängt.
         </p>
         <Image
-          src="/blog/virtual-fencing-collars/hero.webp"
+          src="/blog/virtual-fencing-collars/hero-de.webp"
           alt="Holstein-Kühe mit GNSS-Halsbändern grasen nahe einer virtuellen Zaunlinie, darüber ein Satellit"
           width={1752}
           height={897}
@@ -144,7 +144,7 @@ export default function BlogArticleVirtualFencingCollarsDe() {
 
           <figure>
             <Image
-              src="/blog/virtual-fencing-collars/diagram.webp"
+              src="/blog/virtual-fencing-collars/diagram-de.webp"
               alt="Diagramm einer Weide mit virtueller Grenze und Warnzone: 1 Tonsignal beim Betreten der Warnzone, 2 kurzer Impuls nur, wenn das Tier weiterläuft, 3 kehrt es um, enden die Signale"
               width={1536}
               height={1024}

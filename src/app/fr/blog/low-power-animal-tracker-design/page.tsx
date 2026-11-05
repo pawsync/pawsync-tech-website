@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     "L'autonomie d'un tracker porté par un animal est un problème de budget énergétique. Les techniques qui déterminent si un appareil tient des jours ou des mois.",
   alternates: buildAlternates("fr", "blog/low-power-animal-tracker-design"),
   openGraph: buildOpenGraph("fr", "blog/low-power-animal-tracker-design", {
-    url: "/blog/low-power-animal-tracker-design/og.jpg",
+    url: "/blog/low-power-animal-tracker-design/og-fr.jpg",
     alt: "Vache portant un collier de suivi GNSS, gros plan sur le circuit imprimé du traceur et les axes de conception clés : énergie, positionnement, connectivité et robustesse",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/low-power-animal-tracker-design/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/low-power-animal-tracker-design/og-fr.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -25,7 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/low-power-animal-tracker-design",
   headline: "Concevoir une électronique basse consommation pour trackers d'animaux extérieurs",
   description: metadata.description ?? "",
-  image: "/blog/low-power-animal-tracker-design/og.jpg",
+  image: "/blog/low-power-animal-tracker-design/og-fr.jpg",
 });
 
 export default function BlogArticleLowPowerDesignFr() {
@@ -44,7 +44,7 @@ export default function BlogArticleLowPowerDesignFr() {
           Pourquoi l&apos;autonomie est fondamentalement un problème de budget énergétique, et les techniques qui la font passer de quelques jours à plusieurs mois.
         </p>
         <Image
-          src="/blog/low-power-animal-tracker-design/hero.webp"
+          src="/blog/low-power-animal-tracker-design/hero-fr.webp"
           alt="Vache portant un collier de suivi GNSS, gros plan sur le circuit imprimé du traceur et les axes de conception clés : énergie, positionnement, connectivité et robustesse"
           width={1756}
           height={896}

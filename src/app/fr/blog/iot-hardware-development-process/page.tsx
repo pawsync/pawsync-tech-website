@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Les étapes du développement d'un produit électronique IoT : cahier des charges, preuve de concept, EVT, DVT et PVT, marquage CE, directive RED et Cyber Resilience Act.",
   alternates: buildAlternates("fr", "blog/iot-hardware-development-process"),
   openGraph: buildOpenGraph("fr", "blog/iot-hardware-development-process", {
-    url: "/blog/iot-hardware-development-process/og.jpg",
+    url: "/blog/iot-hardware-development-process/og-fr.jpg",
     alt: "Étapes du développement produit : preuve de concept sur platine d'essai, circuit imprimé sur mesure pour l'EVT et la DVT, boîtier fini pour la PVT",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/iot-hardware-development-process/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/iot-hardware-development-process/og-fr.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/iot-hardware-development-process",
   headline: "Du prototype à la série : les étapes du développement d'un produit IoT",
   description: metadata.description ?? "",
-  image: "/blog/iot-hardware-development-process/og.jpg",
+  image: "/blog/iot-hardware-development-process/og-fr.jpg",
 });
 
 export default function BlogArticleIotHardwareDevelopmentFr() {
@@ -47,7 +47,7 @@ export default function BlogArticleIotHardwareDevelopmentFr() {
           servent les étapes suivantes, et pourquoi les sauter coûte souvent plus cher qu&apos;on ne le pense.
         </p>
         <Image
-          src="/blog/iot-hardware-development-process/hero.webp"
+          src="/blog/iot-hardware-development-process/hero-fr.webp"
           alt="Étapes du développement produit : preuve de concept sur platine d'essai, circuit imprimé sur mesure pour l'EVT et la DVT, boîtier fini pour la PVT"
           width={1755}
           height={896}
@@ -78,7 +78,7 @@ export default function BlogArticleIotHardwareDevelopmentFr() {
 
           <figure>
             <Image
-              src="/blog/iot-hardware-development-process/diagram.webp"
+              src="/blog/iot-hardware-development-process/diagram-fr.webp"
               alt="Schéma des six étapes : 1 cahier des charges, 2 preuve de concept, 3 prototype, 4 EVT, 5 DVT avec certification CE, UKCA et FCC, 6 PVT ; le firmware avance en parallèle"
               width={1755}
               height={896}

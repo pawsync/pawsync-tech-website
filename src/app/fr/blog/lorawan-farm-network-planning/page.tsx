@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Planifier un réseau LoRaWAN agricole : emplacement et hauteur de la passerelle, portée réaliste, bande EU868 et rapport cyclique, autonomie des capteurs, réseau public ou privé.",
   alternates: buildAlternates("fr", "blog/lorawan-farm-network-planning"),
   openGraph: buildOpenGraph("fr", "blog/lorawan-farm-network-planning", {
-    url: "/blog/lorawan-farm-network-planning/og.jpg",
+    url: "/blog/lorawan-farm-network-planning/og-fr.jpg",
     alt: "Illustration d'un réseau LoRaWAN agricole : une passerelle sur un silo atteint les capteurs des champs, une cuve et une station météo ; un capteur derrière une haie n'est pas atteint",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/lorawan-farm-network-planning/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/lorawan-farm-network-planning/og-fr.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/lorawan-farm-network-planning",
   headline: "Planifier un réseau LoRaWAN sur une exploitation : passerelles, portée et autonomie",
   description: metadata.description ?? "",
-  image: "/blog/lorawan-farm-network-planning/og.jpg",
+  image: "/blog/lorawan-farm-network-planning/og-fr.jpg",
 });
 
 export default function BlogArticleLorawanFarmNetworkFr() {
@@ -47,7 +47,7 @@ export default function BlogArticleLorawanFarmNetworkFr() {
           d&apos;exploitation dépend bien plus de sa planification que des capteurs eux-mêmes.
         </p>
         <Image
-          src="/blog/lorawan-farm-network-planning/hero.webp"
+          src="/blog/lorawan-farm-network-planning/hero-fr.webp"
           alt="Illustration d'un réseau LoRaWAN agricole : une passerelle sur un silo atteint les capteurs des champs, une cuve et une station météo ; un capteur derrière une haie n'est pas atteint"
           width={1752}
           height={897}
@@ -72,7 +72,7 @@ export default function BlogArticleLorawanFarmNetworkFr() {
 
           <figure>
             <Image
-              src="/blog/lorawan-farm-network-planning/diagram.webp"
+              src="/blog/lorawan-farm-network-planning/diagram-fr.webp"
               alt="Schéma d'un réseau LoRaWAN : les capteurs envoient de courts messages radio, les passerelles les relaient via Internet, un serveur réseau supprime les doublons et gère clés et débit, une application stocke les données et déclenche les alertes"
               width={1755}
               height={896}

@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Stallklima im Geflügelstall messen: Sensortypen für Ammoniak, CO₂ und Luftfeuchte, Montage auf Tierhöhe, Kalibrierung, Drift sowie Staub und Nassreinigung.",
   alternates: buildAlternates("de", "blog/poultry-house-air-quality-sensors"),
   openGraph: buildOpenGraph("de", "blog/poultry-house-air-quality-sensors", {
-    url: "/blog/poultry-house-air-quality-sensors/og.jpg",
+    url: "/blog/poultry-house-air-quality-sensors/og-de.jpg",
     alt: "Innenansicht eines Geflügelstalls mit Sensoren für Ammoniak (NH₃), CO₂ und relative Luftfeuchte über den Tieren, Zuluftöffnung und Abluftventilator",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og-de.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/poultry-house-air-quality-sensors",
   headline: "Ammoniak-, CO₂- und Feuchtesensoren im Geflügelstall: Montage, Kalibrierung und Drift",
   description: metadata.description ?? "",
-  image: "/blog/poultry-house-air-quality-sensors/og.jpg",
+  image: "/blog/poultry-house-air-quality-sensors/og-de.jpg",
 });
 
 export default function BlogArticlePoultryAirQualitySensorsDe() {
@@ -47,7 +47,7 @@ export default function BlogArticlePoultryAirQualitySensorsDe() {
           unbemerkt driftet, ist schlechter als gar keiner.
         </p>
         <Image
-          src="/blog/poultry-house-air-quality-sensors/hero.webp"
+          src="/blog/poultry-house-air-quality-sensors/hero-de.webp"
           alt="Innenansicht eines Geflügelstalls mit Sensoren für Ammoniak (NH₃), CO₂ und relative Luftfeuchte über den Tieren, Zuluftöffnung und Abluftventilator"
           width={1754}
           height={897}
@@ -155,7 +155,7 @@ export default function BlogArticlePoultryAirQualitySensorsDe() {
 
           <figure>
             <Image
-              src="/blog/poultry-house-air-quality-sensors/diagram.webp"
+              src="/blog/poultry-house-air-quality-sensors/diagram-de.webp"
               alt="Diagramm zur Sensormontage im Geflügelstall: Sensoren auf Tierhöhe an Zuluftseite, Mitte und Lüfterseite sind repräsentativ; ein Sensor unter der Decke oder direkt vor einer Zuluftöffnung liefert verfälschte Werte"
               width={1755}
               height={896}

@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Sensorplatzierung, Protokollwahl und Gateway-Planung für ein drahtloses Überwachungsnetz im Geflügelstall – und warum ein Sensor pro Stall meist nicht reicht.",
   alternates: buildAlternates("de", "blog/wireless-poultry-monitoring-design"),
   openGraph: buildOpenGraph("de", "blog/wireless-poultry-monitoring-design", {
-    url: "/blog/wireless-poultry-monitoring-design/og.jpg",
+    url: "/blog/wireless-poultry-monitoring-design/og-de.jpg",
     alt: "Funk-Sensorknoten an einem Pfosten im Geflügelstall, verbunden mit einem LoRa-Gateway und einem Cloud-Server, daneben ein Monitoring-Dashboard auf einem Laptop",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/wireless-poultry-monitoring-design/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/wireless-poultry-monitoring-design/og-de.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/wireless-poultry-monitoring-design",
   headline: "Ein drahtloses Überwachungsnetz für den Geflügelstall planen",
   description: metadata.description ?? "",
-  image: "/blog/wireless-poultry-monitoring-design/og.jpg",
+  image: "/blog/wireless-poultry-monitoring-design/og-de.jpg",
 });
 
 export default function BlogArticleWirelessPoultryMonitoringDe() {
@@ -45,7 +45,7 @@ export default function BlogArticleWirelessPoultryMonitoringDe() {
           Ein einzelner Sensor in der Stallmitte zeigt die durchschnittliche Bedingung an genau diesem einen Punkt – nicht, was am Boden nahe den Zuluftventilatoren passiert, oder oben am First, wo sich Wärme sammelt.
         </p>
         <Image
-          src="/blog/wireless-poultry-monitoring-design/hero.webp"
+          src="/blog/wireless-poultry-monitoring-design/hero-de.webp"
           alt="Funk-Sensorknoten an einem Pfosten im Geflügelstall, verbunden mit einem LoRa-Gateway und einem Cloud-Server, daneben ein Monitoring-Dashboard auf einem Laptop"
           width={1752}
           height={897}

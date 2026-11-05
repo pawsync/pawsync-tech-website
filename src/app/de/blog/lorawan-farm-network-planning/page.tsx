@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "LoRaWAN für den landwirtschaftlichen Betrieb planen: Gateway-Standort und Höhe, realistische Reichweite, EU868 und Duty Cycle, Batterielaufzeit sowie privates oder öffentliches Netz.",
   alternates: buildAlternates("de", "blog/lorawan-farm-network-planning"),
   openGraph: buildOpenGraph("de", "blog/lorawan-farm-network-planning", {
-    url: "/blog/lorawan-farm-network-planning/og.jpg",
+    url: "/blog/lorawan-farm-network-planning/og-de.jpg",
     alt: "Illustration eines LoRaWAN-Netzes auf dem Hof: Ein Gateway auf einem Silo erreicht Feldsensoren, Wassertank und Wetterstation; ein Sensor hinter einer Baumreihe wird nicht erreicht",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/lorawan-farm-network-planning/og.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/blog/lorawan-farm-network-planning/og-de.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/lorawan-farm-network-planning",
   headline: "Ein LoRaWAN-Netz für den Hof planen: Gateways, Reichweite und Batterielaufzeit",
   description: metadata.description ?? "",
-  image: "/blog/lorawan-farm-network-planning/og.jpg",
+  image: "/blog/lorawan-farm-network-planning/og-de.jpg",
 });
 
 export default function BlogArticleLorawanFarmNetworkDe() {
@@ -47,7 +47,7 @@ export default function BlogArticleLorawanFarmNetworkDe() {
           mehr von der Planung ab als von den Sensoren selbst.
         </p>
         <Image
-          src="/blog/lorawan-farm-network-planning/hero.webp"
+          src="/blog/lorawan-farm-network-planning/hero-de.webp"
           alt="Illustration eines LoRaWAN-Netzes auf dem Hof: Ein Gateway auf einem Silo erreicht Feldsensoren, Wassertank und Wetterstation; ein Sensor hinter einer Baumreihe wird nicht erreicht"
           width={1752}
           height={897}
@@ -72,7 +72,7 @@ export default function BlogArticleLorawanFarmNetworkDe() {
 
           <figure>
             <Image
-              src="/blog/lorawan-farm-network-planning/diagram.webp"
+              src="/blog/lorawan-farm-network-planning/diagram-de.webp"
               alt="Diagramm eines LoRaWAN-Netzes: Endgeräte senden kurze Funknachrichten, Gateways leiten sie per Internet weiter, ein Netzwerkserver entfernt Duplikate und verwaltet Schlüssel und Datenrate, eine Anwendung speichert Daten und löst Alarme aus"
               width={1755}
               height={896}
