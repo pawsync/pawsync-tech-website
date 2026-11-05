@@ -16,6 +16,31 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: "Virtueller Weidezaun: Wie GNSS-Halsbänder funktionieren",
+    excerpt: "Geofencing im Halsband, Abfolge von Ton- und Stromsignal, Energiebedarf – und die aktuelle Rechtslage in Deutschland und Österreich.",
+    href: "/de/blog/virtual-fencing-collars",
+  },
+  {
+    title: "Sensoren für die Weidetier-Überwachung",
+    excerpt: "GPS, Aktivität, RFID, Tränke, Tor und Weidezaun – was jeder Sensor misst, wie er versorgt und über große Flächen vernetzt wird.",
+    href: "/de/blog/livestock-monitoring-sensors",
+  },
+  {
+    title: "Ammoniak-, CO₂- und Feuchtesensoren im Geflügelstall",
+    excerpt: "Sensortypen, Montage auf Tierhöhe, Kalibrierung und Drift – und warum die CO₂-Autokalibrierung im belegten Stall versagt.",
+    href: "/de/blog/poultry-house-air-quality-sensors",
+  },
+  {
+    title: "Vom Prototyp zur Serie: Der Ablauf der IoT-Elektronikentwicklung",
+    excerpt: "Anforderungen, Machbarkeitsnachweis, EVT, DVT und PVT – plus CE-Kennzeichnung, RED und Cyber Resilience Act.",
+    href: "/de/blog/iot-hardware-development-process",
+  },
+  {
+    title: "Ein LoRaWAN-Netz für den Hof planen",
+    excerpt: "Gateway-Standort, realistische Reichweite, EU868 und Duty Cycle sowie Batterielaufzeit für landwirtschaftliche Sensornetze.",
+    href: "/de/blog/lorawan-farm-network-planning",
+  },
+  {
     title: "GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking",
     excerpt: "GNSS bestimmt die Position; LoRa und LTE-M sind separate Kommunikationsebenen, die diese Position vom Gerät übertragen. Ein praktischer Vergleich.",
     href: "/de/blog/gnss-lora-vs-gnss-ltem",
