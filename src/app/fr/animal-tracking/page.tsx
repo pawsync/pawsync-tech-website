@@ -127,6 +127,18 @@ const scope: ServiceScopeCopy = {
     {
       "label": "Conception de carte PCB pour tracker (article)",
       "href": "/fr/blog/pet-tracker-pcb-design"
+    },
+    {
+      "label": "Fonctionnement des colliers de clôture virtuelle (article)",
+      "href": "/fr/blog/virtual-fencing-collars"
+    },
+    {
+      "label": "Capteurs pour le suivi du bétail (article)",
+      "href": "/fr/blog/livestock-monitoring-sensors"
+    },
+    {
+      "label": "Planifier un réseau LoRaWAN agricole (article)",
+      "href": "/fr/blog/lorawan-farm-network-planning"
     }
   ],
   "note": "Cette section décrit des services d'ingénierie sur mesure. Les modèles de référence présentés sur notre page Projets sont des concepts et des prototypes, et non des produits à acheter."

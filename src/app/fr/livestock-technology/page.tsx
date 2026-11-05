@@ -286,7 +286,11 @@ export default function LivestockTechnologyPageFr() {
             <Link href="/fr/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               électronique sur mesure
             </Link>
-            .
+            . Notre guide{" "}
+            <Link href="/fr/blog/iot-hardware-development-process" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              du prototype à la série
+            </Link>{" "}
+            détaille chaque étape.
           </p>
         </div>
 

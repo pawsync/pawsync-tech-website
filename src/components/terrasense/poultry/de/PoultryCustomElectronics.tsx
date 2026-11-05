@@ -35,7 +35,12 @@ export default function PoultryCustomElectronics() {
           <Link href="/de/blog/wireless-poultry-monitoring-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Planung drahtloser Geflügelüberwachung
           </Link>{" "}
-          für Sensorplatzierung und Konnektivität.
+          für Sensorplatzierung und Konnektivität. Zu Kalibrierung und Drift
+          siehe unseren Beitrag über{" "}
+          <Link href="/de/blog/poultry-house-air-quality-sensors" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            Ammoniak-, CO₂- und Feuchtesensoren
+          </Link>
+          .
         </p>
       </div>
 

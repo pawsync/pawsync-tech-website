@@ -34,7 +34,12 @@ export default function PoultryCustomElectronics() {
           <Link href="/blog/wireless-poultry-monitoring-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             poultry monitoring network planning
           </Link>{" "}
-          guide for how we approach sensor placement and connectivity.
+          guide for how we approach sensor placement and connectivity, and our
+          guide to{" "}
+          <Link href="/blog/poultry-house-air-quality-sensors" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            ammonia, CO₂ and humidity sensors
+          </Link>{" "}
+          for calibration and drift.
         </p>
       </div>
 

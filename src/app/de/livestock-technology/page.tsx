@@ -284,6 +284,10 @@ export default function LivestockTechnologyPageDe() {
             <Link href="/de/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               individuelle Elektronikentwicklung
             </Link>
+            . Die einzelnen Phasen erklärt unser Leitfaden{" "}
+            <Link href="/de/blog/iot-hardware-development-process" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              vom Prototyp zur Serie
+            </Link>
             .
           </p>
         </div>

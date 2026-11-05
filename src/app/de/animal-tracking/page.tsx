@@ -127,6 +127,18 @@ const scope: ServiceScopeCopy = {
     {
       "label": "Leiterplattendesign für Tracker (Artikel)",
       "href": "/de/blog/pet-tracker-pcb-design"
+    },
+    {
+      "label": "So funktionieren virtuelle Weidezäune (Artikel)",
+      "href": "/de/blog/virtual-fencing-collars"
+    },
+    {
+      "label": "Sensoren für die Weidetier-Überwachung (Artikel)",
+      "href": "/de/blog/livestock-monitoring-sensors"
+    },
+    {
+      "label": "LoRaWAN-Netz für den Hof planen (Artikel)",
+      "href": "/de/blog/lorawan-farm-network-planning"
     }
   ],
   "note": "Dieser Bereich beschreibt individuelle Engineering-Dienstleistungen. Referenzdesigns auf unserer Projektseite sind Konzepte und Prototypen, keine käuflichen Produkte."

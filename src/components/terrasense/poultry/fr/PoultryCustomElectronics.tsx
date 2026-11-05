@@ -37,7 +37,12 @@ export default function PoultryCustomElectronics() {
           <Link href="/fr/blog/wireless-poultry-monitoring-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             planification de la surveillance avicole sans fil
           </Link>{" "}
-          pour le placement des capteurs et la connectivité.
+          pour le placement des capteurs et la connectivité. Pour l&apos;étalonnage
+          et la dérive, voir notre article sur les{" "}
+          <Link href="/fr/blog/poultry-house-air-quality-sensors" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            capteurs d&apos;ammoniac, de CO₂ et d&apos;humidité
+          </Link>
+          .
         </p>
       </div>
 

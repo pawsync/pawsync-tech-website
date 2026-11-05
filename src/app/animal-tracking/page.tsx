@@ -127,6 +127,18 @@ const scope: ServiceScopeCopy = {
     {
       "label": "Pet tracker PCB design (article)",
       "href": "/blog/pet-tracker-pcb-design"
+    },
+    {
+      "label": "How virtual fencing collars work (article)",
+      "href": "/blog/virtual-fencing-collars"
+    },
+    {
+      "label": "Livestock monitoring sensors (article)",
+      "href": "/blog/livestock-monitoring-sensors"
+    },
+    {
+      "label": "Planning a LoRaWAN farm network (article)",
+      "href": "/blog/lorawan-farm-network-planning"
     }
   ],
   "note": "This section describes custom engineering services. Reference designs on our Projects page are concepts and prototypes, not products available to purchase."
