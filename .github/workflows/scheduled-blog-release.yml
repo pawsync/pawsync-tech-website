@@ -1,0 +1,63 @@
+# Publishes the November 2026 blog campaign by merging its pull request at the
+# approved launch time. Netlify then deploys main to production as usual.
+#
+# 08:00 UTC = 13:00 PKT, 09:00 CET (DE/AT/FR), 08:00 GMT (UK), 03:00 EST (US).
+# GitHub may start scheduled runs a few minutes late. The year check stops the
+# cron from doing anything after 2026; remove this file once the campaign is live.
+name: Scheduled blog release
+
+on:
+  schedule:
+    - cron: "0 8 17 11 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+  statuses: read
+
+concurrency: scheduled-blog-release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+      BRANCH: blog/nov-2026-campaign
+    steps:
+      - name: Merge the campaign pull request
+        run: |
+          set -euo pipefail
+          if [ "$(date -u +%Y)" != "2026" ]; then
+            echo "Campaign year is over; nothing to do."
+            exit 0
+          fi
+          # A manual run before launch must not publish early; after launch it
+          # can be used to retry a failed scheduled run.
+          if [ "$(date -u +%s)" -lt "$(date -u -d '2026-11-17T08:00:00Z' +%s)" ]; then
+            echo "Before the 2026-11-17 08:00 UTC launch time; nothing to do."
+            exit 0
+          fi
+
+          pr=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            echo "No open pull request for $BRANCH (already merged or closed)."
+            exit 0
+          fi
+          echo "Campaign pull request: #$pr"
+
+          # main requires branches to be up to date before merging.
+          if [ "$(gh pr view "$pr" --json mergeStateStatus --jq .mergeStateStatus)" = "BEHIND" ]; then
+            echo "Updating the branch with main"
+            gh pr update-branch "$pr"
+            sleep 90
+          fi
+
+          # Wait for the required Netlify deploy-preview check to pass.
+          gh pr checks "$pr" --required --watch --interval 30
+
+          gh pr merge "$pr" --merge
+          echo "Merged #$pr; Netlify will deploy main to production."
