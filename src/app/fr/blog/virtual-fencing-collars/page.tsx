@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "La clôture virtuelle pour le bétail expliquée côté ingénierie : géorepérage GNSS dans le collier, séquence signal sonore puis impulsion, autonomie de la batterie et cadre réglementaire.",
   alternates: buildAlternates("fr", "blog/virtual-fencing-collars"),
   openGraph: buildOpenGraph("fr", "blog/virtual-fencing-collars", {
-    url: "/blog/virtual-fencing-collars/og.png",
-    alt: "Illustration : bovins équipés de colliers GNSS approchant d'une limite virtuelle, avec un satellite au-dessus",
+    url: "/blog/virtual-fencing-collars/og.jpg",
+    alt: "Vaches Holstein équipées de colliers GNSS pâturant près d'une clôture virtuelle, avec un satellite au-dessus",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og.png"] },
+  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/virtual-fencing-collars",
   headline: "Clôture virtuelle : comment fonctionnent les colliers GNSS – positionnement, signaux et énergie",
   description: metadata.description ?? "",
-  image: "/blog/virtual-fencing-collars/og.png",
+  image: "/blog/virtual-fencing-collars/og.jpg",
 });
 
 export default function BlogArticleVirtualFencingCollarsFr() {
@@ -47,12 +47,12 @@ export default function BlogArticleVirtualFencingCollarsFr() {
           sur une batterie – doit se passer dans un collier porté dehors par un animal en mouvement.
         </p>
         <Image
-          src="/blog/virtual-fencing-collars/hero.svg"
-          alt="Illustration : bovins équipés de colliers GNSS approchant d'une limite virtuelle, avec un satellite au-dessus"
-          width={1200}
-          height={600}
+          src="/blog/virtual-fencing-collars/hero.webp"
+          alt="Vaches Holstein équipées de colliers GNSS pâturant près d'une clôture virtuelle, avec un satellite au-dessus"
+          width={1752}
+          height={897}
           priority
-          unoptimized
+          sizes="(min-width: 768px) 704px, 100vw"
           className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
         />
 
@@ -128,11 +128,11 @@ export default function BlogArticleVirtualFencingCollarsFr() {
 
           <figure>
             <Image
-              src="/blog/virtual-fencing-collars/diagram-fr.svg"
+              src="/blog/virtual-fencing-collars/diagram.webp"
               alt="Schéma d'une parcelle avec limite virtuelle et zone d'alerte : 1 signal sonore à l'entrée de la zone d'alerte, 2 brève impulsion seulement si l'animal continue, 3 les signaux cessent s'il fait demi-tour"
-              width={960}
-              height={600}
-              unoptimized
+              width={1536}
+              height={1024}
+              sizes="(min-width: 768px) 704px, 100vw"
               className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
             />
             <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">

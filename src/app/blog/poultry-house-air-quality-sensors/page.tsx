@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "How ammonia, CO₂ and humidity sensors behave in poultry houses and sheds: sensor types, placement at bird height, calibration, drift and the dust and washdown problem.",
   alternates: buildAlternates("en", "blog/poultry-house-air-quality-sensors"),
   openGraph: buildOpenGraph("en", "blog/poultry-house-air-quality-sensors", {
-    url: "/blog/poultry-house-air-quality-sensors/og.png",
-    alt: "Cross-section illustration of a poultry house with birds on litter, ammonia, CO₂ and humidity sensors at bird height, air inlets and an exhaust fan",
+    url: "/blog/poultry-house-air-quality-sensors/og.jpg",
+    alt: "Poultry house interior with ammonia (NH₃), CO₂ and relative humidity sensors above the birds, an air inlet and an exhaust fan",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og.png"] },
+  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/poultry-house-air-quality-sensors",
   headline: "Ammonia, CO₂ and Humidity Sensors in Poultry Houses: Placement, Calibration and Drift",
   description: metadata.description ?? "",
-  image: "/blog/poultry-house-air-quality-sensors/og.png",
+  image: "/blog/poultry-house-air-quality-sensors/og.jpg",
 });
 
 export default function BlogArticlePoultryAirQualitySensors() {
@@ -47,12 +47,12 @@ export default function BlogArticlePoultryAirQualitySensors() {
           that has quietly drifted is worse than no sensor at all.
         </p>
         <Image
-          src="/blog/poultry-house-air-quality-sensors/hero.svg"
-          alt="Cross-section illustration of a poultry house with birds on litter, ammonia, CO₂ and humidity sensors at bird height, air inlets and an exhaust fan"
-          width={1200}
-          height={600}
+          src="/blog/poultry-house-air-quality-sensors/hero.webp"
+          alt="Poultry house interior with ammonia (NH₃), CO₂ and relative humidity sensors above the birds, an air inlet and an exhaust fan"
+          width={1754}
+          height={897}
           priority
-          unoptimized
+          sizes="(min-width: 768px) 704px, 100vw"
           className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
         />
 
@@ -168,11 +168,11 @@ export default function BlogArticlePoultryAirQualitySensors() {
 
           <figure>
             <Image
-              src="/blog/poultry-house-air-quality-sensors/diagram-en.svg"
+              src="/blog/poultry-house-air-quality-sensors/diagram.webp"
               alt="Diagram of sensor placement in a poultry house: sensors at bird height at the inlet end, middle and fan end are representative; a sensor near the ceiling or directly in front of an inlet gives misleading readings"
-              width={960}
-              height={600}
-              unoptimized
+              width={1755}
+              height={896}
+              sizes="(min-width: 768px) 704px, 100vw"
               className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
             />
             <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">

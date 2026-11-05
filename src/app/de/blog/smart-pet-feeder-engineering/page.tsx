@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung – die Engineering-Entscheidungen hinter einem intelligenten Futterautomaten.",
   alternates: buildAlternates("de", "blog/smart-pet-feeder-engineering"),
-  openGraph: buildOpenGraph("de", "blog/smart-pet-feeder-engineering"),
+  openGraph: buildOpenGraph("de", "blog/smart-pet-feeder-engineering", {
+    url: "/blog/smart-pet-feeder-engineering/og.jpg",
+    alt: "Hund und Katze neben einem smarten Futterautomaten, mit Schnittansicht von Vorratsbehälter, Förderschnecke, Wägezelle und Steuerplatine",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/smart-pet-feeder-engineering/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/smart-pet-feeder-engineering",
   headline: "Hardware- & Firmware-Engineering für intelligente Futterautomaten: Portionsgenauigkeit, Störungserkennung und Wägesensorik",
   description: metadata.description ?? "",
+  image: "/blog/smart-pet-feeder-engineering/og.jpg",
 });
 
 export default function BlogArticleSmartFeederEngineeringDe() {
@@ -38,6 +44,15 @@ export default function BlogArticleSmartFeederEngineeringDe() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Ein intelligenter Futterautomat wirkt von außen einfach – Motor, Behälter, Zeitschaltung. Die Technik, die ihn zuverlässig macht, steckt in der Sensorik und der Firmware, nicht im Dosiermechanismus selbst.
         </p>
+        <Image
+          src="/blog/smart-pet-feeder-engineering/hero.webp"
+          alt="Hund und Katze neben einem smarten Futterautomaten, mit Schnittansicht von Vorratsbehälter, Förderschnecke, Wägezelle und Steuerplatine"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">

@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Welche Sensoren eignen sich zur Fernüberwachung von Rindern und Weidetieren? GPS, Aktivität, RFID, Tränke, Tor und Weidezaun – was sie messen, wie sie versorgt und vernetzt werden.",
   alternates: buildAlternates("de", "blog/livestock-monitoring-sensors"),
   openGraph: buildOpenGraph("de", "blog/livestock-monitoring-sensors", {
-    url: "/blog/livestock-monitoring-sensors/og.png",
-    alt: "Illustration eines Betriebs mit Rindern mit Halsband, Zaunsensor, Tor, Tränkesensor und Wetterstation, verbunden mit einem Gateway-Mast",
+    url: "/blog/livestock-monitoring-sensors/og.jpg",
+    alt: "Weide mit einer Kuh mit Halsband, Zaunsensor, Tränkesensor und solarbetriebener Wetterstation, verbunden mit einem Funkmast: Sensoren am Tier und an der Infrastruktur",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/livestock-monitoring-sensors/og.png"] },
+  twitter: { card: "summary_large_image", images: ["/blog/livestock-monitoring-sensors/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/livestock-monitoring-sensors",
   headline: "Sensoren für die Weidetier-Überwachung: Was sie messen und wie man sie anbindet",
   description: metadata.description ?? "",
-  image: "/blog/livestock-monitoring-sensors/og.png",
+  image: "/blog/livestock-monitoring-sensors/og.jpg",
 });
 
 export default function BlogArticleLivestockMonitoringSensorsDe() {
@@ -47,12 +47,12 @@ export default function BlogArticleLivestockMonitoringSensorsDe() {
           jeder Sensortyp leisten kann – und was er an Energie und Wartung kostet.
         </p>
         <Image
-          src="/blog/livestock-monitoring-sensors/hero.svg"
-          alt="Illustration eines Betriebs mit Rindern mit Halsband, Zaunsensor, Tor, Tränkesensor und Wetterstation, verbunden mit einem Gateway-Mast"
-          width={1200}
-          height={600}
+          src="/blog/livestock-monitoring-sensors/hero.webp"
+          alt="Weide mit einer Kuh mit Halsband, Zaunsensor, Tränkesensor und solarbetriebener Wetterstation, verbunden mit einem Funkmast: Sensoren am Tier und an der Infrastruktur"
+          width={1752}
+          height={897}
           priority
-          unoptimized
+          sizes="(min-width: 768px) 704px, 100vw"
           className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
         />
 
@@ -71,11 +71,11 @@ export default function BlogArticleLivestockMonitoringSensorsDe() {
 
           <figure>
             <Image
-              src="/blog/livestock-monitoring-sensors/diagram-de.svg"
+              src="/blog/livestock-monitoring-sensors/diagram.webp"
               alt="Diagramm: Sensoren am Tier (GNSS-Ortung, Aktivität, RFID) und an der Infrastruktur (Wasserstand, Tore und Zäune, Wetter) senden Daten über ein Gateway oder Netz an ein Dashboard mit Alarmen"
-              width={960}
-              height={640}
-              unoptimized
+              width={1754}
+              height={897}
+              sizes="(min-width: 768px) 704px, 100vw"
               className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
             />
             <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">

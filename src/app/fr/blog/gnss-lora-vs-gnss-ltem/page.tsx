@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
   description:
     "Le GNSS fournit la position ; LoRa ou LTE-M la transmet depuis l'appareil. Une comparaison pratique des deux liaisons pour le matériel de suivi animal.",
   alternates: buildAlternates("fr", "blog/gnss-lora-vs-gnss-ltem"),
-  openGraph: buildOpenGraph("fr", "blog/gnss-lora-vs-gnss-ltem"),
+  openGraph: buildOpenGraph("fr", "blog/gnss-lora-vs-gnss-ltem", {
+    url: "/blog/gnss-lora-vs-gnss-ltem/og.jpg",
+    alt: "Vache équipée d'un collier de suivi à côté d'une comparaison GNSS + LoRa et GNSS + LTE-M, avec un satellite et une application de suivi sur smartphone",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/gnss-lora-vs-gnss-ltem/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -20,6 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/gnss-lora-vs-gnss-ltem",
   headline: "GNSS + LoRa vs. GNSS + LTE-M pour le suivi des animaux",
   description: metadata.description ?? "",
+  image: "/blog/gnss-lora-vs-gnss-ltem/og.jpg",
 });
 
 export default function BlogArticleGnssConnectivityFr() {
@@ -37,6 +43,15 @@ export default function BlogArticleGnssConnectivityFr() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Une clarification sur deux problèmes différents souvent confondus dans les textes marketing du suivi animal — et comment vraiment choisir entre les deux.
         </p>
+        <Image
+          src="/blog/gnss-lora-vs-gnss-ltem/hero.webp"
+          alt="Vache équipée d'un collier de suivi à côté d'une comparaison GNSS + LoRa et GNSS + LTE-M, avec un satellite et une application de suivi sur smartphone"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <p>

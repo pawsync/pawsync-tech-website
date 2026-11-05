@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Portion accuracy, load-cell calibration, jam detection, and RFID recognition — the engineering decisions behind a smart pet feeder, explained.",
   alternates: buildAlternates("en", "blog/smart-pet-feeder-engineering"),
-  openGraph: buildOpenGraph("en", "blog/smart-pet-feeder-engineering"),
+  openGraph: buildOpenGraph("en", "blog/smart-pet-feeder-engineering", {
+    url: "/blog/smart-pet-feeder-engineering/og.jpg",
+    alt: "A dog and a cat beside a smart pet feeder, with a cutaway of the hopper, auger motor, load cell and control board",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/smart-pet-feeder-engineering/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/smart-pet-feeder-engineering",
   headline: "Smart Pet Feeder Hardware & Firmware Engineering: Portion Accuracy, Jam Detection, and Load Sensing",
   description: metadata.description ?? "",
+  image: "/blog/smart-pet-feeder-engineering/og.jpg",
 });
 
 export default function BlogArticleSmartFeederEngineering() {
@@ -38,6 +44,15 @@ export default function BlogArticleSmartFeederEngineering() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           A smart feeder looks simple from the outside — motor, hopper, timer. The engineering that makes it reliable sits in the sensing and the firmware, not the dispensing mechanism itself.
         </p>
+        <Image
+          src="/blog/smart-pet-feeder-engineering/hero.webp"
+          alt="A dog and a cat beside a smart pet feeder, with a cutaway of the hopper, auger motor, load cell and control board"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">

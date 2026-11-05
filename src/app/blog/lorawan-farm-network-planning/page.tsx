@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "How to plan a LoRaWAN network for a farm: gateway placement and height, realistic range, EU868 vs. US915, airtime limits, battery life and public vs. private networks.",
   alternates: buildAlternates("en", "blog/lorawan-farm-network-planning"),
   openGraph: buildOpenGraph("en", "blog/lorawan-farm-network-planning", {
-    url: "/blog/lorawan-farm-network-planning/og.png",
+    url: "/blog/lorawan-farm-network-planning/og.jpg",
     alt: "Illustration of a farm LoRaWAN network: a gateway on top of a silo reaching field sensors, a water tank and a weather station, with one sensor blocked by a tree line",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/lorawan-farm-network-planning/og.png"] },
+  twitter: { card: "summary_large_image", images: ["/blog/lorawan-farm-network-planning/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/lorawan-farm-network-planning",
   headline: "Planning a LoRaWAN Network for a Farm: Gateways, Coverage and Battery Life",
   description: metadata.description ?? "",
-  image: "/blog/lorawan-farm-network-planning/og.png",
+  image: "/blog/lorawan-farm-network-planning/og.jpg",
 });
 
 export default function BlogArticleLorawanFarmNetwork() {
@@ -47,12 +47,12 @@ export default function BlogArticleLorawanFarmNetwork() {
           more on planning than on the sensors themselves.
         </p>
         <Image
-          src="/blog/lorawan-farm-network-planning/hero.svg"
+          src="/blog/lorawan-farm-network-planning/hero.webp"
           alt="Illustration of a farm LoRaWAN network: a gateway on top of a silo reaching field sensors, a water tank and a weather station, with one sensor blocked by a tree line"
-          width={1200}
-          height={600}
+          width={1752}
+          height={897}
           priority
-          unoptimized
+          sizes="(min-width: 768px) 704px, 100vw"
           className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
         />
 
@@ -72,11 +72,11 @@ export default function BlogArticleLorawanFarmNetwork() {
 
           <figure>
             <Image
-              src="/blog/lorawan-farm-network-planning/diagram-en.svg"
+              src="/blog/lorawan-farm-network-planning/diagram.webp"
               alt="Diagram of a LoRaWAN network: end devices send short radio messages, gateways forward them over the internet, a network server removes duplicates and manages keys and data rate, and an application stores data and raises alerts"
-              width={960}
-              height={600}
-              unoptimized
+              width={1755}
+              height={896}
+              sizes="(min-width: 768px) 704px, 100vw"
               className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
             />
             <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">

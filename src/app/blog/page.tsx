@@ -20,56 +20,61 @@ const articles = [
     title: "How Virtual Fencing Collars Work: GNSS, Cues and Power Design",
     excerpt: "How a collar knows where the boundary is, how audio and electrical cues are sequenced, and what limits battery life.",
     href: "/blog/virtual-fencing-collars",
-    image: "/blog/virtual-fencing-collars/hero.svg",
+    image: "/blog/virtual-fencing-collars/hero.webp",
   },
   {
     title: "Livestock Monitoring Sensors: What Each Sensor Measures",
     excerpt: "GPS, activity, water, gate and fence sensors — what each tells you, how it's powered, and how to connect it across a ranch.",
     href: "/blog/livestock-monitoring-sensors",
-    image: "/blog/livestock-monitoring-sensors/hero.svg",
+    image: "/blog/livestock-monitoring-sensors/hero.webp",
   },
   {
     title: "Ammonia, CO₂ and Humidity Sensors in Poultry Houses",
     excerpt: "Sensor types, placement at bird height, calibration and drift — and why CO₂ auto-calibration fails in a stocked house.",
     href: "/blog/poultry-house-air-quality-sensors",
-    image: "/blog/poultry-house-air-quality-sensors/hero.svg",
+    image: "/blog/poultry-house-air-quality-sensors/hero.webp",
   },
   {
     title: "From Prototype to Production: The IoT Hardware Development Process",
     excerpt: "Requirements, proof of concept, EVT, DVT and PVT — plus CE, UKCA and FCC certification for connected devices.",
     href: "/blog/iot-hardware-development-process",
-    image: "/blog/iot-hardware-development-process/hero.svg",
+    image: "/blog/iot-hardware-development-process/hero.webp",
   },
   {
     title: "Planning a LoRaWAN Network for a Farm",
     excerpt: "Gateway placement, realistic range, EU868 vs. US915, airtime limits and battery life for farm sensor networks.",
     href: "/blog/lorawan-farm-network-planning",
-    image: "/blog/lorawan-farm-network-planning/hero.svg",
+    image: "/blog/lorawan-farm-network-planning/hero.webp",
   },
   {
     title: "GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking",
     excerpt: "GNSS determines position; LoRa and LTE-M are separate communication layers that get that position off the device. A practical comparison.",
     href: "/blog/gnss-lora-vs-gnss-ltem",
+    image: "/blog/gnss-lora-vs-gnss-ltem/hero.webp",
   },
   {
     title: "Designing Low-Power Electronics for Outdoor Animal Trackers",
     excerpt: "Battery life in a wearable tracker is a power-budget problem. The engineering techniques that determine whether a device lasts days or months.",
     href: "/blog/low-power-animal-tracker-design",
+    image: "/blog/low-power-animal-tracker-design/hero.webp",
   },
   {
     title: "Designing a PCB for a Pet or Animal Tracker",
     excerpt: "A collar- or tag-mounted tracker isn't a smaller GPS board. Antenna placement, stack-up, and enclosure constraints that drive the design.",
     href: "/blog/pet-tracker-pcb-design",
+    image: "/blog/pet-tracker-pcb-design/hero.webp",
   },
   {
     title: "Smart Pet Feeder Hardware & Firmware Engineering",
     excerpt: "Portion accuracy, load-cell calibration, jam detection, and RFID recognition — the engineering decisions behind a smart pet feeder.",
     href: "/blog/smart-pet-feeder-engineering",
+    image: "/blog/smart-pet-feeder-engineering/hero.webp",
   },
   {
     title: "Planning a Wireless Poultry House Monitoring Network",
     excerpt: "Sensor placement, protocol choice, and gateway planning — and why one sensor per house usually isn't enough.",
     href: "/blog/wireless-poultry-monitoring-design",
+    image: "/blog/wireless-poultry-monitoring-design/hero.webp",
   },
 ];
 
@@ -101,9 +106,9 @@ export default function BlogPage() {
                 <Image
                   src={article.image}
                   alt=""
-                  width={1200}
-                  height={600}
-                  unoptimized
+                  width={1752}
+                  height={897}
+                  sizes="(min-width: 1024px) 480px, (min-width: 640px) 50vw, 100vw"
                   className="aspect-[2/1] h-auto w-full border-b border-[var(--ts-navy)]/8 object-cover"
                 />
               ) : (

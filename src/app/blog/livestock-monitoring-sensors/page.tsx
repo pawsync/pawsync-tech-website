@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "A practical guide to livestock monitoring sensors — GPS, activity, water, gate and fence sensors — what each measures, how it is powered, and how to connect it on a ranch.",
   alternates: buildAlternates("en", "blog/livestock-monitoring-sensors"),
   openGraph: buildOpenGraph("en", "blog/livestock-monitoring-sensors", {
-    url: "/blog/livestock-monitoring-sensors/og.png",
-    alt: "Illustration of a ranch with collared cattle, a fence sensor, a gate, a water trough sensor and a weather station linked to a gateway mast",
+    url: "/blog/livestock-monitoring-sensors/og.jpg",
+    alt: "Pasture with a collared cow, a fence sensor, a water trough sensor and a solar-powered weather station linked to a radio mast: sensors on animals and sensors on infrastructure",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/livestock-monitoring-sensors/og.png"] },
+  twitter: { card: "summary_large_image", images: ["/blog/livestock-monitoring-sensors/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/livestock-monitoring-sensors",
   headline: "Livestock Monitoring Sensors: What Each Sensor Measures and How to Connect It",
   description: metadata.description ?? "",
-  image: "/blog/livestock-monitoring-sensors/og.png",
+  image: "/blog/livestock-monitoring-sensors/og.jpg",
 });
 
 export default function BlogArticleLivestockMonitoringSensors() {
@@ -47,12 +47,12 @@ export default function BlogArticleLivestockMonitoringSensors() {
           you — and what it costs in power and maintenance.
         </p>
         <Image
-          src="/blog/livestock-monitoring-sensors/hero.svg"
-          alt="Illustration of a ranch with collared cattle, a fence sensor, a gate, a water trough sensor and a weather station linked to a gateway mast"
-          width={1200}
-          height={600}
+          src="/blog/livestock-monitoring-sensors/hero.webp"
+          alt="Pasture with a collared cow, a fence sensor, a water trough sensor and a solar-powered weather station linked to a radio mast: sensors on animals and sensors on infrastructure"
+          width={1752}
+          height={897}
           priority
-          unoptimized
+          sizes="(min-width: 768px) 704px, 100vw"
           className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
         />
 
@@ -72,11 +72,11 @@ export default function BlogArticleLivestockMonitoringSensors() {
 
           <figure>
             <Image
-              src="/blog/livestock-monitoring-sensors/diagram-en.svg"
+              src="/blog/livestock-monitoring-sensors/diagram.webp"
               alt="Diagram: animal-worn sensors (GNSS location, activity, RFID) and infrastructure sensors (water level, gates and fences, weather) send data through a gateway or network to a dashboard with alerts"
-              width={960}
-              height={640}
-              unoptimized
+              width={1754}
+              height={897}
+              sizes="(min-width: 768px) 704px, 100vw"
               className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
             />
             <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">

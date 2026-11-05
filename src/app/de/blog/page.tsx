@@ -20,56 +20,61 @@ const articles = [
     title: "Virtueller Weidezaun: Wie GNSS-Halsbänder funktionieren",
     excerpt: "Geofencing im Halsband, Abfolge von Ton- und Stromsignal, Energiebedarf – und die aktuelle Rechtslage in Deutschland und Österreich.",
     href: "/de/blog/virtual-fencing-collars",
-    image: "/blog/virtual-fencing-collars/hero.svg",
+    image: "/blog/virtual-fencing-collars/hero.webp",
   },
   {
     title: "Sensoren für die Weidetier-Überwachung",
     excerpt: "GPS, Aktivität, RFID, Tränke, Tor und Weidezaun – was jeder Sensor misst, wie er versorgt und über große Flächen vernetzt wird.",
     href: "/de/blog/livestock-monitoring-sensors",
-    image: "/blog/livestock-monitoring-sensors/hero.svg",
+    image: "/blog/livestock-monitoring-sensors/hero.webp",
   },
   {
     title: "Ammoniak-, CO₂- und Feuchtesensoren im Geflügelstall",
     excerpt: "Sensortypen, Montage auf Tierhöhe, Kalibrierung und Drift – und warum die CO₂-Autokalibrierung im belegten Stall versagt.",
     href: "/de/blog/poultry-house-air-quality-sensors",
-    image: "/blog/poultry-house-air-quality-sensors/hero.svg",
+    image: "/blog/poultry-house-air-quality-sensors/hero.webp",
   },
   {
     title: "Vom Prototyp zur Serie: Der Ablauf der IoT-Elektronikentwicklung",
     excerpt: "Anforderungen, Machbarkeitsnachweis, EVT, DVT und PVT – plus CE-Kennzeichnung, RED und Cyber Resilience Act.",
     href: "/de/blog/iot-hardware-development-process",
-    image: "/blog/iot-hardware-development-process/hero.svg",
+    image: "/blog/iot-hardware-development-process/hero.webp",
   },
   {
     title: "Ein LoRaWAN-Netz für den Hof planen",
     excerpt: "Gateway-Standort, realistische Reichweite, EU868 und Duty Cycle sowie Batterielaufzeit für landwirtschaftliche Sensornetze.",
     href: "/de/blog/lorawan-farm-network-planning",
-    image: "/blog/lorawan-farm-network-planning/hero.svg",
+    image: "/blog/lorawan-farm-network-planning/hero.webp",
   },
   {
     title: "GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking",
     excerpt: "GNSS bestimmt die Position; LoRa und LTE-M sind separate Kommunikationsebenen, die diese Position vom Gerät übertragen. Ein praktischer Vergleich.",
     href: "/de/blog/gnss-lora-vs-gnss-ltem",
+    image: "/blog/gnss-lora-vs-gnss-ltem/hero.webp",
   },
   {
     title: "Stromsparende Elektronik für Tier-Tracker im Außeneinsatz",
     excerpt: "Die Akkulaufzeit eines tragbaren Trackers ist ein Energiebudget-Problem. Die Techniken, die entscheiden, ob ein Gerät Tage oder Monate durchhält.",
     href: "/de/blog/low-power-animal-tracker-design",
+    image: "/blog/low-power-animal-tracker-design/hero.webp",
   },
   {
     title: "Leiterplattendesign für einen Tier-Tracker",
     excerpt: "Ein Halsband- oder Anhänger-Tracker ist keine kleinere GPS-Platine. Antennenplatzierung, Lagenaufbau und Gehäusevorgaben, die das Design bestimmen.",
     href: "/de/blog/pet-tracker-pcb-design",
+    image: "/blog/pet-tracker-pcb-design/hero.webp",
   },
   {
     title: "Hardware- & Firmware-Engineering für intelligente Futterautomaten",
     excerpt: "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung – die Engineering-Entscheidungen hinter einem Futterautomaten.",
     href: "/de/blog/smart-pet-feeder-engineering",
+    image: "/blog/smart-pet-feeder-engineering/hero.webp",
   },
   {
     title: "Ein drahtloses Überwachungsnetz für den Geflügelstall planen",
     excerpt: "Sensorplatzierung, Protokollwahl und Gateway-Planung – und warum ein Sensor pro Stall meist nicht reicht.",
     href: "/de/blog/wireless-poultry-monitoring-design",
+    image: "/blog/wireless-poultry-monitoring-design/hero.webp",
   },
 ];
 
@@ -101,9 +106,9 @@ export default function BlogPageDe() {
                 <Image
                   src={article.image}
                   alt=""
-                  width={1200}
-                  height={600}
-                  unoptimized
+                  width={1752}
+                  height={897}
+                  sizes="(min-width: 1024px) 480px, (min-width: 640px) 50vw, 100vw"
                   className="aspect-[2/1] h-auto w-full border-b border-[var(--ts-navy)]/8 object-cover"
                 />
               ) : (

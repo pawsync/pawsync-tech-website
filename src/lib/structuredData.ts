@@ -85,7 +85,7 @@ export function blogPostingJsonLd({
   route: BlogPostRoute;
   headline: string;
   description: string;
-  // Site-relative path of the article's share image, e.g. "/blog/<slug>/og.png".
+  // Site-relative path of the article's share image, e.g. "/blog/<slug>/og.jpg".
   image?: string;
 }) {
   const dates: ArticleDates = blogPostDates[route];

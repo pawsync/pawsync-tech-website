@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "Stallklima im Geflügelstall messen: Sensortypen für Ammoniak, CO₂ und Luftfeuchte, Montage auf Tierhöhe, Kalibrierung, Drift sowie Staub und Nassreinigung.",
   alternates: buildAlternates("de", "blog/poultry-house-air-quality-sensors"),
   openGraph: buildOpenGraph("de", "blog/poultry-house-air-quality-sensors", {
-    url: "/blog/poultry-house-air-quality-sensors/og.png",
-    alt: "Schnittdarstellung eines Geflügelstalls mit Tieren auf der Einstreu, Ammoniak-, CO₂- und Feuchtesensoren auf Tierhöhe, Zuluftöffnungen und Abluftventilator",
+    url: "/blog/poultry-house-air-quality-sensors/og.jpg",
+    alt: "Innenansicht eines Geflügelstalls mit Sensoren für Ammoniak (NH₃), CO₂ und relative Luftfeuchte über den Tieren, Zuluftöffnung und Abluftventilator",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og.png"] },
+  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/poultry-house-air-quality-sensors",
   headline: "Ammoniak-, CO₂- und Feuchtesensoren im Geflügelstall: Montage, Kalibrierung und Drift",
   description: metadata.description ?? "",
-  image: "/blog/poultry-house-air-quality-sensors/og.png",
+  image: "/blog/poultry-house-air-quality-sensors/og.jpg",
 });
 
 export default function BlogArticlePoultryAirQualitySensorsDe() {
@@ -47,12 +47,12 @@ export default function BlogArticlePoultryAirQualitySensorsDe() {
           unbemerkt driftet, ist schlechter als gar keiner.
         </p>
         <Image
-          src="/blog/poultry-house-air-quality-sensors/hero.svg"
-          alt="Schnittdarstellung eines Geflügelstalls mit Tieren auf der Einstreu, Ammoniak-, CO₂- und Feuchtesensoren auf Tierhöhe, Zuluftöffnungen und Abluftventilator"
-          width={1200}
-          height={600}
+          src="/blog/poultry-house-air-quality-sensors/hero.webp"
+          alt="Innenansicht eines Geflügelstalls mit Sensoren für Ammoniak (NH₃), CO₂ und relative Luftfeuchte über den Tieren, Zuluftöffnung und Abluftventilator"
+          width={1754}
+          height={897}
           priority
-          unoptimized
+          sizes="(min-width: 768px) 704px, 100vw"
           className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
         />
 
@@ -155,11 +155,11 @@ export default function BlogArticlePoultryAirQualitySensorsDe() {
 
           <figure>
             <Image
-              src="/blog/poultry-house-air-quality-sensors/diagram-de.svg"
+              src="/blog/poultry-house-air-quality-sensors/diagram.webp"
               alt="Diagramm zur Sensormontage im Geflügelstall: Sensoren auf Tierhöhe an Zuluftseite, Mitte und Lüfterseite sind repräsentativ; ein Sensor unter der Decke oder direkt vor einer Zuluftöffnung liefert verfälschte Werte"
-              width={960}
-              height={600}
-              unoptimized
+              width={1755}
+              height={896}
+              sizes="(min-width: 768px) 704px, 100vw"
               className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
             />
             <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">

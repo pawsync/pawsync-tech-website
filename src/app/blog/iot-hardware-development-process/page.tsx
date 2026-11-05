@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "The IoT hardware development process step by step: requirements, proof of concept, EVT, DVT and PVT builds, and CE, UKCA and FCC certification for connected devices.",
   alternates: buildAlternates("en", "blog/iot-hardware-development-process"),
   openGraph: buildOpenGraph("en", "blog/iot-hardware-development-process", {
-    url: "/blog/iot-hardware-development-process/og.png",
-    alt: "Illustration of a connected device's development: a proof-of-concept board, a custom PCB and the finished device in its enclosure",
+    url: "/blog/iot-hardware-development-process/og.jpg",
+    alt: "Product development stages: a breadboard proof of concept, a custom PCB for EVT and DVT, and a finished enclosure for PVT",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/iot-hardware-development-process/og.png"] },
+  twitter: { card: "summary_large_image", images: ["/blog/iot-hardware-development-process/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/iot-hardware-development-process",
   headline: "From Prototype to Production: The IoT Hardware Development Process",
   description: metadata.description ?? "",
-  image: "/blog/iot-hardware-development-process/og.png",
+  image: "/blog/iot-hardware-development-process/og.jpg",
 });
 
 export default function BlogArticleIotHardwareDevelopment() {
@@ -47,12 +47,12 @@ export default function BlogArticleIotHardwareDevelopment() {
           stages are for, and why skipping them tends to cost more than it saves.
         </p>
         <Image
-          src="/blog/iot-hardware-development-process/hero.svg"
-          alt="Illustration of a connected device's development: a proof-of-concept board, a custom PCB and the finished device in its enclosure"
-          width={1200}
-          height={600}
+          src="/blog/iot-hardware-development-process/hero.webp"
+          alt="Product development stages: a breadboard proof of concept, a custom PCB for EVT and DVT, and a finished enclosure for PVT"
+          width={1755}
+          height={896}
           priority
-          unoptimized
+          sizes="(min-width: 768px) 704px, 100vw"
           className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
         />
 
@@ -77,11 +77,11 @@ export default function BlogArticleIotHardwareDevelopment() {
 
           <figure>
             <Image
-              src="/blog/iot-hardware-development-process/diagram-en.svg"
+              src="/blog/iot-hardware-development-process/diagram.webp"
               alt="Diagram of the six stages: 1 requirements, 2 proof of concept, 3 prototype, 4 EVT, 5 DVT with CE, UKCA and FCC certification, 6 PVT, with firmware developed alongside every stage"
-              width={960}
-              height={760}
-              unoptimized
+              width={1755}
+              height={896}
+              sizes="(min-width: 768px) 704px, 100vw"
               className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
             />
             <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">

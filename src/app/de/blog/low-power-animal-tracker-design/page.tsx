@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
   description:
     "Die Akkulaufzeit eines tragbaren Tier-Trackers ist ein Energiebudget-Problem. Die Techniken, die entscheiden, ob ein Gerät Tage oder Monate durchhält.",
   alternates: buildAlternates("de", "blog/low-power-animal-tracker-design"),
-  openGraph: buildOpenGraph("de", "blog/low-power-animal-tracker-design"),
+  openGraph: buildOpenGraph("de", "blog/low-power-animal-tracker-design", {
+    url: "/blog/low-power-animal-tracker-design/og.jpg",
+    alt: "Kuh mit GNSS-Tracking-Halsband, Nahaufnahme der Tracker-Leiterplatte und die wichtigsten Designbereiche: Energie, Ortung, Konnektivität und Robustheit",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/low-power-animal-tracker-design/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -20,6 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/low-power-animal-tracker-design",
   headline: "Stromsparende Elektronik für Tier-Tracker im Außeneinsatz",
   description: metadata.description ?? "",
+  image: "/blog/low-power-animal-tracker-design/og.jpg",
 });
 
 export default function BlogArticleLowPowerDesignDe() {
@@ -37,6 +43,15 @@ export default function BlogArticleLowPowerDesignDe() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Warum Akkulaufzeit im Kern ein Energiebudget-Problem ist, und die Techniken, die sie von Tagen auf Monate strecken.
         </p>
+        <Image
+          src="/blog/low-power-animal-tracker-design/hero.webp"
+          alt="Kuh mit GNSS-Tracking-Halsband, Nahaufnahme der Tracker-Leiterplatte und die wichtigsten Designbereiche: Energie, Ortung, Konnektivität und Robustheit"
+          width={1756}
+          height={896}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <p>

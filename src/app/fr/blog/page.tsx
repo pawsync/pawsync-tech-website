@@ -20,56 +20,61 @@ const articles = [
     title: "Clôture virtuelle : comment fonctionnent les colliers GNSS",
     excerpt: "Géorepérage dans le collier, séquence signal sonore puis impulsion, autonomie de la batterie et cadre réglementaire selon les pays.",
     href: "/fr/blog/virtual-fencing-collars",
-    image: "/blog/virtual-fencing-collars/hero.svg",
+    image: "/blog/virtual-fencing-collars/hero.webp",
   },
   {
     title: "Capteurs pour le suivi du bétail",
     excerpt: "GPS, activité, RFID, abreuvoirs, barrières et clôtures : ce que mesure chaque capteur, comment l'alimenter et le connecter.",
     href: "/fr/blog/livestock-monitoring-sensors",
-    image: "/blog/livestock-monitoring-sensors/hero.svg",
+    image: "/blog/livestock-monitoring-sensors/hero.webp",
   },
   {
     title: "Capteurs d'ammoniac, de CO₂ et d'humidité en bâtiment avicole",
     excerpt: "Types de capteurs, installation à hauteur des animaux, étalonnage et dérive – et pourquoi l'auto-étalonnage CO₂ échoue en bâtiment occupé.",
     href: "/fr/blog/poultry-house-air-quality-sensors",
-    image: "/blog/poultry-house-air-quality-sensors/hero.svg",
+    image: "/blog/poultry-house-air-quality-sensors/hero.webp",
   },
   {
     title: "Du prototype à la série : les étapes du développement d'un produit IoT",
     excerpt: "Cahier des charges, preuve de concept, EVT, DVT et PVT – avec le marquage CE, la directive RED et le Cyber Resilience Act.",
     href: "/fr/blog/iot-hardware-development-process",
-    image: "/blog/iot-hardware-development-process/hero.svg",
+    image: "/blog/iot-hardware-development-process/hero.webp",
   },
   {
     title: "Planifier un réseau LoRaWAN sur une exploitation",
     excerpt: "Emplacement des passerelles, portée réaliste, bande EU868 et rapport cyclique, autonomie des capteurs agricoles.",
     href: "/fr/blog/lorawan-farm-network-planning",
-    image: "/blog/lorawan-farm-network-planning/hero.svg",
+    image: "/blog/lorawan-farm-network-planning/hero.webp",
   },
   {
     title: "GNSS + LoRa vs. GNSS + LTE-M pour le suivi des animaux",
     excerpt: "Le GNSS détermine la position ; LoRa et LTE-M sont des couches de communication distinctes qui transmettent cette position. Une comparaison pratique.",
     href: "/fr/blog/gnss-lora-vs-gnss-ltem",
+    image: "/blog/gnss-lora-vs-gnss-ltem/hero.webp",
   },
   {
     title: "Concevoir une électronique basse consommation pour trackers d'animaux extérieurs",
     excerpt: "L'autonomie d'un tracker portable est un problème de budget énergétique. Les techniques qui déterminent si un appareil tient des jours ou des mois.",
     href: "/fr/blog/low-power-animal-tracker-design",
+    image: "/blog/low-power-animal-tracker-design/hero.webp",
   },
   {
     title: "Concevoir la carte PCB d'un tracker pour animaux",
     excerpt: "Un tracker porté au collier n'est pas une carte GPS miniature. Placement d'antenne, empilage des couches et contraintes de boîtier.",
     href: "/fr/blog/pet-tracker-pcb-design",
+    image: "/blog/pet-tracker-pcb-design/hero.webp",
   },
   {
     title: "Ingénierie matérielle & logicielle d'un distributeur intelligent",
     excerpt: "Précision des portions, calibration de cellule de charge, détection de blocage et reconnaissance RFID — les choix d'ingénierie d'un distributeur.",
     href: "/fr/blog/smart-pet-feeder-engineering",
+    image: "/blog/smart-pet-feeder-engineering/hero.webp",
   },
   {
     title: "Planifier un réseau de surveillance avicole sans fil",
     excerpt: "Placement des capteurs, choix du protocole et planification des passerelles — et pourquoi un capteur ne suffit pas.",
     href: "/fr/blog/wireless-poultry-monitoring-design",
+    image: "/blog/wireless-poultry-monitoring-design/hero.webp",
   },
 ];
 
@@ -102,9 +107,9 @@ export default function BlogPageFr() {
                 <Image
                   src={article.image}
                   alt=""
-                  width={1200}
-                  height={600}
-                  unoptimized
+                  width={1752}
+                  height={897}
+                  sizes="(min-width: 1024px) 480px, (min-width: 640px) 50vw, 100vw"
                   className="aspect-[2/1] h-auto w-full border-b border-[var(--ts-navy)]/8 object-cover"
                 />
               ) : (

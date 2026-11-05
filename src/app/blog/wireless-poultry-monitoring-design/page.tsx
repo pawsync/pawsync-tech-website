@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Sensor placement, protocol choice, and gateway planning for a wireless poultry house monitoring network — and why one sensor per house usually isn't enough.",
   alternates: buildAlternates("en", "blog/wireless-poultry-monitoring-design"),
-  openGraph: buildOpenGraph("en", "blog/wireless-poultry-monitoring-design"),
+  openGraph: buildOpenGraph("en", "blog/wireless-poultry-monitoring-design", {
+    url: "/blog/wireless-poultry-monitoring-design/og.jpg",
+    alt: "A wireless sensor node on a post inside a poultry house, linked to a LoRa gateway and a cloud server, with a monitoring dashboard on a laptop",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/wireless-poultry-monitoring-design/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/wireless-poultry-monitoring-design",
   headline: "Planning a Wireless Poultry House Monitoring Network",
   description: metadata.description ?? "",
+  image: "/blog/wireless-poultry-monitoring-design/og.jpg",
 });
 
 export default function BlogArticleWirelessPoultryMonitoring() {
@@ -38,6 +44,15 @@ export default function BlogArticleWirelessPoultryMonitoring() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           A single sensor hanging in the middle of a poultry house tells you the average condition at that one point — not what&apos;s happening at floor level near the inlet fans, or up near the ridge where heat collects.
         </p>
+        <Image
+          src="/blog/wireless-poultry-monitoring-design/hero.webp"
+          alt="A wireless sensor node on a post inside a poultry house, linked to a LoRa gateway and a cloud server, with a monitoring dashboard on a laptop"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">

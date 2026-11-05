@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
   description:
     "GNSS finds the position; LoRa or LTE-M gets it off the device. A practical comparison of both links for animal-tracking hardware.",
   alternates: buildAlternates("en", "blog/gnss-lora-vs-gnss-ltem"),
-  openGraph: buildOpenGraph("en", "blog/gnss-lora-vs-gnss-ltem"),
+  openGraph: buildOpenGraph("en", "blog/gnss-lora-vs-gnss-ltem", {
+    url: "/blog/gnss-lora-vs-gnss-ltem/og.jpg",
+    alt: "A cow wearing a tracking collar next to a comparison of GNSS + LoRa and GNSS + LTE-M, with a satellite and a phone tracking app",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/gnss-lora-vs-gnss-ltem/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -20,6 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/gnss-lora-vs-gnss-ltem",
   headline: "GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking",
   description: metadata.description ?? "",
+  image: "/blog/gnss-lora-vs-gnss-ltem/og.jpg",
 });
 
 export default function BlogArticleGnssConnectivity() {
@@ -37,6 +43,15 @@ export default function BlogArticleGnssConnectivity() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           A note on two different problems that get conflated in animal-tracking marketing copy — and how to actually choose between them.
         </p>
+        <Image
+          src="/blog/gnss-lora-vs-gnss-ltem/hero.webp"
+          alt="A cow wearing a tracking collar next to a comparison of GNSS + LoRa and GNSS + LTE-M, with a satellite and a phone tracking app"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <p>

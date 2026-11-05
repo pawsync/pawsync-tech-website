@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
   description:
     "Battery life in a wearable animal tracker is a power-budget problem. The engineering techniques that determine whether a device lasts days or months.",
   alternates: buildAlternates("en", "blog/low-power-animal-tracker-design"),
-  openGraph: buildOpenGraph("en", "blog/low-power-animal-tracker-design"),
+  openGraph: buildOpenGraph("en", "blog/low-power-animal-tracker-design", {
+    url: "/blog/low-power-animal-tracker-design/og.jpg",
+    alt: "A cow wearing a GNSS tracking collar, a close-up of the tracker's circuit board, and the key design areas: power, positioning, connectivity and ruggedness",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/low-power-animal-tracker-design/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -20,6 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/low-power-animal-tracker-design",
   headline: "Designing Low-Power Electronics for Outdoor Animal Trackers",
   description: metadata.description ?? "",
+  image: "/blog/low-power-animal-tracker-design/og.jpg",
 });
 
 export default function BlogArticleLowPowerDesign() {
@@ -37,6 +43,15 @@ export default function BlogArticleLowPowerDesign() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Why battery life is fundamentally a power-budget problem, and the techniques that stretch it from days to months.
         </p>
+        <Image
+          src="/blog/low-power-animal-tracker-design/hero.webp"
+          alt="A cow wearing a GNSS tracking collar, a close-up of the tracker's circuit board, and the key design areas: power, positioning, connectivity and ruggedness"
+          width={1756}
+          height={896}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <p>

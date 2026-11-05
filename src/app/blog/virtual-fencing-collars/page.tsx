@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "An engineering look at virtual fencing for livestock: how a collar knows where the boundary is, how audio and electrical cues are sequenced, and what limits battery life.",
   alternates: buildAlternates("en", "blog/virtual-fencing-collars"),
   openGraph: buildOpenGraph("en", "blog/virtual-fencing-collars", {
-    url: "/blog/virtual-fencing-collars/og.png",
-    alt: "Illustration of cattle wearing GNSS collars approaching a virtual fence line, with a satellite overhead",
+    url: "/blog/virtual-fencing-collars/og.jpg",
+    alt: "Holstein cows wearing GNSS collars grazing near a virtual fence line, with a satellite overhead",
   }),
-  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og.png"] },
+  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -26,7 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/virtual-fencing-collars",
   headline: "How Virtual Fencing Collars Work: GNSS, Cues and Power Design",
   description: metadata.description ?? "",
-  image: "/blog/virtual-fencing-collars/og.png",
+  image: "/blog/virtual-fencing-collars/og.jpg",
 });
 
 export default function BlogArticleVirtualFencingCollars() {
@@ -47,12 +47,12 @@ export default function BlogArticleVirtualFencingCollars() {
           battery — has to happen inside a collar that lives outdoors on a moving animal.
         </p>
         <Image
-          src="/blog/virtual-fencing-collars/hero.svg"
-          alt="Illustration of cattle wearing GNSS collars approaching a virtual fence line, with a satellite overhead"
-          width={1200}
-          height={600}
+          src="/blog/virtual-fencing-collars/hero.webp"
+          alt="Holstein cows wearing GNSS collars grazing near a virtual fence line, with a satellite overhead"
+          width={1752}
+          height={897}
           priority
-          unoptimized
+          sizes="(min-width: 768px) 704px, 100vw"
           className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
         />
 
@@ -159,11 +159,11 @@ export default function BlogArticleVirtualFencingCollars() {
 
           <figure>
             <Image
-              src="/blog/virtual-fencing-collars/diagram-en.svg"
+              src="/blog/virtual-fencing-collars/diagram.webp"
               alt="Diagram of a paddock with a virtual boundary and warning zone: 1 audio tone when the animal enters the warning zone, 2 a short pulse only if it keeps walking, 3 cues stop when it turns back"
-              width={960}
-              height={600}
-              unoptimized
+              width={1536}
+              height={1024}
+              sizes="(min-width: 768px) 704px, 100vw"
               className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
             />
             <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">

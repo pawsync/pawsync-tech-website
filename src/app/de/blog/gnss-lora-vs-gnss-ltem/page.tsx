@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
   description:
     "GNSS bestimmt die Position, LoRa oder LTE-M überträgt sie vom Gerät. Ein praktischer Vergleich beider Funkwege für Tier-Tracking-Hardware.",
   alternates: buildAlternates("de", "blog/gnss-lora-vs-gnss-ltem"),
-  openGraph: buildOpenGraph("de", "blog/gnss-lora-vs-gnss-ltem"),
+  openGraph: buildOpenGraph("de", "blog/gnss-lora-vs-gnss-ltem", {
+    url: "/blog/gnss-lora-vs-gnss-ltem/og.jpg",
+    alt: "Kuh mit Tracking-Halsband neben einem Vergleich von GNSS + LoRa und GNSS + LTE-M, mit Satellit und Tracking-App auf dem Smartphone",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/gnss-lora-vs-gnss-ltem/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -20,6 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/gnss-lora-vs-gnss-ltem",
   headline: "GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking",
   description: metadata.description ?? "",
+  image: "/blog/gnss-lora-vs-gnss-ltem/og.jpg",
 });
 
 export default function BlogArticleGnssConnectivityDe() {
@@ -37,6 +43,15 @@ export default function BlogArticleGnssConnectivityDe() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Eine Klarstellung zu zwei unterschiedlichen Problemen, die in der Marketingsprache für Tier-Tracking oft vermischt werden – und wie man wirklich zwischen ihnen wählt.
         </p>
+        <Image
+          src="/blog/gnss-lora-vs-gnss-ltem/hero.webp"
+          alt="Kuh mit Tracking-Halsband neben einem Vergleich von GNSS + LoRa und GNSS + LTE-M, mit Satellit und Tracking-App auf dem Smartphone"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <p>

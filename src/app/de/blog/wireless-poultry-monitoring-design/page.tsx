@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Sensorplatzierung, Protokollwahl und Gateway-Planung für ein drahtloses Überwachungsnetz im Geflügelstall – und warum ein Sensor pro Stall meist nicht reicht.",
   alternates: buildAlternates("de", "blog/wireless-poultry-monitoring-design"),
-  openGraph: buildOpenGraph("de", "blog/wireless-poultry-monitoring-design"),
+  openGraph: buildOpenGraph("de", "blog/wireless-poultry-monitoring-design", {
+    url: "/blog/wireless-poultry-monitoring-design/og.jpg",
+    alt: "Funk-Sensorknoten an einem Pfosten im Geflügelstall, verbunden mit einem LoRa-Gateway und einem Cloud-Server, daneben ein Monitoring-Dashboard auf einem Laptop",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/wireless-poultry-monitoring-design/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/wireless-poultry-monitoring-design",
   headline: "Ein drahtloses Überwachungsnetz für den Geflügelstall planen",
   description: metadata.description ?? "",
+  image: "/blog/wireless-poultry-monitoring-design/og.jpg",
 });
 
 export default function BlogArticleWirelessPoultryMonitoringDe() {
@@ -38,6 +44,15 @@ export default function BlogArticleWirelessPoultryMonitoringDe() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Ein einzelner Sensor in der Stallmitte zeigt die durchschnittliche Bedingung an genau diesem einen Punkt – nicht, was am Boden nahe den Zuluftventilatoren passiert, oder oben am First, wo sich Wärme sammelt.
         </p>
+        <Image
+          src="/blog/wireless-poultry-monitoring-design/hero.webp"
+          alt="Funk-Sensorknoten an einem Pfosten im Geflügelstall, verbunden mit einem LoRa-Gateway und einem Cloud-Server, daneben ein Monitoring-Dashboard auf einem Laptop"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
   description:
     "Un tracker de collier n'est pas une carte GPS miniature : placement d'antenne, empilage des couches et contraintes de boîtier guident la conception.",
   alternates: buildAlternates("fr", "blog/pet-tracker-pcb-design"),
-  openGraph: buildOpenGraph("fr", "blog/pet-tracker-pcb-design"),
+  openGraph: buildOpenGraph("fr", "blog/pet-tracker-pcb-design", {
+    url: "/blog/pet-tracker-pcb-design/og.jpg",
+    alt: "Un chien et une vache portant des colliers de suivi, à côté d'une vue éclatée d'un tracker : couvercle, circuit imprimé, batterie et fond de boîtier",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/pet-tracker-pcb-design/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -20,6 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/pet-tracker-pcb-design",
   headline: "Concevoir la carte PCB d'un tracker pour animaux : ce que le format impose réellement",
   description: metadata.description ?? "",
+  image: "/blog/pet-tracker-pcb-design/og.jpg",
 });
 
 export default function BlogArticlePetTrackerPCBFr() {
@@ -37,6 +43,15 @@ export default function BlogArticlePetTrackerPCBFr() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Un tracker porté au collier ou en médaille n&apos;est pas une version miniature d&apos;une carte GPS classique — le format lui-même impose la plupart des décisions difficiles.
         </p>
+        <Image
+          src="/blog/pet-tracker-pcb-design/hero.webp"
+          alt="Un chien et une vache portant des colliers de suivi, à côté d'une vue éclatée d'un tracker : couvercle, circuit imprimé, batterie et fond de boîtier"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <p>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
   description:
     "Ein Halsband- oder Anhänger-Tracker ist keine kleinere GPS-Platine. Antennenplatzierung, Lagenaufbau und Gehäusevorgaben, die das Design wirklich bestimmen.",
   alternates: buildAlternates("de", "blog/pet-tracker-pcb-design"),
-  openGraph: buildOpenGraph("de", "blog/pet-tracker-pcb-design"),
+  openGraph: buildOpenGraph("de", "blog/pet-tracker-pcb-design", {
+    url: "/blog/pet-tracker-pcb-design/og.jpg",
+    alt: "Hund und Kuh mit Tracking-Halsbändern neben einer Explosionsansicht eines Trackers: Gehäusedeckel, Leiterplatte, Akku und Gehäuseboden",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/pet-tracker-pcb-design/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -20,6 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/pet-tracker-pcb-design",
   headline: "Leiterplattendesign für einen Haustier- oder Tier-Tracker: Was der Formfaktor wirklich vorgibt",
   description: metadata.description ?? "",
+  image: "/blog/pet-tracker-pcb-design/og.jpg",
 });
 
 export default function BlogArticlePetTrackerPCBDe() {
@@ -37,6 +43,15 @@ export default function BlogArticlePetTrackerPCBDe() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           Ein Halsband- oder Anhänger-Tracker ist nicht einfach eine kleinere GPS-Platine – der Formfaktor selbst bestimmt die meisten der schwierigen Entscheidungen.
         </p>
+        <Image
+          src="/blog/pet-tracker-pcb-design/hero.webp"
+          alt="Hund und Kuh mit Tracking-Halsbändern neben einer Explosionsansicht eines Trackers: Gehäusedeckel, Leiterplatte, Akku und Gehäuseboden"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <p>

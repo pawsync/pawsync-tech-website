@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
   description:
     "A collar- or tag-mounted tracker isn't a smaller GPS board. Antenna placement, stack-up, and enclosure constraints that drive a pet tracker PCB design.",
   alternates: buildAlternates("en", "blog/pet-tracker-pcb-design"),
-  openGraph: buildOpenGraph("en", "blog/pet-tracker-pcb-design"),
+  openGraph: buildOpenGraph("en", "blog/pet-tracker-pcb-design", {
+    url: "/blog/pet-tracker-pcb-design/og.jpg",
+    alt: "A dog and a cow wearing tracking collars next to an exploded view of a tracker: enclosure lid, circuit board, battery and base",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/pet-tracker-pcb-design/og.jpg"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -20,6 +25,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/pet-tracker-pcb-design",
   headline: "Designing a PCB for a Pet or Animal Tracker: What the Form Factor Actually Constrains",
   description: metadata.description ?? "",
+  image: "/blog/pet-tracker-pcb-design/og.jpg",
 });
 
 export default function BlogArticlePetTrackerPCB() {
@@ -37,6 +43,15 @@ export default function BlogArticlePetTrackerPCB() {
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
           A collar- or tag-mounted tracker isn&apos;t a smaller version of a normal GPS board — the form factor itself drives most of the hard decisions.
         </p>
+        <Image
+          src="/blog/pet-tracker-pcb-design/hero.webp"
+          alt="A dog and a cow wearing tracking collars next to an exploded view of a tracker: enclosure lid, circuit board, battery and base"
+          width={1752}
+          height={897}
+          priority
+          sizes="(min-width: 768px) 704px, 100vw"
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <p>
