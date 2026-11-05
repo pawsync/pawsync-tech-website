@@ -15,11 +15,11 @@ export const routes = [
   "about",
   "animal-tracking",
   "blog",
-  "blog/gnss-lora-vs-gnss-ltem",
-  "blog/low-power-animal-tracker-design",
-  "blog/pet-tracker-pcb-design",
-  "blog/smart-pet-feeder-engineering",
-  "blog/wireless-poultry-monitoring-design",
+  "blog/iot-hardware-development-process",
+  "blog/livestock-monitoring-sensors",
+  "blog/lorawan-farm-network-planning",
+  "blog/poultry-house-air-quality-sensors",
+  "blog/virtual-fencing-collars",
   "contact",
   "custom-electronics",
   "environmental-monitoring",
@@ -53,12 +53,12 @@ export const routeLastModified: Record<Route, string | Record<Locale, string>> =
   "": "2026-10-02",
   about: "2026-10-10",
   "animal-tracking": "2026-10-27",
-  blog: "2026-10-09",
-  "blog/gnss-lora-vs-gnss-ltem": "2026-10-27",
-  "blog/low-power-animal-tracker-design": "2026-10-27",
-  "blog/pet-tracker-pcb-design": "2026-10-27",
-  "blog/smart-pet-feeder-engineering": "2026-10-27",
-  "blog/wireless-poultry-monitoring-design": "2026-10-27",
+  blog: "2026-11-06",
+  "blog/iot-hardware-development-process": "2026-11-06",
+  "blog/livestock-monitoring-sensors": "2026-11-06",
+  "blog/lorawan-farm-network-planning": "2026-11-06",
+  "blog/poultry-house-air-quality-sensors": "2026-11-06",
+  "blog/virtual-fencing-collars": "2026-11-06",
   contact: "2026-10-02",
   "custom-electronics": "2026-10-04",
   "environmental-monitoring": { en: "2026-10-27", de: "2026-10-29", fr: "2026-10-29" },
@@ -155,18 +155,23 @@ export function buildAlternates(locale: Locale, route: string): Metadata["altern
 // entirely replaces the root layout's, rather than filling in just the
 // fields it omits. Every page that needs its own canonical `url` here must
 // therefore also restate `siteName`/`type`/`images`, or those silently
-// disappear from that page's social metadata.
-export function buildOpenGraph(locale: Locale, route: string): Metadata["openGraph"] {
+// disappear from that page's social metadata. Pass `image` to replace the
+// site-wide share image with a page-specific 1200x630 one.
+export function buildOpenGraph(
+  locale: Locale,
+  route: string,
+  image?: { url: string; alt: string },
+): Metadata["openGraph"] {
   return {
     siteName: "PawSync",
     type: "website",
     url: absoluteUrl(locale, route),
     images: [
       {
-        url: "/og-image.png",
+        url: image?.url ?? "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "PawSync — Custom Electronics & IoT Engineering for Animals & Farms",
+        alt: image?.alt ?? "PawSync — Custom Electronics & IoT Engineering for Animals & Farms",
       },
     ],
   };

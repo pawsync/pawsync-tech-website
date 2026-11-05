@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Newspaper } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
@@ -16,29 +17,34 @@ export const metadata: Metadata = {
 
 const articles = [
   {
-    title: "GNSS + LoRa vs. GNSS + LTE-M für Tier-Tracking",
-    excerpt: "GNSS bestimmt die Position; LoRa und LTE-M sind separate Kommunikationsebenen, die diese Position vom Gerät übertragen. Ein praktischer Vergleich.",
-    href: "/de/blog/gnss-lora-vs-gnss-ltem",
+    title: "Virtueller Weidezaun: Wie GNSS-Halsbänder funktionieren",
+    excerpt: "Geofencing im Halsband, Abfolge von Ton- und Stromsignal, Energiebedarf – und die aktuelle Rechtslage in Deutschland und Österreich.",
+    href: "/de/blog/virtual-fencing-collars",
+    image: "/blog/virtual-fencing-collars/hero-de.webp",
   },
   {
-    title: "Stromsparende Elektronik für Tier-Tracker im Außeneinsatz",
-    excerpt: "Die Akkulaufzeit eines tragbaren Trackers ist ein Energiebudget-Problem. Die Techniken, die entscheiden, ob ein Gerät Tage oder Monate durchhält.",
-    href: "/de/blog/low-power-animal-tracker-design",
+    title: "Sensoren für die Weidetier-Überwachung",
+    excerpt: "GPS, Aktivität, RFID, Tränke, Tor und Weidezaun – was jeder Sensor misst, wie er versorgt und über große Flächen vernetzt wird.",
+    href: "/de/blog/livestock-monitoring-sensors",
+    image: "/blog/livestock-monitoring-sensors/hero-de.webp",
   },
   {
-    title: "Leiterplattendesign für einen Tier-Tracker",
-    excerpt: "Ein Halsband- oder Anhänger-Tracker ist keine kleinere GPS-Platine. Antennenplatzierung, Lagenaufbau und Gehäusevorgaben, die das Design bestimmen.",
-    href: "/de/blog/pet-tracker-pcb-design",
+    title: "Ammoniak-, CO₂- und Feuchtesensoren im Geflügelstall",
+    excerpt: "Sensortypen, Montage auf Tierhöhe, Kalibrierung und Drift – und warum die CO₂-Autokalibrierung im belegten Stall versagt.",
+    href: "/de/blog/poultry-house-air-quality-sensors",
+    image: "/blog/poultry-house-air-quality-sensors/hero-de.webp",
   },
   {
-    title: "Hardware- & Firmware-Engineering für intelligente Futterautomaten",
-    excerpt: "Portionsgenauigkeit, Wägezellen-Kalibrierung, Störungserkennung und RFID-Erkennung – die Engineering-Entscheidungen hinter einem Futterautomaten.",
-    href: "/de/blog/smart-pet-feeder-engineering",
+    title: "Vom Prototyp zur Serie: Der Ablauf der IoT-Elektronikentwicklung",
+    excerpt: "Anforderungen, Machbarkeitsnachweis, EVT, DVT und PVT – plus CE-Kennzeichnung, RED und Cyber Resilience Act.",
+    href: "/de/blog/iot-hardware-development-process",
+    image: "/blog/iot-hardware-development-process/hero-de.webp",
   },
   {
-    title: "Ein drahtloses Überwachungsnetz für den Geflügelstall planen",
-    excerpt: "Sensorplatzierung, Protokollwahl und Gateway-Planung – und warum ein Sensor pro Stall meist nicht reicht.",
-    href: "/de/blog/wireless-poultry-monitoring-design",
+    title: "Ein LoRaWAN-Netz für den Hof planen",
+    excerpt: "Gateway-Standort, realistische Reichweite, EU868 und Duty Cycle sowie Batterielaufzeit für landwirtschaftliche Sensornetze.",
+    href: "/de/blog/lorawan-farm-network-planning",
+    image: "/blog/lorawan-farm-network-planning/hero-de.webp",
   },
 ];
 
@@ -64,19 +70,32 @@ export default function BlogPageDe() {
             <Link
               key={article.title}
               href={article.href}
-              className="group flex flex-col rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(14,27,38,0.16)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--ts-navy)]/8 bg-white shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(14,27,38,0.16)]"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10">
-                <Newspaper className="h-5 w-5 text-[var(--ts-dark-green)]" aria-hidden="true" />
+              {article.image ? (
+                <Image
+                  src={article.image}
+                  alt=""
+                  width={1752}
+                  height={897}
+                  sizes="(min-width: 1024px) 480px, (min-width: 640px) 50vw, 100vw"
+                  className="aspect-[2/1] h-auto w-full border-b border-[var(--ts-navy)]/8 object-cover"
+                />
+              ) : (
+                <div className="flex aspect-[2/1] w-full items-center justify-center border-b border-[var(--ts-navy)]/8 bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/15">
+                  <Newspaper className="h-10 w-10 text-[var(--ts-dark-green)]/70" aria-hidden="true" />
+                </div>
+              )}
+              <div className="flex flex-1 flex-col p-6">
+                <h2 className="font-[family-name:var(--font-manrope)] text-lg font-bold leading-snug text-[var(--ts-navy)]">
+                  {article.title}
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{article.excerpt}</p>
+                <span className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
+                  Artikel lesen
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </span>
               </div>
-              <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-lg font-bold leading-snug text-[var(--ts-navy)]">
-                {article.title}
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{article.excerpt}</p>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
-                Artikel lesen
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </span>
             </Link>
           ))}
         </div>

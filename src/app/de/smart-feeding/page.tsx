@@ -129,8 +129,8 @@ const scope: ServiceScopeCopy = {
       "href": "/de/livestock-technology"
     },
     {
-      "label": "Futterautomaten-Engineering (Artikel)",
-      "href": "/de/blog/smart-pet-feeder-engineering"
+      "label": "Vom Prototyp zur Serie (Artikel)",
+      "href": "/de/blog/iot-hardware-development-process"
     }
   ],
   "note": "Dieser Bereich beschreibt individuelle Engineering-Dienstleistungen. Referenzdesigns auf unserer Projektseite sind Konzepte und Prototypen, keine käuflichen Produkte."

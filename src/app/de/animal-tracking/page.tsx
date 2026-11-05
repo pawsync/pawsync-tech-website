@@ -117,16 +117,20 @@ const scope: ServiceScopeCopy = {
       "href": "/de/livestock-technology"
     },
     {
-      "label": "Stromsparendes Tracker-Design (Artikel)",
-      "href": "/de/blog/low-power-animal-tracker-design"
+      "label": "Vom Prototyp zur Serie (Artikel)",
+      "href": "/de/blog/iot-hardware-development-process"
     },
     {
-      "label": "GNSS + LoRa vs. GNSS + LTE-M (Artikel)",
-      "href": "/de/blog/gnss-lora-vs-gnss-ltem"
+      "label": "So funktionieren virtuelle Weidezäune (Artikel)",
+      "href": "/de/blog/virtual-fencing-collars"
     },
     {
-      "label": "Leiterplattendesign für Tracker (Artikel)",
-      "href": "/de/blog/pet-tracker-pcb-design"
+      "label": "Sensoren für die Weidetier-Überwachung (Artikel)",
+      "href": "/de/blog/livestock-monitoring-sensors"
+    },
+    {
+      "label": "LoRaWAN-Netz für den Hof planen (Artikel)",
+      "href": "/de/blog/lorawan-farm-network-planning"
     }
   ],
   "note": "Dieser Bereich beschreibt individuelle Engineering-Dienstleistungen. Referenzdesigns auf unserer Projektseite sind Konzepte und Prototypen, keine käuflichen Produkte."

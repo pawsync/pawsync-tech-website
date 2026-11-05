@@ -26,15 +26,15 @@ export default function PoultryCustomElectronics() {
           <Link href="/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             livestock tracking hardware
           </Link>{" "}
-          and other connected farm devices. See our{" "}
-          <Link href="/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-            low-power sensor node design
+          and other connected farm devices. See our guide to{" "}
+          <Link href="/blog/poultry-house-air-quality-sensors" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            ammonia, CO₂ and humidity sensors
           </Link>{" "}
-          write-up for how we approach battery-powered hardware, or our{" "}
-          <Link href="/blog/wireless-poultry-monitoring-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-            poultry monitoring network planning
+          for sensor placement, calibration and drift, and our{" "}
+          <Link href="/blog/lorawan-farm-network-planning" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            LoRaWAN network planning
           </Link>{" "}
-          guide for how we approach sensor placement and connectivity.
+          guide for connectivity.
         </p>
       </div>
 

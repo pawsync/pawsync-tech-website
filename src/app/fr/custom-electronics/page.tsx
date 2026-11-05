@@ -223,17 +223,13 @@ export default function CustomElectronicsPageFr() {
             </h3>
             <p className="mt-1 text-sm text-[var(--ts-gray)]">
               Une configuration représentative pour un tracker animal
-              connecté — voir notre article sur la{" "}
-              <Link href="/fr/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-                conception de carte PCB pour tracker
-              </Link>
-              , notre article sur la{" "}
-              <Link href="/fr/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-                conception de trackers basse consommation
+              connecté — voir notre article{" "}
+              <Link href="/fr/blog/iot-hardware-development-process" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                du prototype à la production
               </Link>{" "}
-              et notre comparaison{" "}
-              <Link href="/fr/blog/gnss-lora-vs-gnss-ltem" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-                GNSS + LoRa vs. GNSS + LTE-M
+              et notre{" "}
+              <Link href="/fr/blog/lorawan-farm-network-planning" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                guide de planification LoRaWAN
               </Link>{" "}
               pour les compromis sous-jacents :
             </p>

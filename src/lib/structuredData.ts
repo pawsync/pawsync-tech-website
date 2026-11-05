@@ -55,11 +55,12 @@ export function websiteJsonLd(locale: Locale) {
 type ArticleDates = { published: string; modified?: Partial<Record<Locale, string>> };
 
 export const blogPostDates = {
-  "blog/gnss-lora-vs-gnss-ltem": { published: "2026-09-28T11:16:44+05:00" },
-  "blog/low-power-animal-tracker-design": { published: "2026-09-28T11:16:44+05:00" },
-  "blog/pet-tracker-pcb-design": { published: "2026-10-09T19:23:10+05:00" },
-  "blog/smart-pet-feeder-engineering": { published: "2026-10-09T19:23:10+05:00" },
-  "blog/wireless-poultry-monitoring-design": { published: "2026-10-09T19:23:10+05:00" },
+  // November 2026 campaign: released together.
+  "blog/virtual-fencing-collars": { published: "2026-11-06T00:30:00+05:00" },
+  "blog/livestock-monitoring-sensors": { published: "2026-11-06T00:30:00+05:00" },
+  "blog/poultry-house-air-quality-sensors": { published: "2026-11-06T00:30:00+05:00" },
+  "blog/iot-hardware-development-process": { published: "2026-11-06T00:30:00+05:00" },
+  "blog/lorawan-farm-network-planning": { published: "2026-11-06T00:30:00+05:00" },
 } satisfies Record<string, ArticleDates>;
 
 export type BlogPostRoute = keyof typeof blogPostDates;
@@ -73,11 +74,14 @@ export function blogPostingJsonLd({
   route,
   headline,
   description,
+  image,
 }: {
   locale: Locale;
   route: BlogPostRoute;
   headline: string;
   description: string;
+  // Site-relative path of the article's share image, e.g. "/blog/<slug>/og.jpg".
+  image?: string;
 }) {
   const dates: ArticleDates = blogPostDates[route];
   const url = absoluteUrl(locale, route);
@@ -93,6 +97,7 @@ export function blogPostingJsonLd({
     headline,
     description,
     inLanguage: locale,
+    ...(image ? { image: `${siteUrl}${image}` } : {}),
     datePublished: dates.published,
     dateModified: dates.modified?.[locale] ?? dates.published,
     author: pawsync,

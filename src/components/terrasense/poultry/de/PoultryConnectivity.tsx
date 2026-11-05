@@ -48,11 +48,9 @@ export default function PoultryConnectivity() {
           Internetverfügbarkeit, benötigter Reichweite, Stromverfügbarkeit
           und Datenanforderungen ausgewählt – nicht als pauschale
           Standardlösung angewendet.
-          Eine ausführlichere technische Darstellung zu Protokollwahl,
-          Sensorplatzierung und Gateway-Planung finden Sie in unserem Beitrag
-          zur{" "}
-          <Link href="/de/blog/wireless-poultry-monitoring-design" className="font-semibold text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">
-            Planung eines drahtlosen Überwachungsnetzes im Geflügelstall
+          Sensortypen, Platzierung und Kalibrierung im Stall behandelt unser Beitrag zu{" "}
+          <Link href="/de/blog/poultry-house-air-quality-sensors" className="font-semibold text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">
+            Ammoniak-, CO₂- und Feuchtesensoren im Geflügelstall
           </Link>
           .
         </p>

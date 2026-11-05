@@ -117,16 +117,20 @@ const scope: ServiceScopeCopy = {
       "href": "/fr/livestock-technology"
     },
     {
-      "label": "Conception basse consommation (article)",
-      "href": "/fr/blog/low-power-animal-tracker-design"
+      "label": "Du prototype à la production (article)",
+      "href": "/fr/blog/iot-hardware-development-process"
     },
     {
-      "label": "GNSS + LoRa vs. GNSS + LTE-M (article)",
-      "href": "/fr/blog/gnss-lora-vs-gnss-ltem"
+      "label": "Fonctionnement des colliers de clôture virtuelle (article)",
+      "href": "/fr/blog/virtual-fencing-collars"
     },
     {
-      "label": "Conception de carte PCB pour tracker (article)",
-      "href": "/fr/blog/pet-tracker-pcb-design"
+      "label": "Capteurs pour le suivi du bétail (article)",
+      "href": "/fr/blog/livestock-monitoring-sensors"
+    },
+    {
+      "label": "Planifier un réseau LoRaWAN agricole (article)",
+      "href": "/fr/blog/lorawan-farm-network-planning"
     }
   ],
   "note": "Cette section décrit des services d'ingénierie sur mesure. Les modèles de référence présentés sur notre page Projets sont des concepts et des prototypes, et non des produits à acheter."

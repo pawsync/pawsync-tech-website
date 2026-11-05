@@ -222,18 +222,14 @@ export default function CustomElectronicsPage() {
             </h3>
             <p className="mt-1 text-sm text-[var(--ts-gray)]">
               A representative build for a connected animal tracker — see our{" "}
-              <Link href="/blog/pet-tracker-pcb-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-                tracker PCB design
+              <Link href="/blog/iot-hardware-development-process" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                prototype-to-production
               </Link>{" "}
-              write-up, our{" "}
-              <Link href="/blog/low-power-animal-tracker-design" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-                low-power tracker design
+              write-up and our{" "}
+              <Link href="/blog/lorawan-farm-network-planning" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+                LoRaWAN network planning
               </Link>{" "}
-              write-up, and our{" "}
-              <Link href="/blog/gnss-lora-vs-gnss-ltem" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-                GNSS + LoRa vs. GNSS + LTE-M
-              </Link>{" "}
-              comparison for the trade-offs behind it:
+              guide for the trade-offs behind it:
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {exampleSpecs.map((spec) => (

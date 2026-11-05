@@ -129,8 +129,8 @@ const scope: ServiceScopeCopy = {
       "href": "/livestock-technology"
     },
     {
-      "label": "Smart feeder engineering (article)",
-      "href": "/blog/smart-pet-feeder-engineering"
+      "label": "From prototype to production (article)",
+      "href": "/blog/iot-hardware-development-process"
     }
   ],
   "note": "This section describes custom engineering services. Reference designs on our Projects page are concepts and prototypes, not products available to purchase."
