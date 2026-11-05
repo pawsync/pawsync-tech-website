@@ -16,6 +16,31 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: "How Virtual Fencing Collars Work: GNSS, Cues and Power Design",
+    excerpt: "How a collar knows where the boundary is, how audio and electrical cues are sequenced, and what limits battery life.",
+    href: "/blog/virtual-fencing-collars",
+  },
+  {
+    title: "Livestock Monitoring Sensors: What Each Sensor Measures",
+    excerpt: "GPS, activity, water, gate and fence sensors — what each tells you, how it's powered, and how to connect it across a ranch.",
+    href: "/blog/livestock-monitoring-sensors",
+  },
+  {
+    title: "Ammonia, CO₂ and Humidity Sensors in Poultry Houses",
+    excerpt: "Sensor types, placement at bird height, calibration and drift — and why CO₂ auto-calibration fails in a stocked house.",
+    href: "/blog/poultry-house-air-quality-sensors",
+  },
+  {
+    title: "From Prototype to Production: The IoT Hardware Development Process",
+    excerpt: "Requirements, proof of concept, EVT, DVT and PVT — plus CE, UKCA and FCC certification for connected devices.",
+    href: "/blog/iot-hardware-development-process",
+  },
+  {
+    title: "Planning a LoRaWAN Network for a Farm",
+    excerpt: "Gateway placement, realistic range, EU868 vs. US915, airtime limits and battery life for farm sensor networks.",
+    href: "/blog/lorawan-farm-network-planning",
+  },
+  {
     title: "GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking",
     excerpt: "GNSS determines position; LoRa and LTE-M are separate communication layers that get that position off the device. A practical comparison.",
     href: "/blog/gnss-lora-vs-gnss-ltem",

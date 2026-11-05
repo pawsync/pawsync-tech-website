@@ -60,6 +60,12 @@ export const blogPostDates = {
   "blog/pet-tracker-pcb-design": { published: "2026-10-09T19:23:10+05:00" },
   "blog/smart-pet-feeder-engineering": { published: "2026-10-09T19:23:10+05:00" },
   "blog/wireless-poultry-monitoring-design": { published: "2026-10-09T19:23:10+05:00" },
+  // November 2026 campaign: released together at the scheduled launch time.
+  "blog/virtual-fencing-collars": { published: "2026-11-17T13:00:00+05:00" },
+  "blog/livestock-monitoring-sensors": { published: "2026-11-17T13:00:00+05:00" },
+  "blog/poultry-house-air-quality-sensors": { published: "2026-11-17T13:00:00+05:00" },
+  "blog/iot-hardware-development-process": { published: "2026-11-17T13:00:00+05:00" },
+  "blog/lorawan-farm-network-planning": { published: "2026-11-17T13:00:00+05:00" },
 } satisfies Record<string, ArticleDates>;
 
 export type BlogPostRoute = keyof typeof blogPostDates;
