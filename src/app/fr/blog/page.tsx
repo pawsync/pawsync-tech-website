@@ -16,6 +16,31 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: "Clôture virtuelle : comment fonctionnent les colliers GNSS",
+    excerpt: "Géorepérage dans le collier, séquence signal sonore puis impulsion, autonomie de la batterie et cadre réglementaire selon les pays.",
+    href: "/fr/blog/virtual-fencing-collars",
+  },
+  {
+    title: "Capteurs pour le suivi du bétail",
+    excerpt: "GPS, activité, RFID, abreuvoirs, barrières et clôtures : ce que mesure chaque capteur, comment l'alimenter et le connecter.",
+    href: "/fr/blog/livestock-monitoring-sensors",
+  },
+  {
+    title: "Capteurs d'ammoniac, de CO₂ et d'humidité en bâtiment avicole",
+    excerpt: "Types de capteurs, installation à hauteur des animaux, étalonnage et dérive – et pourquoi l'auto-étalonnage CO₂ échoue en bâtiment occupé.",
+    href: "/fr/blog/poultry-house-air-quality-sensors",
+  },
+  {
+    title: "Du prototype à la série : les étapes du développement d'un produit IoT",
+    excerpt: "Cahier des charges, preuve de concept, EVT, DVT et PVT – avec le marquage CE, la directive RED et le Cyber Resilience Act.",
+    href: "/fr/blog/iot-hardware-development-process",
+  },
+  {
+    title: "Planifier un réseau LoRaWAN sur une exploitation",
+    excerpt: "Emplacement des passerelles, portée réaliste, bande EU868 et rapport cyclique, autonomie des capteurs agricoles.",
+    href: "/fr/blog/lorawan-farm-network-planning",
+  },
+  {
     title: "GNSS + LoRa vs. GNSS + LTE-M pour le suivi des animaux",
     excerpt: "Le GNSS détermine la position ; LoRa et LTE-M sont des couches de communication distinctes qui transmettent cette position. Une comparaison pratique.",
     href: "/fr/blog/gnss-lora-vs-gnss-ltem",
