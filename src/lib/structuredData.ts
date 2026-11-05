@@ -79,11 +79,14 @@ export function blogPostingJsonLd({
   route,
   headline,
   description,
+  image,
 }: {
   locale: Locale;
   route: BlogPostRoute;
   headline: string;
   description: string;
+  // Site-relative path of the article's share image, e.g. "/blog/<slug>/og.png".
+  image?: string;
 }) {
   const dates: ArticleDates = blogPostDates[route];
   const url = absoluteUrl(locale, route);
@@ -99,6 +102,7 @@ export function blogPostingJsonLd({
     headline,
     description,
     inLanguage: locale,
+    ...(image ? { image: `${siteUrl}${image}` } : {}),
     datePublished: dates.published,
     dateModified: dates.modified?.[locale] ?? dates.published,
     author: pawsync,

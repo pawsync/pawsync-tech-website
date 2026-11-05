@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Newspaper } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
@@ -19,26 +20,31 @@ const articles = [
     title: "How Virtual Fencing Collars Work: GNSS, Cues and Power Design",
     excerpt: "How a collar knows where the boundary is, how audio and electrical cues are sequenced, and what limits battery life.",
     href: "/blog/virtual-fencing-collars",
+    image: "/blog/virtual-fencing-collars/hero.svg",
   },
   {
     title: "Livestock Monitoring Sensors: What Each Sensor Measures",
     excerpt: "GPS, activity, water, gate and fence sensors — what each tells you, how it's powered, and how to connect it across a ranch.",
     href: "/blog/livestock-monitoring-sensors",
+    image: "/blog/livestock-monitoring-sensors/hero.svg",
   },
   {
     title: "Ammonia, CO₂ and Humidity Sensors in Poultry Houses",
     excerpt: "Sensor types, placement at bird height, calibration and drift — and why CO₂ auto-calibration fails in a stocked house.",
     href: "/blog/poultry-house-air-quality-sensors",
+    image: "/blog/poultry-house-air-quality-sensors/hero.svg",
   },
   {
     title: "From Prototype to Production: The IoT Hardware Development Process",
     excerpt: "Requirements, proof of concept, EVT, DVT and PVT — plus CE, UKCA and FCC certification for connected devices.",
     href: "/blog/iot-hardware-development-process",
+    image: "/blog/iot-hardware-development-process/hero.svg",
   },
   {
     title: "Planning a LoRaWAN Network for a Farm",
     excerpt: "Gateway placement, realistic range, EU868 vs. US915, airtime limits and battery life for farm sensor networks.",
     href: "/blog/lorawan-farm-network-planning",
+    image: "/blog/lorawan-farm-network-planning/hero.svg",
   },
   {
     title: "GNSS + LoRa vs. GNSS + LTE-M for Animal Tracking",
@@ -89,19 +95,32 @@ export default function BlogPage() {
             <Link
               key={article.title}
               href={article.href}
-              className="group flex flex-col rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(14,27,38,0.16)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--ts-navy)]/8 bg-white shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(14,27,38,0.16)]"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10">
-                <Newspaper className="h-5 w-5 text-[var(--ts-dark-green)]" aria-hidden="true" />
+              {article.image ? (
+                <Image
+                  src={article.image}
+                  alt=""
+                  width={1200}
+                  height={600}
+                  unoptimized
+                  className="aspect-[2/1] h-auto w-full border-b border-[var(--ts-navy)]/8 object-cover"
+                />
+              ) : (
+                <div className="flex aspect-[2/1] w-full items-center justify-center border-b border-[var(--ts-navy)]/8 bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/15">
+                  <Newspaper className="h-10 w-10 text-[var(--ts-dark-green)]/70" aria-hidden="true" />
+                </div>
+              )}
+              <div className="flex flex-1 flex-col p-6">
+                <h2 className="font-[family-name:var(--font-manrope)] text-lg font-bold leading-snug text-[var(--ts-navy)]">
+                  {article.title}
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{article.excerpt}</p>
+                <span className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
+                  Read article
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </span>
               </div>
-              <h2 className="mt-4 font-[family-name:var(--font-manrope)] text-lg font-bold leading-snug text-[var(--ts-navy)]">
-                {article.title}
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{article.excerpt}</p>
-              <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--ts-dark-green)]">
-                Read article
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </span>
             </Link>
           ))}
         </div>

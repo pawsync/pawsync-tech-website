@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Les étapes du développement d'un produit électronique IoT : cahier des charges, preuve de concept, EVT, DVT et PVT, marquage CE, directive RED et Cyber Resilience Act.",
   alternates: buildAlternates("fr", "blog/iot-hardware-development-process"),
-  openGraph: buildOpenGraph("fr", "blog/iot-hardware-development-process"),
+  openGraph: buildOpenGraph("fr", "blog/iot-hardware-development-process", {
+    url: "/blog/iot-hardware-development-process/og.png",
+    alt: "Illustration du développement d'un objet connecté : carte de preuve de concept, circuit imprimé sur mesure et produit fini dans son boîtier",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/iot-hardware-development-process/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/iot-hardware-development-process",
   headline: "Du prototype à la série : les étapes du développement d'un produit IoT",
   description: metadata.description ?? "",
+  image: "/blog/iot-hardware-development-process/og.png",
 });
 
 export default function BlogArticleIotHardwareDevelopmentFr() {
@@ -40,6 +46,15 @@ export default function BlogArticleIotHardwareDevelopmentFr() {
           moins de la moitié du chemin vers un produit fabriqué en série, certifié et commercialisé. Voici à quoi
           servent les étapes suivantes, et pourquoi les sauter coûte souvent plus cher qu&apos;on ne le pense.
         </p>
+        <Image
+          src="/blog/iot-hardware-development-process/hero.svg"
+          alt="Illustration du développement d'un objet connecté : carte de preuve de concept, circuit imprimé sur mesure et produit fini dans son boîtier"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -60,6 +75,20 @@ export default function BlogArticleIotHardwareDevelopmentFr() {
             <li><strong>PVT</strong> (validation de production) – l&apos;usine peut-elle la fabriquer de façon fiable en volume ?</li>
             <li><strong>Production en série</strong> – montée en cadence, avec les retours terrain qui alimentent la conception.</li>
           </ol>
+
+          <figure>
+            <Image
+              src="/blog/iot-hardware-development-process/diagram-fr.svg"
+              alt="Schéma des six étapes : 1 cahier des charges, 2 preuve de concept, 3 prototype, 4 EVT, 5 DVT avec certification CE, UKCA et FCC, 6 PVT ; le firmware avance en parallèle"
+              width={960}
+              height={760}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Les six étapes de l&apos;idée à la série, avec la certification en DVT et le firmware en parallèle.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             1. Cahier des charges : le moment le moins cher pour changer d&apos;avis

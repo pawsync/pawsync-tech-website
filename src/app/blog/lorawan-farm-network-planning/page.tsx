@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "How to plan a LoRaWAN network for a farm: gateway placement and height, realistic range, EU868 vs. US915, airtime limits, battery life and public vs. private networks.",
   alternates: buildAlternates("en", "blog/lorawan-farm-network-planning"),
-  openGraph: buildOpenGraph("en", "blog/lorawan-farm-network-planning"),
+  openGraph: buildOpenGraph("en", "blog/lorawan-farm-network-planning", {
+    url: "/blog/lorawan-farm-network-planning/og.png",
+    alt: "Illustration of a farm LoRaWAN network: a gateway on top of a silo reaching field sensors, a water tank and a weather station, with one sensor blocked by a tree line",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/lorawan-farm-network-planning/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/lorawan-farm-network-planning",
   headline: "Planning a LoRaWAN Network for a Farm: Gateways, Coverage and Battery Life",
   description: metadata.description ?? "",
+  image: "/blog/lorawan-farm-network-planning/og.png",
 });
 
 export default function BlogArticleLorawanFarmNetwork() {
@@ -40,6 +46,15 @@ export default function BlogArticleLorawanFarmNetwork() {
           long distances and no Wi-Fi in the fields. Whether a farm network works well, though, depends far
           more on planning than on the sensors themselves.
         </p>
+        <Image
+          src="/blog/lorawan-farm-network-planning/hero.svg"
+          alt="Illustration of a farm LoRaWAN network: a gateway on top of a silo reaching field sensors, a water tank and a weather station, with one sensor blocked by a tree line"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -54,6 +69,20 @@ export default function BlogArticleLorawanFarmNetwork() {
             single gateway: any gateway in range can receive a message, which is what makes adding a second
             gateway such an effective way to fill gaps.
           </p>
+
+          <figure>
+            <Image
+              src="/blog/lorawan-farm-network-planning/diagram-en.svg"
+              alt="Diagram of a LoRaWAN network: end devices send short radio messages, gateways forward them over the internet, a network server removes duplicates and manages keys and data rate, and an application stores data and raises alerts"
+              width={960}
+              height={600}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              The four parts of a LoRaWAN network. Devices aren&apos;t paired to one gateway, so a second gateway can fill coverage gaps.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Realistic range: why the brochure number rarely applies

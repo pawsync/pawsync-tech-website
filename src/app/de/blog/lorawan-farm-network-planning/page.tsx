@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "LoRaWAN für den landwirtschaftlichen Betrieb planen: Gateway-Standort und Höhe, realistische Reichweite, EU868 und Duty Cycle, Batterielaufzeit sowie privates oder öffentliches Netz.",
   alternates: buildAlternates("de", "blog/lorawan-farm-network-planning"),
-  openGraph: buildOpenGraph("de", "blog/lorawan-farm-network-planning"),
+  openGraph: buildOpenGraph("de", "blog/lorawan-farm-network-planning", {
+    url: "/blog/lorawan-farm-network-planning/og.png",
+    alt: "Illustration eines LoRaWAN-Netzes auf dem Hof: Ein Gateway auf einem Silo erreicht Feldsensoren, Wassertank und Wetterstation; ein Sensor hinter einer Baumreihe wird nicht erreicht",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/lorawan-farm-network-planning/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/lorawan-farm-network-planning",
   headline: "Ein LoRaWAN-Netz für den Hof planen: Gateways, Reichweite und Batterielaufzeit",
   description: metadata.description ?? "",
+  image: "/blog/lorawan-farm-network-planning/og.png",
 });
 
 export default function BlogArticleLorawanFarmNetworkDe() {
@@ -40,6 +46,15 @@ export default function BlogArticleLorawanFarmNetworkDe() {
           große Entfernungen und kein WLAN auf dem Feld. Ob ein Hof-Funknetz zuverlässig läuft, hängt aber viel
           mehr von der Planung ab als von den Sensoren selbst.
         </p>
+        <Image
+          src="/blog/lorawan-farm-network-planning/hero.svg"
+          alt="Illustration eines LoRaWAN-Netzes auf dem Hof: Ein Gateway auf einem Silo erreicht Feldsensoren, Wassertank und Wetterstation; ein Sensor hinter einer Baumreihe wird nicht erreicht"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -54,6 +69,20 @@ export default function BlogArticleLorawanFarmNetworkDe() {
             Gateway gebunden: Jedes Gateway in Reichweite kann eine Nachricht empfangen. Deshalb schließt ein
             zweites Gateway Lücken so wirksam.
           </p>
+
+          <figure>
+            <Image
+              src="/blog/lorawan-farm-network-planning/diagram-de.svg"
+              alt="Diagramm eines LoRaWAN-Netzes: Endgeräte senden kurze Funknachrichten, Gateways leiten sie per Internet weiter, ein Netzwerkserver entfernt Duplikate und verwaltet Schlüssel und Datenrate, eine Anwendung speichert Daten und löst Alarme aus"
+              width={960}
+              height={600}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Die vier Bausteine eines LoRaWAN-Netzes. Endgeräte sind an kein einzelnes Gateway gebunden, deshalb kann ein zweites Gateway Funklöcher schließen.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Realistische Reichweite statt Prospektwert

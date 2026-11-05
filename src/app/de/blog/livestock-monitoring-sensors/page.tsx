@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Welche Sensoren eignen sich zur Fernüberwachung von Rindern und Weidetieren? GPS, Aktivität, RFID, Tränke, Tor und Weidezaun – was sie messen, wie sie versorgt und vernetzt werden.",
   alternates: buildAlternates("de", "blog/livestock-monitoring-sensors"),
-  openGraph: buildOpenGraph("de", "blog/livestock-monitoring-sensors"),
+  openGraph: buildOpenGraph("de", "blog/livestock-monitoring-sensors", {
+    url: "/blog/livestock-monitoring-sensors/og.png",
+    alt: "Illustration eines Betriebs mit Rindern mit Halsband, Zaunsensor, Tor, Tränkesensor und Wetterstation, verbunden mit einem Gateway-Mast",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/livestock-monitoring-sensors/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/livestock-monitoring-sensors",
   headline: "Sensoren für die Weidetier-Überwachung: Was sie messen und wie man sie anbindet",
   description: metadata.description ?? "",
+  image: "/blog/livestock-monitoring-sensors/og.png",
 });
 
 export default function BlogArticleLivestockMonitoringSensorsDe() {
@@ -40,6 +46,15 @@ export default function BlogArticleLivestockMonitoringSensorsDe() {
           Fläche. Bevor man eine Plattform oder ein Funknetz auswählt, lohnt sich ein klarer Blick darauf, was
           jeder Sensortyp leisten kann – und was er an Energie und Wartung kostet.
         </p>
+        <Image
+          src="/blog/livestock-monitoring-sensors/hero.svg"
+          alt="Illustration eines Betriebs mit Rindern mit Halsband, Zaunsensor, Tor, Tränkesensor und Wetterstation, verbunden mit einem Gateway-Mast"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -53,6 +68,20 @@ export default function BlogArticleLivestockMonitoringSensorsDe() {
             nachläuft, oder ein Weidezaun ohne Spannung. Solche Sensoren sind oft günstiger, leichter zu
             versorgen und einfacher zu warten als alles, was ein Tier trägt – ein guter Startpunkt.
           </p>
+
+          <figure>
+            <Image
+              src="/blog/livestock-monitoring-sensors/diagram-de.svg"
+              alt="Diagramm: Sensoren am Tier (GNSS-Ortung, Aktivität, RFID) und an der Infrastruktur (Wasserstand, Tore und Zäune, Wetter) senden Daten über ein Gateway oder Netz an ein Dashboard mit Alarmen"
+              width={960}
+              height={640}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Zwei Sensorgruppen, ein Datenweg: vom Tier oder von der Infrastruktur über Gateway oder Netz zu Dashboard und Alarmen.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Sensoren am Tier

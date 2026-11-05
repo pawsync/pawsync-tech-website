@@ -165,18 +165,23 @@ export function buildAlternates(locale: Locale, route: string): Metadata["altern
 // entirely replaces the root layout's, rather than filling in just the
 // fields it omits. Every page that needs its own canonical `url` here must
 // therefore also restate `siteName`/`type`/`images`, or those silently
-// disappear from that page's social metadata.
-export function buildOpenGraph(locale: Locale, route: string): Metadata["openGraph"] {
+// disappear from that page's social metadata. Pass `image` to replace the
+// site-wide share image with a page-specific 1200x630 one.
+export function buildOpenGraph(
+  locale: Locale,
+  route: string,
+  image?: { url: string; alt: string },
+): Metadata["openGraph"] {
   return {
     siteName: "PawSync",
     type: "website",
     url: absoluteUrl(locale, route),
     images: [
       {
-        url: "/og-image.png",
+        url: image?.url ?? "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "PawSync — Custom Electronics & IoT Engineering for Animals & Farms",
+        alt: image?.alt ?? "PawSync — Custom Electronics & IoT Engineering for Animals & Farms",
       },
     ],
   };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Der Ablauf der IoT-Hardwareentwicklung Schritt für Schritt: Anforderungen, Machbarkeitsnachweis, EVT, DVT und PVT sowie CE-Kennzeichnung, RED und Cyber Resilience Act.",
   alternates: buildAlternates("de", "blog/iot-hardware-development-process"),
-  openGraph: buildOpenGraph("de", "blog/iot-hardware-development-process"),
+  openGraph: buildOpenGraph("de", "blog/iot-hardware-development-process", {
+    url: "/blog/iot-hardware-development-process/og.png",
+    alt: "Illustration der Geräteentwicklung: Machbarkeitsaufbau, eigene Leiterplatte und fertiges Gerät im Gehäuse",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/iot-hardware-development-process/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/iot-hardware-development-process",
   headline: "Vom Prototyp zur Serie: Der Ablauf der IoT-Elektronikentwicklung",
   description: metadata.description ?? "",
+  image: "/blog/iot-hardware-development-process/og.png",
 });
 
 export default function BlogArticleIotHardwareDevelopmentDe() {
@@ -40,6 +46,15 @@ export default function BlogArticleIotHardwareDevelopmentDe() {
           die Hälfte des Weges zu einem Produkt, das in Stückzahlen gefertigt, zertifiziert und verkauft werden
           kann. Dafür sind die folgenden Phasen da, und deshalb kostet es meist mehr, sie zu überspringen.
         </p>
+        <Image
+          src="/blog/iot-hardware-development-process/hero.svg"
+          alt="Illustration der Geräteentwicklung: Machbarkeitsaufbau, eigene Leiterplatte und fertiges Gerät im Gehäuse"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -59,6 +74,20 @@ export default function BlogArticleIotHardwareDevelopmentDe() {
             <li><strong>PVT</strong> (Production Validation Test) – kann die Fertigung es zuverlässig in Stückzahl bauen?</li>
             <li><strong>Serienproduktion</strong> – Hochlauf, Rückmeldungen aus dem Feld fließen ins Design zurück.</li>
           </ol>
+
+          <figure>
+            <Image
+              src="/blog/iot-hardware-development-process/diagram-de.svg"
+              alt="Diagramm der sechs Phasen: 1 Anforderungen, 2 Machbarkeitsnachweis, 3 Prototyp, 4 EVT, 5 DVT mit CE-, UKCA- und FCC-Zulassung, 6 PVT; die Firmware entsteht parallel"
+              width={960}
+              height={760}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Die sechs Phasen von der Idee bis zur Serie – Zulassung in der DVT, Firmware parallel dazu.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             1. Anforderungen: hier sind Änderungen am günstigsten

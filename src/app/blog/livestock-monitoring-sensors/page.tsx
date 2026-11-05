@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "A practical guide to livestock monitoring sensors — GPS, activity, water, gate and fence sensors — what each measures, how it is powered, and how to connect it on a ranch.",
   alternates: buildAlternates("en", "blog/livestock-monitoring-sensors"),
-  openGraph: buildOpenGraph("en", "blog/livestock-monitoring-sensors"),
+  openGraph: buildOpenGraph("en", "blog/livestock-monitoring-sensors", {
+    url: "/blog/livestock-monitoring-sensors/og.png",
+    alt: "Illustration of a ranch with collared cattle, a fence sensor, a gate, a water trough sensor and a weather station linked to a gateway mast",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/livestock-monitoring-sensors/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/livestock-monitoring-sensors",
   headline: "Livestock Monitoring Sensors: What Each Sensor Measures and How to Connect It",
   description: metadata.description ?? "",
+  image: "/blog/livestock-monitoring-sensors/og.png",
 });
 
 export default function BlogArticleLivestockMonitoringSensors() {
@@ -40,6 +46,15 @@ export default function BlogArticleLivestockMonitoringSensors() {
           a platform or a network, it helps to be clear about what each type of sensor can and can&apos;t tell
           you — and what it costs in power and maintenance.
         </p>
+        <Image
+          src="/blog/livestock-monitoring-sensors/hero.svg"
+          alt="Illustration of a ranch with collared cattle, a fence sensor, a gate, a water trough sensor and a weather station linked to a gateway mast"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -54,6 +69,20 @@ export default function BlogArticleLivestockMonitoringSensors() {
             sensors are often cheaper, easier to power and easier to maintain than anything worn by an
             animal, which makes them a good place to start.
           </p>
+
+          <figure>
+            <Image
+              src="/blog/livestock-monitoring-sensors/diagram-en.svg"
+              alt="Diagram: animal-worn sensors (GNSS location, activity, RFID) and infrastructure sensors (water level, gates and fences, weather) send data through a gateway or network to a dashboard with alerts"
+              width={960}
+              height={640}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Two groups of sensors, one data path: from the animal or the infrastructure, through a gateway or network, to a dashboard and alerts.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Animal-worn sensors

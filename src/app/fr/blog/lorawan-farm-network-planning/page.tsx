@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Planifier un réseau LoRaWAN agricole : emplacement et hauteur de la passerelle, portée réaliste, bande EU868 et rapport cyclique, autonomie des capteurs, réseau public ou privé.",
   alternates: buildAlternates("fr", "blog/lorawan-farm-network-planning"),
-  openGraph: buildOpenGraph("fr", "blog/lorawan-farm-network-planning"),
+  openGraph: buildOpenGraph("fr", "blog/lorawan-farm-network-planning", {
+    url: "/blog/lorawan-farm-network-planning/og.png",
+    alt: "Illustration d'un réseau LoRaWAN agricole : une passerelle sur un silo atteint les capteurs des champs, une cuve et une station météo ; un capteur derrière une haie n'est pas atteint",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/lorawan-farm-network-planning/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/lorawan-farm-network-planning",
   headline: "Planifier un réseau LoRaWAN sur une exploitation : passerelles, portée et autonomie",
   description: metadata.description ?? "",
+  image: "/blog/lorawan-farm-network-planning/og.png",
 });
 
 export default function BlogArticleLorawanFarmNetworkFr() {
@@ -40,6 +46,15 @@ export default function BlogArticleLorawanFarmNetworkFr() {
           message, grandes distances et pas de Wi-Fi dans les champs. Mais la fiabilité d&apos;un réseau
           d&apos;exploitation dépend bien plus de sa planification que des capteurs eux-mêmes.
         </p>
+        <Image
+          src="/blog/lorawan-farm-network-planning/hero.svg"
+          alt="Illustration d'un réseau LoRaWAN agricole : une passerelle sur un silo atteint les capteurs des champs, une cuve et une station météo ; un capteur derrière une haie n'est pas atteint"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -54,6 +69,20 @@ export default function BlogArticleLorawanFarmNetworkFr() {
             objets ne sont pas liés à une passerelle précise : toute passerelle à portée peut recevoir un message,
             ce qui explique pourquoi une seconde passerelle comble si efficacement les zones blanches.
           </p>
+
+          <figure>
+            <Image
+              src="/blog/lorawan-farm-network-planning/diagram-fr.svg"
+              alt="Schéma d'un réseau LoRaWAN : les capteurs envoient de courts messages radio, les passerelles les relaient via Internet, un serveur réseau supprime les doublons et gère clés et débit, une application stocke les données et déclenche les alertes"
+              width={960}
+              height={600}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Les quatre éléments d&apos;un réseau LoRaWAN. Les capteurs ne sont liés à aucune passerelle : une deuxième passerelle peut combler les zones mal couvertes.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Portée réaliste : pourquoi le chiffre de la brochure s&apos;applique rarement

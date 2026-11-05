@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "How ammonia, CO₂ and humidity sensors behave in poultry houses and sheds: sensor types, placement at bird height, calibration, drift and the dust and washdown problem.",
   alternates: buildAlternates("en", "blog/poultry-house-air-quality-sensors"),
-  openGraph: buildOpenGraph("en", "blog/poultry-house-air-quality-sensors"),
+  openGraph: buildOpenGraph("en", "blog/poultry-house-air-quality-sensors", {
+    url: "/blog/poultry-house-air-quality-sensors/og.png",
+    alt: "Cross-section illustration of a poultry house with birds on litter, ammonia, CO₂ and humidity sensors at bird height, air inlets and an exhaust fan",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/poultry-house-air-quality-sensors",
   headline: "Ammonia, CO₂ and Humidity Sensors in Poultry Houses: Placement, Calibration and Drift",
   description: metadata.description ?? "",
+  image: "/blog/poultry-house-air-quality-sensors/og.png",
 });
 
 export default function BlogArticlePoultryAirQualitySensors() {
@@ -40,6 +46,15 @@ export default function BlogArticlePoultryAirQualitySensors() {
           humidity sensors all behave differently in dust, moisture and ammonia-laden air — and a sensor
           that has quietly drifted is worse than no sensor at all.
         </p>
+        <Image
+          src="/blog/poultry-house-air-quality-sensors/hero.svg"
+          alt="Cross-section illustration of a poultry house with birds on litter, ammonia, CO₂ and humidity sensors at bird height, air inlets and an exhaust fan"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -150,6 +165,20 @@ export default function BlogArticlePoultryAirQualitySensors() {
             </Link>
             .
           </p>
+
+          <figure>
+            <Image
+              src="/blog/poultry-house-air-quality-sensors/diagram-en.svg"
+              alt="Diagram of sensor placement in a poultry house: sensors at bird height at the inlet end, middle and fan end are representative; a sensor near the ceiling or directly in front of an inlet gives misleading readings"
+              width={960}
+              height={600}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Measure where the birds are: several points at bird height along the house, away from inlets, fans and the ceiling.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Dust and washdown: designing for clean-out

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "La clôture virtuelle pour le bétail expliquée côté ingénierie : géorepérage GNSS dans le collier, séquence signal sonore puis impulsion, autonomie de la batterie et cadre réglementaire.",
   alternates: buildAlternates("fr", "blog/virtual-fencing-collars"),
-  openGraph: buildOpenGraph("fr", "blog/virtual-fencing-collars"),
+  openGraph: buildOpenGraph("fr", "blog/virtual-fencing-collars", {
+    url: "/blog/virtual-fencing-collars/og.png",
+    alt: "Illustration : bovins équipés de colliers GNSS approchant d'une limite virtuelle, avec un satellite au-dessus",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/virtual-fencing-collars",
   headline: "Clôture virtuelle : comment fonctionnent les colliers GNSS – positionnement, signaux et énergie",
   description: metadata.description ?? "",
+  image: "/blog/virtual-fencing-collars/og.png",
 });
 
 export default function BlogArticleVirtualFencingCollarsFr() {
@@ -40,6 +46,15 @@ export default function BlogArticleVirtualFencingCollarsFr() {
           la fait fonctionner – savoir où se trouve l&apos;animal, l&apos;avertir au bon moment et tenir des mois
           sur une batterie – doit se passer dans un collier porté dehors par un animal en mouvement.
         </p>
+        <Image
+          src="/blog/virtual-fencing-collars/hero.svg"
+          alt="Illustration : bovins équipés de colliers GNSS approchant d'une limite virtuelle, avec un satellite au-dessus"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -110,6 +125,20 @@ export default function BlogArticleVirtualFencingCollarsFr() {
             <li><strong>Traçabilité</strong> – enregistrer chaque signal sonore et chaque impulsion avec l&apos;heure et la position, pour repérer une limite mal placée.</li>
             <li><strong>Règle de retour</strong> – un animal qui a franchi la limite doit être guidé vers l&apos;intérieur, pas empêché de revenir.</li>
           </ul>
+
+          <figure>
+            <Image
+              src="/blog/virtual-fencing-collars/diagram-fr.svg"
+              alt="Schéma d'une parcelle avec limite virtuelle et zone d'alerte : 1 signal sonore à l'entrée de la zone d'alerte, 2 brève impulsion seulement si l'animal continue, 3 les signaux cessent s'il fait demi-tour"
+              width={960}
+              height={600}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              La séquence des signaux : d&apos;abord le son, une impulsion seulement si l&apos;animal continue, plus rien dès qu&apos;il fait demi-tour.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             L&apos;énergie : la contrainte derrière toutes les autres

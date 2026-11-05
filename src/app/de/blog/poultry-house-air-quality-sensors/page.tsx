@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Stallklima im Geflügelstall messen: Sensortypen für Ammoniak, CO₂ und Luftfeuchte, Montage auf Tierhöhe, Kalibrierung, Drift sowie Staub und Nassreinigung.",
   alternates: buildAlternates("de", "blog/poultry-house-air-quality-sensors"),
-  openGraph: buildOpenGraph("de", "blog/poultry-house-air-quality-sensors"),
+  openGraph: buildOpenGraph("de", "blog/poultry-house-air-quality-sensors", {
+    url: "/blog/poultry-house-air-quality-sensors/og.png",
+    alt: "Schnittdarstellung eines Geflügelstalls mit Tieren auf der Einstreu, Ammoniak-, CO₂- und Feuchtesensoren auf Tierhöhe, Zuluftöffnungen und Abluftventilator",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/poultry-house-air-quality-sensors",
   headline: "Ammoniak-, CO₂- und Feuchtesensoren im Geflügelstall: Montage, Kalibrierung und Drift",
   description: metadata.description ?? "",
+  image: "/blog/poultry-house-air-quality-sensors/og.png",
 });
 
 export default function BlogArticlePoultryAirQualitySensorsDe() {
@@ -40,6 +46,15 @@ export default function BlogArticlePoultryAirQualitySensorsDe() {
           reagieren aber sehr unterschiedlich auf Staub, Nässe und ammoniakhaltige Luft – und ein Sensor, der
           unbemerkt driftet, ist schlechter als gar keiner.
         </p>
+        <Image
+          src="/blog/poultry-house-air-quality-sensors/hero.svg"
+          alt="Schnittdarstellung eines Geflügelstalls mit Tieren auf der Einstreu, Ammoniak-, CO₂- und Feuchtesensoren auf Tierhöhe, Zuluftöffnungen und Abluftventilator"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -137,6 +152,20 @@ export default function BlogArticlePoultryAirQualitySensorsDe() {
             </Link>
             .
           </p>
+
+          <figure>
+            <Image
+              src="/blog/poultry-house-air-quality-sensors/diagram-de.svg"
+              alt="Diagramm zur Sensormontage im Geflügelstall: Sensoren auf Tierhöhe an Zuluftseite, Mitte und Lüfterseite sind repräsentativ; ein Sensor unter der Decke oder direkt vor einer Zuluftöffnung liefert verfälschte Werte"
+              width={960}
+              height={600}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Dort messen, wo die Tiere sind: mehrere Messpunkte auf Tierhöhe entlang des Stalls, nicht vor Zuluftöffnungen, Lüftern oder unter der Decke.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Staub und Nassreinigung: für die Serviceperiode konstruieren

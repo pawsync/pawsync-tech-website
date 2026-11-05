@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Quels capteurs pour le suivi à distance du bétail ? GPS, activité, RFID, abreuvoirs, barrières et clôtures électriques : ce qu'ils mesurent, comment les alimenter et les connecter.",
   alternates: buildAlternates("fr", "blog/livestock-monitoring-sensors"),
-  openGraph: buildOpenGraph("fr", "blog/livestock-monitoring-sensors"),
+  openGraph: buildOpenGraph("fr", "blog/livestock-monitoring-sensors", {
+    url: "/blog/livestock-monitoring-sensors/og.png",
+    alt: "Illustration d'une exploitation avec bovins équipés de colliers, capteur de clôture, barrière, capteur d'abreuvoir et station météo reliés à une passerelle",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/livestock-monitoring-sensors/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/livestock-monitoring-sensors",
   headline: "Capteurs pour le suivi du bétail : ce que mesure chaque capteur et comment le connecter",
   description: metadata.description ?? "",
+  image: "/blog/livestock-monitoring-sensors/og.png",
 });
 
 export default function BlogArticleLivestockMonitoringSensorsFr() {
@@ -40,6 +46,15 @@ export default function BlogArticleLivestockMonitoringSensorsFr() {
           choisir une plateforme ou un réseau, il est utile de savoir ce que chaque type de capteur peut – et ne
           peut pas – vous apprendre, et ce qu&apos;il coûte en énergie et en entretien.
         </p>
+        <Image
+          src="/blog/livestock-monitoring-sensors/hero.svg"
+          alt="Illustration d'une exploitation avec bovins équipés de colliers, capteur de clôture, barrière, capteur d'abreuvoir et station météo reliés à une passerelle"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -54,6 +69,20 @@ export default function BlogArticleLivestockMonitoringSensorsFr() {
             moins chers, plus faciles à alimenter et à entretenir que tout ce que porte un animal – un bon point de
             départ.
           </p>
+
+          <figure>
+            <Image
+              src="/blog/livestock-monitoring-sensors/diagram-fr.svg"
+              alt="Schéma : les capteurs sur l'animal (position GNSS, activité, RFID) et sur les équipements (niveau d'eau, barrières et clôtures, météo) transmettent leurs données via une passerelle ou un réseau vers un tableau de bord avec alertes"
+              width={960}
+              height={640}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Deux familles de capteurs, un seul chemin : de l&apos;animal ou des équipements, via une passerelle ou un réseau, jusqu&apos;au tableau de bord et aux alertes.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Capteurs portés par l&apos;animal

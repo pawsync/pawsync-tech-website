@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "An engineering look at virtual fencing for livestock: how a collar knows where the boundary is, how audio and electrical cues are sequenced, and what limits battery life.",
   alternates: buildAlternates("en", "blog/virtual-fencing-collars"),
-  openGraph: buildOpenGraph("en", "blog/virtual-fencing-collars"),
+  openGraph: buildOpenGraph("en", "blog/virtual-fencing-collars", {
+    url: "/blog/virtual-fencing-collars/og.png",
+    alt: "Illustration of cattle wearing GNSS collars approaching a virtual fence line, with a satellite overhead",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/virtual-fencing-collars",
   headline: "How Virtual Fencing Collars Work: GNSS, Cues and Power Design",
   description: metadata.description ?? "",
+  image: "/blog/virtual-fencing-collars/og.png",
 });
 
 export default function BlogArticleVirtualFencingCollars() {
@@ -40,6 +46,15 @@ export default function BlogArticleVirtualFencingCollars() {
           work — knowing where the animal is, deciding when to warn it, and doing that for months on one
           battery — has to happen inside a collar that lives outdoors on a moving animal.
         </p>
+        <Image
+          src="/blog/virtual-fencing-collars/hero.svg"
+          alt="Illustration of cattle wearing GNSS collars approaching a virtual fence line, with a satellite overhead"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -141,6 +156,20 @@ export default function BlogArticleVirtualFencingCollars() {
               blocked from returning by cues on the wrong side.
             </li>
           </ul>
+
+          <figure>
+            <Image
+              src="/blog/virtual-fencing-collars/diagram-en.svg"
+              alt="Diagram of a paddock with a virtual boundary and warning zone: 1 audio tone when the animal enters the warning zone, 2 a short pulse only if it keeps walking, 3 cues stop when it turns back"
+              width={960}
+              height={600}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              The cue sequence: sound first, a pulse only if the animal keeps going, and nothing once it turns back.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Power: the constraint behind every other decision

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "The IoT hardware development process step by step: requirements, proof of concept, EVT, DVT and PVT builds, and CE, UKCA and FCC certification for connected devices.",
   alternates: buildAlternates("en", "blog/iot-hardware-development-process"),
-  openGraph: buildOpenGraph("en", "blog/iot-hardware-development-process"),
+  openGraph: buildOpenGraph("en", "blog/iot-hardware-development-process", {
+    url: "/blog/iot-hardware-development-process/og.png",
+    alt: "Illustration of a connected device's development: a proof-of-concept board, a custom PCB and the finished device in its enclosure",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/iot-hardware-development-process/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/iot-hardware-development-process",
   headline: "From Prototype to Production: The IoT Hardware Development Process",
   description: metadata.description ?? "",
+  image: "/blog/iot-hardware-development-process/og.png",
 });
 
 export default function BlogArticleIotHardwareDevelopment() {
@@ -40,6 +46,15 @@ export default function BlogArticleIotHardwareDevelopment() {
           the way to a product that can be built in volume, certified and sold. This is what the remaining
           stages are for, and why skipping them tends to cost more than it saves.
         </p>
+        <Image
+          src="/blog/iot-hardware-development-process/hero.svg"
+          alt="Illustration of a connected device's development: a proof-of-concept board, a custom PCB and the finished device in its enclosure"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -59,6 +74,20 @@ export default function BlogArticleIotHardwareDevelopment() {
             <li><strong>PVT</strong> (production validation test) — can the factory build it reliably at volume?</li>
             <li><strong>Mass production</strong> — ramp-up, with field feedback flowing back into the design.</li>
           </ol>
+
+          <figure>
+            <Image
+              src="/blog/iot-hardware-development-process/diagram-en.svg"
+              alt="Diagram of the six stages: 1 requirements, 2 proof of concept, 3 prototype, 4 EVT, 5 DVT with CE, UKCA and FCC certification, 6 PVT, with firmware developed alongside every stage"
+              width={960}
+              height={760}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              The six stages from idea to production, with certification in DVT and firmware running alongside.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             1. Requirements: the cheapest place to change your mind

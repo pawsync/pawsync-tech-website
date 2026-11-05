@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Mesurer l'ambiance d'un bâtiment avicole : types de capteurs d'ammoniac, de CO₂ et d'humidité, installation à hauteur des animaux, étalonnage, dérive, poussière et lavage.",
   alternates: buildAlternates("fr", "blog/poultry-house-air-quality-sensors"),
-  openGraph: buildOpenGraph("fr", "blog/poultry-house-air-quality-sensors"),
+  openGraph: buildOpenGraph("fr", "blog/poultry-house-air-quality-sensors", {
+    url: "/blog/poultry-house-air-quality-sensors/og.png",
+    alt: "Coupe illustrée d'un bâtiment avicole avec volailles sur litière, capteurs d'ammoniac, de CO₂ et d'humidité à hauteur des animaux, entrées d'air et ventilateur",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/poultry-house-air-quality-sensors/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/poultry-house-air-quality-sensors",
   headline: "Capteurs d'ammoniac, de CO₂ et d'humidité en bâtiment avicole : installation, étalonnage et dérive",
   description: metadata.description ?? "",
+  image: "/blog/poultry-house-air-quality-sensors/og.png",
 });
 
 export default function BlogArticlePoultryAirQualitySensorsFr() {
@@ -41,6 +47,15 @@ export default function BlogArticlePoultryAirQualitySensorsFr() {
           l&apos;humidité et à l&apos;air chargé d&apos;ammoniac – et un capteur qui dérive sans qu&apos;on le
           sache est pire que pas de capteur du tout.
         </p>
+        <Image
+          src="/blog/poultry-house-air-quality-sensors/hero.svg"
+          alt="Coupe illustrée d'un bâtiment avicole avec volailles sur litière, capteurs d'ammoniac, de CO₂ et d'humidité à hauteur des animaux, entrées d'air et ventilateur"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -141,6 +156,20 @@ export default function BlogArticlePoultryAirQualitySensorsFr() {
             </Link>
             .
           </p>
+
+          <figure>
+            <Image
+              src="/blog/poultry-house-air-quality-sensors/diagram-fr.svg"
+              alt="Schéma d'installation des capteurs en bâtiment avicole : à hauteur des animaux côté entrées, au milieu et côté ventilateurs, les mesures sont représentatives ; près du plafond ou devant une entrée d'air, elles sont trompeuses"
+              width={960}
+              height={600}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Mesurer là où sont les animaux : plusieurs points à hauteur des animaux le long du bâtiment, loin des entrées d&apos;air, des ventilateurs et du plafond.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Poussière et lavage : concevoir pour le vide sanitaire

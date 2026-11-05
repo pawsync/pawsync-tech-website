@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import ArticleDate from "@/components/terrasense/ArticleDate";
@@ -13,7 +14,11 @@ export const metadata: Metadata = {
   description:
     "Virtuelle Zäune für Weidetiere technisch erklärt: GNSS-Geofencing im Halsband, Abfolge von Ton- und Stromsignal, Energiebedarf – und die Rechtslage in Deutschland und Österreich.",
   alternates: buildAlternates("de", "blog/virtual-fencing-collars"),
-  openGraph: buildOpenGraph("de", "blog/virtual-fencing-collars"),
+  openGraph: buildOpenGraph("de", "blog/virtual-fencing-collars", {
+    url: "/blog/virtual-fencing-collars/og.png",
+    alt: "Illustration: Rinder mit GNSS-Halsbändern nähern sich einer virtuellen Zaunlinie, darüber ein Satellit",
+  }),
+  twitter: { card: "summary_large_image", images: ["/blog/virtual-fencing-collars/og.png"] },
 };
 
 const articleJsonLd = blogPostingJsonLd({
@@ -21,6 +26,7 @@ const articleJsonLd = blogPostingJsonLd({
   route: "blog/virtual-fencing-collars",
   headline: "Virtueller Weidezaun: Wie GNSS-Halsbänder funktionieren – Technik, Signale und Energie",
   description: metadata.description ?? "",
+  image: "/blog/virtual-fencing-collars/og.png",
 });
 
 export default function BlogArticleVirtualFencingCollarsDe() {
@@ -40,6 +46,15 @@ export default function BlogArticleVirtualFencingCollarsDe() {
           ist – die Position des Tieres kennen, rechtzeitig warnen und das monatelang mit einem Akku – muss in
           einem Halsband passieren, das draußen an einem Tier in Bewegung hängt.
         </p>
+        <Image
+          src="/blog/virtual-fencing-collars/hero.svg"
+          alt="Illustration: Rinder mit GNSS-Halsbändern nähern sich einer virtuellen Zaunlinie, darüber ein Satellit"
+          width={1200}
+          height={600}
+          priority
+          unoptimized
+          className="mt-8 h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+        />
 
         <div className="prose-content mt-8 space-y-6 text-base leading-relaxed text-[var(--ts-navy)]">
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
@@ -126,6 +141,20 @@ export default function BlogArticleVirtualFencingCollarsDe() {
             <li><strong>Protokollierung</strong> jedes Tons und Impulses mit Zeit und Ort, damit Häufigkeit und schlecht gesetzte Grenzen sichtbar werden.</li>
             <li><strong>Rückkehrregel</strong> – ein Tier jenseits der Grenze wird zurückgeführt, nicht an der Rückkehr gehindert.</li>
           </ul>
+
+          <figure>
+            <Image
+              src="/blog/virtual-fencing-collars/diagram-de.svg"
+              alt="Diagramm einer Weide mit virtueller Grenze und Warnzone: 1 Tonsignal beim Betreten der Warnzone, 2 kurzer Impuls nur, wenn das Tier weiterläuft, 3 kehrt es um, enden die Signale"
+              width={960}
+              height={600}
+              unoptimized
+              className="h-auto w-full rounded-2xl border border-[var(--ts-navy)]/8"
+            />
+            <figcaption className="mt-3 text-center text-sm text-[var(--ts-gray)]">
+              Die Signalfolge im Prinzip: erst Ton, ein Impuls nur, wenn das Tier weiterläuft, und nichts mehr, sobald es umkehrt.
+            </figcaption>
+          </figure>
 
           <h2 className="font-[family-name:var(--font-manrope)] text-xl font-bold text-[var(--ts-navy)]">
             Energie: die Grenze hinter allen anderen Entscheidungen
