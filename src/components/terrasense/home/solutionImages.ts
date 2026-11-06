@@ -1,9 +1,14 @@
 import type { Locale } from "@/i18n/config";
 
-/** Card media for the eight compact homepage solution cards (EN/DE/FR share the same images). */
-export type SolutionMedia = { src: string; alt: string } | "panel";
+/**
+ * Card media for the eight compact homepage solution cards (EN/DE/FR share the same images).
+ * Images are 800x400 (2:1) files in public/home/solutions/ and are shown whole at every screen size.
+ * Optional `position` (CSS object-position, e.g. "50% 30%") picks which part stays in view if the
+ * strip's shape is ever changed; the default is the centre.
+ */
+export type SolutionMedia = { src: string; alt: string; position?: string } | "panel";
 
-const images: Record<string, { file: string; alt: Record<Locale, string> }> = {
+const images: Record<string, { file: string; alt: Record<Locale, string>; position?: string }> = {
   "/virtual-fencing": {
     file: "virtual-fencing",
     alt: {
@@ -52,6 +57,14 @@ const images: Record<string, { file: string; alt: Record<Locale, string> }> = {
       fr: "Sonde d'humidité du sol, goutte-à-goutte et vanne d'irrigation dans une parcelle",
     },
   },
+  "/solutions#safety-detection": {
+    file: "emergency",
+    alt: {
+      en: "Weather station and sensor enclosure with a warning symbol on a pole above a valley town",
+      de: "Wetterstation und Sensorgehäuse mit Warnsymbol an einem Mast über einem Ort im Tal",
+      fr: "Station météo et boîtier de capteurs avec un symbole d'alerte sur un mât au-dessus d'une ville dans la vallée",
+    },
+  },
   "/custom-electronics": {
     file: "custom-iot",
     alt: {
@@ -67,5 +80,5 @@ export function getSolutionMedia(href: string, locale: Locale): SolutionMedia {
   const key = href.replace(/^\/(de|fr)(?=\/)/, "");
   const entry = images[key];
   if (!entry) return "panel";
-  return { src: `/home/solutions/${entry.file}.webp`, alt: entry.alt[locale] };
+  return { src: `/home/solutions/${entry.file}.webp`, alt: entry.alt[locale], position: entry.position };
 }

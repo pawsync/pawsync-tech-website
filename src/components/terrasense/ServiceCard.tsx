@@ -11,7 +11,7 @@ interface ServiceCardProps {
   href?: string;
   locale?: Locale;
   /** Optional strip across the top of the card: a photo, or a styled icon panel when no photo exists. */
-  media?: { src: string; alt: string } | "panel";
+  media?: { src: string; alt: string; position?: string } | "panel";
 }
 
 const learnMoreLabels: Record<Locale, string> = {
@@ -28,7 +28,7 @@ export default function ServiceCard({ id, icon: Icon, title, description, href, 
         className="absolute inset-x-0 top-0 z-10 h-[3px] scale-x-0 rounded-t-2xl bg-gradient-to-r from-[var(--ts-green)] to-[var(--ts-accent)] transition-transform duration-300 origin-left group-hover:scale-x-100"
       />
       {media && (
-        <div className="relative -mx-6 -mt-6 h-36 overflow-hidden">
+        <div className="relative -mx-6 -mt-6 aspect-[2/1] overflow-hidden">
           {media === "panel" ? (
             <div aria-hidden="true" className="flex h-full items-center justify-center bg-gradient-to-br from-[var(--ts-dark-green)] to-[var(--ts-navy)]">
               <div
@@ -47,6 +47,7 @@ export default function ServiceCard({ id, icon: Icon, title, description, href, 
               alt={media.alt}
               fill
               sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 92vw"
+              style={media.position ? { objectPosition: media.position } : undefined}
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
           )}
