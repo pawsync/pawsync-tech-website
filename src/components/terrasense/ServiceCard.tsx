@@ -11,7 +11,7 @@ interface ServiceCardProps {
   href?: string;
   locale?: Locale;
   /** Optional strip across the top of the card: a photo, or a styled icon panel when no photo exists. */
-  media?: { src: string; alt: string; position?: string } | "panel";
+  media?: { src: string; alt: string; position?: string; fit?: "cover" | "contain" } | "panel";
 }
 
 const learnMoreLabels: Record<Locale, string> = {
@@ -48,16 +48,20 @@ export default function ServiceCard({ id, icon: Icon, title, description, href, 
               fill
               sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 92vw"
               style={media.position ? { objectPosition: media.position } : undefined}
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className={
+                media.fit === "contain"
+                  ? "bg-[var(--ts-navy)]/[0.03] object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                  : "object-cover transition-transform duration-500 group-hover:scale-105"
+              }
             />
           )}
         </div>
       )}
       <div
         className={`flex h-12 w-12 items-center justify-center rounded-xl ring-1 ring-inset ring-[var(--ts-dark-green)]/10 transition-transform duration-300 group-hover:scale-110 ${
-          media
+          media && !(media !== "panel" && media.fit === "contain")
             ? "relative -mt-6 bg-white shadow-[0_6px_16px_-6px_rgba(14,27,38,0.3)]"
-            : "bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10"
+            : `${media ? "mt-5 " : ""}bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10`
         }`}
       >
         <Icon className="h-6 w-6 text-[var(--ts-dark-green)]" aria-hidden="true" />

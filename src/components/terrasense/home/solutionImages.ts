@@ -2,11 +2,12 @@ import type { Locale } from "@/i18n/config";
 
 /**
  * Card media for the eight compact homepage solution cards (EN/DE/FR share the same images).
- * Images are 800x400 (2:1) files in public/home/solutions/ and are shown whole at every screen size.
- * Optional `position` (CSS object-position, e.g. "50% 30%") picks which part stays in view if the
- * strip's shape is ever changed; the default is the centre.
+ * Images are the owner-supplied infographics, uncropped (1200px wide, *-full.webp in public/home/solutions/).
+ * They are shown whole inside a 2:1 frame (`fit: "contain"`) at every screen size.
+ * Optional `position` (CSS object-position, e.g. "50% 30%") aligns the image inside the frame;
+ * the default is the centre.
  */
-export type SolutionMedia = { src: string; alt: string; position?: string } | "panel";
+export type SolutionMedia = { src: string; alt: string; position?: string; fit?: "cover" | "contain" } | "panel";
 
 const images: Record<string, { file: string; alt: Record<Locale, string>; position?: string }> = {
   "/virtual-fencing": {
@@ -80,5 +81,5 @@ export function getSolutionMedia(href: string, locale: Locale): SolutionMedia {
   const key = href.replace(/^\/(de|fr)(?=\/)/, "");
   const entry = images[key];
   if (!entry) return "panel";
-  return { src: `/home/solutions/${entry.file}.webp`, alt: entry.alt[locale], position: entry.position };
+  return { src: `/home/solutions/${entry.file}-full.webp`, alt: entry.alt[locale], position: entry.position, fit: "contain" };
 }
