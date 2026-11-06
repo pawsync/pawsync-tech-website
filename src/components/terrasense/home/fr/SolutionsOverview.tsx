@@ -19,6 +19,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import ServiceCard from "@/components/terrasense/ServiceCard";
+import { getSolutionMedia } from "@/components/terrasense/home/solutionImages";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 
 const smallerSolutions: { icon: LucideIcon; title: string; description: string; href: string }[] = [
@@ -210,7 +211,7 @@ export default function SolutionsOverview() {
           resolves evenly at every desktop width */}
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {smallerSolutions.map((solution) => (
-          <ServiceCard key={solution.title} locale="fr" {...solution} />
+          <ServiceCard key={solution.title} locale="fr" {...solution} media={getSolutionMedia(solution.href, "fr")} />
         ))}
       </div>
     </section>
