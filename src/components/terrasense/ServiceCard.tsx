@@ -10,8 +10,11 @@ interface ServiceCardProps {
   description: string;
   href?: string;
   locale?: Locale;
-  /** Optional strip across the top of the card: a photo, or a styled icon panel when no photo exists. */
-  media?: { src: string; alt: string; position?: string; fit?: "cover" | "contain" } | "panel";
+  /**
+   * Optional media across the top of the card: an image shown whole at its own shape
+   * (width/height are its intrinsic size), or a styled icon panel when no image exists.
+   */
+  media?: { src: string; alt: string; width: number; height: number } | "panel";
 }
 
 const learnMoreLabels: Record<Locale, string> = {
@@ -28,7 +31,7 @@ export default function ServiceCard({ id, icon: Icon, title, description, href, 
         className="absolute inset-x-0 top-0 z-10 h-[3px] scale-x-0 rounded-t-2xl bg-gradient-to-r from-[var(--ts-green)] to-[var(--ts-accent)] transition-transform duration-300 origin-left group-hover:scale-x-100"
       />
       {media && (
-        <div className="relative -mx-6 -mt-6 aspect-[2/1] overflow-hidden">
+        <div className={`relative -mx-6 -mt-6 overflow-hidden ${media === "panel" ? "aspect-[2/1]" : ""}`}>
           {media === "panel" ? (
             <div aria-hidden="true" className="flex h-full items-center justify-center bg-gradient-to-br from-[var(--ts-dark-green)] to-[var(--ts-navy)]">
               <div
@@ -45,21 +48,17 @@ export default function ServiceCard({ id, icon: Icon, title, description, href, 
             <Image
               src={media.src}
               alt={media.alt}
-              fill
+              width={media.width}
+              height={media.height}
               sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 92vw"
-              style={media.position ? { objectPosition: media.position } : undefined}
-              className={
-                media.fit === "contain"
-                  ? "bg-[var(--ts-navy)]/[0.03] object-contain transition-transform duration-500 group-hover:scale-[1.02]"
-                  : "object-cover transition-transform duration-500 group-hover:scale-105"
-              }
+              className="block h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
             />
           )}
         </div>
       )}
       <div
         className={`flex h-12 w-12 items-center justify-center rounded-xl ring-1 ring-inset ring-[var(--ts-dark-green)]/10 transition-transform duration-300 group-hover:scale-110 ${
-          media && !(media !== "panel" && media.fit === "contain")
+          media === "panel"
             ? "relative -mt-6 bg-white shadow-[0_6px_16px_-6px_rgba(14,27,38,0.3)]"
             : `${media ? "mt-5 " : ""}bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10`
         }`}
