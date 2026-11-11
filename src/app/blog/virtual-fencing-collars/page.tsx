@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Virtual Fencing Collars: GNSS, Cues & Power | PawSync",
   description:
-    "An engineering look at virtual fencing for livestock: how a collar knows where the boundary is, how audio and electrical cues are sequenced, and what limits battery life.",
+    "An engineering look at virtual fencing for livestock: how a collar knows the boundary, how audio and electric cues are sequenced, what limits battery life.",
   alternates: buildAlternates("en", "blog/virtual-fencing-collars"),
   openGraph: buildOpenGraph("en", "blog/virtual-fencing-collars", {
     url: "/blog/virtual-fencing-collars/og.jpg",

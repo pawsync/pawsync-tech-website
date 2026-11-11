@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "LoRaWAN agricole : planifier le réseau | PawSync",
   description:
-    "Planifier un réseau LoRaWAN agricole : emplacement et hauteur de la passerelle, portée réaliste, bande EU868 et rapport cyclique, autonomie des capteurs, réseau public ou privé.",
+    "Planifier un réseau LoRaWAN agricole : emplacement et hauteur de la passerelle, portée réaliste, EU868, rapport cyclique, autonomie, réseau public/privé.",
   alternates: buildAlternates("fr", "blog/lorawan-farm-network-planning"),
   openGraph: buildOpenGraph("fr", "blog/lorawan-farm-network-planning", {
     url: "/blog/lorawan-farm-network-planning/og-fr.jpg",

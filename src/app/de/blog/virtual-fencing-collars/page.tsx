@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Virtueller Weidezaun: So funktionieren die Halsbänder | PawSync",
   description:
-    "Virtuelle Zäune für Weidetiere technisch erklärt: GNSS-Geofencing im Halsband, Abfolge von Ton- und Stromsignal, Energiebedarf – und die Rechtslage in Deutschland und Österreich.",
+    "Virtuelle Zäune für Weidetiere technisch erklärt: GNSS-Geofencing im Halsband, Ton- und Stromsignal, Energiebedarf und Rechtslage in DE und AT.",
   alternates: buildAlternates("de", "blog/virtual-fencing-collars"),
   openGraph: buildOpenGraph("de", "blog/virtual-fencing-collars", {
     url: "/blog/virtual-fencing-collars/og-de.jpg",
