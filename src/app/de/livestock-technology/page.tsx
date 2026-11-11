@@ -214,7 +214,13 @@ export default function LivestockTechnologyPageDe() {
             dimensionieren den Akku passend zu Ihrem Meldeintervall. Wo es hilft,
             auffällige Tiere zu erkennen, können Aktivitätsdaten ergänzt werden.
             Jedes Design wird auf Ihre Herde, Ihr Gelände und Ihre Infrastruktur
-            zugeschnitten und vor der Produktion als Prototyp validiert.
+            zugeschnitten und vor der Produktion als Prototyp validiert. Welche
+            Sensoren was messen und wie sie versorgt und vernetzt werden, zeigt
+            unser{" "}
+            <Link href="/de/blog/livestock-monitoring-sensors" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              Leitfaden zu Sensoren für Weidetiere
+            </Link>
+            .
           </p>
         </div>
       </section>

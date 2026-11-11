@@ -60,6 +60,10 @@ export default function VirtualFencingPageFr() {
           <Link href="/fr/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             surveillance du bétail à distance
           </Link>
+          . La technique du collier est détaillée dans notre{" "}
+          <Link href="/fr/blog/virtual-fencing-collars" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            article sur la clôture virtuelle
+          </Link>
           .
         </p>
       </section>

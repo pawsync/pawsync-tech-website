@@ -213,7 +213,11 @@ export default function LivestockTechnologyPage() {
             interval. Activity data can be added where it helps flag animals
             that need attention. Each design is scoped to your herd, terrain,
             and infrastructure, and validated as a prototype before
-            production.
+            production. Our{" "}
+            <Link href="/blog/livestock-monitoring-sensors" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              livestock monitoring sensors guide
+            </Link>{" "}
+            explains what each sensor measures and how it is powered and connected.
           </p>
         </div>
       </section>
