@@ -26,6 +26,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import PagePhoto from "@/components/terrasense/PagePhoto";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import FarmMapDashboard from "@/components/terrasense/FarmMapDashboard";
@@ -156,6 +157,8 @@ export default function LivestockTechnologyPageDe() {
           Schafe, Ziegen und Pferde auf dem Betrieb.
         </p>
       </section>
+
+      <PagePhoto name="pasture-connectivity" locale="de" />
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <FarmMapDashboard locale="de" />

@@ -14,6 +14,7 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import PagePhoto from "@/components/terrasense/PagePhoto";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import ServiceScope, { type ServiceScopeCopy } from "@/components/terrasense/ServiceScope";
 import ServiceCard from "@/components/terrasense/ServiceCard";
@@ -147,6 +148,8 @@ export default function PetTechnologyPageDe() {
           Start-ups der Haustiertechnologie, Tierheime und Gerätehersteller gleichermaßen.
         </p>
       </section>
+
+      <PagePhoto name="pet-tracker-prototype" locale="de" />
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

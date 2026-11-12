@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CheckCircle2 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
 import Eyebrow from "@/components/terrasense/Eyebrow";
+import { StagePhoto } from "@/components/terrasense/PagePhoto";
 import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
@@ -61,6 +62,7 @@ export default function HowWeWorkPage() {
                 {stage.title}
               </h2>
               <p className="mt-1.5 text-sm leading-relaxed text-[var(--ts-gray)]">{stage.description}</p>
+              <StagePhoto index={index} locale="en" />
             </li>
           ))}
         </ol>

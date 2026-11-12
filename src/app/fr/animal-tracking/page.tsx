@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import PagePhoto from "@/components/terrasense/PagePhoto";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import ServiceScope, { type ServiceScopeCopy } from "@/components/terrasense/ServiceScope";
 import ServiceCard from "@/components/terrasense/ServiceCard";
@@ -151,6 +152,8 @@ export default function AnimalTrackingPageFr() {
           d&apos;elle.
         </p>
       </section>
+
+      <PagePhoto name="tracking-interface" locale="fr" />
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <FarmMapDashboard locale="fr" />

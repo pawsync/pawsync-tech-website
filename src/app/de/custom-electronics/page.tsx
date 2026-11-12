@@ -17,6 +17,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import PagePhoto from "@/components/terrasense/PagePhoto";
 import ServiceCard from "@/components/terrasense/ServiceCard";
 import FAQAccordion, { type FAQItem } from "@/components/terrasense/FAQAccordion";
 import CTABanner from "@/components/terrasense/CTABanner";
@@ -182,6 +183,8 @@ export default function CustomElectronicsPageDe() {
           .
         </p>
       </section>
+
+      <PagePhoto name="power-battery-design" locale="de" />
 
       <section id="services" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
