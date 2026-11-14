@@ -11,6 +11,7 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import Breadcrumb from "@/components/terrasense/Breadcrumb";
+import PagePhoto from "@/components/terrasense/PagePhoto";
 import Eyebrow from "@/components/terrasense/Eyebrow";
 import ServiceScope, { type ServiceScopeCopy } from "@/components/terrasense/ServiceScope";
 import ServiceCard from "@/components/terrasense/ServiceCard";
@@ -150,6 +151,8 @@ export default function SmartFeedingPageFr() {
           distance pour animaux de compagnie, bétail et sites multi-animaux.
         </p>
       </section>
+
+      <PagePhoto name="rfid-feeder" locale="fr" />
 
       {/* Flow diagram */}
       <section className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
