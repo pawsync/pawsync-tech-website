@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Clôture virtuelle : comment marchent les colliers | PawSync",
   description:
-    "La clôture virtuelle pour le bétail expliquée côté ingénierie : géorepérage GNSS dans le collier, séquence signal sonore puis impulsion, autonomie de la batterie et cadre réglementaire.",
+    "La clôture virtuelle pour le bétail côté ingénierie : géorepérage GNSS dans le collier, signal sonore puis impulsion, autonomie et cadre réglementaire.",
   alternates: buildAlternates("fr", "blog/virtual-fencing-collars"),
   openGraph: buildOpenGraph("fr", "blog/virtual-fencing-collars", {
     url: "/blog/virtual-fencing-collars/og-fr.jpg",

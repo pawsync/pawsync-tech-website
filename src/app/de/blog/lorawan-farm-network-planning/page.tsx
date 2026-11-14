@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "LoRaWAN in der Landwirtschaft: Hof-Funknetz planen | PawSync",
   description:
-    "LoRaWAN für den landwirtschaftlichen Betrieb planen: Gateway-Standort und Höhe, realistische Reichweite, EU868 und Duty Cycle, Batterielaufzeit sowie privates oder öffentliches Netz.",
+    "LoRaWAN für den Betrieb planen: Gateway-Standort und Höhe, realistische Reichweite, EU868 und Duty Cycle, Batterielaufzeit, privates/öffentliches Netz.",
   alternates: buildAlternates("de", "blog/lorawan-farm-network-planning"),
   openGraph: buildOpenGraph("de", "blog/lorawan-farm-network-planning", {
     url: "/blog/lorawan-farm-network-planning/og-de.jpg",

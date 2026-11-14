@@ -16,7 +16,7 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Über uns | PawSync",
+  title: "Über PawSync | Elektronik für Tierhaltung & Landwirtschaft",
   description:
     "PawSync verbindet Elektronik, Embedded-Systeme, Sensorik und IoT-Konnektivität zu praxisnaher Technologie für Tierhaltung und Landwirtschaft.",
   alternates: buildAlternates("de", "about"),

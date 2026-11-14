@@ -60,7 +60,11 @@ export default function VirtualFencingPage() {
           <Link href="/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             remote livestock monitoring
           </Link>{" "}
-          work.
+          work. The engineering behind the collar is covered in our{" "}
+          <Link href="/blog/virtual-fencing-collars" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            virtual fencing collar guide
+          </Link>
+          .
         </p>
       </section>
 

@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "IoT Hardware Development: Prototype to Production | PawSync",
   description:
-    "The IoT hardware development process step by step: requirements, proof of concept, EVT, DVT and PVT builds, and CE, UKCA and FCC certification for connected devices.",
+    "The IoT hardware development process step by step: requirements, proof of concept, EVT, DVT and PVT builds, and CE, UKCA and FCC certification.",
   alternates: buildAlternates("en", "blog/iot-hardware-development-process"),
   openGraph: buildOpenGraph("en", "blog/iot-hardware-development-process", {
     url: "/blog/iot-hardware-development-process/og.jpg",

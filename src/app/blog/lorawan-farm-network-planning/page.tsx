@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "LoRaWAN for Agriculture: Planning a Farm Network | PawSync",
   description:
-    "How to plan a LoRaWAN network for a farm: gateway placement and height, realistic range, EU868 vs. US915, airtime limits, battery life and public vs. private networks.",
+    "How to plan a LoRaWAN network for a farm: gateway placement and height, realistic range, EU868 vs. US915, airtime limits, battery life, public vs. private.",
   alternates: buildAlternates("en", "blog/lorawan-farm-network-planning"),
   openGraph: buildOpenGraph("en", "blog/lorawan-farm-network-planning", {
     url: "/blog/lorawan-farm-network-planning/og.jpg",

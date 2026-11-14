@@ -60,6 +60,10 @@ export default function VirtualFencingPageDe() {
           <Link href="/de/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
             Nutztier-Fernüberwachung
           </Link>
+          . Die Technik im Halsband erklärt unser{" "}
+          <Link href="/de/blog/virtual-fencing-collars" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+            Beitrag über virtuelle Weidezäune
+          </Link>
           .
         </p>
       </section>

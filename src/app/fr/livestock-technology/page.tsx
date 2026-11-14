@@ -216,6 +216,12 @@ export default function LivestockTechnologyPageFr() {
             ajoutées lorsqu&apos;elles aident à repérer les animaux à surveiller.
             Chaque conception est adaptée à votre troupeau, votre terrain et votre
             infrastructure, et validée sous forme de prototype avant la production.
+            Notre{" "}
+            <Link href="/fr/blog/livestock-monitoring-sensors" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
+              guide des capteurs pour le bétail
+            </Link>{" "}
+            explique ce que mesure chaque capteur et comment l&apos;alimenter et le
+            connecter.
           </p>
         </div>
       </section>

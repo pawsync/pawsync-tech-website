@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Livestock Monitoring Sensors: What Each One Measures | PawSync",
   description:
-    "A practical guide to livestock monitoring sensors — GPS, activity, water, gate and fence sensors — what each measures, how it is powered, and how to connect it on a ranch.",
+    "A practical guide to livestock monitoring sensors: GPS, activity, water, gate and fence sensors: what each measures, how it's powered and connected.",
   alternates: buildAlternates("en", "blog/livestock-monitoring-sensors"),
   openGraph: buildOpenGraph("en", "blog/livestock-monitoring-sensors", {
     url: "/blog/livestock-monitoring-sensors/og.jpg",

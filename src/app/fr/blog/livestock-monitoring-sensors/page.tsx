@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Capteurs pour le suivi du bétail : le guide pratique | PawSync",
   description:
-    "Quels capteurs pour le suivi à distance du bétail ? GPS, activité, RFID, abreuvoirs, barrières et clôtures électriques : ce qu'ils mesurent, comment les alimenter et les connecter.",
+    "Capteurs pour le suivi à distance du bétail : GPS, activité, RFID, abreuvoirs, barrières, clôtures électriques – ce qu'ils mesurent et comment les relier.",
   alternates: buildAlternates("fr", "blog/livestock-monitoring-sensors"),
   openGraph: buildOpenGraph("fr", "blog/livestock-monitoring-sensors", {
     url: "/blog/livestock-monitoring-sensors/og-fr.jpg",

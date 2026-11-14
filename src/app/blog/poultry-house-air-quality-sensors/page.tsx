@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Poultry House Ammonia, CO₂ & Humidity Sensors | PawSync",
   description:
-    "How ammonia, CO₂ and humidity sensors behave in poultry houses and sheds: sensor types, placement at bird height, calibration, drift and the dust and washdown problem.",
+    "How ammonia, CO₂ and humidity sensors behave in poultry houses: sensor types, placement at bird height, calibration, drift, dust and washdown.",
   alternates: buildAlternates("en", "blog/poultry-house-air-quality-sensors"),
   openGraph: buildOpenGraph("en", "blog/poultry-house-air-quality-sensors", {
     url: "/blog/poultry-house-air-quality-sensors/og.jpg",
