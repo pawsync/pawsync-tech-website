@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Capteurs NH₃, CO₂ et humidité en élevage avicole | PawSync",
   description:
-    "Mesurer l'ambiance d'un bâtiment avicole : types de capteurs d'ammoniac, de CO₂ et d'humidité, installation à hauteur des animaux, étalonnage, dérive, poussière et lavage.",
+    "Mesurer l'ambiance d'un bâtiment avicole : capteurs d'ammoniac, de CO₂ et d'humidité, pose à hauteur des animaux, étalonnage, dérive, poussière, lavage.",
   alternates: buildAlternates("fr", "blog/poultry-house-air-quality-sensors"),
   openGraph: buildOpenGraph("fr", "blog/poultry-house-air-quality-sensors", {
     url: "/blog/poultry-house-air-quality-sensors/og-fr.jpg",

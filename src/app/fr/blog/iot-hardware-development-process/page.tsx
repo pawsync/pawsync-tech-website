@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Développement de produit IoT : du prototype à la série | PawSync",
   description:
-    "Les étapes du développement d'un produit électronique IoT : cahier des charges, preuve de concept, EVT, DVT et PVT, marquage CE, directive RED et Cyber Resilience Act.",
+    "Développer un produit électronique IoT : cahier des charges, preuve de concept, EVT, DVT et PVT, marquage CE, directive RED et Cyber Resilience Act.",
   alternates: buildAlternates("fr", "blog/iot-hardware-development-process"),
   openGraph: buildOpenGraph("fr", "blog/iot-hardware-development-process", {
     url: "/blog/iot-hardware-development-process/og-fr.jpg",

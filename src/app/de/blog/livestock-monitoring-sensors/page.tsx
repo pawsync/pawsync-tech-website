@@ -12,7 +12,7 @@ import { blogPostingJsonLd, serializeJsonLd } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "Sensoren für die Weidetier-Überwachung im Überblick | PawSync",
   description:
-    "Welche Sensoren eignen sich zur Fernüberwachung von Rindern und Weidetieren? GPS, Aktivität, RFID, Tränke, Tor und Weidezaun – was sie messen, wie sie versorgt und vernetzt werden.",
+    "Sensoren zur Fernüberwachung von Rindern und Weidetieren: GPS, Aktivität, RFID, Tränke, Tor und Weidezaun – was sie messen und wie sie vernetzt werden.",
   alternates: buildAlternates("de", "blog/livestock-monitoring-sensors"),
   openGraph: buildOpenGraph("de", "blog/livestock-monitoring-sensors", {
     url: "/blog/livestock-monitoring-sensors/og-de.jpg",

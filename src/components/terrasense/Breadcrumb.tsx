@@ -33,6 +33,8 @@ export default function Breadcrumb({ items, locale = "en" }: { items: Crumb[]; l
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    // Naming the list itself stops Search Console from labelling the trail "Unnamed item".
+    name: trail[trail.length - 1].name,
     itemListElement: trail.map((crumb, index) => ({
       "@type": "ListItem",
       position: index + 1,

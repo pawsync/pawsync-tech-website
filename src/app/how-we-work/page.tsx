@@ -7,7 +7,7 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "How We Work | PawSync",
+  title: "How We Work | IoT Hardware Engineering Process | PawSync",
   description:
     "Our engineering process from requirement analysis through production support — the stages every PawSync project moves through.",
   alternates: buildAlternates("en", "how-we-work"),
