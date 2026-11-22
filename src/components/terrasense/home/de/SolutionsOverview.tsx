@@ -39,7 +39,7 @@ const smallerSolutions: { icon: LucideIcon; title: string; description: string; 
     icon: HeartPulse,
     title: "Tiergesundheitsüberwachung",
     description: "Tragbare oder fest installierte Elektronik für Aktivität, Temperatur, Bewegung und tägliches Gesundheits-Tracking.",
-    href: "/de/solutions#health-monitoring",
+    href: "/de/animal-health-monitoring",
   },
   {
     icon: Activity,
@@ -57,13 +57,13 @@ const smallerSolutions: { icon: LucideIcon; title: string; description: string; 
     icon: Waves,
     title: "Intelligente Bewässerung & Wassermanagement",
     description: "Bodenfeuchtemessung, automatisierte Ventile und Pumpen sowie wetterabhängige Steuerung zur Optimierung des Wasserverbrauchs.",
-    href: "/de/solutions#smart-irrigation",
+    href: "/de/smart-irrigation",
   },
   {
     icon: AlertTriangle,
     title: "Notfall- & Gefahrenerkennung",
     description: "Frühwarnsysteme für extreme Hitze, Kälte, Rauch, Brandrisiko, Überflutung, Wasseraustritt und Geräteausfälle.",
-    href: "/de/solutions#safety-detection",
+    href: "/de/emergency-detection",
   },
   {
     icon: CircuitBoard,

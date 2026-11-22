@@ -35,13 +35,13 @@ const solutionsMenu: { key: string; href: string; icon: LucideIcon }[] = [
   { key: "animalTracking", href: "/animal-tracking", icon: Satellite },
   { key: "virtualFencing", href: "/virtual-fencing", icon: Radar },
   { key: "smartFeeding", href: "/smart-feeding", icon: UtensilsCrossed },
-  { key: "healthMonitoring", href: "/solutions#health-monitoring", icon: HeartPulse },
+  { key: "healthMonitoring", href: "/animal-health-monitoring", icon: HeartPulse },
   { key: "livestockMonitoring", href: "/livestock-technology", icon: Tractor },
   { key: "petTechnology", href: "/pet-technology", icon: Dog },
   { key: "poultryFarming", href: "/poultry-farming", icon: Bird },
   { key: "farmAutomation", href: "/farm-automation", icon: Settings2 },
   { key: "environmentalMonitoring", href: "/environmental-monitoring", icon: CloudRain },
-  { key: "safetyDetection", href: "/solutions#safety-detection", icon: AlertTriangle },
+  { key: "safetyDetection", href: "/emergency-detection", icon: AlertTriangle },
 ];
 
 const engineeringMenu: { key: string; href: string; icon: LucideIcon }[] = [

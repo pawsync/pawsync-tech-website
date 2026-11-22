@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
+  ArrowRight,
   AlertTriangle,
   CircuitBoard,
   CloudRain,
@@ -32,11 +34,13 @@ interface Category {
   title: string;
   description: string;
   points: string[];
+  href?: string;
 }
 
 const categories: Category[] = [
   {
     id: "tracking-location",
+    href: "/animal-tracking",
     icon: Satellite,
     title: "Tracking & Location",
     description:
@@ -45,6 +49,7 @@ const categories: Category[] = [
   },
   {
     id: "virtual-fencing",
+    href: "/virtual-fencing",
     icon: Radar,
     title: "Virtual Fencing",
     description:
@@ -53,6 +58,7 @@ const categories: Category[] = [
   },
   {
     id: "health-monitoring",
+    href: "/animal-health-monitoring",
     icon: HeartPulse,
     title: "Health Monitoring",
     description:
@@ -61,6 +67,7 @@ const categories: Category[] = [
   },
   {
     id: "smart-feeding",
+    href: "/smart-feeding",
     icon: UtensilsCrossed,
     title: "Smart Feeding",
     description:
@@ -69,6 +76,7 @@ const categories: Category[] = [
   },
   {
     id: "livestock-monitoring",
+    href: "/livestock-technology",
     icon: Activity,
     title: "Livestock Monitoring",
     description:
@@ -77,6 +85,7 @@ const categories: Category[] = [
   },
   {
     id: "farm-automation",
+    href: "/farm-automation",
     icon: Settings2,
     title: "Farm Automation",
     description:
@@ -85,6 +94,7 @@ const categories: Category[] = [
   },
   {
     id: "smart-irrigation",
+    href: "/smart-irrigation",
     icon: Waves,
     title: "Smart Irrigation & Water Management",
     description:
@@ -93,6 +103,7 @@ const categories: Category[] = [
   },
   {
     id: "environmental-monitoring",
+    href: "/environmental-monitoring",
     icon: CloudRain,
     title: "Environmental Monitoring",
     description:
@@ -101,6 +112,7 @@ const categories: Category[] = [
   },
   {
     id: "safety-detection",
+    href: "/emergency-detection",
     icon: AlertTriangle,
     title: "Safety & Disaster Detection",
     description:
@@ -117,6 +129,7 @@ const categories: Category[] = [
   },
   {
     id: "custom-iot",
+    href: "/custom-electronics",
     icon: CircuitBoard,
     title: "Custom IoT Systems",
     description:
@@ -175,6 +188,15 @@ export default function SolutionsPage() {
                   </li>
                 ))}
               </ul>
+              {category.href && (
+                <Link
+                  href={category.href}
+                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-[var(--ts-dark-green)] hover:underline"
+                >
+                  Learn more<span className="sr-only">: {category.title}</span>
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              )}
             </article>
           ))}
         </div>

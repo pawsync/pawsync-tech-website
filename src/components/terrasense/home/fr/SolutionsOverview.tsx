@@ -39,7 +39,7 @@ const smallerSolutions: { icon: LucideIcon; title: string; description: string; 
     icon: HeartPulse,
     title: "Suivi de la santé animale",
     description: "Électronique portable ou installée pour le suivi de l'activité, de la température, des mouvements et de la santé au quotidien.",
-    href: "/fr/solutions#health-monitoring",
+    href: "/fr/animal-health-monitoring",
   },
   {
     icon: Activity,
@@ -57,13 +57,13 @@ const smallerSolutions: { icon: LucideIcon; title: string; description: string; 
     icon: Waves,
     title: "Irrigation intelligente et gestion de l'eau",
     description: "Mesure de l'humidité du sol, vannes et pompes automatisées, et programmation tenant compte de la météo pour optimiser la consommation d'eau.",
-    href: "/fr/solutions#smart-irrigation",
+    href: "/fr/smart-irrigation",
   },
   {
     icon: AlertTriangle,
     title: "Détection d'urgence et de risques",
     description: "Systèmes d'alerte précoce pour la chaleur extrême, le froid, la fumée, le risque d'incendie, les inondations, les fuites d'eau et les pannes d'équipement.",
-    href: "/fr/solutions#safety-detection",
+    href: "/fr/emergency-detection",
   },
   {
     icon: CircuitBoard,

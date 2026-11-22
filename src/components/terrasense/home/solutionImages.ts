@@ -28,7 +28,7 @@ const images: Record<string, { file: string; height: number; alt: Record<Locale,
       fr: "Infographie distributeur intelligent : chien et chat à côté d'un distributeur avec vue en coupe du doseur et de la carte de commande",
     },
   },
-  "/solutions#health-monitoring": {
+  "/animal-health-monitoring": {
     file: "animal-health",
     height: 675,
     alt: {
@@ -55,7 +55,7 @@ const images: Record<string, { file: string; height: number; alt: Record<Locale,
       fr: "Infographie suivi avicole : bâtiment avicole avec nœud de capteurs d'ambiance, suivi de l'aliment et de l'eau et passerelle LoRa",
     },
   },
-  "/solutions#smart-irrigation": {
+  "/smart-irrigation": {
     file: "irrigation",
     height: 613,
     alt: {
@@ -64,7 +64,7 @@ const images: Record<string, { file: string; height: number; alt: Record<Locale,
       fr: "Infographie irrigation intelligente : contrôleur solaire, sonde d'humidité du sol, électrovanne et débitmètre dans une parcelle",
     },
   },
-  "/solutions#safety-detection": {
+  "/emergency-detection": {
     file: "emergency",
     height: 613,
     alt: {
