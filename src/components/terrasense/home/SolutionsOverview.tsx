@@ -39,7 +39,7 @@ const smallerSolutions: { icon: LucideIcon; title: string; description: string; 
     icon: HeartPulse,
     title: "Animal Health Monitoring",
     description: "Wearable or installed electronics for activity, temperature, movement and daily health tracking.",
-    href: "/solutions#health-monitoring",
+    href: "/animal-health-monitoring",
   },
   {
     icon: Activity,
@@ -57,13 +57,13 @@ const smallerSolutions: { icon: LucideIcon; title: string; description: string; 
     icon: Waves,
     title: "Smart Irrigation & Water Management",
     description: "Soil-moisture sensing, automated valves and pumps, and weather-aware scheduling to optimize water usage.",
-    href: "/solutions#smart-irrigation",
+    href: "/smart-irrigation",
   },
   {
     icon: AlertTriangle,
     title: "Emergency & Disaster Detection",
     description: "Early-warning systems for extreme heat, cold, smoke, fire risk, flooding, water leakage and equipment failures.",
-    href: "/solutions#safety-detection",
+    href: "/emergency-detection",
   },
   {
     icon: CircuitBoard,

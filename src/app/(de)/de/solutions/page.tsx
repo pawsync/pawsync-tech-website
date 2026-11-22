@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
+  ArrowRight,
   AlertTriangle,
   CircuitBoard,
   CloudRain,
@@ -32,11 +34,13 @@ interface Category {
   title: string;
   description: string;
   points: string[];
+  href?: string;
 }
 
 const categories: Category[] = [
   {
     id: "tracking-location",
+    href: "/de/animal-tracking",
     icon: Satellite,
     title: "Tracking & Standort",
     description:
@@ -45,6 +49,7 @@ const categories: Category[] = [
   },
   {
     id: "virtual-fencing",
+    href: "/de/virtual-fencing",
     icon: Radar,
     title: "Virtuelle Einzäunung",
     description:
@@ -53,6 +58,7 @@ const categories: Category[] = [
   },
   {
     id: "health-monitoring",
+    href: "/de/animal-health-monitoring",
     icon: HeartPulse,
     title: "Gesundheitsüberwachung",
     description:
@@ -61,6 +67,7 @@ const categories: Category[] = [
   },
   {
     id: "smart-feeding",
+    href: "/de/smart-feeding",
     icon: UtensilsCrossed,
     title: "Intelligente Fütterung",
     description:
@@ -69,6 +76,7 @@ const categories: Category[] = [
   },
   {
     id: "livestock-monitoring",
+    href: "/de/livestock-technology",
     icon: Activity,
     title: "Nutztierüberwachung",
     description:
@@ -77,6 +85,7 @@ const categories: Category[] = [
   },
   {
     id: "farm-automation",
+    href: "/de/farm-automation",
     icon: Settings2,
     title: "Hofautomatisierung",
     description:
@@ -85,6 +94,7 @@ const categories: Category[] = [
   },
   {
     id: "smart-irrigation",
+    href: "/de/smart-irrigation",
     icon: Waves,
     title: "Intelligente Bewässerung & Wassermanagement",
     description:
@@ -93,6 +103,7 @@ const categories: Category[] = [
   },
   {
     id: "environmental-monitoring",
+    href: "/de/environmental-monitoring",
     icon: CloudRain,
     title: "Umweltüberwachung",
     description:
@@ -101,6 +112,7 @@ const categories: Category[] = [
   },
   {
     id: "safety-detection",
+    href: "/de/emergency-detection",
     icon: AlertTriangle,
     title: "Sicherheit & Gefahrenerkennung",
     description:
@@ -117,6 +129,7 @@ const categories: Category[] = [
   },
   {
     id: "custom-iot",
+    href: "/de/custom-electronics",
     icon: CircuitBoard,
     title: "Kundenspezifische IoT-Systeme",
     description:
@@ -175,6 +188,15 @@ export default function SolutionsPageDe() {
                   </li>
                 ))}
               </ul>
+              {category.href && (
+                <Link
+                  href={category.href}
+                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-[var(--ts-dark-green)] hover:underline"
+                >
+                  Mehr erfahren<span className="sr-only">: {category.title}</span>
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              )}
             </article>
           ))}
         </div>
