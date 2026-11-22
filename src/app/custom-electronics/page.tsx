@@ -25,7 +25,7 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Custom Electronics & IoT Product Development | PawSync",
+  title: "IoT Hardware & Product Development Services | PawSync",
   description:
     "Custom PCB design, embedded firmware development, GPS and LoRa IoT engineering, and prototype-to-production support for animal and farm technology products.",
   alternates: buildAlternates("en", "custom-electronics"),
@@ -167,7 +167,7 @@ export default function CustomElectronicsPage() {
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Engineering Services</Eyebrow>
         <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">
-          Custom Electronics &amp; IoT Product Development
+          Custom Electronics &amp; IoT Hardware Development
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           When an off-the-shelf device won&apos;t do the job, we design one

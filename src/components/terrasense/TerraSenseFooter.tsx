@@ -225,9 +225,9 @@ export default function TerraSenseFooter() {
 
           {columns.map((column) => (
             <nav key={column.headingKey} aria-label={t[column.headingKey]}>
-              <h2 className="text-sm font-semibold uppercase tracking-wide text-white">
+              <p className="text-sm font-semibold uppercase tracking-wide text-white">
                 {t[column.headingKey]}
-              </h2>
+              </p>
               <ul className="mt-4 space-y-3 text-sm">
                 {column.links.map((link) => (
                   <li key={link.key}>
