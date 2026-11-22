@@ -19,14 +19,24 @@ import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 import { serializeJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "Wireless Poultry Technology & Remote Monitoring | PawSync",
+  title: "Poultry Monitoring System & Wireless Sensors | PawSync",
   description:
-    "Wireless poultry technology: temperature, humidity, and air-quality sensors with LoRa/Wi-Fi connectivity and remote monitoring, engineered by PawSync.",
+    "Wireless poultry sensors and a custom poultry monitoring system for remote monitoring of temperature, humidity, ammonia and ventilation, engineered by PawSync.",
   alternates: buildAlternates("en", "poultry-farming"),
   openGraph: buildOpenGraph("en", "poultry-farming"),
 };
 
 const faqs = [
+  {
+    question: "What is a poultry monitoring system?",
+    answer:
+      "A poultry monitoring system uses wireless sensors in each house to measure conditions such as temperature, humidity and ammonia, sends the readings over LoRa, Wi-Fi or cellular to a gateway, and shows them on a dashboard with alerts. We design the sensors, gateway and firmware around your houses and equipment.",
+  },
+  {
+    question: "Which wireless poultry sensors can you integrate?",
+    answer:
+      "Typical builds combine temperature, humidity, ammonia, CO2 and air-quality sensors with feed, water-level and power monitoring. The exact sensor set is chosen during scoping to match your house layout and what you need to control.",
+  },
   {
     question: "Can you develop a custom poultry farm controller?",
     answer:

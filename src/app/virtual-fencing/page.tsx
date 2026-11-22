@@ -19,7 +19,7 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Custom GPS Virtual Fencing for Livestock | PawSync",
+  title: "Virtual Fencing for Cattle: GPS Collars & Systems | PawSync",
   description:
     "Custom GPS virtual fencing for livestock: collar hardware, boundary logic and alerts designed to your requirements, not an off-the-shelf product.",
   alternates: buildAlternates("en", "virtual-fencing"),
@@ -40,6 +40,7 @@ const capabilities = [
 const faqs = [
   { question: "Does virtual fencing replace physical fencing entirely?", answer: "It can reduce dependency on physical fencing in many settings, but the right approach depends on terrain, animal type, and local requirements — we'll help you assess what fits." },
   { question: "How does an animal learn the boundary?", answer: "Collars typically use a progressive audio cue, and in some systems a brief, gentle pulse, giving the animal a chance to turn back before reaching the edge." },
+  { question: "How long does a virtual fencing collar battery last?", answer: "Battery life depends mostly on how often the collar takes a GPS fix and sends data, plus the radio used and any solar charging. We set the power budget around the battery life you need, then choose fix intervals and hardware to meet it." },
   { question: "Can zones be changed remotely?", answer: "They can be. Remote boundary changes through a web or mobile interface can be designed in, so no hardware has to be moved." },
 ];
 
