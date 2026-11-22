@@ -256,6 +256,8 @@ export default function BlogArticleLorawanFarmNetwork() {
           Planning LoRaWAN sensors or gateways for a farm or a product?{" "}
           <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> —
           sensor nodes and network designs can be developed for your site and region. See also{" "}
+          <ArticleServiceLink locale="en" href="/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Poultry Monitoring Systems</ArticleServiceLink>,{" "}
+          <ArticleServiceLink locale="en" href="/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Remote Livestock Monitoring</ArticleServiceLink>,{" "}
           <ArticleServiceLink locale="en" href="/farm-automation" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Farm Automation</ArticleServiceLink> and{" "}
           <ArticleServiceLink locale="en" href="/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Environmental Monitoring</ArticleServiceLink>.
         </p>

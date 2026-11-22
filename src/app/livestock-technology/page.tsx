@@ -109,7 +109,7 @@ const faqs: FAQItem[] = [
 
 const solutions = [
   { icon: Satellite, title: "Livestock GPS Tracking", description: "Location tracking built for open range and large pastures.", href: "/animal-tracking" },
-  { icon: Radar, title: "Cattle Tracking", description: "Collar or ear-tag hardware designed around your herd and range." },
+  { icon: Radar, title: "Cattle Tracking", description: "Collar or ear-tag hardware designed around your herd and range.", href: "/animal-tracking" },
   { icon: Radar, title: "Sheep Tracking", description: "Lightweight tracking devices for flock management." },
   { icon: Radar, title: "Goat Tracking", description: "Rugged tracking hardware for browsing herds." },
   { icon: Radar, title: "Horse Tracking", description: "GPS and activity tracking designed with equine welfare in mind." },
@@ -244,7 +244,7 @@ export default function LivestockTechnologyPage() {
       <section aria-labelledby="livestock-connectivity-heading" className="bg-[var(--ts-navy)] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 id="livestock-connectivity-heading" className="text-center text-sm font-semibold uppercase tracking-widest text-white/50">
-            Wireless Connectivity for Remote Livestock Monitoring
+            Wireless Livestock Monitoring: Connectivity Options
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {connectivity.map(({ icon: Icon, label }) => (

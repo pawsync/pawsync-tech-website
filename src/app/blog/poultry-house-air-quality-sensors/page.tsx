@@ -42,7 +42,9 @@ export default function BlogArticlePoultryAirQualitySensors() {
         </h1>
         <ArticleDate route="blog/poultry-house-air-quality-sensors" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
-          Air-quality readings drive ventilation decisions in a poultry house or shed. But ammonia, CO₂ and
+          Air-quality readings drive ventilation decisions in a poultry house or shed, and they sit at the heart of
+          any{" "}
+          <Link href="/poultry-farming" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">poultry monitoring system</Link>. But ammonia, CO₂ and
           humidity sensors all behave differently in dust, moisture and ammonia-laden air — and a sensor
           that has quietly drifted is worse than no sensor at all.
         </p>
@@ -231,7 +233,7 @@ export default function BlogArticlePoultryAirQualitySensors() {
           Designing sensor hardware for poultry houses?{" "}
           <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Get in touch</Link> —
           sensor nodes, enclosures and calibration features can be developed to your requirements. See also{" "}
-          <ArticleServiceLink locale="en" href="/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Poultry Farm Technology</ArticleServiceLink> and{" "}
+          <ArticleServiceLink locale="en" href="/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Poultry Monitoring Systems</ArticleServiceLink> and{" "}
           <ArticleServiceLink locale="en" href="/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Environmental Monitoring</ArticleServiceLink>.
         </p>
       </article>
