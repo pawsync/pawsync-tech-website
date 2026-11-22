@@ -24,13 +24,10 @@ const dict: Record<Locale, { heading: string; body: string; cta: string }> = {
   },
 };
 
-// Server-side headers() does NOT carry the middleware-injected x-locale
-// header into this boundary for a genuinely unmatched route (confirmed by
-// direct testing — the header reads null here even though it's present on
-// every normal page render). The browser's address bar still shows the
-// attempted URL on a 404, though, so usePathname() reliably recovers the
-// locale client-side — the same helper (localeFromPathname) already used
-// by the header/footer for exactly this purpose.
+// Unmatched URLs render through app/global-not-found.tsx, which has no
+// language of its own. The address bar still shows the attempted URL, so
+// usePathname() recovers the locale client-side, using the same helper
+// (localeFromPathname) as the header and footer.
 export default function TerraSenseNotFound() {
   const pathname = usePathname();
   const locale = localeFromPathname(pathname);
