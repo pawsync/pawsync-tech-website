@@ -38,6 +38,11 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Needed for app/global-not-found.tsx: the site has one root layout per
+  // language, so unmatched URLs need their own full-document 404 page.
+  experimental: {
+    globalNotFound: true,
+  },
   // Five older posts were removed on 2026-11-06; their URLs point to the closest
   // remaining article (or the blog index) so links and search results still work.
   async redirects() {

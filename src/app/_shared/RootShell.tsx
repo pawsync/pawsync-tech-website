@@ -1,7 +1,11 @@
+// Root HTML shell for every page. Each language has its own root layout
+// ((en), (de), (fr)) that passes a fixed locale here, so <html lang> is known
+// at build time and pages can be prerendered and served from the CDN instead
+// of being rendered on every request (the old layout read a request header
+// set by middleware, which made the whole site dynamic).
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import localFont from "next/font/local";
-import "./globals.css";
+import "../globals.css";
 import TerraSenseHeader from "@/components/terrasense/TerraSenseHeader";
 import TerraSenseFooter from "@/components/terrasense/TerraSenseFooter";
 import BackToTop from "@/components/terrasense/BackToTop";
@@ -13,20 +17,21 @@ import { organizationJsonLd, serializeJsonLd, websiteJsonLd } from "@/lib/struct
 // @fontsource-variable 5.3.0, SIL Open Font License 1.1 in ./fonts). Builds no
 // longer download fonts from Google, so a network hiccup can't fail a deploy.
 const inter = localFont({
-  src: "./fonts/inter-latin-wght-normal.woff2",
+  src: "../fonts/inter-latin-wght-normal.woff2",
   variable: "--font-inter",
   weight: "100 900",
   display: "swap",
 });
 
 const manrope = localFont({
-  src: "./fonts/manrope-latin-wght-normal.woff2",
+  src: "../fonts/manrope-latin-wght-normal.woff2",
   variable: "--font-manrope",
   weight: "200 800",
   display: "swap",
 });
 
-export const metadata: Metadata = {
+// Shared by the three per-language root layouts in (en), (de) and (fr).
+export const rootMetadata: Metadata = {
   metadataBase: new URL("https://pawsync.tech"),
   title: "PawSync | Smart Electronics for Animals, Farms & Connected Environments",
   description:
@@ -53,9 +58,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const headersList = await headers();
-  const locale = (headersList.get("x-locale") as Locale | null) ?? "en";
+export default function RootShell({ locale, children }: { locale: Locale; children: React.ReactNode }) {
   const siteJsonLd = {
     "@context": "https://schema.org",
     "@graph": [websiteJsonLd(locale), organizationJsonLd()],
