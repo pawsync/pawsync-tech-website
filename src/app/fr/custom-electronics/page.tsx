@@ -25,7 +25,7 @@ import Eyebrow from "@/components/terrasense/Eyebrow";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Électronique sur mesure & produits IoT | PawSync",
+  title: "Développement et prototypage de produits IoT | PawSync",
   description:
     "Cartes PCB sur mesure, micrologiciel embarqué, ingénierie IoT GPS et LoRa, du prototype à la production, pour la technologie animale et agricole.",
   alternates: buildAlternates("fr", "custom-electronics"),

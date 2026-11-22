@@ -54,11 +54,11 @@ export default function PoultryHero() {
           </span>
 
           <h1 className="mt-5 font-[family-name:var(--font-manrope)] text-4xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl sm:leading-[1.08] lg:text-[3.4rem]">
-            Wireless IoT Monitoring &amp; Automation for Modern Poultry Farms
+            Wireless Poultry Monitoring System for Remote Farm Monitoring
           </h1>
 
           <p className="mt-5 max-w-[600px] text-lg leading-relaxed text-white/70">
-            Custom IoT devices, environmental monitoring, feeding and
+            Wireless poultry sensors, poultry remote monitoring, feeding and
             watering controls, climate automation, safety alerts, and
             connected electronics designed for modern poultry operations.
           </p>

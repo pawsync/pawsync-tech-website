@@ -20,9 +20,9 @@ import CTABanner from "@/components/terrasense/CTABanner";
 import { buildAlternates, buildOpenGraph } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "GPS Animal Tracker Development | PawSync",
+  title: "Cattle & Livestock GPS Tracking Systems | PawSync",
   description:
-    "Custom GPS and GNSS animal tracker development: low-power PCB design, firmware, LoRa or cellular connectivity and prototyping.",
+    "Custom GPS tracking systems for cattle, livestock and pets: low-power tracker PCB design, firmware, LoRa or cellular connectivity and prototyping.",
   alternates: buildAlternates("en", "animal-tracking"),
   openGraph: buildOpenGraph("en", "animal-tracking"),
 };
@@ -39,6 +39,7 @@ const capabilities = [
 ];
 
 const faqs = [
+  { question: "Can you build a cow or cattle tracking system?", answer: "Yes. We develop custom cattle and herd tracking systems: GPS collars or tags, LoRa or cellular connectivity, a gateway where needed, and a dashboard that shows each animal's location and alerts. The design is scoped around your herd size, terrain and battery-life needs." },
   { question: "Can tracking devices work without cellular coverage?", answer: "Yes. We design systems around LoRa and other low-power wide-area protocols for sites with limited or no cellular signal, syncing data once a gateway or cellular connection is reached." },
   { question: "How long does battery life typically last?", answer: "It depends on update frequency, connectivity type and enclosure size — we design the power budget around your required reporting interval and duty cycle." },
   { question: "Can you track multiple species with one platform?", answer: "Yes. A dashboard and backend can be designed to support mixed fleets (pets, livestock, and working animals), with device hardware sized per species." },
@@ -144,7 +145,7 @@ export default function AnimalTrackingPage() {
 
       <section className="mx-auto max-w-4xl px-4 pb-4 pt-8 text-center sm:px-6 sm:pt-10 lg:px-8">
         <Eyebrow>Animal Tracking</Eyebrow>
-        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Custom GPS & GNSS Animal Tracker Development</h1>
+        <h1 className="mt-3 break-words font-[family-name:var(--font-manrope)] text-4xl font-extrabold tracking-tight text-[var(--ts-navy)] sm:text-5xl">Custom GPS Tracking Systems for Cattle, Livestock &amp; Pets</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[var(--ts-gray)]">
           We design real-time or periodic location systems that keep pets,
           livestock and other animals findable — on the property or far

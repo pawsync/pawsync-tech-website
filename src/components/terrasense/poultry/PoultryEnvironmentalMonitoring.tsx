@@ -25,7 +25,7 @@ export default function PoultryEnvironmentalMonitoring() {
         <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>Environmental Monitoring</Eyebrow>
           <h2 id="poultry-env-heading" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
-            Know Your Poultry House Environment 24/7
+            Wireless Poultry Sensors for 24/7 House Monitoring
           </h2>
           <p className="mt-4 text-lg text-[var(--ts-gray)]">
             Sensor nodes distributed throughout the facility feed a single,
