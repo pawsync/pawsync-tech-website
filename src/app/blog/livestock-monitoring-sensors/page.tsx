@@ -42,7 +42,9 @@ export default function BlogArticleLivestockMonitoringSensors() {
         </h1>
         <ArticleDate route="blog/livestock-monitoring-sensors" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
-          A remote livestock monitoring system is only as useful as the sensors at its edge. Before choosing
+          A{" "}
+          <Link href="/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">remote livestock monitoring system</Link>{" "}
+          is only as useful as the sensors at its edge. Before choosing
           a platform or a network, it helps to be clear about what each type of sensor can and can&apos;t tell
           you — and what it costs in power and maintenance.
         </p>

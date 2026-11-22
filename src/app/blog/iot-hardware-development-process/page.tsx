@@ -249,7 +249,9 @@ export default function BlogArticleIotHardwareDevelopment() {
           Planning a connected device and want to get the early stages right?{" "}
           <Link href="/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Start a conversation</Link> —
           requirements, PCB design, firmware and prototypes can be developed per project. See also{" "}
-          <ArticleServiceLink locale="en" href="/custom-electronics" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Custom Electronics</ArticleServiceLink> and{" "}
+          <ArticleServiceLink locale="en" href="/custom-electronics" className="font-semibold text-[var(--ts-dark-green)] hover:underline">IoT Hardware Development</ArticleServiceLink>,{" "}
+          <ArticleServiceLink locale="en" href="/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Poultry Monitoring Systems</ArticleServiceLink>,{" "}
+          <ArticleServiceLink locale="en" href="/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Remote Livestock Monitoring</ArticleServiceLink> and{" "}
           <ArticleServiceLink locale="en" href="/how-we-work" className="font-semibold text-[var(--ts-dark-green)] hover:underline">How We Work</ArticleServiceLink>.
         </p>
       </article>
