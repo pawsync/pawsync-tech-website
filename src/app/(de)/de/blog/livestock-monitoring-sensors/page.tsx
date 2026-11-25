@@ -42,7 +42,9 @@ export default function BlogArticleLivestockMonitoringSensorsDe() {
         </h1>
         <ArticleDate route="blog/livestock-monitoring-sensors" locale="de" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
-          Ein System zur Fernüberwachung von Weidetieren ist nur so gut wie die Sensoren draußen auf der
+          Ein{" "}
+          <Link href="/de/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">System zur Fernüberwachung von Weidetieren</Link>{" "}
+          ist nur so gut wie die Sensoren draußen auf der
           Fläche. Bevor man eine Plattform oder ein Funknetz auswählt, lohnt sich ein klarer Blick darauf, was
           jeder Sensortyp leisten kann – und was er an Energie und Wartung kostet.
         </p>

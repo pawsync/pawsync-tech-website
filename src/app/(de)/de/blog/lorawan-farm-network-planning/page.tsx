@@ -232,6 +232,8 @@ export default function BlogArticleLorawanFarmNetworkDe() {
           Sie planen LoRaWAN-Sensoren oder Gateways für einen Betrieb oder ein Produkt?{" "}
           <Link href="/de/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Kontaktieren Sie uns</Link> –
           Sensorknoten und Netzkonzepte können für Ihren Standort entwickelt werden. Siehe auch{" "}
+          <ArticleServiceLink locale="de" href="/de/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Geflügel-Überwachungssysteme</ArticleServiceLink>,{" "}
+          <ArticleServiceLink locale="de" href="/de/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Fernüberwachung von Nutztieren</ArticleServiceLink>,{" "}
           <ArticleServiceLink locale="de" href="/de/farm-automation" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Hofautomatisierung</ArticleServiceLink> und{" "}
           <ArticleServiceLink locale="de" href="/de/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Umweltsensoren für Hof & Stall</ArticleServiceLink>.
         </p>

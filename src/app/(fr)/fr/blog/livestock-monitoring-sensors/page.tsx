@@ -42,7 +42,9 @@ export default function BlogArticleLivestockMonitoringSensorsFr() {
         </h1>
         <ArticleDate route="blog/livestock-monitoring-sensors" locale="fr" />
         <p className="mt-4 text-sm text-[var(--ts-gray)]">
-          Un système de suivi à distance du bétail ne vaut que par les capteurs installés sur le terrain. Avant de
+          Un{" "}
+          <Link href="/fr/livestock-technology" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">système de suivi à distance du bétail</Link>{" "}
+          ne vaut que par les capteurs installés sur le terrain. Avant de
           choisir une plateforme ou un réseau, il est utile de savoir ce que chaque type de capteur peut – et ne
           peut pas – vous apprendre, et ce qu&apos;il coûte en énergie et en entretien.
         </p>

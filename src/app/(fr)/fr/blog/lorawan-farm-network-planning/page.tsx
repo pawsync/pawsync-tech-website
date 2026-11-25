@@ -217,6 +217,8 @@ export default function BlogArticleLorawanFarmNetworkFr() {
           Vous prévoyez des capteurs ou des passerelles LoRaWAN pour une exploitation ou un produit ?{" "}
           <Link href="/fr/contact" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Contactez-nous</Link> –
           nœuds capteurs et architectures réseau peuvent être développés pour votre site. Voir aussi{" "}
+          <ArticleServiceLink locale="fr" href="/fr/poultry-farming" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Systèmes de surveillance avicole</ArticleServiceLink>,{" "}
+          <ArticleServiceLink locale="fr" href="/fr/livestock-technology" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Surveillance du bétail à distance</ArticleServiceLink>,{" "}
           <ArticleServiceLink locale="fr" href="/fr/farm-automation" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Automatisation agricole</ArticleServiceLink> et{" "}
           <ArticleServiceLink locale="fr" href="/fr/environmental-monitoring" className="font-semibold text-[var(--ts-dark-green)] hover:underline">Capteurs environnementaux</ArticleServiceLink>.
         </p>
