@@ -59,6 +59,13 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
   { icon: Factory, label: "Produktion" },
 ];
 
+const euContext: { icon: LucideIcon; title: string; description: string }[] = [
+  { icon: Radio, title: "LoRaWAN im EU868-Band", description: "In Europa arbeitet LoRaWAN im lizenzfreien 868-MHz-Band. Auf den Standardkanälen gilt ein gesetzliches Duty-Cycle-Limit von 1 % – das begrenzt, wie oft ein Halsband senden darf. Meldeintervall und Datenmenge legen wir von Anfang an darauf aus." },
+  { icon: Hash, title: "Offizielle Kennzeichnung bleibt bestehen", description: "Rinder werden in Deutschland mit zwei Ohrmarken gekennzeichnet und in der HIT-Datenbank gemeldet; Schafe und Ziegen benötigen EU-weit eine elektronische Kennzeichnung. Unsere Geräte ergänzen diese Pflichtkennzeichnung – sie ersetzen sie nicht." },
+  { icon: RadioTower, title: "Mobilfunk im ländlichen Raum", description: "Auf Weiden, in Mittelgebirgslagen und in Ställen ist die Netzabdeckung oft lückenhaft. Bevor wir uns für LTE-M, NB-IoT oder ein eigenes LoRaWAN-Gateway entscheiden, prüfen wir die tatsächliche Versorgung auf Ihren Flächen." },
+  { icon: ClipboardCheck, title: "Ihre Daten bleiben Ihre Daten", description: "Standort-, Aktivitäts- und Betriebsdaten gehören Ihnen. Speicherort, Zugriffsrechte und Exportformate planen wir mit Blick auf die DSGVO und die Software, die Sie bereits nutzen." },
+];
+
 const faqs: FAQItem[] = [
   {
     question: "Woraus besteht ein System zur Nutztierüberwachung?",
@@ -270,6 +277,31 @@ export default function LivestockTechnologyPageDe() {
         </div>
       </section>
 
+      <section aria-labelledby="livestock-eu-heading-de" className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <Eyebrow>Für Betriebe in Deutschland und der EU</Eyebrow>
+            <h2 id="livestock-eu-heading-de" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+              Nutztierüberwachung im europäischen Rahmen
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
+              Ein Überwachungssystem für deutsche Betriebe muss zu den Regeln und Bedingungen passen, die hier bereits gelten. Diese Punkte klären wir in der Konzeptphase – bevor die erste Leiterplatte entsteht.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            {euContext.map(({ icon: Icon, title, description }) => (
+              <div key={title} className="rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10">
+                  <Icon className="h-5 w-5 text-[var(--ts-dark-green)]" aria-hidden="true" />
+                </div>
+                <h3 className="mt-4 font-[family-name:var(--font-manrope)] text-lg font-bold text-[var(--ts-navy)]">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="livestock-process-heading-de" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>Individuelle Entwicklung</Eyebrow>
@@ -280,11 +312,7 @@ export default function LivestockTechnologyPageDe() {
             Zuerst Anforderungsanalyse und Architektur, dann Schaltplan- und
             Leiterplattenentwicklung, Firmware, ein Prototyp zum Testen unter
             echten Bedingungen und schließlich die Fertigungsvorbereitung nach
-            erfolgreicher Validierung. Siehe auch unseren Beitrag{" "}
-            <Link href="/de/blog/iot-hardware-development-process" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-              vom Prototyp zur Serie
-            </Link>{" "}
-            oder unsere{" "}
+            erfolgreicher Validierung. Siehe auch unsere{" "}
             <Link href="/de/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               individuelle Elektronikentwicklung
             </Link>

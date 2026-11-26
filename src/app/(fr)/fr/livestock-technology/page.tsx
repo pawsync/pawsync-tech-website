@@ -59,6 +59,13 @@ const processSteps: { icon: LucideIcon; label: string }[] = [
   { icon: Factory, label: "Production" },
 ];
 
+const euContext: { icon: LucideIcon; title: string; description: string }[] = [
+  { icon: Radio, title: "LoRaWAN dans la bande EU868", description: "En Europe, LoRaWAN fonctionne dans la bande libre des 868 MHz. Sur les canaux par défaut, la réglementation impose un rapport cyclique de 1 %, ce qui limite la fréquence d'émission d'un collier. Nous dimensionnons l'intervalle de transmission et la taille des messages en conséquence." },
+  { icon: Hash, title: "L'identification officielle reste en place", description: "En France, les bovins portent deux boucles auriculaires et sont enregistrés dans la BDNI ; dans toute l'UE, les ovins et caprins doivent être identifiés électroniquement. Nos dispositifs complètent cette identification obligatoire — ils ne la remplacent pas." },
+  { icon: RadioTower, title: "Couverture réseau en zone rurale", description: "En estive, en zone de montagne ou à l'intérieur des bâtiments, la couverture mobile est souvent irrégulière. Avant de choisir entre LTE-M, NB-IoT ou une passerelle LoRaWAN privée, nous vérifions la couverture réelle sur vos parcelles." },
+  { icon: ClipboardCheck, title: "Vos données restent les vôtres", description: "Les données de localisation, d'activité et d'exploitation vous appartiennent. Nous définissons le lieu de stockage, les droits d'accès et les formats d'export en tenant compte du RGPD et des logiciels que vous utilisez déjà." },
+];
+
 const faqs: FAQItem[] = [
   {
     question: "De quoi se compose un système de surveillance du bétail ?",
@@ -272,6 +279,31 @@ export default function LivestockTechnologyPageFr() {
         </div>
       </section>
 
+      <section aria-labelledby="livestock-eu-heading-fr" className="bg-[var(--ts-dark-green)]/5 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <Eyebrow>Pour les exploitations en France et dans l&apos;UE</Eyebrow>
+            <h2 id="livestock-eu-heading-fr" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+              La surveillance du bétail dans le cadre européen
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-[var(--ts-gray)]">
+              Un système de surveillance pour une exploitation française doit s&apos;intégrer aux règles et aux conditions qui s&apos;y appliquent déjà. Nous traitons ces points dès la phase de découverte, avant de dessiner la première carte électronique.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            {euContext.map(({ icon: Icon, title, description }) => (
+              <div key={title} className="rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--ts-dark-green)]/10 to-[var(--ts-green)]/10">
+                  <Icon className="h-5 w-5 text-[var(--ts-dark-green)]" aria-hidden="true" />
+                </div>
+                <h3 className="mt-4 font-[family-name:var(--font-manrope)] text-lg font-bold text-[var(--ts-navy)]">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="livestock-process-heading-fr" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>Ingénierie sur mesure</Eyebrow>
@@ -283,11 +315,7 @@ export default function LivestockTechnologyPageFr() {
             de la conception du schéma et du circuit imprimé, du micrologiciel,
             d&apos;un prototype testable en conditions réelles, puis des
             fichiers de préparation à la fabrication une fois la conception
-            validée. Voir aussi notre article{" "}
-            <Link href="/fr/blog/iot-hardware-development-process" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
-              du prototype à la production
-            </Link>{" "}
-            ou nos services d&apos;
+            validée. Voir aussi nos services d&apos;
             <Link href="/fr/custom-electronics" className="underline decoration-[var(--ts-dark-green)]/30 underline-offset-2 hover:decoration-[var(--ts-dark-green)]">
               électronique sur mesure
             </Link>

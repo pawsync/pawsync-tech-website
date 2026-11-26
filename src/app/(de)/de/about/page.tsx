@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
+  ArrowRight,
   Battery,
   Bluetooth,
   CircuitBoard,
@@ -32,6 +34,15 @@ const focusAreas = [
   { icon: Battery, label: "Leistungselektronik" },
   { icon: CircuitBoard, label: "Leiterplattendesign" },
   { icon: Settings2, label: "Automatisierung" },
+];
+
+const offerings = [
+  { href: "/de/livestock-technology", title: "Nutztierüberwachung", description: "Halsbänder, Ohrmarken und Gateways für Rinder, Schafe, Ziegen und Pferde." },
+  { href: "/de/poultry-farming", title: "Stallüberwachung Geflügel", description: "Funksensoren für Temperatur, Luftfeuchte, Ammoniak und CO₂." },
+  { href: "/de/animal-tracking", title: "GPS-Tierortung", description: "Standortverfolgung für offene Weiden und große Flächen." },
+  { href: "/de/virtual-fencing", title: "Virtueller Zaun", description: "GPS-basierte Grenzen, die den Bedarf an physischen Zäunen verringern." },
+  { href: "/de/animal-health-monitoring", title: "Tiergesundheitsüberwachung", description: "Aktivitäts- und Verhaltenssensorik, die Veränderungen früh meldet." },
+  { href: "/de/custom-electronics", title: "Individuelle Elektronik", description: "Leiterplattenentwicklung, Firmware und Prototypen für Ihre Produktidee." },
 ];
 
 const approach = [
@@ -119,6 +130,30 @@ export default function AboutPageDe() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="about-offerings-heading" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Was wir entwickeln</Eyebrow>
+          <h2 id="about-offerings-heading" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+            Systeme, die wir entwickeln und bauen
+          </h2>
+        </div>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {offerings.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition hover:border-[var(--ts-dark-green)]/30"
+            >
+              <h3 className="flex items-center justify-between gap-2 font-[family-name:var(--font-manrope)] text-lg font-bold text-[var(--ts-navy)]">
+                {item.title}
+                <ArrowRight className="h-4 w-4 shrink-0 text-[var(--ts-green)] transition group-hover:translate-x-0.5" aria-hidden="true" />
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{item.description}</p>
+            </Link>
+          ))}
         </div>
       </section>
 

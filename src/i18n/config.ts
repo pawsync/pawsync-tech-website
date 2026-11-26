@@ -54,7 +54,7 @@ export type Route = (typeof routes)[number];
 // different days. Update the entry when a page's content changes.
 export const routeLastModified: Record<Route, string | Record<Locale, string>> = {
   "": "2026-10-02",
-  about: "2026-10-10",
+  about: "2026-11-26",
   "animal-health-monitoring": "2026-11-22",
   "animal-tracking": { en: "2026-11-22", de: "2026-10-27", fr: "2026-10-27" },
   blog: "2026-11-06",
@@ -70,7 +70,7 @@ export const routeLastModified: Record<Route, string | Record<Locale, string>> =
   "farm-automation": "2026-11-22",
   "how-we-work": { en: "2026-09-16", de: "2026-09-18", fr: "2026-09-18" },
   industries: "2026-11-22",
-  "livestock-technology": { en: "2026-10-27", de: "2026-10-29", fr: "2026-10-29" },
+  "livestock-technology": { en: "2026-10-27", de: "2026-11-26", fr: "2026-11-26" },
   "pet-technology": "2026-10-27",
   "poultry-farming": { en: "2026-11-22", de: "2026-10-29", fr: "2026-10-29" },
   privacy: "2026-09-28",
