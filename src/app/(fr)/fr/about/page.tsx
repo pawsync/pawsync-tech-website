@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
+  ArrowRight,
   Battery,
   Bluetooth,
   CircuitBoard,
@@ -32,6 +34,15 @@ const focusAreas = [
   { icon: Battery, label: "Électronique de puissance" },
   { icon: CircuitBoard, label: "Conception de cartes PCB" },
   { icon: Settings2, label: "Automatisation" },
+];
+
+const offerings = [
+  { href: "/fr/livestock-technology", title: "Surveillance du bétail", description: "Colliers, boucles auriculaires et passerelles pour bovins, ovins, caprins et chevaux." },
+  { href: "/fr/poultry-farming", title: "Surveillance des bâtiments avicoles", description: "Capteurs sans fil de température, d'humidité, d'ammoniac et de CO₂." },
+  { href: "/fr/animal-tracking", title: "Suivi GPS des animaux", description: "Localisation pour les pâturages ouverts et les grandes étendues." },
+  { href: "/fr/virtual-fencing", title: "Clôture virtuelle", description: "Des limites GPS qui réduisent la dépendance aux clôtures physiques." },
+  { href: "/fr/animal-health-monitoring", title: "Surveillance de la santé animale", description: "Détection de l'activité et du comportement pour repérer tôt les changements." },
+  { href: "/fr/custom-electronics", title: "Électronique sur mesure", description: "Conception de PCB, micrologiciel et prototypes pour votre idée de produit." },
 ];
 
 const approach = [
@@ -119,6 +130,30 @@ export default function AboutPageFr() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="about-offerings-heading" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Ce que nous concevons</Eyebrow>
+          <h2 id="about-offerings-heading" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+            Les systèmes que nous concevons et fabriquons
+          </h2>
+        </div>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {offerings.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition hover:border-[var(--ts-dark-green)]/30"
+            >
+              <h3 className="flex items-center justify-between gap-2 font-[family-name:var(--font-manrope)] text-lg font-bold text-[var(--ts-navy)]">
+                {item.title}
+                <ArrowRight className="h-4 w-4 shrink-0 text-[var(--ts-green)] transition group-hover:translate-x-0.5" aria-hidden="true" />
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{item.description}</p>
+            </Link>
+          ))}
         </div>
       </section>
 

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
+  ArrowRight,
   Battery,
   Bluetooth,
   CircuitBoard,
@@ -32,6 +34,15 @@ const focusAreas = [
   { icon: Battery, label: "Power Electronics" },
   { icon: CircuitBoard, label: "PCB Design" },
   { icon: Settings2, label: "Automation" },
+];
+
+const offerings = [
+  { href: "/livestock-technology", title: "Livestock monitoring", description: "Collars, ear tags and gateways for cattle, sheep, goats and horses." },
+  { href: "/poultry-farming", title: "Poultry house monitoring", description: "Wireless sensors for temperature, humidity, ammonia and CO₂." },
+  { href: "/animal-tracking", title: "Animal GPS tracking", description: "Location tracking for open pasture and large ranges." },
+  { href: "/virtual-fencing", title: "Virtual fencing", description: "GPS-based boundaries that reduce reliance on physical fencing." },
+  { href: "/animal-health-monitoring", title: "Animal health monitoring", description: "Activity and behaviour sensing that flags changes early." },
+  { href: "/custom-electronics", title: "Custom electronics", description: "PCB design, firmware and prototypes for your own product idea." },
 ];
 
 const approach = [
@@ -116,6 +127,30 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="about-offerings-heading" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>What we build</Eyebrow>
+          <h2 id="about-offerings-heading" className="mt-3 font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-[var(--ts-navy)] sm:text-4xl">
+            Systems we design and build
+          </h2>
+        </div>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {offerings.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group rounded-2xl border border-[var(--ts-navy)]/8 bg-white p-6 shadow-[0_1px_2px_rgba(14,27,38,0.04)] transition hover:border-[var(--ts-dark-green)]/30"
+            >
+              <h3 className="flex items-center justify-between gap-2 font-[family-name:var(--font-manrope)] text-lg font-bold text-[var(--ts-navy)]">
+                {item.title}
+                <ArrowRight className="h-4 w-4 shrink-0 text-[var(--ts-green)] transition group-hover:translate-x-0.5" aria-hidden="true" />
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--ts-gray)]">{item.description}</p>
+            </Link>
+          ))}
         </div>
       </section>
 
